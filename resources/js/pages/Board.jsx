@@ -7,33 +7,58 @@ export default function Board() {
   useEffect(() => { api('/leaderboard').then((d) => setUsers(d.users)); }, []);
   const medal = ['🥇', '🥈', '🥉'];
   return (
-    <>
+    <div className="board-page">
       <h1>Papan Skor</h1>
       <p className="muted mb">20 pemain dengan poin tertinggi.</p>
-      <div className="card">
-        <div className="table-wrap">
-          <table>
-            <thead><tr><th>#</th><th>Nama</th><th>Level</th><th>Poin</th></tr></thead>
+      <div className="card board-card">
+        <div className="table-wrap board-table-wrap">
+          <table className="board-table">
+            <thead>
+              <tr>
+                <th className="board-th-rank">#</th>
+                <th className="board-th-name">Nama</th>
+                <th className="board-th-level">Level</th>
+                <th className="board-th-points">Poin</th>
+              </tr>
+            </thead>
             <tbody>
               {(users || []).map((u, i) => (
-                <tr key={u.id}>
-                  <td>{medal[i] || i + 1}</td>
-                  <td>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <tr key={u.id} className={i < 3 ? `board-row-top board-row-${i + 1}` : ''}>
+                  <td className="board-td-rank">
+                    {i < 3 ? (
+                      <span className="board-medal" title={`Peringkat ${i + 1}`}>{medal[i]}</span>
+                    ) : (
+                      <span className="board-rank-num">{i + 1}</span>
+                    )}
+                  </td>
+                  <td className="board-td-name">
+                    <div className="board-user-wrap">
                       <Avatar user={u} size={32} />
-                      {u.name}
+                      <span className="board-user-name" title={u.name}>
+                        {u.name}
+                      </span>
                     </div>
                   </td>
-                  <td>Lv {u.level}</td>
-                  <td><b>{u.points}</b></td>
+                  <td className="board-td-level">
+                    <span className="board-level-badge">Lv {u.level}</span>
+                  </td>
+                  <td className="board-td-points">
+                    <b className="board-points-val">{u.points}</b>
+                  </td>
                 </tr>
               ))}
-              {users && !users.length && <tr><td colSpan="4" className="muted">Belum ada pemain.</td></tr>}
+              {users && !users.length && (
+                <tr>
+                  <td colSpan="4" className="muted center" style={{ padding: '32px 16px' }}>
+                    Belum ada pemain.
+                  </td>
+                </tr>
+              )}
             </tbody>
           </table>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

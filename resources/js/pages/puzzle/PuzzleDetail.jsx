@@ -52,7 +52,7 @@ export default function PuzzleDetail() {
         {p.type === 'cryptarithm' && <p style={{ margin: '8px 0 0', fontSize: '0.9rem', color: 'var(--muted)' }}>Setiap huruf mewakili angka unik (0-9). Substitusikan angka yang tepat agar persamaan matematikanya bernilai benar.</p>}
         {p.type === 'riddle' && <p style={{ margin: '8px 0 0', fontSize: '0.9rem', color: 'var(--muted)' }}>Pecahkan pola atau teka-teki logika yang diberikan lalu tulis jawaban akhir di kolom jawaban.</p>}
       </div>
-      <form className="card game" onSubmit={submit}>
+      <form className="card puzzle-play-card" onSubmit={submit}>
         {p.type === 'cryptarithm' ? (
           <>
             <div className="crypt">{p.data.equation}</div>

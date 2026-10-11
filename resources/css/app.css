@@ -116,7 +116,11 @@
   .reveal-item { opacity: 1 !important; transform: none !important; }
 }
 
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
 body {
   margin: 0;
@@ -128,6 +132,8 @@ body {
   background-position: 0 0, 30px 30px;
   color: var(--text);
   line-height: 1.6;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 [data-theme="dark"] body { background-image: none; }
@@ -137,11 +143,17 @@ body {
   flex-direction: column;
   min-height: 100vh;
   min-height: 100dvh;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 #root > main {
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 
 a { color: var(--blue-d); text-decoration: none; }
@@ -150,7 +162,7 @@ h2 { color: var(--navy); }
 h3 { margin: .4rem 0; color: var(--navy); }
 
 /* ─── 3. Layout ─────────────────────────────────────────────────────── */
-.container { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+.container { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; }
 .page { padding-top: 28px; padding-bottom: 56px; min-height: 70vh; }
 .tutor-page-wrap { padding-bottom: 32px; min-height: unset; }
 
@@ -169,7 +181,7 @@ h3 { margin: .4rem 0; color: var(--navy); }
 /* ─── 4. Math Background ─────────────────────────────────────────────── */
 .math-bg-container {
   position: fixed; top: 0; left: 0;
-  width: 100vw; height: 100vh;
+  width: 100%; height: 100%;
   pointer-events: none; z-index: -1; overflow: hidden;
 }
 
@@ -552,6 +564,7 @@ input:focus, select:focus, textarea:focus {
   background: var(--card-bg); backdrop-filter: blur(12px);
   border-radius: var(--radius); box-shadow: var(--shadow);
   padding: 20px; border: 1px solid var(--border-light);
+  width: 100%; max-width: 100%; box-sizing: border-box;
 }
 
 /* Reveal — progressive enhancement */
@@ -2383,22 +2396,292 @@ td.aksi-cell {
 }
 
 /* ── 32c. Table responsive: horizontal scroll wrapper di semua konteks ── */
-/* Board (Papan Skor) dan halaman admin */
 .table-wrap {
+  width: 100%;
+  max-width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  /* Negative margin trick agar tabel bisa keluar container di mobile */
+  box-sizing: border-box;
   border-radius: var(--radius);
 }
 
-/* Pastikan tabel minimal cukup lebar sehingga bisa dibaca */
-.table-wrap table {
+/* Pastikan tabel data padat/admin dapat di-scroll horizontal tanpa merusak layout */
+.admin-content .table-wrap table,
+.table-wrap table:not(.board-table) {
   min-width: 480px;
 }
 
-/* Board (Papan Skor) — wrap tabel tanpa .table-wrap eksplisit */
-.card table {
-  min-width: 360px;
+/* ── 32c-1. Papan Skor (Leaderboard): Lebar & Luas di Desktop, Responsif di Mobile ── */
+.board-page {
+  width: 100%;
+  max-width: 100%;
+}
+
+.board-card {
+  width: 100%;
+  max-width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.board-table-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.board-table {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  border-collapse: collapse;
+}
+
+.board-table th {
+  padding: 14px 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--line);
+}
+
+.board-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+}
+
+.board-table tbody tr {
+  transition: background-color var(--dur-fast) var(--ease-out);
+}
+
+.board-table tbody tr:hover {
+  background-color: var(--surface-hover);
+}
+
+.board-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Rank column */
+.board-th-rank,
+.board-td-rank {
+  width: 56px;
+  text-align: center;
+}
+
+.board-medal {
+  font-size: 1.25rem;
+  line-height: 1;
+  display: inline-block;
+}
+
+.board-rank-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+/* Name column */
+.board-th-name {
+  text-align: left;
+}
+
+.board-td-name {
+  min-width: 0;
+}
+
+.board-user-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.board-user-name {
+  font-weight: 500;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+/* Level column */
+.board-th-level,
+.board-td-level {
+  width: 90px;
+  text-align: center;
+}
+
+.board-level-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 99px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* Points column */
+.board-th-points,
+.board-td-points {
+  width: 100px;
+  text-align: right;
+}
+
+.board-points-val {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+[data-theme="dark"] .board-points-val {
+  color: var(--blue-d);
+}
+
+/* ── 32c-2. Panel Puzzle (Wide di Desktop, Responsif di Mobile) ── */
+.puzzle-play-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 28px;
+}
+
+.puzzle-play-card .crypt {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  color: var(--navy);
+  word-break: break-word;
+  text-align: center;
+}
+
+[data-theme="dark"] .puzzle-play-card .crypt {
+  color: var(--blue-d);
+}
+
+.puzzle-play-card .q-text {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  color: var(--text);
+}
+
+.puzzle-play-card input:not([type="checkbox"]):not([type="radio"]) {
+  width: 100%;
+  max-width: 640px;
+  box-sizing: border-box;
+}
+
+/* Responsive breakpoint Papan Skor & Puzzle */
+@media (max-width: 768px) {
+  .board-card {
+    padding: 18px 14px;
+  }
+  .puzzle-play-card {
+    padding: 20px 16px;
+  }
+  .puzzle-play-card .crypt {
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+  }
+  .puzzle-play-card .q-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .board-card {
+    padding: 14px 10px;
+    border-radius: var(--radius);
+  }
+  .board-table th,
+  .board-table td {
+    padding: 11px 8px;
+  }
+  .board-th-rank,
+  .board-td-rank {
+    width: 38px;
+  }
+  .board-medal {
+    font-size: 1.1rem;
+  }
+  .board-rank-num {
+    width: 22px;
+    height: 22px;
+    font-size: 0.75rem;
+  }
+  .board-user-wrap {
+    gap: 8px;
+  }
+  .board-user-name {
+    font-size: 0.88rem;
+    max-width: 140px;
+  }
+  .board-th-level,
+  .board-td-level {
+    width: 60px;
+  }
+  .board-level-badge {
+    padding: 2px 7px;
+    font-size: 0.74rem;
+  }
+  .board-th-points,
+  .board-td-points {
+    width: 62px;
+  }
+  .board-points-val {
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .board-card {
+    padding: 12px 6px;
+  }
+  .board-table th,
+  .board-table td {
+    padding: 10px 5px;
+  }
+  .board-th-rank,
+  .board-td-rank {
+    width: 32px;
+  }
+  .board-user-name {
+    max-width: 110px;
+    font-size: 0.82rem;
+  }
+  .board-th-level,
+  .board-td-level {
+    width: 52px;
+  }
+  .board-th-points,
+  .board-td-points {
+    width: 54px;
+  }
+  .puzzle-play-card {
+    padding: 16px 12px;
+  }
+  .puzzle-play-card .crypt {
+    font-size: 1.35rem;
+    letter-spacing: 1.5px;
+  }
 }
 
 /* ── 32d. Game 2048: grid fluid di layar sangat sempit ── */
