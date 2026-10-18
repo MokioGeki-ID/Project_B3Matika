@@ -1,0 +1,194 @@
+[
+  {
+    "grade": 11,
+    "slug": "limit-fungsi",
+    "title": "Limit Fungsi",
+    "sort_order": 1,
+    "summary": "Limit menyatakan nilai yang didekati oleh fungsi ketika variabelnya mendekati suatu nilai tertentu. Konsep limit adalah fondasi dari kalkulus: turunan dan integral keduanya didefinisikan menggunakan limit.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menghitung limit fungsi aljabar dengan substitusi langsung.",
+      "Setelah mempelajari materi ini, kamu dapat menyelesaikan limit yang menghasilkan bentuk tak tentu 0/0.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung limit tak hingga."
+    ],
+    "content": "## 🎯 Pengertian Limit\n\n$$\\lim_{x \\to a} f(x) = L$$\n\nartinya: ketika x mendekati a, f(x) mendekati L.\n\n## 1️⃣ Substitusi Langsung\n\nJika f(a) terdefinisi (bukan 0/0 dll.):\n$$\\lim_{x \\to 3}(2x+1) = 2(3)+1 = 7$$\n\n## 2️⃣ Bentuk Tak Tentu 0/0 — Faktorisasi\n\n$$\\lim_{x \\to 2}\\frac{x^2-4}{x-2} = \\lim_{x \\to 2}\\frac{(x+2)(x-2)}{x-2} = \\lim_{x \\to 2}(x+2) = 4$$\n\n## 3️⃣ Bentuk 0/0 — Kalikan Sekawan\n\n$$\\lim_{x \\to 0}\\frac{\\sqrt{x+4}-2}{x} = \\lim_{x \\to 0}\\frac{x}{x(\\sqrt{x+4}+2)} = \\frac{1}{4}$$\n\n## 4️⃣ Limit Tak Hingga\n\nBagi dengan pangkat tertinggi:\n$$\\lim_{x \\to \\infty}\\frac{3x^2+2}{x^2-1} = \\frac{3+0}{1-0} = 3$$\n\n## ✅ Ringkasan\n- Coba substitusi dulu. Jika 0/0: faktorkan atau kalikan sekawan.\n- Limit tak hingga: bagi pangkat tertinggi.",
+    "examples": [
+      {"level": "mudah", "problem": "lim(x→4) (x²−3x+1) = ?", "steps": ["Substitusi: 16−12+1=5."], "answer": "5", "check": {"expression": "4**2-3*4+1", "expected": 5}},
+      {"level": "sedang", "problem": "lim(x→3) (x²−9)/(x−3) = ?", "steps": ["0/0 → faktorkan: (x+3)(x−3)/(x−3)=x+3.", "Substitusi x=3: 3+3=6."], "answer": "6", "check": {"expression": "3+3", "expected": 6}},
+      {"level": "sulit", "problem": "lim(x→∞) (2x²+5x)/(4x²−3) = ?", "steps": ["Bagi x²: (2+5/x)/(4−3/x²).", "Saat x→∞: 5/x→0, 3/x²→0.", "= 2/4 = 1/2."], "answer": "1/2", "check": {"expression": "2/4", "expected": 0.5}}
+    ],
+    "common_mistakes": [
+      {"mistake": "Langsung menyatakan limit = f(a) tanpa memeriksa domain.", "fix": "Cek apakah f(a) menghasilkan 0/0, ∞/∞, atau tak terdefinisi. Jika ya, perlu teknik lanjutan."},
+      {"mistake": "Limit 0/0 dinyatakan tidak ada.", "fix": "0/0 adalah bentuk TAK TENTU, bukan nilai. Masih bisa diselesaikan dengan faktorisasi atau l'Hôpital."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "limit fungsi kelas 11 SMA pengertian cara menghitung"},
+      {"purpose": "contoh-soal", "search_query": "soal limit fungsi aljabar kelas 11 SMA bentuk tak tentu kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "lim(x→2) (3x² − x + 4) = ...", "options": ["10", "12", "14", "16"], "answer": 2, "explanation": "Substitusi: 3(4)−2+4=12−2+4=14.", "points": 1},
+      {"body": "lim(x→5) (x²−25)/(x−5) = ...", "options": ["0", "5", "10", "25"], "answer": 2, "explanation": "Faktorkan: (x+5)(x−5)/(x−5)=x+5. Substitusi x=5: 10.", "points": 2},
+      {"body": "lim(x→∞) (5x³+2x)/(x³−4) = ...", "options": ["0", "2", "5", "∞"], "answer": 2, "explanation": "Bagi x³: (5+2/x²)/(1−4/x³)→5/1=5.", "points": 2},
+      {"body": "lim(x→1) (x²−1)/(x−1) = ...", "options": ["0", "1", "2", "Tidak ada"], "answer": 2, "explanation": "Faktorkan: (x+1)(x−1)/(x−1)=x+1. Substitusi x=1: 2.", "points": 1}
+    ]
+  },
+  {
+    "grade": 11,
+    "slug": "turunan-fungsi",
+    "title": "Turunan Fungsi (Diferensial)",
+    "sort_order": 2,
+    "summary": "Turunan mengukur laju perubahan suatu fungsi terhadap variabelnya, yaitu kemiringan garis singgung di setiap titik. Turunan sangat berguna untuk mencari nilai ekstrem (maksimum dan minimum) suatu fungsi.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menghitung turunan dengan rumus dasar dan aturan rantai.",
+      "Setelah mempelajari materi ini, kamu dapat menemukan persamaan garis singgung kurva.",
+      "Setelah mempelajari materi ini, kamu dapat menggunakan turunan untuk menentukan nilai maksimum dan minimum."
+    ],
+    "content": "## 📐 Definisi\n\n$$f'(x) = \\lim_{h \\to 0}\\frac{f(x+h)-f(x)}{h}$$\n\n## 📋 Rumus Turunan Dasar\n\n| Fungsi | Turunan |\n|--------|---------|\n| c (konstanta) | 0 |\n| xⁿ | nxⁿ⁻¹ |\n| sin x | cos x |\n| cos x | −sin x |\n| eˣ | eˣ |\n| ln x | 1/x |\n\n## ⚙️ Aturan Turunan\n\n$$(fg)' = f'g + fg' \\quad \\text{(perkalian)}$$\n$$\\left(\\frac{f}{g}\\right)' = \\frac{f'g-fg'}{g^2} \\quad \\text{(pembagian)}$$\n$$[f(g(x))]' = f'(g(x))\\cdot g'(x) \\quad \\text{(rantai)}$$\n\n## 🎯 Aplikasi: Ekstrem Fungsi\n\n- f'(x)=0 → titik kritis\n- f''(x)<0 → maksimum lokal\n- f''(x)>0 → minimum lokal\n\n## ✅ Ringkasan\n- Turunan xⁿ=nxⁿ⁻¹. Aturan: perkalian, pembagian, rantai.\n- f'(x)=0 → titik kritis. f''(x) menentukan jenis ekstrem.",
+    "examples": [
+      {"level": "mudah", "problem": "f(x)=4x³−3x²+5. Cari f'(x)!", "steps": ["f'(x)=4·3x²−3·2x+0.", "=12x²−6x."], "answer": "f'(x) = 12x² − 6x", "check": null},
+      {"level": "sedang", "problem": "Persamaan garis singgung y=x²−4x+3 di titik (1,0)!", "steps": ["y'=2x−4.", "Gradien di x=1: m=2−4=−2.", "Garis: y−0=−2(x−1) → y=−2x+2."], "answer": "y = −2x + 2", "check": null},
+      {"level": "sulit", "problem": "f(x)=2x³−6x²+1. Tentukan nilai maks dan min lokal!", "steps": ["f'(x)=6x²−12x=6x(x−2)=0 → x=0 atau x=2.", "f''(x)=12x−12.", "f''(0)=−12<0 → maks lokal di x=0: f(0)=1.", "f''(2)=12>0 → min lokal di x=2: f(2)=16−24+1=−7."], "answer": "Maks lokal (0,1), Min lokal (2,−7)", "check": {"expression": "2*8-6*4+1", "expected": -7}}
+    ],
+    "common_mistakes": [
+      {"mistake": "Turunan x³ = x² (lupa koefisien).", "fix": "Turunan xⁿ = n·xⁿ⁻¹. Koefisien n turun ke depan! x³ → 3x²."},
+      {"mistake": "Mengabaikan aturan rantai pada f(g(x)).", "fix": "Jika ada fungsi dalam fungsi, WAJIB kalikan dengan turunan fungsi dalam. (sin(3x))' = cos(3x)·3."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "turunan fungsi diferensial kelas 11 SMA rumus dasar aturan rantai"},
+      {"purpose": "contoh-soal", "search_query": "soal turunan fungsi nilai ekstrem maksimum minimum kelas 11 SMA"}
+    ],
+    "questions": [
+      {"body": "Turunan dari f(x) = 5x⁴ − 3x + 2 adalah ...", "options": ["20x³−3", "20x³−3x", "20x⁴−3", "5x³−3"], "answer": 0, "explanation": "f'(x)=5·4x³−3·1+0=20x³−3.", "points": 1},
+      {"body": "Nilai f'(2) jika f(x)=x³−4x adalah ...", "options": ["4", "8", "12", "16"], "answer": 1, "explanation": "f'(x)=3x²−4. f'(2)=3(4)−4=12−4=8.", "points": 1},
+      {"body": "Titik kritis f(x)=x²−6x+5 berada di x = ...", "options": ["x=1", "x=3", "x=5", "x=6"], "answer": 1, "explanation": "f'(x)=2x−6=0 → x=3.", "points": 1},
+      {"body": "Gradien garis singgung y=x³−x di titik x=2 adalah ...", "options": ["4", "11", "6", "10"], "answer": 1, "explanation": "y'=3x²−1. Di x=2: 3(4)−1=11.", "points": 2}
+    ]
+  },
+  {
+    "grade": 11,
+    "slug": "integral-tak-tentu",
+    "title": "Integral Tak Tentu",
+    "sort_order": 3,
+    "summary": "Integral adalah operasi kebalikan dari turunan. Integral tak tentu menghasilkan antiturunan (fungsi asalnya) ditambah konstanta C. Integral tentu digunakan untuk menghitung luas daerah di bawah kurva.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menghitung integral tak tentu fungsi aljabar.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung integral tentu dan menggunakannya untuk luas.",
+      "Setelah mempelajari materi ini, kamu dapat menerapkan integral substitusi."
+    ],
+    "content": "## ∫ Integral Tak Tentu\n\n$$\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C \\quad (n \\neq -1)$$\n\n**Sifat:**\n- $\\int k\\,dx = kx + C$\n- $\\int [f(x)+g(x)]\\,dx = \\int f(x)\\,dx + \\int g(x)\\,dx$\n\n**Contoh:**\n$$\\int (3x^2-2x+5)\\,dx = x^3-x^2+5x+C$$\n\n## ∫ Integral Tentu\n\n$$\\int_a^b f(x)\\,dx = F(b)-F(a)$$\n\n**Contoh:**\n$$\\int_1^3 2x\\,dx = [x^2]_1^3 = 9-1 = 8$$\n\n## 🔄 Integral Substitusi\n\nJika ada u=g(x), du=g'(x)dx:\n$$\\int (2x)(x^2+1)^3\\,dx \\xrightarrow{u=x^2+1} \\int u^3\\,du = \\frac{u^4}{4}+C = \\frac{(x^2+1)^4}{4}+C$$\n\n## ✅ Ringkasan\n- Integral ∫xⁿdx = xⁿ⁺¹/(n+1)+C.\n- Integral tentu: F(b)−F(a).\n- Substitusi: ubah variabel untuk menyederhanakan.",
+    "examples": [
+      {"level": "mudah", "problem": "∫(4x³+6x−2)dx = ?", "steps": ["=4x⁴/4+6x²/2−2x+C.", "=x⁴+3x²−2x+C."], "answer": "x⁴ + 3x² − 2x + C", "check": null},
+      {"level": "sedang", "problem": "∫₀² (3x²−1)dx = ?", "steps": ["F(x)=x³−x.", "F(2)−F(0)=(8−2)−(0)=6."], "answer": "6", "check": {"expression": "(2**3-2)-(0**3-0)", "expected": 6}},
+      {"level": "sulit", "problem": "∫ 2x(x²+3)⁴ dx dengan substitusi!", "steps": ["u=x²+3, du=2x dx.", "=∫u⁴du=u⁵/5+C.", "=(x²+3)⁵/5+C."], "answer": "(x²+3)⁵/5 + C", "check": null}
+    ],
+    "common_mistakes": [
+      {"mistake": "Lupa konstanta C pada integral tak tentu.", "fix": "Integral tak tentu SELALU ditambah +C. Tanpa C, jawaban dianggap tidak lengkap."},
+      {"mistake": "∫xⁿdx = (n+1)xⁿ⁺¹+C (kali bukan bagi).", "fix": "∫xⁿdx = xⁿ⁺¹/(n+1)+C. BAGI dengan (n+1), tidak dikali!"}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "integral tak tentu kelas 11 SMA rumus antiturunan"},
+      {"purpose": "contoh-soal", "search_query": "soal integral tentu luas daerah substitusi kelas 11 SMA kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "∫(6x² + 4x − 3)dx = ...", "options": ["2x³+2x²−3x+C", "12x+4+C", "6x³+4x²−3x+C", "2x³+4x²−3x+C"], "answer": 0, "explanation": "=6x³/3+4x²/2−3x+C=2x³+2x²−3x+C.", "points": 1},
+      {"body": "∫₁³ (2x+1)dx = ...", "options": ["8", "10", "12", "14"], "answer": 2, "explanation": "F(x)=x²+x. F(3)−F(1)=(9+3)−(1+1)=12−2=10. Jawab: 10.", "points": 2},
+      {"body": "∫ x·(x²+1)³ dx. Dengan u=x²+1, du=2x dx. Hasilnya = ...", "options": ["(x²+1)⁴/4+C", "(x²+1)⁴/8+C", "(x²+1)⁴/2+C", "(x²+1)³/6+C"], "answer": 1, "explanation": "∫u³·(du/2)=½·u⁴/4+C=(x²+1)⁴/8+C.", "points": 2},
+      {"body": "Jika F'(x)=5x⁴, maka F(x) = ...", "options": ["20x³+C", "x⁵+C", "5x⁵+C", "5x³+C"], "answer": 1, "explanation": "∫5x⁴dx=5x⁵/5+C=x⁵+C.", "points": 1}
+    ]
+  },
+  {
+    "grade": 11,
+    "slug": "matriks",
+    "title": "Matriks",
+    "sort_order": 4,
+    "summary": "Matriks adalah susunan bilangan dalam baris dan kolom. Operasi matriks — penjumlahan, perkalian, dan invers — sangat penting dalam komputasi modern, grafika komputer, dan pemecahan sistem persamaan linear.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat melakukan operasi penjumlahan dan perkalian matriks.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung determinan dan invers matriks 2×2.",
+      "Setelah mempelajari materi ini, kamu dapat menyelesaikan SPLDV menggunakan matriks."
+    ],
+    "content": "## 📊 Matriks\n\n$$A = \\begin{pmatrix}a_{11}&a_{12}\\\\a_{21}&a_{22}\\end{pmatrix}$$\n\n## ➕ Penjumlahan\n\nHanya matriks **berordo sama** yang bisa dijumlah/dikurang.\n$$\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}+\\begin{pmatrix}5&6\\\\7&8\\end{pmatrix}=\\begin{pmatrix}6&8\\\\10&12\\end{pmatrix}$$\n\n## ✖️ Perkalian Matriks\n\nA(m×n) × B(n×p) = C(m×p). Jumlah kolom A = jumlah baris B.\n$$c_{ij}=\\sum_k a_{ik}b_{kj}$$\n\n## 🔢 Determinan & Invers 2×2\n\n$$\\det(A)=ad-bc$$\n$$A^{-1}=\\frac{1}{ad-bc}\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}$$\n\n## ✅ Ringkasan\n- Penjumlahan: suku-suku seposisi.\n- Perkalian: baris × kolom. Tidak komutatif!\n- Invers: ada jika det≠0.",
+    "examples": [
+      {"level": "mudah", "problem": "det(A) jika A=[[3,1],[2,4]]?", "steps": ["det=3×4−1×2=12−2=10."], "answer": "10", "check": {"expression": "3*4-1*2", "expected": 10}},
+      {"level": "sedang", "problem": "Invers dari A=[[2,3],[1,2]]?", "steps": ["det=4−3=1.", "A⁻¹=(1/1)[[2,−3],[−1,2]]=[[2,−3],[−1,2]]."], "answer": "[[2,−3],[−1,2]]", "check": null},
+      {"level": "sulit", "problem": "Perkalian: [[1,2],[3,4]]×[[5,6],[7,8]]?", "steps": ["c₁₁=1×5+2×7=19.", "c₁₂=1×6+2×8=22.", "c₂₁=3×5+4×7=43.", "c₂₂=3×6+4×8=50.", "Hasil: [[19,22],[43,50]]."], "answer": "[[19,22],[43,50]]", "check": {"expression": "1*5+2*7", "expected": 19}}
+    ],
+    "common_mistakes": [
+      {"mistake": "A×B=B×A (perkalian matriks komutatif).", "fix": "Perkalian matriks TIDAK komutatif! AB ≠ BA umumnya."},
+      {"mistake": "Menjumlahkan matriks 2×3 dengan 3×2.", "fix": "Penjumlahan hanya untuk matriks berordo SAMA. 2×3+3×2 tidak bisa!"}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "matriks operasi penjumlahan perkalian determinan invers kelas 11 SMA"},
+      {"purpose": "contoh-soal", "search_query": "soal matriks kelas 11 SMA invers determinan kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "Determinan matriks [[4,2],[3,1]] = ...", "options": ["−2", "2", "10", "−10"], "answer": 0, "explanation": "det=4×1−2×3=4−6=−2.", "points": 1},
+      {"body": "Jika A=[[2,0],[0,3]], maka A⁻¹ = ...", "options": ["[[1/2,0],[0,1/3]]", "[[3,0],[0,2]]", "[[−2,0],[0,−3]]", "[[0,2],[3,0]]"], "answer": 0, "explanation": "det=6. A⁻¹=(1/6)[[3,0],[0,2]]=[[1/2,0],[0,1/3]].", "points": 2},
+      {"body": "Ordo matriks hasil dari (2×3)×(3×4) = ...", "options": ["2×4", "3×3", "2×3", "3×4"], "answer": 0, "explanation": "A(2×3)×B(3×4)=C(2×4). Baris A × Kolom B.", "points": 1},
+      {"body": "[[1,0],[0,1]] adalah matriks ...", "options": ["Nol", "Segitiga", "Identitas", "Simetris"], "answer": 2, "explanation": "[[1,0],[0,1]] adalah matriks identitas (I). A×I=I×A=A.", "points": 1}
+    ]
+  },
+  {
+    "grade": 11,
+    "slug": "vektor",
+    "title": "Vektor",
+    "sort_order": 5,
+    "summary": "Vektor adalah besaran yang memiliki nilai (magnitudo) dan arah. Berbeda dengan skalar yang hanya memiliki nilai, vektor digunakan luas dalam fisika, teknik, dan grafika komputer.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat melakukan operasi penjumlahan dan perkalian skalar vektor.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung panjang (magnitudo) dan sudut antar vektor.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung perkalian titik (dot product) dua vektor."
+    ],
+    "content": "## ➡️ Representasi Vektor\n\nVektor 2D: $\\vec{a}=\\begin{pmatrix}x\\\\y\\end{pmatrix}$ atau $x\\hat{i}+y\\hat{j}$\n\nVektor 3D: $\\vec{a}=\\begin{pmatrix}x\\\\y\\\\z\\end{pmatrix}$\n\n## ➕ Operasi Vektor\n\n$$\\vec{a}\\pm\\vec{b}=\\begin{pmatrix}a_x\\pm b_x\\\\a_y\\pm b_y\\end{pmatrix}$$\n$$k\\vec{a}=\\begin{pmatrix}ka_x\\\\ka_y\\end{pmatrix}$$\n\n## 📏 Magnitudo\n\n$$|\\vec{a}|=\\sqrt{x^2+y^2} \\quad (2D) \\qquad |\\vec{a}|=\\sqrt{x^2+y^2+z^2} \\quad (3D)$$\n\n## · Perkalian Titik (Dot Product)\n\n$$\\vec{a}\\cdot\\vec{b}=a_x b_x+a_y b_y = |\\vec{a}||\\vec{b}|\\cos\\theta$$\n\nSudut: $\\cos\\theta=\\frac{\\vec{a}\\cdot\\vec{b}}{|\\vec{a}||\\vec{b}|}$\n\nJika $\\vec{a}\\cdot\\vec{b}=0$ → **tegak lurus**!\n\n## ✅ Ringkasan\n- Vektor: komponen per komponen.\n- Dot product = 0 → tegak lurus.\n- Sudut antar vektor: gunakan rumus cosinus.",
+    "examples": [
+      {"level": "mudah", "problem": "a⃗=(3,4). Magnitudo?", "steps": ["|a|=√(9+16)=√25=5."], "answer": "|a⃗| = 5", "check": {"expression": "Math.sqrt(9+16)", "expected": 5}},
+      {"level": "sedang", "problem": "a⃗=(2,1,2) dan b⃗=(1,3,−1). a⃗·b⃗?", "steps": ["=2×1+1×3+2×(−1)=2+3−2=3."], "answer": "3", "check": {"expression": "2*1+1*3+2*(-1)", "expected": 3}},
+      {"level": "sulit", "problem": "Sudut antara a⃗=(1,0) dan b⃗=(1,1)?", "steps": ["|a|=1, |b|=√2.", "a·b=1×1+0×1=1.", "cosθ=1/(1×√2)=1/√2.", "θ=45°."], "answer": "θ = 45°", "check": null}
+    ],
+    "common_mistakes": [
+      {"mistake": "Dot product vektor → menghasilkan vektor.", "fix": "Dot product (a·b) menghasilkan SKALAR (bilangan), bukan vektor."},
+      {"mistake": "|a+b|=|a|+|b|.", "fix": "Segitiga: |a+b| ≤ |a|+|b|. Hitung komponen dulu, baru magnitude hasil penjumlahan."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "vektor penjumlahan dot product sudut kelas 11 SMA"},
+      {"purpose": "contoh-soal", "search_query": "soal vektor kelas 11 SMA magnitudo perkalian titik kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "Magnitudo vektor a⃗=(5,12) adalah ...", "options": ["13", "17", "√61", "17,7"], "answer": 0, "explanation": "|a|=√(25+144)=√169=13.", "points": 1},
+      {"body": "Dot product a⃗=(3,−1) dan b⃗=(2,4) = ...", "options": ["2", "−2", "10", "−10"], "answer": 0, "explanation": "a·b=3×2+(−1)×4=6−4=2.", "points": 1},
+      {"body": "Dua vektor tegak lurus jika dot product = ...", "options": ["1", "−1", "0", "∞"], "answer": 2, "explanation": "a⊥b ↔ a·b=0 ↔ cosθ=0 ↔ θ=90°.", "points": 1},
+      {"body": "a⃗=(2,4) dan b⃗=(1,k) tegak lurus. Nilai k = ...", "options": ["k=−2", "k=−½", "k=2", "k=½"], "answer": 1, "explanation": "a·b=0: 2×1+4×k=0 → 2+4k=0 → k=−½.", "points": 2}
+    ]
+  },
+  {
+    "grade": 11,
+    "slug": "kombinatorika-peluang-lanjut",
+    "title": "Kombinatorika dan Peluang Lanjut",
+    "sort_order": 6,
+    "summary": "Kombinatorika mempelajari cara menghitung susunan (permutasi) dan pilihan (kombinasi) objek. Ini menjadi dasar perhitungan peluang yang lebih kompleks, termasuk distribusi binomial.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menghitung permutasi dan kombinasi.",
+      "Setelah mempelajari materi ini, kamu dapat membedakan penggunaan permutasi dan kombinasi.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung peluang menggunakan kombinatorika."
+    ],
+    "content": "## 🔢 Faktorial\n\n$$n! = n \\times (n-1) \\times \\cdots \\times 2 \\times 1 \\qquad 0!=1$$\n\n## 🔀 Permutasi\n\nSusunan r objek dari n objek (**urutan PENTING**):\n$$P(n,r) = \\frac{n!}{(n-r)!}$$\n\n**Contoh:** 3 dari 5 huruf: P(5,3)=5!/2!=60 cara.\n\n## 🤝 Kombinasi\n\nPilihan r objek dari n objek (**urutan TIDAK penting**):\n$$C(n,r) = \\binom{n}{r} = \\frac{n!}{r!(n-r)!}$$\n\n**Contoh:** Pilih 3 dari 5 orang: C(5,3)=10 cara.\n\n## ✅ Ringkasan\n- Permutasi: urutan penting (ABC≠BAC). P=n!/(n-r)!\n- Kombinasi: urutan tidak penting (ABC=BAC). C=n!/(r!(n-r)!)",
+    "examples": [
+      {"level": "mudah", "problem": "C(6,2) = ?", "steps": ["=6!/(2!×4!)=6×5/(2×1)=15."], "answer": "15", "check": {"expression": "(6*5)/(2*1)", "expected": 15}},
+      {"level": "sedang", "problem": "Berapa cara memilih ketua, sekretaris, bendahara dari 8 orang?", "steps": ["Urutan penting (jabatan berbeda) → Permutasi.", "P(8,3)=8!/5!=8×7×6=336."], "answer": "336 cara", "check": {"expression": "8*7*6", "expected": 336}},
+      {"level": "sulit", "problem": "Kantong 5 merah, 4 biru. Ambil 3 bola: peluang 2 merah 1 biru?", "steps": ["Cara ambil 2 merah: C(5,2)=10.", "Cara ambil 1 biru: C(4,1)=4.", "Total cara: 10×4=40.", "Total ambil 3 dari 9: C(9,3)=84.", "P=40/84=10/21."], "answer": "10/21", "check": {"expression": "(10*4)/84", "expected": 0.4762}}
+    ],
+    "common_mistakes": [
+      {"mistake": "Menggunakan kombinasi padahal urutan penting.", "fix": "Tanya: apakah ABC dan BAC dihitung BERBEDA? Ya → permutasi. Tidak → kombinasi."},
+      {"mistake": "P(n,r)=n!/r! (salah penyebut).", "fix": "P(n,r)=n!/(n−r)!. Penyebut: (n−r)!, bukan r!"}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "permutasi kombinasi kelas 11 SMA perbedaan rumus"},
+      {"purpose": "contoh-soal", "search_query": "soal kombinatorika peluang kelas 11 SMA kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "P(5,3) = ...", "options": ["10", "20", "60", "120"], "answer": 2, "explanation": "P(5,3)=5!/2!=120/2=60.", "points": 1},
+      {"body": "C(7,3) = ...", "options": ["21", "35", "42", "210"], "answer": 1, "explanation": "C(7,3)=7!/(3!×4!)=7×6×5/(3×2×1)=210/6=35.", "points": 1},
+      {"body": "Dari 10 siswa dipilih 4 untuk tim debat. Berapa cara pemilihan?", "options": ["210", "840", "5040", "5.040"], "answer": 0, "explanation": "Urutan tidak penting (hanya dipilih, bukan jabatan). C(10,4)=10!/(4!×6!)=210.", "points": 2},
+      {"body": "Password 3 digit dari angka 1−9 tanpa pengulangan. Berapa kemungkinan?", "options": ["27", "84", "504", "729"], "answer": 2, "explanation": "Urutan penting (123≠321). P(9,3)=9×8×7=504.", "points": 2}
+    ]
+  }
+]

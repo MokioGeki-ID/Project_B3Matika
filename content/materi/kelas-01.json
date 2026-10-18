@@ -1,546 +1,210 @@
 [
   {
     "grade": 1,
-    "slug": "bilangan-cacah-sampai-20",
-    "title": "Bilangan Cacah sampai 20",
+    "slug": "bilangan-cacah-hingga-20",
+    "title": "Bilangan Cacah hingga 20",
     "sort_order": 1,
-    "summary": "Bilangan cacah adalah bilangan untuk menghitung benda, dimulai dari 0. Di kelas 1, kita belajar mengenal, membaca, menulis, dan membandingkan bilangan 0 sampai 20.",
+    "summary": "Bilangan cacah adalah bilangan yang kita gunakan untuk menghitung benda sehari-hari, mulai dari 0, 1, 2, 3, dan seterusnya. Di kelas 1, kita belajar mengenal, membaca, menulis, dan membandingkan bilangan dari 0 sampai 20.",
     "objectives": [
-      "Setelah mempelajari materi ini, kamu dapat membaca bilangan 0 sampai 20 dengan benar.",
-      "Setelah mempelajari materi ini, kamu dapat menulis lambang bilangan 0 sampai 20.",
-      "Setelah mempelajari materi ini, kamu dapat membandingkan dua bilangan (lebih besar, lebih kecil, atau sama).",
-      "Setelah mempelajari materi ini, kamu dapat mengurutkan bilangan dari yang terkecil ke terbesar atau sebaliknya."
+      "Setelah mempelajari materi ini, kamu dapat membaca dan menulis bilangan 0 sampai 20.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung benda sampai 20.",
+      "Setelah mempelajari materi ini, kamu dapat membandingkan dua bilangan menggunakan simbol > dan <."
     ],
-    "content": "## 🔢 Apa itu Bilangan Cacah?\n\nBilangan cacah adalah bilangan yang kita pakai untuk **menghitung benda**. Bilangan cacah dimulai dari **nol (0)**.\n\nContoh bilangan cacah: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20.\n\n> Bayangkan kamu menghitung jeruk di atas meja. Kalau tidak ada jeruk, kamu bilang **nol**. Kalau ada satu jeruk, kamu bilang **satu**. Begitu seterusnya!\n\n### Nama Bilangan 1 sampai 20\n\n- 1 = satu\n- 2 = dua\n- 3 = tiga\n- 4 = empat\n- 5 = lima\n- 6 = enam\n- 7 = tujuh\n- 8 = delapan\n- 9 = sembilan\n- 10 = sepuluh\n- 11 = sebelas\n- 12 = dua belas\n- 13 = tiga belas\n- 14 = empat belas\n- 15 = lima belas\n- 16 = enam belas\n- 17 = tujuh belas\n- 18 = delapan belas\n- 19 = sembilan belas\n- 20 = dua puluh\n\n## 📊 Membandingkan Bilangan\n\nUntuk membandingkan dua bilangan, bayangkan **garis bilangan**:\n\n```\n0 - 1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10 - 11 - 12 - 13 - 14 - 15 - 16 - 17 - 18 - 19 - 20\n```\n\n**Aturan mudah:**\n- Bilangan yang di **kanan** lebih **besar**.\n- Bilangan yang di **kiri** lebih **kecil**.\n\n### Tanda Perbandingan\n- **>** artinya lebih besar. Contoh: 12 > 7 (dua belas lebih besar dari tujuh)\n- **<** artinya lebih kecil. Contoh: 5 < 13 (lima lebih kecil dari tiga belas)\n- **=** artinya sama dengan. Contoh: 10 = 10\n\n> Tips: Tanda > dan < seperti mulut buaya yang selalu makan bilangan yang lebih besar! 🐊\n\n## 📋 Mengurutkan Bilangan\n\n**Urutan naik (dari terkecil ke terbesar):**\nContoh: 3, 8, 1, 15, 6 → diurutkan menjadi **1, 3, 6, 8, 15**\n\n**Urutan turun (dari terbesar ke terkecil):**\nContoh: 3, 8, 1, 15, 6 → diurutkan menjadi **15, 8, 6, 3, 1**\n\n## ✅ Ringkasan\n\n- Bilangan cacah dimulai dari 0, 1, 2, 3, ..., 20.\n- Membaca bilangan: hafal namanya dari satu sampai dua puluh.\n- Membandingkan: bilangan yang lebih kanan pada garis bilangan lebih besar.\n- Mengurutkan: susun dari terkecil ke terbesar (naik) atau sebaliknya (turun).",
+    "content": "## 🔢 Bilangan 0 sampai 20\n\nMari kita hafal urutan bilangan:\n\n```\n0  1  2  3  4  5  6  7  8  9  10\n11 12 13 14 15 16 17 18 19 20\n```\n\n### Cara Membaca\n- 11 → sebelas\n- 12 → dua belas\n- 15 → lima belas\n- 20 → dua puluh\n\n## ↔️ Membandingkan Bilangan\n\n- **>** artinya **lebih besar dari**. Contoh: 8 > 5\n- **<** artinya **lebih kecil dari**. Contoh: 3 < 9\n- **=** artinya **sama dengan**. Contoh: 7 = 7\n\n### Tips Mudah\nBayangkan buaya yang selalu membuka mulutnya ke bilangan yang lebih **besar**! 🐊\n\n```\n8 > 5  →  buaya makan 8\n3 < 9  →  buaya makan 9\n```\n\n## ✅ Ringkasan\n- Bilangan cacah: 0, 1, 2, 3, ..., 20.\n- Hitung benda satu per satu, tidak ada yang terlewat.\n- > = lebih besar, < = lebih kecil.",
     "examples": [
       {
         "level": "mudah",
-        "problem": "Berapakah nama bilangan yang ditulis dengan angka 17?",
-        "steps": [
-          "Lihat angka tersebut: 17.",
-          "Angka 17 berada di antara 10 dan 20.",
-          "10 = sepuluh, dan 7 = tujuh, maka 17 = tujuh belas."
-        ],
-        "answer": "Tujuh belas",
+        "problem": "Ada 7 apel di keranjang. Tulis lambang bilangannya!",
+        "steps": ["Hitung: satu, dua, tiga, empat, lima, enam, tujuh.", "Lambang bilangan tujuh adalah 7."],
+        "answer": "7",
         "check": null
       },
       {
         "level": "sedang",
-        "problem": "Manakah yang lebih besar: 14 atau 9?",
-        "steps": [
-          "Bayangkan garis bilangan dari 0 sampai 20.",
-          "14 berada di sebelah kanan 9 pada garis bilangan.",
-          "Bilangan yang lebih kanan artinya lebih besar.",
-          "Jadi 14 lebih besar dari 9, ditulis: 14 > 9."
-        ],
-        "answer": "14 lebih besar dari 9 (14 > 9)",
+        "problem": "Manakah yang lebih besar: 13 atau 9?",
+        "steps": ["Pada garis bilangan, 13 ada di sebelah kanan 9.", "Semakin ke kanan = semakin besar.", "13 > 9."],
+        "answer": "13 lebih besar dari 9 (13 > 9)",
         "check": null
       },
       {
         "level": "sulit",
-        "problem": "Urutkan bilangan-bilangan ini dari terkecil ke terbesar: 11, 4, 18, 7, 14.",
-        "steps": [
-          "Tulis semua bilangan: 11, 4, 18, 7, 14.",
-          "Cari bilangan terkecil dari semua: 4.",
-          "Dari sisa (11, 18, 7, 14), terkecil berikutnya: 7.",
-          "Dari sisa (11, 18, 14), terkecil berikutnya: 11.",
-          "Dari sisa (18, 14), terkecil berikutnya: 14.",
-          "Terakhir: 18.",
-          "Urutan dari terkecil: 4, 7, 11, 14, 18."
-        ],
-        "answer": "4, 7, 11, 14, 18",
+        "problem": "Urutkan dari kecil ke besar: 17, 5, 12, 8, 20.",
+        "steps": ["Cari yang paling kecil: 5.", "Lalu 8, 12, 17, 20.", "Urutan: 5, 8, 12, 17, 20."],
+        "answer": "5, 8, 12, 17, 20",
         "check": null
       }
     ],
     "common_mistakes": [
-      {
-        "mistake": "Membaca 11 sebagai 'satu-satu' atau 'sepuluh satu'.",
-        "fix": "Ingat bahwa 11 dibaca 'sebelas', 12 dibaca 'dua belas', bukan 'satu-dua'."
-      },
-      {
-        "mistake": "Mengurutkan bilangan hanya berdasarkan digit pertama (misalnya menganggap 19 < 8 karena 1 < 8).",
-        "fix": "Bandingkan nilai bilangan secara keseluruhan. 19 lebih besar dari 8 karena 19 ada di sebelah kanan 8 pada garis bilangan."
-      }
+      {"mistake": "Menulis angka terbalik, seperti 6 ditulis sebagai 9.", "fix": "Latihan menulis angka sambil mengikuti arah yang benar. Angka 6 melengkung ke kiri, angka 9 melengkung ke kanan."},
+      {"mistake": "Salah arah simbol: menulis 5 > 8 (padahal 5 lebih kecil).", "fix": "Ingat buaya: mulut buaya selalu menghadap bilangan yang lebih BESAR. 5 < 8 berarti buaya makan 8."}
     ],
     "videos": [
-      {
-        "purpose": "konsep",
-        "search_query": "bilangan cacah 1 sampai 20 kelas 1 SD matematika"
-      },
-      {
-        "purpose": "contoh-soal",
-        "search_query": "membandingkan dan mengurutkan bilangan kelas 1 SD"
-      }
+      {"purpose": "konsep", "search_query": "belajar bilangan 1 sampai 20 kelas 1 SD"},
+      {"purpose": "contoh-soal", "search_query": "membandingkan bilangan kelas 1 SD lebih besar lebih kecil"}
     ],
     "questions": [
-      {
-        "body": "Lambang bilangan 'lima belas' adalah ...",
-        "options": ["13", "14", "15", "16"],
-        "answer": 2,
-        "explanation": "Lima belas ditulis dengan lambang angka 15.",
-        "points": 1
-      },
-      {
-        "body": "Bilangan yang lebih besar antara 8 dan 13 adalah ...",
-        "options": ["8", "13", "Sama besar", "Tidak bisa dibandingkan"],
-        "answer": 1,
-        "explanation": "13 berada di sebelah kanan 8 pada garis bilangan, sehingga 13 lebih besar dari 8.",
-        "points": 1
-      },
-      {
-        "body": "Urutan bilangan dari terkecil ke terbesar: 6, 2, 15, 9, 11 adalah ...",
-        "options": ["15, 11, 9, 6, 2", "2, 6, 9, 11, 15", "6, 2, 9, 11, 15", "2, 9, 6, 11, 15"],
-        "answer": 1,
-        "explanation": "Diurutkan naik: 2, 6, 9, 11, 15.",
-        "points": 2
-      },
-      {
-        "body": "Ibu membeli 12 apel dan 8 jeruk. Buah manakah yang lebih banyak?",
-        "options": ["Jeruk lebih banyak", "Apel lebih banyak", "Sama banyak", "Tidak dapat ditentukan"],
-        "answer": 1,
-        "explanation": "12 > 8, sehingga apel (12 buah) lebih banyak dari jeruk (8 buah).",
-        "points": 1
-      },
-      {
-        "body": "Di antara bilangan 14, 20, 17, yang terbesar adalah ...",
-        "options": ["14", "17", "20", "Sama besar"],
-        "answer": 2,
-        "explanation": "20 adalah bilangan terbesar karena paling jauh ke kanan pada garis bilangan.",
-        "points": 1
-      }
+      {"body": "Bilangan yang tepat setelah 14 adalah ...", "options": ["13", "15", "16", "12"], "answer": 1, "explanation": "Setelah 14 adalah 15. Urutan: ..., 13, 14, 15, 16, ...", "points": 1},
+      {"body": "Tanda yang tepat untuk 9 ... 15 adalah ...", "options": [">", "=", "<", "+"], "answer": 2, "explanation": "9 lebih kecil dari 15, jadi 9 < 15.", "points": 1},
+      {"body": "Bilangan manakah yang paling besar: 11, 7, 19, 14?", "options": ["11", "7", "19", "14"], "answer": 2, "explanation": "Dari keempat bilangan tersebut, 19 adalah yang paling besar.", "points": 1},
+      {"body": "Ada 12 bintang dan 8 bulatan. Berapa banyak lebihnya bintang daripada bulatan?", "options": ["2", "3", "4", "6"], "answer": 2, "explanation": "12 − 8 = 4. Bintang lebih banyak 4.", "points": 2}
     ]
   },
   {
     "grade": 1,
     "slug": "penjumlahan-pengurangan-dasar",
-    "title": "Penjumlahan dan Pengurangan Dasar",
+    "title": "Penjumlahan dan Pengurangan Dasar (sampai 20)",
     "sort_order": 2,
-    "summary": "Penjumlahan berarti menggabungkan dua kumpulan benda, sedangkan pengurangan berarti mengambil sebagian dari suatu kumpulan. Keduanya adalah operasi dasar yang sangat penting dalam matematika.",
+    "summary": "Penjumlahan berarti menggabungkan dua kelompok benda. Pengurangan berarti mengambil sebagian benda dari suatu kelompok. Keduanya adalah dasar dari semua matematika yang akan kita pelajari.",
     "objectives": [
-      "Setelah mempelajari materi ini, kamu dapat menghitung hasil penjumlahan dua bilangan sampai 20.",
-      "Setelah mempelajari materi ini, kamu dapat menghitung hasil pengurangan dua bilangan sampai 20.",
-      "Setelah mempelajari materi ini, kamu dapat menggunakan penjumlahan dan pengurangan untuk memecahkan masalah sehari-hari."
+      "Setelah mempelajari materi ini, kamu dapat menjumlahkan dua bilangan dengan hasil sampai 20.",
+      "Setelah mempelajari materi ini, kamu dapat mengurangkan dua bilangan sampai 20.",
+      "Setelah mempelajari materi ini, kamu dapat memecahkan masalah sederhana menggunakan penjumlahan dan pengurangan."
     ],
-    "content": "## ➕ Penjumlahan\n\nPenjumlahan artinya **menggabungkan** dua kelompok benda.\n\nTanda penjumlahan adalah **+** (plus).\n\n### Cara Menghitung\n\n**Cara 1: Menghitung dengan benda nyata**\nSiapkan kelereng atau biji-bijian. Taruh 5 kelereng di kiri dan 3 kelereng di kanan. Gabungkan, lalu hitung semua: 1, 2, 3, 4, 5, 6, 7, 8. Jadi **5 + 3 = 8**.\n\n**Cara 2: Mulai dari angka yang lebih besar**\nUntuk 6 + 4, mulai dari 6, lalu hitung maju 4 langkah: 7, 8, 9, 10. Jadi **6 + 4 = 10**.\n\n### Contoh Penjumlahan\n- 3 + 5 = 8\n- 7 + 6 = 13\n- 9 + 8 = 17\n- 12 + 5 = 17\n\n> Di warung, Budi membeli 4 kerupuk dan 6 permen. Budi membeli **4 + 6 = 10** jajanan.\n\n## ➖ Pengurangan\n\nPengurangan artinya **mengambil** sebagian dari suatu kumpulan.\n\nTanda pengurangan adalah **-** (minus).\n\n### Cara Menghitung\n\n**Cara 1: Hitung mundur**\nUntuk 10 - 4, mulai dari 10, lalu hitung mundur 4 langkah: 9, 8, 7, 6. Jadi **10 - 4 = 6**.\n\n**Cara 2: Gunakan jari**\nTunjukkan 8 jari, lalu tutup 5 jari. Hitung jari yang masih terbuka: ada **3** jari. Jadi **8 - 5 = 3**.\n\n### Contoh Pengurangan\n- 10 - 3 = 7\n- 14 - 6 = 8\n- 18 - 9 = 9\n- 20 - 7 = 13\n\n> Dina punya 15 permen. Ia memberikan 6 permen kepada adiknya. Permen Dina sekarang: **15 - 6 = 9**.\n\n## 🔄 Hubungan Penjumlahan dan Pengurangan\n\nPenjumlahan dan pengurangan saling berhubungan:\n- Jika **5 + 8 = 13**, maka **13 - 8 = 5** dan **13 - 5 = 8**.\n\nIni sangat berguna untuk mengecek jawaban!\n\n## ✅ Ringkasan\n\n- Penjumlahan (+): menggabungkan, hasilnya lebih besar.\n- Pengurangan (-): mengambil, hasilnya lebih kecil.\n- Mulai dari angka besar saat menjumlah; hitung mundur saat mengurangi.\n- Penjumlahan dan pengurangan saling berkebalikan.",
+    "content": "## ➕ Penjumlahan\n\nPenjumlahan adalah **menggabungkan** dua kelompok benda.\n\n**Simbol: +** (tambah)\n\n### Contoh:\n- 3 + 5 = 8 (tiga ditambah lima sama dengan delapan)\n- 7 + 6 = 13\n- 9 + 9 = 18\n\n**Cara hitung menggunakan jari:**\nTaruh angka besar di kepala, lalu hitung naik dengan jari.\n7 + 4: mulai dari 7, lalu hitung 4 jari: 8, 9, 10, 11. Hasilnya 11!\n\n## ➖ Pengurangan\n\nPengurangan adalah **mengambil** sebagian dari kelompok.\n\n**Simbol: −** (kurang)\n\n### Contoh:\n- 10 − 4 = 6 (sepuluh dikurangi empat sama dengan enam)\n- 15 − 7 = 8\n- 20 − 9 = 11\n\n**Cara hitung menggunakan jari:**\nMulai dari angka besar, lalu hitung turun.\n12 − 5: mulai dari 12, hitung mundur 5: 11, 10, 9, 8, 7. Hasilnya 7!\n\n## 🔄 Hubungan Penjumlahan dan Pengurangan\n\nPenjumlahan dan pengurangan saling berkebalikan:\n- Jika 6 + 7 = 13, maka 13 − 7 = 6 dan 13 − 6 = 7.\n\n## ✅ Ringkasan\n- Penjumlahan (+): gabungkan, hasilnya lebih besar.\n- Pengurangan (−): ambil sebagian, hasilnya lebih kecil.\n- Keduanya saling kebalikan.",
     "examples": [
-      {
-        "level": "mudah",
-        "problem": "Berapa hasil dari 7 + 5?",
-        "steps": [
-          "Mulai dari angka yang lebih besar: 7.",
-          "Hitung maju 5 langkah: 8, 9, 10, 11, 12.",
-          "Hasil: 7 + 5 = 12."
-        ],
-        "answer": "12",
-        "check": { "expression": "7 + 5", "expected": 12 }
-      },
-      {
-        "level": "sedang",
-        "problem": "Raka punya 16 buku. Ia memberikan 7 buku ke perpustakaan. Berapa buku Raka sekarang?",
-        "steps": [
-          "Diketahui: Raka punya 16 buku, diberikan 7 buku.",
-          "Operasi: pengurangan karena ada yang diambil.",
-          "Hitung: 16 - 7.",
-          "Mulai dari 16, hitung mundur 7 langkah: 15, 14, 13, 12, 11, 10, 9.",
-          "Hasil: 16 - 7 = 9."
-        ],
-        "answer": "9 buku",
-        "check": { "expression": "16 - 7", "expected": 9 }
-      },
-      {
-        "level": "sulit",
-        "problem": "Ani punya 12 kelereng. Budi memberi 6 kelereng, lalu Ani memberikan 5 kelereng kepada adiknya. Sekarang kelereng Ani ada berapa?",
-        "steps": [
-          "Diketahui: Ani mulai dengan 12 kelereng.",
-          "Budi memberi 6: 12 + 6 = 18 kelereng.",
-          "Ani memberikan 5: 18 - 5 = 13 kelereng.",
-          "Jadi kelereng Ani sekarang ada 13."
-        ],
-        "answer": "13 kelereng",
-        "check": { "expression": "12 + 6 - 5", "expected": 13 }
-      }
+      {"level": "mudah", "problem": "Hitung: 6 + 8 = ?", "steps": ["Mulai dari 6, hitung maju 8 langkah.", "7, 8, 9, 10, 11, 12, 13, 14.", "6 + 8 = 14."], "answer": "14", "check": {"expression": "6 + 8", "expected": 14}},
+      {"level": "sedang", "problem": "Ada 15 permen. Dita makan 7 permen. Sisa permen ada berapa?", "steps": ["15 − 7 = ?", "Mulai dari 15, mundur 7: 14,13,12,11,10,9,8.", "Sisa permen: 8."], "answer": "8 permen", "check": {"expression": "15 - 7", "expected": 8}},
+      {"level": "sulit", "problem": "Ibu membeli 9 telur pagi dan 8 telur sore. Dipakai memasak 11 telur. Sisa telur berapa?", "steps": ["Total telur: 9 + 8 = 17.", "Dipakai: 11. Sisa: 17 − 11 = 6."], "answer": "6 telur", "check": {"expression": "9 + 8 - 11", "expected": 6}}
     ],
     "common_mistakes": [
-      {
-        "mistake": "Menghitung maju mulai dari 1 (bukan dari angka besar), sehingga lambat dan mudah salah.",
-        "fix": "Selalu mulai dari angka yang lebih besar. Untuk 4 + 9, mulai dari 9 lalu hitung maju 4."
-      },
-      {
-        "mistake": "Salah menentukan operasi: menjumlah padahal harus mengurangi, atau sebaliknya.",
-        "fix": "Baca soal cerita dengan teliti. Kata 'diberikan', 'dimakan', 'diambil' berarti pengurangan. Kata 'ditambah', 'mendapat lagi', 'digabungkan' berarti penjumlahan."
-      }
+      {"mistake": "Menghitung 7 + 5 = 11 karena menghitung angka pertama sebagai langkah pertama.", "fix": "Mulai menghitung dari angka pertama, tapi langkah pertama adalah angka berikutnya. 7 + 5: langkah dari 7 → 8(1), 9(2), 10(3), 11(4), 12(5). Hasilnya 12."},
+      {"mistake": "Salah dalam pengurangan jika minuend lebih kecil: menulis 4 − 9 = 5.", "fix": "Di kelas 1, kita belum belajar bilangan negatif. Pastikan bilangan yang dikurangi selalu LEBIH BESAR dari pengurang."}
     ],
     "videos": [
-      {
-        "purpose": "konsep",
-        "search_query": "penjumlahan dan pengurangan kelas 1 SD matematika dasar"
-      },
-      {
-        "purpose": "contoh-soal",
-        "search_query": "soal cerita penjumlahan pengurangan kelas 1 SD"
-      }
+      {"purpose": "konsep", "search_query": "belajar penjumlahan pengurangan kelas 1 SD sampai 20"},
+      {"purpose": "contoh-soal", "search_query": "soal cerita penjumlahan pengurangan kelas 1 SD"}
+    ],
+    "questions": [
+      {"body": "Hasil dari 8 + 7 adalah ...", "options": ["13", "14", "15", "16"], "answer": 2, "explanation": "8 + 7 = 15. Hitung dari 8: 9,10,11,12,13,14,15 (7 langkah).", "points": 1},
+      {"body": "Hasil dari 16 − 9 adalah ...", "options": ["5", "6", "7", "8"], "answer": 2, "explanation": "16 − 9 = 7. Hitung mundur dari 16 sebanyak 9 langkah.", "points": 1},
+      {"body": "Rina punya 5 buku. Ibu memberi 8 buku lagi. Buku Rina sekarang ada ...", "options": ["10", "11", "12", "13"], "answer": 3, "explanation": "5 + 8 = 13 buku.", "points": 1},
+      {"body": "Di pohon ada 20 burung. Terbang pergi 14 ekor. Sisa burung di pohon ada ...", "options": ["4", "5", "6", "7"], "answer": 2, "explanation": "20 − 14 = 6 burung.", "points": 2}
     ]
   },
   {
     "grade": 1,
-    "slug": "nilai-tempat-puluhan-satuan",
-    "title": "Pengenalan Nilai Tempat: Puluhan dan Satuan",
+    "slug": "nilai-tempat-satuan-puluhan",
+    "title": "Nilai Tempat: Satuan dan Puluhan",
     "sort_order": 3,
-    "summary": "Nilai tempat menjelaskan arti setiap angka dalam suatu bilangan berdasarkan posisinya. Pada bilangan dua digit, posisi kanan adalah satuan dan posisi kiri adalah puluhan.",
+    "summary": "Nilai tempat adalah posisi suatu angka dalam sebuah bilangan yang menentukan nilainya. Angka di tempat satuan bernilai satu-satuan, sedangkan angka di tempat puluhan bernilai sepuluhan.",
     "objectives": [
-      "Setelah mempelajari materi ini, kamu dapat menyebut nilai tempat satuan dan puluhan dari sebuah bilangan.",
+      "Setelah mempelajari materi ini, kamu dapat menentukan nilai tempat satuan dan puluhan suatu bilangan.",
       "Setelah mempelajari materi ini, kamu dapat menguraikan bilangan dua digit menjadi puluhan dan satuan.",
-      "Setelah mempelajari materi ini, kamu dapat menyusun bilangan dari komponen puluhan dan satuan."
+      "Setelah mempelajari materi ini, kamu dapat membandingkan bilangan menggunakan nilai tempat."
     ],
-    "content": "## 🏠 Apa itu Nilai Tempat?\n\nSetiap angka dalam bilangan memiliki **tempat** (posisi) yang menentukan nilainya.\n\nUntuk bilangan 1 sampai 20:\n- Posisi **kanan** = **satuan** (menunjukkan berapa biji)\n- Posisi **kiri** = **puluhan** (menunjukkan berapa puluh)\n\n> Bayangkan seperti rumah berlantai dua. Lantai bawah adalah satuan (1-9), lantai atas adalah puluhan (10, 20, 30...).\n\n## 📦 Cara Membaca Nilai Tempat\n\nAmbil bilangan **17**:\n\n```\nAngka:      1    7\nTempat:  Puluhan  Satuan\nNilai:     10   + 7  = 17\n```\n\n- Angka **1** berada di tempat **puluhan** → nilainya **10**\n- Angka **7** berada di tempat **satuan** → nilainya **7**\n- Jadi 17 = 10 + 7\n\n### Contoh Lainnya\n\n- **13**: puluhan = 1 (nilai 10), satuan = 3 → 13 = **10 + 3**\n- **20**: puluhan = 2 (nilai 20), satuan = 0 → 20 = **20 + 0**\n- **5**: hanya ada satuan = 5 (tidak ada puluhan) → 5 = **0 + 5**\n\n## 🧮 Membuat Bilangan dari Puluhan dan Satuan\n\nJika ada **1 puluhan** dan **4 satuan**, bilangan apa itu?\n- 1 puluhan = 10\n- 4 satuan = 4\n- Digabung: 10 + 4 = **14**\n\nJika ada **2 puluhan** dan **0 satuan** → 20 + 0 = **20**\n\n## ✅ Ringkasan\n\n- Satuan: posisi paling kanan, menunjukkan sisa setelah puluhan.\n- Puluhan: posisi kedua dari kanan, setiap 1 puluhan = 10 satuan.\n- Cara menguraikan: pisahkan angka masing-masing sesuai tempatnya.",
+    "content": "## 📍 Nilai Tempat\n\nSetiap angka dalam bilangan punya **tempat** yang menentukan **nilainya**.\n\n```\nBilangan:  1  7\nTempat:   Puluhan Satuan\nNilai:    10   +   7  = 17\n```\n\n### Contoh:\n\n| Bilangan | Puluhan | Satuan |\n|----------|---------|--------|\n| 35 | 3 (= 30) | 5 (= 5) |\n| 14 | 1 (= 10) | 4 (= 4) |\n| 20 | 2 (= 20) | 0 (= 0) |\n\n## 🧱 Cara Memahami dengan Balok Satuan\n\nBayangkan **batang** = 10 satuan, **kubus kecil** = 1 satuan.\n\n17 = 1 batang + 7 kubus kecil = **1 puluhan + 7 satuan**\n\n## ✅ Ringkasan\n- Satuan: angka paling kanan. Nilainya = angka itu sendiri.\n- Puluhan: angka kedua dari kanan. Nilainya = angka × 10.",
     "examples": [
-      {
-        "level": "mudah",
-        "problem": "Angka berapa yang ada di tempat satuan pada bilangan 15?",
-        "steps": [
-          "Tulis bilangan 15: angka 1 di kiri, angka 5 di kanan.",
-          "Tempat kanan = satuan.",
-          "Angka di tempat satuan adalah 5."
-        ],
-        "answer": "5",
-        "check": null
-      },
-      {
-        "level": "sedang",
-        "problem": "Uraikan bilangan 18 menjadi puluhan dan satuan!",
-        "steps": [
-          "Tulis bilangan 18.",
-          "Angka 1 di tempat puluhan: nilainya 10.",
-          "Angka 8 di tempat satuan: nilainya 8.",
-          "Jadi 18 = 10 + 8."
-        ],
-        "answer": "18 = 10 + 8 (1 puluhan dan 8 satuan)",
-        "check": null
-      },
-      {
-        "level": "sulit",
-        "problem": "Ada 1 ikat pensil (isinya 10 batang) dan 6 pensil lepas. Berapa jumlah pensil seluruhnya? Tulis dalam bentuk puluhan dan satuan!",
-        "steps": [
-          "1 ikat = 1 puluhan = 10 pensil.",
-          "6 pensil lepas = 6 satuan.",
-          "Total: 10 + 6 = 16 pensil.",
-          "Nilai tempat: 1 di puluhan (nilai 10), 6 di satuan (nilai 6)."
-        ],
-        "answer": "16 pensil = 1 puluhan + 6 satuan",
-        "check": { "expression": "10 + 6", "expected": 16 }
-      }
+      {"level": "mudah", "problem": "Berapa nilai digit 3 pada bilangan 37?", "steps": ["Angka 3 ada di tempat puluhan.", "Nilai = 3 × 10 = 30."], "answer": "30", "check": {"expression": "3 * 10", "expected": 30}},
+      {"level": "sedang", "problem": "Uraikan bilangan 58 menjadi puluhan dan satuan!", "steps": ["Digit puluhan: 5, nilainya 50.", "Digit satuan: 8, nilainya 8.", "58 = 50 + 8."], "answer": "5 puluhan + 8 satuan = 50 + 8", "check": {"expression": "50 + 8", "expected": 58}},
+      {"level": "sulit", "problem": "Bilangan mana yang lebih besar: 47 atau 74? Jelaskan dengan nilai tempat!", "steps": ["47: puluhan=4, satuan=7.", "74: puluhan=7, satuan=4.", "Bandingkan puluhan: 7 > 4.", "74 > 47."], "answer": "74 lebih besar karena puluhan 7 > 4", "check": null}
     ],
     "common_mistakes": [
-      {
-        "mistake": "Menukar posisi puluhan dan satuan, misalnya menganggap angka kiri adalah satuan.",
-        "fix": "Ingat: selalu mulai membaca nilai tempat dari kanan. Kanan = satuan, satu langkah ke kiri = puluhan."
-      },
-      {
-        "mistake": "Menganggap nilai angka sama di mana pun ia berada (misalnya: angka 1 di '13' dianggap bernilai 1, bukan 10).",
-        "fix": "Nilai angka tergantung tempatnya. Angka 1 di tempat puluhan bernilai 10, bukan 1."
-      }
+      {"mistake": "Mengira nilai digit 5 pada 53 adalah 5 (bukan 50).", "fix": "Nilai digit tergantung tempatnya. Angka 5 di tempat puluhan bernilai 5 × 10 = 50, bukan 5."},
+      {"mistake": "Menulis puluhan dan satuan terbalik: mengira 47 = 4 satuan + 7 puluhan.", "fix": "Digit paling kanan selalu satuan, digit di sebelah kirinya puluhan. 47 = 4 puluhan + 7 satuan."}
     ],
     "videos": [
-      {
-        "purpose": "konsep",
-        "search_query": "nilai tempat satuan puluhan kelas 1 SD matematika"
-      },
-      {
-        "purpose": "contoh-soal",
-        "search_query": "latihan soal nilai tempat puluhan satuan kelas 1"
-      }
+      {"purpose": "konsep", "search_query": "nilai tempat satuan puluhan kelas 1 2 SD"},
+      {"purpose": "contoh-soal", "search_query": "soal nilai tempat kelas 1 SD matematika"}
     ],
     "questions": [
-      {
-        "body": "Pada bilangan 14, angka di tempat satuan adalah ...",
-        "options": ["1", "4", "10", "14"],
-        "answer": 1,
-        "explanation": "Angka 4 berada di posisi kanan (satuan). Angka 1 berada di tempat puluhan (nilainya 10).",
-        "points": 1
-      },
-      {
-        "body": "Bilangan 19 terdiri dari ... puluhan dan ... satuan.",
-        "options": ["9 puluhan dan 1 satuan", "1 puluhan dan 9 satuan", "19 puluhan dan 0 satuan", "0 puluhan dan 19 satuan"],
-        "answer": 1,
-        "explanation": "19 = 10 + 9, sehingga ada 1 puluhan dan 9 satuan.",
-        "points": 1
-      },
-      {
-        "body": "Jika ada 1 puluhan dan 7 satuan, bilangan yang terbentuk adalah ...",
-        "options": ["7", "10", "17", "71"],
-        "answer": 2,
-        "explanation": "1 puluhan = 10, ditambah 7 satuan = 17.",
-        "points": 1
-      },
-      {
-        "body": "Pak Andi memiliki 1 pak permen (isi 10 buah) dan 3 permen lepas. Berapa total permen Pak Andi?",
-        "options": ["3", "10", "13", "31"],
-        "answer": 2,
-        "explanation": "1 pak = 10, ditambah 3 = 13 permen.",
-        "points": 2
-      },
-      {
-        "body": "Nilai angka 2 pada bilangan 20 adalah ...",
-        "options": ["2", "10", "20", "22"],
-        "answer": 2,
-        "explanation": "Angka 2 berada di tempat puluhan. Nilainya 2 × 10 = 20.",
-        "points": 2
-      }
+      {"body": "Angka 6 pada bilangan 64 menempati posisi ...", "options": ["Satuan", "Puluhan", "Ratusan", "Ribuan"], "answer": 1, "explanation": "64: angka 6 ada di posisi kedua dari kanan = puluhan.", "points": 1},
+      {"body": "Nilai digit 8 pada bilangan 89 adalah ...", "options": ["8", "9", "80", "90"], "answer": 2, "explanation": "Angka 8 ada di tempat puluhan, nilainya 8 × 10 = 80.", "points": 1},
+      {"body": "Bilangan yang terdiri dari 4 puluhan dan 3 satuan adalah ...", "options": ["34", "43", "430", "304"], "answer": 1, "explanation": "4 puluhan = 40, 3 satuan = 3. 40 + 3 = 43.", "points": 1},
+      {"body": "Selisih nilai puluhan dan satuan pada bilangan 75 adalah ...", "options": ["2", "65", "7", "5"], "answer": 1, "explanation": "Nilai puluhan: 70. Nilai satuan: 5. Selisih: 70 − 5 = 65.", "points": 2}
     ]
   },
   {
     "grade": 1,
-    "slug": "bangun-datar-bangun-ruang-sederhana",
-    "title": "Pengenalan Bangun Datar dan Bangun Ruang Sederhana",
+    "slug": "mengenal-bangun-datar-ruang",
+    "title": "Mengenal Bangun Datar dan Bangun Ruang",
     "sort_order": 4,
-    "summary": "Bangun datar adalah bentuk yang rata dan bisa digambar di kertas, seperti lingkaran, segitiga, dan persegi. Bangun ruang adalah bentuk tiga dimensi yang bisa dipegang, seperti bola, kubus, dan balok.",
+    "summary": "Bangun datar adalah bentuk yang rata seperti gambar di kertas: lingkaran, segitiga, persegi. Bangun ruang adalah bentuk tiga dimensi yang bisa kita pegang: bola, kubus, balok.",
     "objectives": [
-      "Setelah mempelajari materi ini, kamu dapat menyebutkan nama-nama bangun datar sederhana dan ciri-cirinya.",
-      "Setelah mempelajari materi ini, kamu dapat menyebutkan nama-nama bangun ruang sederhana dan contohnya dalam kehidupan sehari-hari.",
-      "Setelah mempelajari materi ini, kamu dapat membedakan bangun datar dan bangun ruang."
+      "Setelah mempelajari materi ini, kamu dapat mengenali dan menyebutkan nama bangun datar: lingkaran, segitiga, persegi, dan persegi panjang.",
+      "Setelah mempelajari materi ini, kamu dapat mengenali dan menyebutkan nama bangun ruang: bola, kubus, balok, dan tabung.",
+      "Setelah mempelajari materi ini, kamu dapat menghubungkan benda sehari-hari dengan bangun ruang yang bersesuaian."
     ],
-    "content": "## 🔷 Bangun Datar\n\nBangun datar adalah bentuk yang **rata** — seperti gambar di kertas. Bangun datar punya **sisi** (garis pinggirnya) dan **sudut** (pojoknya).\n\n### Persegi\n- Punya **4 sisi** sama panjang.\n- Punya **4 sudut** yang sama (siku-siku).\n- Contoh: ubin lantai, kue brownis kotak.\n\n### Persegi Panjang\n- Punya **4 sisi** (2 pasang sisi yang sama panjang).\n- Punya **4 sudut** siku-siku.\n- Lebih panjang di satu arah.\n- Contoh: pintu, buku, papan tulis.\n\n### Segitiga\n- Punya **3 sisi** dan **3 sudut**.\n- Contoh: atap rumah, pizza segitiga, tanda peringatan.\n\n### Lingkaran\n- **Tidak punya sisi lurus** dan **tidak punya sudut**.\n- Semua titik di pinggirnya sama jauh dari pusat.\n- Contoh: roda sepeda, koin uang logam, piring.\n\n> Lihat di sekitarmu! Jendela biasanya berbentuk persegi panjang. Jam dinding berbentuk lingkaran. Kue ulang tahun kadang berbentuk segitiga.\n\n## 📦 Bangun Ruang Sederhana\n\nBangun ruang punya **tiga dimensi**: panjang, lebar, dan tinggi. Kita bisa memegangnya!\n\n### Bola\n- Berbentuk **bulat penuh** ke semua arah.\n- Tidak punya sudut.\n- Contoh: bola sepak, jeruk, kelereng.\n\n### Kubus\n- Punya **6 sisi persegi** sama besar.\n- Punya **8 sudut** dan **12 rusuk**.\n- Contoh: dadu, kotak hadiah berbentuk kubus.\n\n### Balok\n- Seperti kubus tapi sisinya bisa berbeda ukuran.\n- Punya **6 sisi persegi panjang**.\n- Contoh: kotak susu, buku tebal, lemari.\n\n### Tabung\n- Seperti kaleng — atasnya dan bawahnya **lingkaran**.\n- Tidak punya sudut.\n- Contoh: kaleng minuman, drum, lilin.\n\n### Kerucut\n- Alasnya **lingkaran**, ujung atasnya **runcing**.\n- Contoh: topi ulang tahun, es krim cone.\n\n## ✅ Ringkasan\n\n- Bangun datar: 2D, bisa digambar (persegi, persegi panjang, segitiga, lingkaran).\n- Bangun ruang: 3D, bisa dipegang (bola, kubus, balok, tabung, kerucut).\n- Ciri penting: sisi, sudut, dan rusuk.",
+    "content": "## 📐 Bangun Datar\n\nBangun datar adalah bentuk yang **datar** (2 dimensi).\n\n| Nama | Ciri | Contoh |\n|------|------|--------|\n| **Lingkaran** | Tidak bersudut, bulat sempurna | Uang koin, roda |\n| **Segitiga** | 3 sisi, 3 sudut | Tanda peringatan jalan, atap rumah |\n| **Persegi** | 4 sisi sama panjang, 4 sudut | Ubin lantai, papan catur |\n| **Persegi panjang** | 2 pasang sisi sama, 4 sudut | Pintu, buku tulis |\n\n## 📦 Bangun Ruang\n\nBangun ruang adalah bentuk **tiga dimensi** yang punya volume.\n\n| Nama | Ciri | Contoh |\n|------|------|--------|\n| **Bola** | Bulat sempurna, tidak ada sudut | Bola sepak, jeruk |\n| **Kubus** | 6 sisi persegi sama besar | Dadu, es batu |\n| **Balok** | 6 sisi persegi panjang | Kotak sepatu, lemari |\n| **Tabung** | 2 lingkaran + sisi selimut | Kaleng susu, gelas |\n\n## ✅ Ringkasan\n- Bangun datar: 2 dimensi (panjang dan lebar).\n- Bangun ruang: 3 dimensi (panjang, lebar, dan tinggi).",
     "examples": [
-      {
-        "level": "mudah",
-        "problem": "Bangun datar apa yang punya 3 sisi dan 3 sudut?",
-        "steps": [
-          "Ingat ciri-ciri bangun datar: persegi (4 sisi), persegi panjang (4 sisi), segitiga (3 sisi), lingkaran (0 sisi).",
-          "Bangun dengan 3 sisi adalah segitiga.",
-          "Segitiga juga punya 3 sudut."
-        ],
-        "answer": "Segitiga",
-        "check": null
-      },
-      {
-        "level": "sedang",
-        "problem": "Beni punya kotak pensil berbentuk balok. Apa perbedaan balok dengan kubus?",
-        "steps": [
-          "Kubus: semua 6 sisinya berbentuk persegi yang sama besar.",
-          "Balok: 6 sisinya berbentuk persegi panjang, boleh berbeda ukuran.",
-          "Kotak pensil lebih panjang di satu arah → itu tanda balok.",
-          "Perbedaan: pada kubus semua sisi sama besar, pada balok sisi bisa berbeda."
-        ],
-        "answer": "Balok memiliki sisi-sisi yang bisa berbeda ukuran, sedangkan kubus semua sisinya sama besar.",
-        "check": null
-      },
-      {
-        "level": "sulit",
-        "problem": "Sebutkan 2 benda di dapur yang berbentuk tabung dan jelaskan mengapa termasuk tabung!",
-        "steps": [
-          "Ingat ciri tabung: alas dan tutup berbentuk lingkaran, sisi samping seperti selimut.",
-          "Contoh benda di dapur: kaleng susu dan gelas minum.",
-          "Kaleng susu: alasnya lingkaran, tutupnya lingkaran, sisi luarnya melengkung seperti selimut → tabung.",
-          "Gelas minum: alasnya lingkaran, ujung atasnya lingkaran, sisi luarnya melengkung → tabung."
-        ],
-        "answer": "Kaleng susu dan gelas minum, keduanya punya alas dan tutup berbentuk lingkaran.",
-        "check": null
-      }
+      {"level": "mudah", "problem": "Benda apakah yang berbentuk bola?", "steps": ["Bola: bulat sempurna, tidak ada sisi datar.", "Contoh: bola sepak, bola tenis, buah semangka."], "answer": "Bola sepak, buah jeruk", "check": null},
+      {"level": "sedang", "problem": "Apa perbedaan persegi dan persegi panjang?", "steps": ["Persegi: SEMUA sisi sama panjang.", "Persegi panjang: hanya sisi yang BERHADAPAN sama panjang."], "answer": "Persegi: semua sisi sama. Persegi panjang: sisi berhadapan sama.", "check": null},
+      {"level": "sulit", "problem": "Sebutkan 2 benda di rumahmu yang berbentuk balok!", "steps": ["Ciri balok: 6 sisi persegi panjang, seperti kotak.", "Contoh: kotak sepatu, lemari buku, kulkas, bata merah."], "answer": "Kotak sepatu, lemari buku (atau benda serupa)", "check": null}
     ],
     "common_mistakes": [
-      {
-        "mistake": "Menyebut balok sebagai kubus hanya karena keduanya kotak.",
-        "fix": "Periksa sisinya: kalau semua 6 sisi sama besar (persegi), itu kubus. Kalau ada sisi berbeda, itu balok."
-      },
-      {
-        "mistake": "Menganggap lingkaran punya sudut karena 'pojok' terlihat saat menggambar.",
-        "fix": "Lingkaran sejati tidak punya sudut. Garis pinggirnya melengkung penuh tanpa ada pojok."
-      }
+      {"mistake": "Mengira persegi dan kubus adalah hal yang sama.", "fix": "Persegi = bangun DATAR (2D, seperti gambar). Kubus = bangun RUANG (3D, punya isi). Kubus punya 6 sisi persegi."},
+      {"mistake": "Mengira lingkaran memiliki sudut.", "fix": "Lingkaran tidak memiliki sudut sama sekali. Bentuknya melengkung sempurna sepanjang kelilingnya."}
     ],
     "videos": [
-      {
-        "purpose": "konsep",
-        "search_query": "mengenal bangun datar dan bangun ruang kelas 1 SD"
-      },
-      {
-        "purpose": "contoh-soal",
-        "search_query": "soal bangun datar bangun ruang kelas 1 SD matematika"
-      }
-    ]
-  },
-  {
-    "grade": 1,
-    "slug": "pengukuran-satuan-tidak-baku",
-    "title": "Pengukuran Waktu dan Panjang dengan Satuan Tidak Baku",
-    "sort_order": 5,
-    "summary": "Sebelum mengenal penggaris dan meter, manusia mengukur panjang menggunakan anggota tubuh seperti jengkal, hasta, dan langkah. Pengukuran seperti ini disebut satuan tidak baku.",
-    "objectives": [
-      "Setelah mempelajari materi ini, kamu dapat mengukur panjang benda menggunakan satuan tidak baku (jengkal, hasta, langkah).",
-      "Setelah mempelajari materi ini, kamu dapat membandingkan panjang dua benda menggunakan satuan tidak baku.",
-      "Setelah mempelajari materi ini, kamu dapat menyebutkan urutan waktu dalam sehari (pagi, siang, sore, malam)."
-    ],
-    "content": "## 📏 Mengukur Panjang dengan Satuan Tidak Baku\n\nSatuan tidak baku adalah cara mengukur menggunakan benda-benda di sekitar kita atau bagian tubuh kita. Hasilnya berbeda-beda tergantung siapa yang mengukur.\n\n### Satuan Tubuh yang Sering Dipakai\n\n**Jengkal**: jarak dari ujung jempol ke ujung kelingking saat tangan dibuka lebar.\n\n**Hasta**: jarak dari siku sampai ujung jari tengah.\n\n**Langkah**: jarak satu langkah kaki saat berjalan biasa.\n\n**Depa**: jarak ujung jari tangan kanan ke ujung jari tangan kiri saat kedua tangan direntangkan.\n\n> Coba ukur mejamu dengan jengkal! Letakkan jempol di ujung meja, rentangkan tangan, tandai ujung kelingking. Itu satu jengkal. Ulangi sampai ujung meja yang lain. Hitunglah berapa jengkal panjang mejamu.\n\n### Benda Lain sebagai Alat Ukur\n\nSelain bagian tubuh, kita juga bisa memakai:\n- **Penghapus**: berapa penghapus panjang buku?\n- **Buku**: berapa buku tinggi almari?\n- **Batang korek api**: berapa batang panjang pensil?\n\n### Contoh Pengukuran\n\nPanjang meja Rina = 4 jengkal Rina.\nPanjang meja Rina juga = 5 jengkal Beni (karena jengkal Beni lebih kecil).\n\n> Inilah kelemahan satuan tidak baku: hasilnya berbeda-beda tergantung ukuran alat ukur! Itulah mengapa kita butuh satuan baku seperti centimeter (cm) dan meter (m).\n\n## 🕐 Mengenal Waktu dalam Sehari\n\nSehari = 24 jam. Kita membagi waktu menjadi:\n\n- **Pagi** (kira-kira pukul 05.00 – 11.00): matahari terbit, sarapan, berangkat sekolah.\n- **Siang** (kira-kira pukul 11.00 – 15.00): matahari di atas kepala, panas, makan siang.\n- **Sore** (kira-kira pukul 15.00 – 18.00): angin sejuk, bermain, matahari mulai turun.\n- **Malam** (kira-kira pukul 18.00 – 05.00): gelap, bintang muncul, tidur.\n\n### Urutan Kegiatan Sehari\n\n- Bangun tidur → Pagi\n- Sarapan → Pagi\n- Belajar di sekolah → Pagi – Siang\n- Makan siang → Siang\n- Bermain → Sore\n- Makan malam → Malam\n- Tidur → Malam\n\n## ✅ Ringkasan\n\n- Satuan tidak baku: jengkal, hasta, langkah, depa — hasilnya berbeda tiap orang.\n- Gunakan satuan tidak baku untuk perbandingan sederhana.\n- Waktu sehari: pagi, siang, sore, malam — selalu berurutan.",
-    "examples": [
-      {
-        "level": "mudah",
-        "problem": "Rina mengukur panjang buku tugasnya dengan jengkal. Hasilnya 3 jengkal. Beni mengukur buku yang sama, hasilnya 4 jengkal. Mengapa hasilnya berbeda?",
-        "steps": [
-          "Rina dan Beni menggunakan jengkal masing-masing.",
-          "Jengkal Rina lebih besar dari jengkal Beni.",
-          "Karena ukuran jengkal berbeda, hasilnya pun berbeda.",
-          "Inilah kelemahan satuan tidak baku."
-        ],
-        "answer": "Karena ukuran jengkal Rina dan Beni berbeda.",
-        "check": null
-      },
-      {
-        "level": "sedang",
-        "problem": "Panjang tali merah = 6 jengkal. Panjang tali biru = 8 jengkal. Tali mana yang lebih panjang?",
-        "steps": [
-          "Kedua tali diukur dengan jengkal yang sama (oleh orang yang sama).",
-          "Tali merah = 6 jengkal.",
-          "Tali biru = 8 jengkal.",
-          "8 > 6, sehingga tali biru lebih panjang."
-        ],
-        "answer": "Tali biru lebih panjang (8 jengkal > 6 jengkal)",
-        "check": null
-      },
-      {
-        "level": "sulit",
-        "problem": "Aldi bangun tidur pukul 05.30. Ia sarapan pukul 06.00. Setelah sarapan, ia berangkat ke sekolah. Semua kegiatan ini terjadi pada waktu apa?",
-        "steps": [
-          "Pukul 05.30 = antara pukul 05.00 dan 06.00 → pagi.",
-          "Pukul 06.00 = masih pagi.",
-          "Berangkat sekolah setelah sarapan → sekitar pukul 06.30 → masih pagi.",
-          "Semua kegiatan tersebut terjadi di waktu pagi."
-        ],
-        "answer": "Semua kegiatan terjadi di waktu pagi.",
-        "check": null
-      }
-    ],
-    "common_mistakes": [
-      {
-        "mistake": "Mengira hasil pengukuran satuan tidak baku selalu sama untuk semua orang.",
-        "fix": "Satuan tidak baku tergantung ukuran alat ukurnya. Jengkal orang dewasa lebih panjang dari jengkal anak-anak."
-      },
-      {
-        "mistake": "Bingung urutan waktu: menganggap sore lebih awal dari siang.",
-        "fix": "Urutan selalu: pagi → siang → sore → malam → pagi lagi (siklus berulang setiap hari)."
-      }
-    ],
-    "videos": [
-      {
-        "purpose": "konsep",
-        "search_query": "satuan tidak baku jengkal hasta langkah kelas 1 SD"
-      },
-      {
-        "purpose": "contoh-soal",
-        "search_query": "pengukuran panjang satuan tidak baku kelas 1 SD matematika"
-      }
+      {"purpose": "konsep", "search_query": "mengenal bangun datar dan bangun ruang kelas 1 SD"},
+      {"purpose": "contoh-soal", "search_query": "bangun datar lingkaran segitiga persegi kelas 1 2 SD"}
     ],
     "questions": [
-      {
-        "body": "Alat ukur panjang yang termasuk satuan tidak baku adalah ...",
-        "options": ["Penggaris", "Meteran", "Jengkal", "Centimeter"],
-        "answer": 2,
-        "explanation": "Jengkal adalah bagian tubuh yang dipakai sebagai alat ukur tidak baku. Penggaris, meteran, dan centimeter adalah satuan baku.",
-        "points": 1
-      },
-      {
-        "body": "Kegiatan yang biasanya dilakukan pada waktu sore hari adalah ...",
-        "options": ["Sarapan pagi", "Berangkat sekolah", "Bermain di lapangan", "Tidur malam"],
-        "answer": 2,
-        "explanation": "Sore hari sekitar pukul 15.00-18.00, biasanya dipakai untuk bermain.",
-        "points": 1
-      },
-      {
-        "body": "Meja Doni panjangnya 5 jengkal Doni. Meja Ayu panjangnya 5 jengkal Ayu. Jengkal Doni lebih panjang dari jengkal Ayu. Meja siapa yang lebih panjang?",
-        "options": ["Meja Doni", "Meja Ayu", "Sama panjang", "Tidak bisa ditentukan"],
-        "answer": 0,
-        "explanation": "Jengkal Doni lebih panjang, sehingga 5 jengkal Doni menghasilkan panjang lebih besar dari 5 jengkal Ayu.",
-        "points": 2
-      }
+      {"body": "Benda yang berbentuk tabung adalah ...", "options": ["Bola sepak", "Dadu", "Kaleng susu", "Ubin lantai"], "answer": 2, "explanation": "Kaleng susu berbentuk tabung (2 lingkaran di atas dan bawah, dengan sisi melengkung).", "points": 1},
+      {"body": "Bangun datar yang memiliki 3 sisi adalah ...", "options": ["Persegi", "Lingkaran", "Segitiga", "Persegi panjang"], "answer": 2, "explanation": "Segitiga memiliki 3 sisi dan 3 sudut.", "points": 1},
+      {"body": "Manakah yang merupakan bangun RUANG?", "options": ["Lingkaran", "Segitiga", "Persegi", "Kubus"], "answer": 3, "explanation": "Kubus adalah bangun 3 dimensi (ruang). Lingkaran, segitiga, dan persegi adalah bangun datar (2D).", "points": 1},
+      {"body": "Berapa banyak sisi yang dimiliki kubus?", "options": ["4", "5", "6", "8"], "answer": 2, "explanation": "Kubus memiliki 6 sisi, semuanya berbentuk persegi.", "points": 1}
     ]
   },
   {
     "grade": 1,
-    "slug": "diagram-gambar-sederhana",
-    "title": "Statistika Dasar: Diagram Gambar Sederhana",
+    "slug": "pengukuran-tidak-baku",
+    "title": "Pengukuran Tidak Baku",
+    "sort_order": 5,
+    "summary": "Sebelum ada penggaris, manusia mengukur menggunakan benda-benda di sekitarnya seperti jengkal tangan, langkah kaki, dan depa. Inilah yang disebut pengukuran tidak baku.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat melakukan pengukuran panjang menggunakan satuan tidak baku.",
+      "Setelah mempelajari materi ini, kamu dapat membandingkan panjang benda menggunakan satuan tidak baku.",
+      "Setelah mempelajari materi ini, kamu dapat menjelaskan keterbatasan pengukuran tidak baku."
+    ],
+    "content": "## 📏 Pengukuran Tidak Baku\n\nSatuan **tidak baku** adalah satuan yang tidak standar dan bisa berbeda-beda tergantung orang yang mengukur.\n\n### Contoh Satuan Tidak Baku:\n\n| Satuan | Deskripsi |\n|--------|----------|\n| **Jengkal** | Jarak dari ujung ibu jari ke ujung kelingking |\n| **Hasta** | Jarak dari siku sampai ujung jari tengah |\n| **Langkah** | Jarak satu langkah kaki |\n| **Depa** | Jarak kedua tangan direntangkan |\n| **Pensil/penghapus** | Panjang pensil/penghapus |\n\n### Mengapa Tidak Baku?\n\nSetiap orang punya jengkal dan langkah yang berbeda-beda. Sehingga hasil pengukuran bisa berbeda meski mengukur benda yang sama!\n\n**Contoh:**\nMeja kelas diukur:\n- Oleh Budi: **4 jengkal**\n- Oleh guru: **3 jengkal** (karena tangan guru lebih besar)\n\nNilainya berbeda! Inilah mengapa kita butuh satuan **baku** (cm, m) yang selalu sama.\n\n## ✅ Ringkasan\n- Satuan tidak baku: jengkal, hasta, langkah, depa.\n- Hasilnya bisa berbeda untuk orang yang berbeda.\n- Satuan baku (cm, m) diperlukan agar hasilnya selalu sama.",
+    "examples": [
+      {"level": "mudah", "problem": "Buku pelajaran diukur dan lebarnya 2 jengkal Rani. Apa artinya?", "steps": ["Jengkal adalah jarak dari ibu jari ke kelingking.", "Lebar buku = 2 kali jengkal Rani."], "answer": "Lebar buku sama dengan 2 kali jengkal tangan Rani.", "check": null},
+      {"level": "sedang", "problem": "Meja diukur: 5 pensil panjangnya. Pensil = 15 cm. Berapa panjang meja?", "steps": ["Panjang meja = jumlah pensil × panjang satu pensil.", "= 5 × 15 cm = 75 cm."], "answer": "75 cm", "check": {"expression": "5 * 15", "expected": 75}},
+      {"level": "sulit", "problem": "Andi melangkah 10 langkah untuk mengelilingi taman. Rina melangkah 12 langkah untuk mengelilingi taman yang sama. Mengapa hasilnya berbeda?", "steps": ["Langkah Andi lebih panjang dari langkah Rina.", "Satuan tidak baku (langkah) berbeda-beda tiap orang.", "Inilah kelemahan satuan tidak baku."], "answer": "Karena langkah kaki Andi lebih panjang dari Rina. Satuan tidak baku tidak konsisten.", "check": null}
+    ],
+    "common_mistakes": [
+      {"mistake": "Mengira hasil pengukuran tidak baku selalu sama untuk semua orang.", "fix": "Satuan tidak baku bergantung pada alat ukur yang dipakai. Jengkal orang dewasa berbeda dengan jengkal anak-anak."},
+      {"mistake": "Mengira satuan baku (cm, m) dan tidak baku (jengkal) sama akuratnya.", "fix": "Satuan baku nilainya tetap dan disepakati internasional. Satuan tidak baku hasilnya bisa berbeda-beda."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "pengukuran tidak baku jengkal hasta langkah kelas 1 SD"},
+      {"purpose": "contoh-soal", "search_query": "satuan tidak baku matematika kelas 1 2 SD"}
+    ],
+    "questions": [
+      {"body": "Satuan pengukuran TIDAK baku adalah ...", "options": ["Centimeter (cm)", "Meter (m)", "Jengkal", "Kilometer (km)"], "answer": 2, "explanation": "Jengkal adalah satuan tidak baku karena ukurannya berbeda-beda tiap orang.", "points": 1},
+      {"body": "Meja diukur sepanjang 6 jengkal Ibu dan 8 jengkal Budi. Mengapa hasilnya berbeda?", "options": ["Mejanya berbeda", "Jengkal Ibu lebih panjang dari jengkal Budi", "Jengkal Budi lebih panjang dari jengkal Ibu", "Meja berubah ukuran"], "answer": 1, "explanation": "6 jengkal Ibu = 8 jengkal Budi berarti satu jengkal Ibu lebih panjang dari jengkal Budi.", "points": 2},
+      {"body": "Manakah yang merupakan satuan BAKU (standar)?", "options": ["Langkah kaki", "Panjang pensil", "Depa tangan", "Sentimeter (cm)"], "answer": 3, "explanation": "Sentimeter (cm) adalah satuan baku yang nilainya selalu sama di mana pun.", "points": 1}
+    ]
+  },
+  {
+    "grade": 1,
+    "slug": "penyajian-data-diagram-gambar",
+    "title": "Penyajian Data: Diagram Gambar",
     "sort_order": 6,
-    "summary": "Diagram gambar (piktogram) adalah cara menyajikan data menggunakan gambar atau simbol. Setiap gambar mewakili jumlah tertentu, sehingga data lebih mudah dibaca dan dibandingkan.",
+    "summary": "Diagram gambar menggunakan simbol atau gambar untuk mewakili data. Ini adalah cara termudah untuk menyajikan dan membaca data bagi anak-anak kelas 1.",
     "objectives": [
       "Setelah mempelajari materi ini, kamu dapat membaca informasi dari diagram gambar sederhana.",
-      "Setelah mempelajari materi ini, kamu dapat membandingkan data dari diagram gambar.",
-      "Setelah mempelajari materi ini, kamu dapat membuat diagram gambar sederhana dari data yang diberikan."
+      "Setelah mempelajari materi ini, kamu dapat membuat diagram gambar sederhana dari data yang ada.",
+      "Setelah mempelajari materi ini, kamu dapat membandingkan data dari diagram gambar."
     ],
-    "content": "## 📊 Apa itu Diagram Gambar?\n\nDiagram gambar (piktogram) adalah cara menyajikan data menggunakan **gambar atau simbol**. Setiap gambar mewakili jumlah tertentu.\n\n> Contoh: Guru bertanya kepada 10 siswa, buah kesukaan mereka apa. Hasil jawabannya bisa disajikan dengan diagram gambar.\n\n## 📋 Cara Membaca Diagram Gambar\n\nContoh diagram gambar buah kesukaan siswa:\n\n```\nApel    : 🍎 🍎 🍎 🍎\nPisang  : 🍌 🍌 🍌\nJeruk   : 🍊 🍊\nMangga  : 🥭 🥭 🥭 🥭 🥭\n```\n\n(Setiap gambar = 1 siswa)\n\nDari diagram ini kita bisa tahu:\n- **Apel** disukai 4 siswa.\n- **Pisang** disukai 3 siswa.\n- **Jeruk** disukai 2 siswa.\n- **Mangga** disukai 5 siswa — ini yang **terbanyak**!\n\n### Pertanyaan yang Bisa Dijawab\n- Buah apa yang paling banyak disukai? → Mangga (5 siswa)\n- Buah apa yang paling sedikit disukai? → Jeruk (2 siswa)\n- Berapa banyak siswa yang menyukai apel atau pisang? → 4 + 3 = 7 siswa\n\n## ✏️ Cara Membuat Diagram Gambar\n\n1. **Kumpulkan data**: tanya teman-temanmu atau hitung benda.\n2. **Pilih simbol/gambar**: pilih satu gambar yang mewakili 1 data (atau lebih untuk data besar).\n3. **Gambar sesuai jumlah**: gambar sebanyak jumlah datanya.\n4. **Beri keterangan**: tulis nama kategori dan jumlahnya.\n\n## ✅ Ringkasan\n\n- Diagram gambar: data disajikan dengan gambar/simbol.\n- Baca: hitung jumlah gambar tiap baris.\n- Bandingkan: baris terpanjang = paling banyak, terpendek = paling sedikit.",
+    "content": "## 🖼️ Diagram Gambar\n\nDiagram gambar menggunakan **simbol gambar** untuk mewakili jumlah data.\n\n### Contoh: Hobi Siswa Kelas 1\n\n```\nBersepeda  : 🚲 🚲 🚲 🚲     = 4 siswa\nMenggambar : 🖍️ 🖍️ 🖍️       = 3 siswa\nBermain    : ⚽ ⚽ ⚽ ⚽ ⚽   = 5 siswa\nMembaca    : 📚 📚            = 2 siswa\n```\n\n### Cara Membaca:\n1. Lihat judul — apa yang didata?\n2. Lihat simbol — apa yang diwakili tiap simbol?\n3. Hitung simbol tiap baris.\n4. Bandingkan.\n\n**Dari contoh di atas:**\n- Yang paling banyak: Bermain (5)\n- Yang paling sedikit: Membaca (2)\n- Selisih terbanyak dan tersedikit: 5 − 2 = 3\n\n## ✅ Ringkasan\n- Diagram gambar: data diwakili gambar/simbol.\n- Hitung gambar untuk tahu nilainya.\n- Bisa membandingkan kategori dari jumlah gambarnya.",
     "examples": [
-      {
-        "level": "mudah",
-        "problem": "Dari diagram buah di atas, berapa banyak siswa yang menyukai apel?",
-        "steps": [
-          "Lihat baris 'Apel' pada diagram.",
-          "Hitung gambar apel: 🍎 🍎 🍎 🍎 = 4 gambar.",
-          "Setiap gambar = 1 siswa.",
-          "Jadi 4 siswa menyukai apel."
-        ],
-        "answer": "4 siswa",
-        "check": null
-      },
-      {
-        "level": "sedang",
-        "problem": "Dari diagram buah di atas, berapa lebih banyak siswa yang suka mangga dibanding jeruk?",
-        "steps": [
-          "Siswa suka mangga: 5 (hitung simbol mangga).",
-          "Siswa suka jeruk: 2 (hitung simbol jeruk).",
-          "Selisih: 5 - 2 = 3.",
-          "Siswa suka mangga lebih banyak 3 orang dari jeruk."
-        ],
-        "answer": "3 siswa lebih banyak yang suka mangga",
-        "check": { "expression": "5 - 2", "expected": 3 }
-      },
-      {
-        "level": "sulit",
-        "problem": "Di kelas 1B, siswa diminta memilih olahraga favorit. Hasilnya: Sepak bola = 6 siswa, Badminton = 4 siswa, Renang = 3 siswa, Lari = 2 siswa. Buat diagram gambar dan jawab: olahraga mana yang paling disukai?",
-        "steps": [
-          "Tentukan simbol: ⚽ untuk sepak bola, 🏸 untuk badminton, 🏊 untuk renang, 🏃 untuk lari.",
-          "Gambarlah sesuai jumlah:",
-          "Sepak bola : ⚽⚽⚽⚽⚽⚽ (6)",
-          "Badminton  : 🏸🏸🏸🏸 (4)",
-          "Renang     : 🏊🏊🏊 (3)",
-          "Lari       : 🏃🏃 (2)",
-          "Baris terpanjang = sepak bola (6 simbol).",
-          "Olahraga paling disukai: sepak bola."
-        ],
-        "answer": "Sepak bola (6 siswa) adalah olahraga yang paling disukai.",
-        "check": null
-      }
+      {"level": "mudah", "problem": "Dari diagram hobi di atas, berapa siswa yang suka bersepeda?", "steps": ["Hitung simbol 🚲 di baris Bersepeda.", "Ada 4 simbol.", "4 siswa suka bersepeda."], "answer": "4 siswa", "check": null},
+      {"level": "sedang", "problem": "Berapa jumlah total siswa yang didata?", "steps": ["Bersepeda: 4. Menggambar: 3. Bermain: 5. Membaca: 2.", "Total: 4 + 3 + 5 + 2 = 14."], "answer": "14 siswa", "check": {"expression": "4 + 3 + 5 + 2", "expected": 14}},
+      {"level": "sulit", "problem": "Berapa lebih banyak siswa yang suka Bermain dibanding Membaca?", "steps": ["Bermain: 5 siswa. Membaca: 2 siswa.", "Selisih: 5 − 2 = 3."], "answer": "3 siswa lebih banyak yang suka bermain", "check": {"expression": "5 - 2", "expected": 3}}
     ],
     "common_mistakes": [
-      {
-        "mistake": "Menghitung gambar tanpa memperhatikan apakah 1 gambar = 1 data atau lebih.",
-        "fix": "Selalu baca keterangan (legenda) diagram. Pastikan kamu tahu 1 gambar mewakili berapa data."
-      },
-      {
-        "mistake": "Bingung antara 'terbanyak' dan 'terkecil': mengira baris terpendek adalah yang terbanyak.",
-        "fix": "Baris dengan paling banyak gambar = data terbanyak. Baris dengan paling sedikit gambar = data tersedikit."
-      }
+      {"mistake": "Salah menghitung simbol karena tidak teliti.", "fix": "Coret atau beri tanda tiap simbol yang sudah dihitung agar tidak terlewat atau dihitung dua kali."},
+      {"mistake": "Mengira diagram gambar dan grafik batang adalah hal yang sama.", "fix": "Diagram gambar menggunakan simbol/gambar. Grafik batang menggunakan batang persegi panjang. Keduanya berbeda tampilannya."}
     ],
     "videos": [
-      {
-        "purpose": "konsep",
-        "search_query": "diagram gambar piktogram kelas 1 SD statistika"
-      },
-      {
-        "purpose": "contoh-soal",
-        "search_query": "membaca diagram gambar kelas 1 2 SD matematika"
-      }
+      {"purpose": "konsep", "search_query": "diagram gambar piktogram kelas 1 2 SD membaca data"},
+      {"purpose": "contoh-soal", "search_query": "soal diagram gambar kelas 1 SD matematika"}
     ],
     "questions": [
-      {
-        "body": "Di diagram gambar, baris 'Kucing' menunjukkan 5 gambar kucing dan baris 'Anjing' menunjukkan 3 gambar anjing. Hewan apa yang lebih banyak dipilih?",
-        "options": ["Anjing", "Kucing", "Sama banyak", "Tidak bisa dilihat"],
-        "answer": 1,
-        "explanation": "5 gambar kucing > 3 gambar anjing, sehingga kucing lebih banyak dipilih.",
-        "points": 1
-      },
-      {
-        "body": "Dari diagram gambar, diketahui: Merah = 4, Biru = 6, Hijau = 2. Berapa total siswa yang memilih warna merah dan hijau?",
-        "options": ["4", "6", "8", "12"],
-        "answer": 1,
-        "explanation": "Merah + Hijau = 4 + 2 = 6 siswa.",
-        "points": 2
-      }
+      {"body": "Dari diagram hobi di atas, hobi yang PALING SEDIKIT diminati adalah ...", "options": ["Bersepeda", "Menggambar", "Bermain", "Membaca"], "answer": 3, "explanation": "Membaca hanya diminati 2 siswa, paling sedikit dibanding yang lain.", "points": 1},
+      {"body": "Jumlah siswa yang suka Menggambar dan Membaca adalah ...", "options": ["4", "5", "6", "7"], "answer": 1, "explanation": "Menggambar 3 + Membaca 2 = 5 siswa.", "points": 1},
+      {"body": "Jika 2 siswa yang suka Bermain pindah ke suka Membaca, berapa siswa suka Bermain sekarang?", "options": ["2", "3", "4", "5"], "answer": 1, "explanation": "5 − 2 = 3 siswa suka Bermain.", "points": 2}
     ]
   }
 ]

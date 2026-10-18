@@ -1,0 +1,194 @@
+[
+  {
+    "grade": 9,
+    "slug": "eksponen-bentuk-akar",
+    "title": "Eksponen dan Bentuk Akar",
+    "sort_order": 1,
+    "summary": "Eksponen menyatakan perkalian berulang sebuah bilangan dengan dirinya sendiri. Bentuk akar adalah kebalikan dari eksponen. Keduanya memiliki sifat-sifat yang harus dikuasai untuk aljabar lanjutan.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menerapkan sifat-sifat eksponen.",
+      "Setelah mempelajari materi ini, kamu dapat menyederhanakan bentuk akar.",
+      "Setelah mempelajari materi ini, kamu dapat menyelesaikan persamaan dengan eksponen sederhana."
+    ],
+    "content": "## 🔢 Sifat-sifat Eksponen\n\n$$a^m \\times a^n = a^{m+n}$$\n$$\\frac{a^m}{a^n} = a^{m-n}$$\n$$(a^m)^n = a^{mn}$$\n$$(ab)^n = a^n b^n$$\n$$a^0 = 1 \\quad (a\\neq 0)$$\n$$a^{-n} = \\frac{1}{a^n}$$\n$$a^{\\frac{m}{n}} = \\sqrt[n]{a^m}$$\n\n**Contoh:**\n- $2^3 \\times 2^4 = 2^7 = 128$\n- $3^{-2} = \\frac{1}{9}$\n- $4^{\\frac{3}{2}} = (\\sqrt{4})^3 = 2^3 = 8$\n\n## √ Sifat Bentuk Akar\n\n$$\\sqrt{ab}=\\sqrt{a}\\cdot\\sqrt{b}$$\n$$\\sqrt{\\frac{a}{b}}=\\frac{\\sqrt{a}}{\\sqrt{b}}$$\n$$\\sqrt{a}+\\sqrt{b}\\neq\\sqrt{a+b}$$\n\n**Merasionalkan penyebut:**\n$$\\frac{3}{\\sqrt{5}}=\\frac{3\\sqrt{5}}{5}$$\n\n## ✅ Ringkasan\n- Perkalian: jumlahkan eksponen. Pembagian: kurangkan.\n- Eksponen negatif: pindah posisi.\n- Bentuk akar: tidak bisa dijumlah jika berbeda.",
+    "examples": [
+      {"level": "mudah", "problem": "Sederhanakan: 2³ × 2⁵", "steps": ["2³×2⁵=2^(3+5)=2⁸=256."], "answer": "256", "check": {"expression": "2**8", "expected": 256}},
+      {"level": "sedang", "problem": "Sederhanakan: √48 − √12", "steps": ["√48=√(16×3)=4√3.", "√12=√(4×3)=2√3.", "4√3−2√3=2√3."], "answer": "2√3", "check": null},
+      {"level": "sulit", "problem": "Rasionalkan: 6/(√3+√2)", "steps": ["Kali (√3−√2)/(√3−√2).", "=6(√3−√2)/(3−2)=6(√3−√2)/1=6√3−6√2."], "answer": "6√3 − 6√2", "check": null}
+    ],
+    "common_mistakes": [
+      {"mistake": "2³+2⁴=2⁷ (menjumlah eksponen padahal beda operasi).", "fix": "Eksponen dijumlahkan hanya untuk PERKALIAN. 2³×2⁴=2⁷. 2³+2⁴=8+16=24."},
+      {"mistake": "√(a+b)=√a+√b.", "fix": "SALAH! √9=3. √(4+5)=3. Tapi √4+√5=2+2,24=4,24 ≠ 3."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "sifat eksponen bentuk akar kelas 9 SMP kurikulum merdeka"},
+      {"purpose": "contoh-soal", "search_query": "soal eksponen akar kelas 9 SMP merasionalkan penyebut"}
+    ],
+    "questions": [
+      {"body": "3⁴ × 3⁻² = ...", "options": ["3²=9", "3⁶=729", "3²=6", "3⁸"], "answer": 0, "explanation": "3⁴×3⁻²=3^(4+(−2))=3²=9.", "points": 1},
+      {"body": "√75 dalam bentuk paling sederhana adalah ...", "options": ["5√3", "3√5", "15√3", "25√3"], "answer": 0, "explanation": "√75=√(25×3)=5√3.", "points": 1},
+      {"body": "Nilai dari 8^(2/3) = ...", "options": ["2", "4", "6", "8"], "answer": 1, "explanation": "8^(2/3)=(∛8)²=2²=4.", "points": 2},
+      {"body": "4√2 + 3√2 − √2 = ...", "options": ["6√2", "8√2", "6", "8"], "answer": 0, "explanation": "(4+3−1)√2=6√2.", "points": 1}
+    ]
+  },
+  {
+    "grade": 9,
+    "slug": "persamaan-kuadrat",
+    "title": "Persamaan Kuadrat",
+    "sort_order": 2,
+    "summary": "Persamaan kuadrat berbentuk ax²+bx+c=0 (a≠0). Solusinya bisa dicari dengan tiga metode: memfaktorkan, melengkapkan kuadrat, atau rumus ABC (kuadratik). Diskriminan menentukan jenis akar-akarnya.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menyelesaikan persamaan kuadrat dengan faktorisasi.",
+      "Setelah mempelajari materi ini, kamu dapat menyelesaikan persamaan kuadrat dengan rumus ABC.",
+      "Setelah mempelajari materi ini, kamu dapat menggunakan diskriminan untuk menentukan jenis akar."
+    ],
+    "content": "## 📐 Bentuk Umum\n\n$$ax^2 + bx + c = 0, \\quad a \\neq 0$$\n\n## 1️⃣ Faktorisasi\n\n$$x^2 + 5x + 6 = 0$$\nCari: dua bilangan yang jumlahnya 5, kalinya 6 → 2 dan 3.\n$$(x+2)(x+3)=0 \\implies x=-2 \\text{ atau } x=-3$$\n\n## 2️⃣ Rumus ABC (Kuadratik)\n\n$$x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$$\n\n## 3️⃣ Diskriminan D\n\n$$D = b^2-4ac$$\n- D > 0 → **2 akar real berbeda**\n- D = 0 → **1 akar real (kembar)**\n- D < 0 → **tidak ada akar real**\n\n## 🔗 Hubungan Akar-akar (Vieta)\n\n$$x_1+x_2 = -\\frac{b}{a} \\qquad x_1 \\cdot x_2 = \\frac{c}{a}$$\n\n## ✅ Ringkasan\n- Faktor jika mudah, Rumus ABC jika sulit.\n- Diskriminan: D>0 dua akar, D=0 satu akar, D<0 tidak ada akar.",
+    "examples": [
+      {"level": "mudah", "problem": "Faktorkan: x²−7x+12=0", "steps": ["Cari: jumlah=−7, kali=12 → −3 dan −4.", "(x−3)(x−4)=0. x=3 atau x=4."], "answer": "x=3 atau x=4", "check": null},
+      {"level": "sedang", "problem": "Rumus ABC: 2x²−5x−3=0", "steps": ["a=2, b=−5, c=−3.", "D=25+24=49. √D=7.", "x=(5±7)/4. x=3 atau x=−½."], "answer": "x=3 atau x=−½", "check": null},
+      {"level": "sulit", "problem": "x₁+x₂=7, x₁·x₂=12. Bentuk persamaan kuadrat?", "steps": ["−b/a=7 → b=−7a. c/a=12 → c=12a.", "Pilih a=1: x²−7x+12=0."], "answer": "x² − 7x + 12 = 0", "check": null}
+    ],
+    "common_mistakes": [
+      {"mistake": "Faktorkan x²+5x+6=(x+5)(x+6) (jumlah=11, bukan 5).", "fix": "Cek: (p+q)=b=5 dan p×q=c=6. Coba semua faktor 6: (1,6)→7, (2,3)→5 ✓."},
+      {"mistake": "D=b²+4ac (tanda plus).", "fix": "D=b²−4ac. Tanda MINUS! D=b²−4ac."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "persamaan kuadrat faktorisasi rumus abc kelas 9 SMP"},
+      {"purpose": "contoh-soal", "search_query": "soal persamaan kuadrat kelas 9 SMP kurikulum merdeka diskriminan"}
+    ],
+    "questions": [
+      {"body": "Akar-akar x² − 5x + 6 = 0 adalah ...", "options": ["x=2 atau x=3", "x=−2 atau x=−3", "x=1 atau x=6", "x=−1 atau x=−6"], "answer": 0, "explanation": "Faktor: (x−2)(x−3)=0. x=2 atau x=3.", "points": 1},
+      {"body": "Diskriminan x²−6x+9=0 adalah ...", "options": ["−72", "0", "36", "72"], "answer": 1, "explanation": "D=b²−4ac=(−6)²−4(1)(9)=36−36=0.", "points": 1},
+      {"body": "Persamaan kuadrat dengan akar x₁=−1 dan x₂=5 adalah ...", "options": ["x²−4x−5=0", "x²+4x−5=0", "x²−4x+5=0", "x²+4x+5=0"], "answer": 0, "explanation": "x₁+x₂=4=−b/a, x₁×x₂=−5=c/a. Persamaan: x²−4x−5=0.", "points": 2},
+      {"body": "2x² + 3x − 2 = 0 diselesaikan dengan rumus ABC. Nilai x yang positif = ...", "options": ["1/2", "1", "2", "3"], "answer": 0, "explanation": "D=9+16=25. x=(−3±5)/4. x=2/4=1/2 atau x=−8/4=−2. Positif: x=1/2.", "points": 2}
+    ]
+  },
+  {
+    "grade": 9,
+    "slug": "fungsi-kuadrat",
+    "title": "Fungsi Kuadrat dan Grafiknya",
+    "sort_order": 3,
+    "summary": "Fungsi kuadrat f(x)=ax²+bx+c menghasilkan grafik parabola. Bentuk parabola—apakah membuka ke atas atau ke bawah, titik puncak, dan perpotongan dengan sumbu—ditentukan oleh koefisien a, b, dan c.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menentukan sifat-sifat parabola dari koefisiennya.",
+      "Setelah mempelajari materi ini, kamu dapat menemukan titik puncak (vertex) fungsi kuadrat.",
+      "Setelah mempelajari materi ini, kamu dapat menggambar grafik fungsi kuadrat."
+    ],
+    "content": "## 📈 f(x) = ax² + bx + c\n\n**a > 0**: parabola terbuka ke **atas** (∪), puncak = minimum.\n**a < 0**: parabola terbuka ke **bawah** (∩), puncak = maksimum.\n\n## 🎯 Titik Puncak (Vertex)\n\n$$x_p = -\\frac{b}{2a} \\qquad y_p = f(x_p) = -\\frac{D}{4a}$$\n\n**Contoh:** f(x)=x²−4x+3\n- $x_p=-(-4)/(2\\cdot1)=2$\n- $y_p=4−8+3=−1$\n- **Vertex: (2, −1)**\n\n## 🔀 Titik Potong\n\n- **Sumbu X:** f(x)=0 → selesaikan persamaan kuadrat\n- **Sumbu Y:** x=0 → f(0)=c\n\n**Contoh:** f(x)=x²−4x+3\n- Potong Y: (0, 3)\n- Potong X: x²−4x+3=0 → x=1 atau x=3 → (1,0),(3,0)\n\n## ✅ Ringkasan\n- a>0: parabola ∪ (min). a<0: ∩ (maks).\n- Vertex: (−b/2a, −D/4a).\n- Potong X: f(x)=0. Potong Y: f(0)=c.",
+    "examples": [
+      {"level": "mudah", "problem": "f(x)=−x²+4. Parabola ke atas/bawah? Titik puncak?", "steps": ["a=−1<0 → parabola ke bawah.", "xp=0 (karena b=0). yp=4.", "Puncak (0,4)."], "answer": "Ke bawah, puncak (0, 4)", "check": null},
+      {"level": "sedang", "problem": "Titik puncak f(x)=2x²−8x+5?", "steps": ["xp=8/(2×2)=2.", "yp=2(4)−8(2)+5=8−16+5=−3.", "Vertex: (2,−3)."], "answer": "(2, −3)", "check": {"expression": "2*4-8*2+5", "expected": -3}},
+      {"level": "sulit", "problem": "f(x)=x²−6x+8. Gambar semua informasi penting!", "steps": ["a=1>0, min.", "Vertex: xp=3, yp=9−18+8=−1. (3,−1).", "Potong Y: (0,8).", "Potong X: x²−6x+8=0=(x−2)(x−4). (2,0),(4,0)."], "answer": "Vertex(3,−1), potong Y(0,8), potong X(2,0)dan(4,0)", "check": null}
+    ],
+    "common_mistakes": [
+      {"mistake": "a>0 berarti parabola ke bawah.", "fix": "a>0 (positif): parabola ke ATAS (∪). a<0 (negatif): ke bawah (∩)."},
+      {"mistake": "Titik puncak = (a, b) dari ax²+bx+c.", "fix": "Vertex: x=−b/(2a). Substitusi ke f(x) untuk mendapat y. Bukan langsung a dan b!"}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "fungsi kuadrat parabola grafik kelas 9 SMP titik puncak"},
+      {"purpose": "contoh-soal", "search_query": "soal fungsi kuadrat kelas 9 SMP vertex sumbu simetri"}
+    ],
+    "questions": [
+      {"body": "Untuk f(x)=−2x²+5, parabola membuka ke ...", "options": ["Atas", "Bawah", "Kanan", "Kiri"], "answer": 1, "explanation": "a=−2<0 → parabola membuka ke bawah.", "points": 1},
+      {"body": "Titik puncak f(x)=x²−4x+7 adalah ...", "options": ["(2, 3)", "(−2, 19)", "(2, 7)", "(4, 7)"], "answer": 0, "explanation": "xp=4/2=2. yp=4−8+7=3. Vertex: (2,3).", "points": 2},
+      {"body": "Titik potong f(x)=x²−5x+6 dengan sumbu X adalah ...", "options": ["(2,0) dan (3,0)", "(−2,0) dan (−3,0)", "(1,0) dan (6,0)", "(2,0) dan (3,0)"], "answer": 0, "explanation": "x²−5x+6=0=(x−2)(x−3). x=2 atau x=3.", "points": 2},
+      {"body": "Titik potong f(x)=3x²−x+2 dengan sumbu Y adalah ...", "options": ["(0, 1)", "(0, 2)", "(0, 3)", "(0, −2)"], "answer": 1, "explanation": "Potong Y: x=0. f(0)=3(0)−0+2=2. Titik: (0,2).", "points": 1}
+    ]
+  },
+  {
+    "grade": 9,
+    "slug": "transformasi-geometri",
+    "title": "Transformasi Geometri",
+    "sort_order": 4,
+    "summary": "Transformasi geometri memindahkan atau mengubah posisi/bentuk bangun datar. Empat jenis transformasi dasar: translasi (geser), refleksi (cermin), rotasi (putar), dan dilatasi (skala).",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menentukan bayangan titik oleh translasi, refleksi, rotasi, dan dilatasi.",
+      "Setelah mempelajari materi ini, kamu dapat menggambar hasil transformasi pada koordinat.",
+      "Setelah mempelajari materi ini, kamu dapat membedakan sifat-sifat masing-masing transformasi."
+    ],
+    "content": "## ➡️ Translasi (a, b)\n\nGeser x+a, y+b.\n$$P(x,y)\\xrightarrow{T(a,b)}P'(x+a,y+b)$$\n\n## 🔄 Refleksi\n\n| Terhadap | Rumus |\n|----------|-------|\n| Sumbu X | (x,y)→(x,−y) |\n| Sumbu Y | (x,y)→(−x,y) |\n| y=x | (x,y)→(y,x) |\n| y=−x | (x,y)→(−y,−x) |\n| Titik O(0,0) | (x,y)→(−x,−y) |\n\n## 🔁 Rotasi 90° searah jarum jam, pusat O\n\n$$(x,y)\\to(y,-x)$$\n\n## 🔍 Dilatasi [O, k]\n\n$$(x,y)\\to(kx,ky)$$\n\nk>1: perbesar, 0<k<1: perkecil, k<0: perbesar+refleksi.\n\n## ✅ Ringkasan\n- Translasi, refleksi, rotasi: ukuran tetap (isometri).\n- Dilatasi: ukuran berubah sesuai faktor k.",
+    "examples": [
+      {"level": "mudah", "problem": "A(3,5) direfleksikan terhadap sumbu X. Bayangan?", "steps": ["(x,y)→(x,−y).", "A'=(3,−5)."], "answer": "A'(3, −5)", "check": null},
+      {"level": "sedang", "problem": "P(4,2) ditranslasi (−3, 5). Bayangan?", "steps": ["P'=(4+(−3), 2+5)=(1,7)."], "answer": "P'(1, 7)", "check": null},
+      {"level": "sulit", "problem": "Segitiga A(1,2), B(3,2), C(2,5) didilatasikan [O,3]. Koordinat bayangan?", "steps": ["A'=(3,6). B'=(9,6). C'=(6,15)."], "answer": "A'(3,6), B'(9,6), C'(6,15)", "check": null}
+    ],
+    "common_mistakes": [
+      {"mistake": "Refleksi terhadap sumbu Y: (x,y)→(x,−y) (sama dengan sumbu X).", "fix": "Sumbu X: y berubah jadi −y. Sumbu Y: x berubah jadi −x. Berbeda!"},
+      {"mistake": "Rotasi 90° CCW sama dengan 90° CW.", "fix": "90° searah jarum jam (CW): (x,y)→(y,−x). Berlawanan (CCW): (x,y)→(−y,x)."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "transformasi geometri translasi refleksi rotasi dilatasi kelas 9 SMP"},
+      {"purpose": "contoh-soal", "search_query": "soal transformasi geometri kelas 9 SMP koordinat kartesius"}
+    ],
+    "questions": [
+      {"body": "Titik P(5, −3) direfleksikan terhadap sumbu Y. Bayangannya adalah ...", "options": ["(5, 3)", "(−5, −3)", "(−5, 3)", "(3, −5)"], "answer": 1, "explanation": "Refleksi sumbu Y: (x,y)→(−x,y). P'=(−5, −3).", "points": 1},
+      {"body": "Titik Q(2, 4) ditranslasi dengan T(3, −1). Bayangannya = ...", "options": ["(−1, 5)", "(5, 3)", "(5, −3)", "(6, 3)"], "answer": 1, "explanation": "Q'=(2+3, 4+(−1))=(5,3).", "points": 1},
+      {"body": "Titik A(3, 2) dirotasi 90° searah jarum jam terhadap O. Bayangan = ...", "options": ["(−2, 3)", "(2, −3)", "(−3, 2)", "(2, 3)"], "answer": 1, "explanation": "Rotasi 90° CW: (x,y)→(y,−x). A'=(2,−3).", "points": 2},
+      {"body": "Titik B(4, 6) didilatasikan dengan pusat O dan faktor k=½. Bayangan = ...", "options": ["(2, 3)", "(8, 12)", "(4, 3)", "(6, 4)"], "answer": 0, "explanation": "k=½: B'=(½×4, ½×6)=(2,3).", "points": 1}
+    ]
+  },
+  {
+    "grade": 9,
+    "slug": "kesebangunan-kekongruenan",
+    "title": "Kesebangunan dan Kekongruenan",
+    "sort_order": 5,
+    "summary": "Dua bangun datar kongruen jika ukuran dan bentuknya sama persis. Dua bangun datar sebangun jika bentuknya sama tapi ukurannya proporsional. Kesebangunan dan kekongruenan memiliki syarat-syarat yang bisa diuji.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menentukan apakah dua bangun kongruen atau sebangun.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung panjang sisi yang tidak diketahui pada bangun sebangun.",
+      "Setelah mempelajari materi ini, kamu dapat menerapkan syarat kekongruenan segitiga."
+    ],
+    "content": "## 🔄 Kongruen (≅)\n\nDua bangun kongruen jika **ukuran dan bentuk identik** (bisa saling menutupi).\n\n**Syarat segitiga kongruen:**\n- **SSS**: ketiga sisi sama\n- **SAS**: dua sisi dan sudut apitnya sama\n- **ASA**: dua sudut dan sisi apitnya sama\n- **AAS**: dua sudut dan sisi di depannya sama\n\n## ~ Sebangun (∼)\n\nDua bangun sebangun jika **bentuk sama, ukuran proporsional**.\n\n**Syarat segitiga sebangun:**\n- **AAA (AA)**: dua sudut sama\n- **SSS**: semua sisi proporsional\n- **SAS**: dua sisi proporsional dan sudut apitnya sama\n\n### Menghitung Sisi yang Tidak Diketahui:\n\n$$\\frac{AB}{A'B'} = \\frac{BC}{B'C'} = \\frac{CA}{C'A'}$$\n\n## ✅ Ringkasan\n- Kongruen (≅): sama persis. Syarat: SSS, SAS, ASA, AAS.\n- Sebangun (∼): proporsional. Syarat: AA, SSS proporsional.",
+    "examples": [
+      {"level": "mudah", "problem": "Persegi 4cm dan 6cm, apakah sebangun?", "steps": ["Semua persegi memiliki sudut 90° dan sisi sama.", "Rasio sisi: 4/6=2/3 (konstan).", "Ya, sebangun."], "answer": "Ya, sebangun", "check": null},
+      {"level": "sedang", "problem": "△ABC∼△DEF, AB=6, BC=9, DE=4. Cari EF!", "steps": ["AB/DE=BC/EF → 6/4=9/EF.", "EF=9×4/6=6."], "answer": "EF = 6", "check": {"expression": "9*4/6", "expected": 6}},
+      {"level": "sulit", "problem": "Foto 15×20cm diperbesar skala 1:1,5. Ukuran baru?", "steps": ["15×1,5=22,5cm. 20×1,5=30cm.", "Cek: 22,5/15=30/20=1,5 ✓."], "answer": "22,5 × 30 cm", "check": null}
+    ],
+    "common_mistakes": [
+      {"mistake": "Kongruen = sebangun selalu.", "fix": "Kongruen → sebangun (dengan rasio 1:1). Tapi sebangun tidak harus kongruen. Sebangun hanya syarat proporsional."},
+      {"mistake": "Rasio sisi yang salah dipasangkan.", "fix": "Pasangkan sisi yang berkorespondensi (sisi yang saling berhadapan/sesuai posisi dalam kedua segitiga)."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "kesebangunan kekongruenan segitiga kelas 9 SMP kurikulum merdeka"},
+      {"purpose": "contoh-soal", "search_query": "soal kesebangunan menghitung sisi kelas 9 SMP matematika"}
+    ],
+    "questions": [
+      {"body": "Syarat cukup untuk dua segitiga KONGRUEN yang TIDAK berlaku adalah ...", "options": ["SSS", "SAS", "ASA", "AAA"], "answer": 3, "explanation": "AAA hanya membuktikan kesebangunan, bukan kekongruenan (ukuran bisa beda).", "points": 2},
+      {"body": "△PQR∼△STU. PQ=8, QR=12, ST=6. Panjang TU = ...", "options": ["8", "9", "10", "16"], "answer": 1, "explanation": "PQ/ST=QR/TU → 8/6=12/TU → TU=12×6/8=9.", "points": 2},
+      {"body": "Sebuah tiang 4m tingginya. Bayangannya 6m. Bayangan gedung 30m. Tinggi gedung = ...", "options": ["15 m", "20 m", "30 m", "45 m"], "answer": 1, "explanation": "4/6=t/30 → t=4×30/6=20m.", "points": 2},
+      {"body": "Semua persegi panjang dengan panjang:lebar=3:2 adalah ...", "options": ["Kongruen", "Sebangun", "Kongruen dan sebangun", "Tidak ada hubungan"], "answer": 1, "explanation": "Rasio sama (3:2) → sebangun. Tapi ukuran bisa beda, jadi belum tentu kongruen.", "points": 1}
+    ]
+  },
+  {
+    "grade": 9,
+    "slug": "bangun-ruang-sisi-lengkung",
+    "title": "Bangun Ruang Sisi Lengkung: Tabung, Kerucut, Bola",
+    "sort_order": 6,
+    "summary": "Bangun ruang sisi lengkung memiliki sisi yang melengkung, bukan datar. Tabung, kerucut, dan bola adalah contoh utamanya yang banyak ditemukan dalam kehidupan sehari-hari seperti kaleng, topi, dan bola.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menghitung volume tabung, kerucut, dan bola.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung luas permukaan tabung, kerucut, dan bola.",
+      "Setelah mempelajari materi ini, kamu dapat memecahkan masalah kontekstual."
+    ],
+    "content": "## 🥤 Tabung (r=jari-jari, t=tinggi)\n\n$$V = \\pi r^2 t \\qquad LP = 2\\pi r(r+t)$$\n\n## 🔺 Kerucut (r=jari-jari alas, t=tinggi, s=apotema=√(r²+t²))\n\n$$V = \\frac{1}{3}\\pi r^2 t \\qquad LP = \\pi r(r+s)$$\n\n## ⚽ Bola (r=jari-jari)\n\n$$V = \\frac{4}{3}\\pi r^3 \\qquad LP = 4\\pi r^2$$\n\n### Contoh (π=22/7, r=7, t=10):\n\n**Tabung:** V=22/7×49×10=**1.540cm³**, LP=2×22/7×7×17=**748cm²**\n\n**Kerucut (r=7,t=24,s=25):** V=⅓×22/7×49×24=**1.232cm³**, LP=22/7×7×32=**704cm²**\n\n**Bola r=7:** V=4/3×22/7×343=**1.437,3cm³**, LP=4×22/7×49=**616cm²**\n\n## ✅ Ringkasan\n- Kerucut = ⅓ tabung seukuran.\n- Bola = ⅔ tabung yang membungkusnya.",
+    "examples": [
+      {"level": "mudah", "problem": "Volume tabung r=5, t=8cm (π=3,14)?", "steps": ["V=3,14×25×8=628cm³."], "answer": "628 cm³", "check": {"expression": "3.14*25*8", "expected": 628}},
+      {"level": "sedang", "problem": "Luas permukaan bola r=21cm (π=22/7)?", "steps": ["LP=4×22/7×441=4×22×63=5.544cm²."], "answer": "5.544 cm²", "check": {"expression": "4*22/7*441", "expected": 5544}},
+      {"level": "sulit", "problem": "Kerucut r=6cm, t=8cm. V dan LP (s=10)? (π=3,14)", "steps": ["V=⅓×3,14×36×8=301,44cm³.", "LP=3,14×6×(6+10)=3,14×96=301,44cm²."], "answer": "V=301,44cm³, LP=301,44cm²", "check": {"expression": "(1/3)*3.14*36*8", "expected": 301.44}}
+    ],
+    "common_mistakes": [
+      {"mistake": "LP tabung = 2πrt (lupa dua alas lingkaran).", "fix": "LP tabung = 2πrt (selimut) + 2πr² (2 alas) = 2πr(t+r)."},
+      {"mistake": "Volume kerucut = πr²t (lupa ×⅓).", "fix": "V kerucut = ⅓πr²t. Selalu ×⅓!"}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "volume luas permukaan tabung kerucut bola kelas 9 SMP rumus"},
+      {"purpose": "contoh-soal", "search_query": "soal bangun ruang sisi lengkung kelas 9 SMP kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "Volume bola dengan jari-jari 3cm (π=3,14) adalah ...", "options": ["28,26 cm³", "56,52 cm³", "113,04 cm³", "339,12 cm³"], "answer": 2, "explanation": "V=4/3×3,14×27=4/3×84,78=113,04 cm³.", "points": 2},
+      {"body": "Luas selimut tabung r=7, t=15cm (π=22/7) adalah ...", "options": ["220 cm²", "440 cm²", "660 cm²", "880 cm²"], "answer": 2, "explanation": "Selimut=2πrt=2×22/7×7×15=660 cm².", "points": 1},
+      {"body": "Perbandingan volume kerucut dan tabung yang memiliki alas dan tinggi yang sama adalah ...", "options": ["1:2", "1:3", "2:3", "3:1"], "answer": 1, "explanation": "Vkerucut=⅓πr²t. Vtabung=πr²t. Rasio=1:3.", "points": 2},
+      {"body": "Volume kerucut r=6cm, t=14cm (π=22/7) adalah ...", "options": ["264 cm³", "528 cm³", "792 cm³", "1.584 cm³"], "answer": 1, "explanation": "V=⅓×22/7×36×14=⅓×1.584=528 cm³.", "points": 2}
+    ]
+  }
+]

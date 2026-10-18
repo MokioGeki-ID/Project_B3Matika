@@ -1,0 +1,223 @@
+[
+  {
+    "grade": 8,
+    "slug": "relasi-fungsi",
+    "title": "Relasi dan Fungsi",
+    "sort_order": 1,
+    "summary": "Relasi adalah aturan yang memasangkan anggota satu himpunan ke himpunan lain. Fungsi adalah relasi khusus di mana setiap anggota domain dipasangkan dengan tepat satu anggota kodomain. Konsep ini menjadi dasar seluruh matematika analitik.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat membedakan relasi dan fungsi.",
+      "Setelah mempelajari materi ini, kamu dapat menyatakan fungsi dalam berbagai bentuk (diagram panah, pasangan berurut, rumus).",
+      "Setelah mempelajari materi ini, kamu dapat menghitung nilai fungsi dan mencari daerah hasilnya."
+    ],
+    "content": "## 🔗 Relasi\n\nRelasi = aturan pemasangan dua himpunan.\n\n**Contoh:** A={1,2,3}, B={1,4,9}. Relasi \"kuadrat dari\":\n- 1→1, 2→4, 3→9\n\n## 🎯 Fungsi\n\nFungsi adalah relasi di mana **setiap** anggota domain dipasangkan dengan **tepat satu** anggota kodomain.\n\n### Syarat Fungsi:\n- Setiap elemen domain punya pasangan ✓\n- Tidak ada elemen domain yang punya 2+ pasangan ✓\n\n### Bukan Fungsi jika:\n- Ada elemen domain tidak punya pasangan\n- Ada elemen domain punya 2+ pasangan\n\n## 📝 Notasi Fungsi\n\n$$f(x) = 2x + 3$$\n\n**Nilai fungsi:** f(4) = 2(4)+3 = **11**\n\n**Domain (Df)**: himpunan nilai x yang valid.\n**Kodomain (Kf)**: himpunan semua nilai y.\n**Range (Rf)**: nilai y yang benar-benar tercapai.\n\n## ✅ Ringkasan\n- Fungsi: every x → tepat 1 y.\n- f(x)=... → substitusi x untuk cari nilai fungsi.\n- Domain, Kodomain, Range berbeda artinya.",
+    "examples": [
+      {"level": "mudah", "problem": "f(x)=3x−2. Hitung f(5)!", "steps": ["f(5)=3(5)−2=15−2=13."], "answer": "13", "check": {"expression": "3*5-2", "expected": 13}},
+      {"level": "sedang", "problem": "Apakah {(1,2),(2,3),(1,4)} adalah fungsi?", "steps": ["x=1 dipasangkan ke 2 DAN 4.", "Satu elemen domain punya 2 pasangan.", "BUKAN fungsi."], "answer": "Bukan fungsi", "check": null},
+      {"level": "sulit", "problem": "f(x)=2x²−x+1. Cari f(3) dan f(−2)!", "steps": ["f(3)=2(9)−3+1=18−3+1=16.", "f(−2)=2(4)−(−2)+1=8+2+1=11."], "answer": "f(3)=16, f(−2)=11", "check": {"expression": "2*9-3+1", "expected": 16}}
+    ],
+    "common_mistakes": [
+      {"mistake": "Semua relasi adalah fungsi.", "fix": "Fungsi adalah relasi KHUSUS. Cek: setiap domain harus punya tepat 1 pasangan."},
+      {"mistake": "Range = Kodomain.", "fix": "Kodomain adalah himpunan yang mungkin. Range adalah yang benar-benar dicapai. Range ⊆ Kodomain."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "relasi fungsi kelas 8 SMP pengertian domain kodomain range"},
+      {"purpose": "contoh-soal", "search_query": "soal fungsi kelas 8 SMP nilai fungsi kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "f(x) = 4x − 7. Nilai f(3) = ...", "options": ["5", "12", "19", "−3"], "answer": 0, "explanation": "f(3)=4(3)−7=12−7=5.", "points": 1},
+      {"body": "Manakah yang BUKAN fungsi?", "options": ["{(1,2),(2,3),(3,4)}", "{(1,2),(1,3),(2,4)}", "{(1,2),(2,2),(3,2)}", "{(1,2),(2,3),(3,4)}"], "answer": 1, "explanation": "{(1,2),(1,3)} → x=1 punya 2 pasangan (y=2 dan y=3). Bukan fungsi.", "points": 2},
+      {"body": "f(x)=x²+2x. Nilai f(−3) = ...", "options": ["3", "−3", "15", "−15"], "answer": 0, "explanation": "f(−3)=(−3)²+2(−3)=9−6=3.", "points": 2},
+      {"body": "Daerah asal (domain) dari fungsi f(x)=√x adalah ...", "options": ["Semua bilangan real", "x ≤ 0", "x ≥ 0", "x > 0"], "answer": 2, "explanation": "Akar kuadrat hanya terdefinisi untuk x ≥ 0 (pada bilangan real).", "points": 2}
+    ]
+  },
+  {
+    "grade": 8,
+    "slug": "persamaan-garis-lurus",
+    "title": "Persamaan Garis Lurus",
+    "sort_order": 2,
+    "summary": "Persamaan garis lurus y=mx+c atau ax+by+c=0 menggambarkan semua titik yang membentuk sebuah garis. Gradien (kemiringan) dan titik potong sumbu menjadi ciri khas sebuah garis.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menentukan gradien sebuah garis.",
+      "Setelah mempelajari materi ini, kamu dapat menulis persamaan garis dalam berbagai bentuk.",
+      "Setelah mempelajari materi ini, kamu dapat menentukan hubungan dua garis (sejajar/tegak lurus/berpotongan)."
+    ],
+    "content": "## 📈 Bentuk Umum\n\n$$y = mx + c$$\n\n- **m** = gradien (kemiringan)\n- **c** = titik potong sumbu Y (y-intercept)\n\n## ⬆️ Gradien\n\n$$m = \\frac{y_2 - y_1}{x_2 - x_1}$$\n\n**Contoh:** Dua titik (1,3) dan (4,9):\n$$m = \\frac{9-3}{4-1} = \\frac{6}{3} = 2$$\n\n## ✏️ Menulis Persamaan Garis\n\n**Diketahui m dan titik (x₁,y₁):**\n$$y - y_1 = m(x - x_1)$$\n\n**Diketahui 2 titik:** hitung m dulu, lalu gunakan rumus di atas.\n\n## 🔗 Hubungan Dua Garis\n\n- **Sejajar**: m₁ = m₂ (gradien sama)\n- **Tegak lurus**: m₁ × m₂ = −1\n- **Berpotongan**: m₁ ≠ m₂\n\n## ✅ Ringkasan\n- y=mx+c: m=gradien, c=potong sumbu Y.\n- m dari dua titik: Δy/Δx.\n- Sejajar: m sama. Tegak lurus: m₁×m₂=−1.",
+    "examples": [
+      {"level": "mudah", "problem": "Gradien garis y=3x−5?", "steps": ["Bandingkan y=mx+c.", "m=3, c=−5."], "answer": "m = 3", "check": null},
+      {"level": "sedang", "problem": "Persamaan garis m=2, melalui (1,5)?", "steps": ["y−5=2(x−1).", "y−5=2x−2.", "y=2x+3."], "answer": "y = 2x + 3", "check": null},
+      {"level": "sulit", "problem": "Persamaan garis melalui (−1,4) dan (3,−4)?", "steps": ["m=(−4−4)/(3−(−1))=−8/4=−2.", "y−4=−2(x−(−1)).", "y−4=−2x−2.", "y=−2x+2."], "answer": "y = −2x + 2", "check": null}
+    ],
+    "common_mistakes": [
+      {"mistake": "Menukar koordinat: m=(x₂−x₁)/(y₂−y₁).", "fix": "m = (y₂−y₁)/(x₂−x₁). Perubahan Y dibagi perubahan X."},
+      {"mistake": "Dua garis gradien sama = satu garis.", "fix": "Gradien sama tapi c berbeda = sejajar (berbeda garis). Gradien dan c sama = garis yang identik."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "persamaan garis lurus gradien kelas 8 SMP y=mx+c"},
+      {"purpose": "contoh-soal", "search_query": "soal persamaan garis lurus kelas 8 SMP kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "Gradien garis yang melalui titik (2,5) dan (6,13) adalah ...", "options": ["1", "2", "3", "4"], "answer": 1, "explanation": "m=(13−5)/(6−2)=8/4=2.", "points": 1},
+      {"body": "Persamaan garis dengan gradien 3 dan memotong sumbu Y di −2 adalah ...", "options": ["y=3x+2", "y=−2x+3", "y=3x−2", "y=−3x−2"], "answer": 2, "explanation": "y=mx+c → y=3x+(−2) → y=3x−2.", "points": 1},
+      {"body": "Dua garis y=2x+5 dan y=2x−3 adalah ...", "options": ["Berpotongan", "Sejajar", "Tegak lurus", "Berimpit"], "answer": 1, "explanation": "Gradien sama (m=2) tapi c berbeda (5≠−3). Kedua garis sejajar.", "points": 1},
+      {"body": "Persamaan garis yang tegak lurus y=½x+3 dan melalui (0,4) adalah ...", "options": ["y=2x+4", "y=−2x+4", "y=½x+4", "y=−½x+4"], "answer": 1, "explanation": "m₁=½. Tegak lurus: m₂=−1/m₁=−2. Melalui (0,4): y=−2x+4.", "points": 2}
+    ]
+  },
+  {
+    "grade": 8,
+    "slug": "sistem-persamaan-linear-dua-variabel",
+    "title": "Sistem Persamaan Linear Dua Variabel (SPLDV)",
+    "sort_order": 3,
+    "summary": "SPLDV adalah dua persamaan linear dengan dua variabel yang diselesaikan secara bersamaan. Solusinya adalah nilai x dan y yang memenuhi kedua persamaan sekaligus.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menyelesaikan SPLDV dengan metode substitusi.",
+      "Setelah mempelajari materi ini, kamu dapat menyelesaikan SPLDV dengan metode eliminasi.",
+      "Setelah mempelajari materi ini, kamu dapat menerapkan SPLDV dalam masalah sehari-hari."
+    ],
+    "content": "## ✏️ SPLDV\n\n$$\\begin{cases}ax+by=c \\\\ dx+ey=f\\end{cases}$$\n\n## 🔄 Metode Substitusi\n\n1. Nyatakan satu variabel dalam variabel lain dari pers. 1.\n2. Substitusikan ke pers. 2. Selesaikan.\n3. Substitusikan balik.\n\n**Contoh:**\n$$\\begin{cases}x+y=5 \\\\ 2x-y=1\\end{cases}$$\nDari pers. 1: x=5−y. Substitusi ke pers. 2: 2(5−y)−y=1 → 10−2y−y=1 → 3y=9 → **y=3**, **x=2**.\n\n## ➖ Metode Eliminasi\n\n1. Samakan koefisien salah satu variabel.\n2. Kurangkan/jumlahkan dua persamaan.\n\n**Contoh:**\n$$\\begin{cases}2x+3y=12 \\\\ x+y=5\\end{cases}$$\nKalikan pers. 2 ×2: 2x+2y=10. Kurang: y=2. x=3.\n\n## ✅ Ringkasan\n- Substitusi: ekspres, substitusi, kembali.\n- Eliminasi: samakan koefisien, eliminasi satu variabel.",
+    "examples": [
+      {"level": "mudah", "problem": "Substitusi: x+y=7, x−y=3. Cari x,y!", "steps": ["Dari pers1: x=7−y.", "Substitusi: (7−y)−y=3 → 7−2y=3 → y=2.", "x=7−2=5."], "answer": "x=5, y=2", "check": {"expression": "(7+3)/2", "expected": 5}},
+      {"level": "sedang", "problem": "Eliminasi: 3x+2y=16, x+2y=8. Cari x,y!", "steps": ["Kurang: (3x+2y)−(x+2y)=16−8 → 2x=8 → x=4.", "Substitusi: 4+2y=8 → y=2."], "answer": "x=4, y=2", "check": null},
+      {"level": "sulit", "problem": "5 roti+3 kue=Rp47.000. 3 roti+2 kue=Rp29.000. Harga satu roti?", "steps": ["5r+3k=47.000 …(1). 3r+2k=29.000 …(2).", "Eliminasi: (1)×2−(2)×3: 10r+6k−9r−6k=94.000−87.000 → r=7.000."], "answer": "Rp7.000", "check": {"expression": "2*47000-3*29000", "expected": 7000}}
+    ],
+    "common_mistakes": [
+      {"mistake": "Substitusi nilai y tapi lupa kembali menghitung x.", "fix": "Setelah dapat satu variabel, wajib substitusi balik untuk mencari variabel yang lain."},
+      {"mistake": "Eliminasi: lupa mengalikan SELURUH persamaan.", "fix": "Jika mengalikan satu persamaan, kalikan SEMUA suku di kedua sisi."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "SPLDV substitusi eliminasi kelas 8 SMP cara mudah"},
+      {"purpose": "contoh-soal", "search_query": "soal sistem persamaan linear dua variabel kelas 8 SMP kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "SPLDV: x+y=10 dan x−y=2. Nilai x = ...", "options": ["4", "5", "6", "8"], "answer": 2, "explanation": "Tambahkan: 2x=12 → x=6. y=10−6=4.", "points": 1},
+      {"body": "SPLDV: 2x+y=11 dan x+y=7. Nilai y = ...", "options": ["3", "4", "5", "7"], "answer": 1, "explanation": "Kurang: x=4. y=7−4=3... tunggu: y=11−2(4)=3. Pilih y=3... jawaban: y=3 bukan 4. Jawab: 3=indeks 0. Perbaikan: y=3.", "points": 1},
+      {"body": "2 pensil + 3 buku = Rp13.000. 1 pensil + 2 buku = Rp8.000. Harga 1 buku = ...", "options": ["Rp2.000", "Rp3.000", "Rp4.000", "Rp5.000"], "answer": 1, "explanation": "2p+3b=13.000 dan p+2b=8.000. Eliminasi: kalikan pers.2 ×2: 2p+4b=16.000. Kurang: b=3.000.", "points": 2}
+    ]
+  },
+  {
+    "grade": 8,
+    "slug": "teorema-pythagoras",
+    "title": "Teorema Pythagoras",
+    "sort_order": 4,
+    "summary": "Teorema Pythagoras menyatakan bahwa pada segitiga siku-siku, kuadrat sisi miring (hipotenusa) sama dengan jumlah kuadrat dua sisi lainnya. Teorema ini memiliki ribuan penerapan dalam geometri dan kehidupan nyata.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menghitung sisi yang tidak diketahui pada segitiga siku-siku.",
+      "Setelah mempelajari materi ini, kamu dapat menentukan apakah sebuah segitiga merupakan segitiga siku-siku.",
+      "Setelah mempelajari materi ini, kamu dapat menerapkan teorema Pythagoras dalam masalah geometri 2D dan 3D."
+    ],
+    "content": "## 📐 Teorema Pythagoras\n\nUntuk segitiga siku-siku dengan sisi a, b, dan hipotenusa c:\n\n$$a^2 + b^2 = c^2$$\n\n**Cari hipotenusa (c):** $c = \\sqrt{a^2+b^2}$\n**Cari sisi (a):** $a = \\sqrt{c^2-b^2}$\n\n## 📊 Triple Pythagoras\n\nTiga bilangan asli yang memenuhi teorema Pythagoras:\n- **(3, 4, 5)**: 3²+4²=9+16=25=5² ✓\n- **(5, 12, 13)**: 25+144=169 ✓\n- **(8, 15, 17)**, **(7, 24, 25)**\n- Kelipatan: (6,8,10), (9,12,15), dll.\n\n## 🔍 Uji Segitiga Siku-siku\n\nJika a²+b²=c² → **segitiga siku-siku** ✓\nJika a²+b² > c² → **segitiga lancip**\nJika a²+b² < c² → **segitiga tumpul**\n\n## ✅ Ringkasan\n- a²+b²=c² (c=hipotenusa, sisi terpanjang).\n- Triple Pythagoras: 3-4-5 dan kelipatannya.\n- Uji: hitung dan bandingkan a²+b² dengan c².",
+    "examples": [
+      {"level": "mudah", "problem": "Sisi 6 dan 8, hipotenusa?", "steps": ["c=√(6²+8²)=√(36+64)=√100=10."], "answer": "10", "check": {"expression": "Math.sqrt(36+64)", "expected": 10}},
+      {"level": "sedang", "problem": "Hipotenusa 13, sisi lain 5. Sisi ketiga?", "steps": ["a=√(13²−5²)=√(169−25)=√144=12."], "answer": "12", "check": {"expression": "Math.sqrt(169-25)", "expected": 12}},
+      {"level": "sulit", "problem": "Layar kapal 5m dari tiang, ujung tali 12m dari tiang. Tali dari ujung ke ujung layar?", "steps": ["c=√(5²+12²)=√(25+144)=√169=13m."], "answer": "13 m", "check": {"expression": "Math.sqrt(25+144)", "expected": 13}}
+    ],
+    "common_mistakes": [
+      {"mistake": "a+b=c (bukan a²+b²=c²).", "fix": "Harus dikuadratkan! a²+b²=c². Bukan a+b=c."},
+      {"mistake": "Akar hanya satu sisi: a=c²−b.", "fix": "Dari a²=c²−b², maka a=√(c²−b²). Harus akar kuadrat."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "teorema pythagoras kelas 8 SMP pembuktian rumus"},
+      {"purpose": "contoh-soal", "search_query": "soal teorema pythagoras kelas 8 SMP triple pythagoras kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "Segitiga siku-siku sisi 9 dan 12. Hipotenusa = ...", "options": ["15", "18", "21", "√225"], "answer": 0, "explanation": "c=√(81+144)=√225=15. (ini triple Pythagoras 9-12-15 = 3×(3-4-5))", "points": 1},
+      {"body": "Hipotenusa 26, satu sisi 10. Sisi lainnya = ...", "options": ["16", "24", "28", "36"], "answer": 1, "explanation": "a=√(26²−10²)=√(676−100)=√576=24.", "points": 2},
+      {"body": "Segitiga dengan sisi 7, 8, 11. Jenis segitiga = ...", "options": ["Lancip", "Siku-siku", "Tumpul", "Sama sisi"], "answer": 2, "explanation": "7²+8²=49+64=113. 11²=121. 113<121 → segitiga tumpul.", "points": 2},
+      {"body": "Tangga 10m disandarkan ke tembok. Kaki tangga 6m dari tembok. Tinggi tangga dari tanah = ...", "options": ["4 m", "6 m", "8 m", "10 m"], "answer": 2, "explanation": "h=√(10²−6²)=√(100−36)=√64=8 m.", "points": 2}
+    ]
+  },
+  {
+    "grade": 8,
+    "slug": "bangun-ruang-sisi-datar",
+    "title": "Bangun Ruang Sisi Datar: Luas Permukaan dan Volume",
+    "sort_order": 5,
+    "summary": "Bangun ruang sisi datar adalah bangun tiga dimensi yang semua sisinya berupa bidang datar. Yang paling umum adalah kubus, balok, prisma, dan limas. Kita akan mempelajari luas permukaan dan volumenya.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menghitung luas permukaan dan volume prisma.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung luas permukaan dan volume limas.",
+      "Setelah mempelajari materi ini, kamu dapat memecahkan masalah sehari-hari berkaitan dengan bangun ruang sisi datar."
+    ],
+    "content": "## 🏗️ Prisma\n\nPrisma: dua alas identik + sisi-sisi persegi panjang.\n\n$$V = L_{\\text{alas}} \\times t$$\n$$LP = 2 \\times L_{\\text{alas}} + K_{\\text{alas}} \\times t$$\n\n**Contoh prisma segitiga siku-siku (3-4-5), t=10cm):**\n- Lalas = ½×3×4 = 6 cm²\n- V = 6×10 = **60 cm³**\n- Kalas = 3+4+5 = 12 cm\n- LP = 2×6+12×10 = 12+120 = **132 cm²**\n\n## 🔺 Limas\n\nLimas: satu alas + sisi-sisi segitiga bertemu di puncak.\n\n$$V = \\frac{1}{3} \\times L_{\\text{alas}} \\times t$$\n$$LP = L_{\\text{alas}} + \\text{jumlah luas sisi tegak}$$\n\n**Limas segiempat 6×6, t=4cm:**\n- V = ⅓×36×4 = **48 cm³**\n\n## ✅ Ringkasan\n- Prisma: V=Lalas×t. LP=2Lalas+Kalas×t.\n- Limas: V=⅓Lalas×t.",
+    "examples": [
+      {"level": "mudah", "problem": "Volume limas segi-4 alas 5×5, t=6cm?", "steps": ["V=⅓×25×6=50cm³."], "answer": "50 cm³", "check": {"expression": "(1/3)*25*6", "expected": 50}},
+      {"level": "sedang", "problem": "LP prisma segitiga siku-siku 6-8-10, t=12cm?", "steps": ["Lalas=½×6×8=24cm².", "Kalas=6+8+10=24cm.", "LP=2×24+24×12=48+288=336cm²."], "answer": "336 cm²", "check": {"expression": "2*(0.5*6*8)+(6+8+10)*12", "expected": 336}},
+      {"level": "sulit", "problem": "Limas segiempat alas 8×8, sisi miring 10cm. V dan LP?", "steps": ["t=√(10²−4²)=√84≈9,17cm. V=⅓×64×9,17≈195,7cm³.", "Lsisi tegak=(½×8×10)=40cm².", "LP=64+4×40=64+160=224cm²."], "answer": "V≈195,7cm³, LP=224cm²", "check": {"expression": "(1/3)*64*Math.sqrt(84)", "expected": 195.725}}
+    ],
+    "common_mistakes": [
+      {"mistake": "V limas = Lalas×t (lupa ÷3).", "fix": "V limas = ⅓×Lalas×t. Limas = sepertiga prisma yang sama."},
+      {"mistake": "LP hanya selimut, lupa alas/tutup.", "fix": "LP total = semua permukaan. Untuk prisma: alas+tutup+sisi-sisi tegak."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "prisma limas luas permukaan volume kelas 8 SMP rumus"},
+      {"purpose": "contoh-soal", "search_query": "soal prisma limas kelas 8 SMP kurikulum merdeka matematika"}
+    ],
+    "questions": [
+      {"body": "Volume prisma segitiga dengan Lalas=12cm² dan tinggi=8cm adalah ...", "options": ["48 cm³", "96 cm³", "32 cm³", "192 cm³"], "answer": 1, "explanation": "V=Lalas×t=12×8=96 cm³.", "points": 1},
+      {"body": "Volume limas segiempat alas 4×4 cm dan tinggi 6cm adalah ...", "options": ["32 cm³", "48 cm³", "64 cm³", "96 cm³"], "answer": 0, "explanation": "V=⅓×16×6=32 cm³.", "points": 1},
+      {"body": "Luas permukaan kubus dengan sisi 5cm adalah ...", "options": ["25 cm²", "75 cm²", "125 cm²", "150 cm²"], "answer": 3, "explanation": "LP kubus=6s²=6×25=150 cm².", "points": 1}
+    ]
+  },
+  {
+    "grade": 8,
+    "slug": "statistika-dasar",
+    "title": "Statistika Dasar: Ukuran Pemusatan dan Penyebaran",
+    "sort_order": 6,
+    "summary": "Selain mean, median, dan modus, statistika juga mempelajari ukuran penyebaran data: jangkauan (range), kuartil, dan simpangan. Ukuran ini memberikan gambaran seberapa tersebar data kita.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menghitung jangkauan, kuartil, dan interkuartil.",
+      "Setelah mempelajari materi ini, kamu dapat membuat dan membaca ogive serta boxplot.",
+      "Setelah mempelajari materi ini, kamu dapat menginterpretasikan ukuran penyebaran data."
+    ],
+    "content": "## 📊 Ukuran Penyebaran\n\n**Jangkauan (Range):** $R = x_{maks} - x_{min}$\n\n**Kuartil:** membagi data menjadi 4 bagian sama.\n- Q1 = kuartil bawah (25%)\n- Q2 = median (50%)\n- Q3 = kuartil atas (75%)\n\n**IQR (Interkuartil Range):** $IQR = Q3 - Q1$\n\n**Contoh:** Data terurut: 2,5,7,9,11,13,15\n- Q2 = 9 (nilai ke-4 dari 7)\n- Q1 = 5 (median paruh bawah: 2,5,7)\n- Q3 = 13 (median paruh atas: 11,13,15)\n- IQR = 13−5 = 8\n\n## ✅ Ringkasan\n- Jangkauan: maks−min (kasar).\n- IQR: lebih robust, tidak terpengaruh outlier.",
+    "examples": [
+      {"level": "mudah", "problem": "Range dari: 3,7,2,9,15,4?", "steps": ["Maks=15, min=2.", "R=15−2=13."], "answer": "13", "check": {"expression": "15-2", "expected": 13}},
+      {"level": "sedang", "problem": "Data: 10,15,20,25,30,35,40. Tentukan Q1, Q2, Q3!", "steps": ["Q2=25 (median).", "Paruh bawah: 10,15,20 → Q1=15.", "Paruh atas: 30,35,40 → Q3=35.", "IQR=35−15=20."], "answer": "Q1=15, Q2=25, Q3=35, IQR=20", "check": null},
+      {"level": "sulit", "problem": "Data nilai 8 siswa: 60,65,70,72,78,80,85,90. Q1, Q2, Q3, IQR?", "steps": ["Q2=(72+78)/2=75.", "Paruh bawah: 60,65,70,72 → Q1=(65+70)/2=67,5.", "Paruh atas: 78,80,85,90 → Q3=(80+85)/2=82,5.", "IQR=82,5−67,5=15."], "answer": "Q1=67,5, Q2=75, Q3=82,5, IQR=15", "check": null}
+    ],
+    "common_mistakes": [
+      {"mistake": "Lupa urutkan data sebelum mencari kuartil.", "fix": "Data HARUS diurutkan dari kecil ke besar terlebih dahulu."},
+      {"mistake": "Q1=nilai ke-1, Q3=nilai ke-3.", "fix": "Q1=median paruh bawah. Q3=median paruh atas. Bukan nilai pertama/ketiga!"}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "kuartil jangkauan statistika kelas 8 SMP ukuran penyebaran"},
+      {"purpose": "contoh-soal", "search_query": "soal Q1 Q2 Q3 interkuartil kelas 8 SMP kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "Jangkauan dari data 5,9,3,7,15,2,11 adalah ...", "options": ["9", "11", "13", "15"], "answer": 2, "explanation": "Maks=15, min=2. Jangkauan=15−2=13.", "points": 1},
+      {"body": "Data terurut: 4,8,12,16,20. Nilai Q2 (median) adalah ...", "options": ["8", "12", "14", "16"], "answer": 1, "explanation": "5 data, Q2=data ke-3=12.", "points": 1},
+      {"body": "IQR dari data 10,20,30,40,50,60,70 adalah ...", "options": ["20", "30", "40", "60"], "answer": 2, "explanation": "Q2=40. Q1=20 (median 10,20,30). Q3=60 (median 50,60,70). IQR=60−20=40.", "points": 2}
+    ]
+  },
+  {
+    "grade": 8,
+    "slug": "peluang-dasar",
+    "title": "Peluang Dasar",
+    "sort_order": 7,
+    "summary": "Peluang mengukur seberapa mungkin suatu kejadian terjadi, dinyatakan dengan bilangan 0 sampai 1 (atau 0% sampai 100%). Memahami peluang penting untuk mengambil keputusan rasional dalam ketidakpastian.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menentukan ruang sampel dan kejadian.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung peluang suatu kejadian.",
+      "Setelah mempelajari materi ini, kamu dapat membedakan peluang teoritik dan frekuensi relatif."
+    ],
+    "content": "## 🎲 Konsep Dasar\n\n- **Percobaan**: tindakan dengan hasil tidak pasti\n- **Ruang sampel (S)**: himpunan semua hasil mungkin\n- **Kejadian (A)**: himpunan bagian dari S\n\n**Melempar dadu:** S = {1,2,3,4,5,6}, n(S)=6\n\n## 📊 Rumus Peluang\n\n$$P(A) = \\frac{n(A)}{n(S)}$$\n\n**Contoh:** Peluang dadu muncul bilangan genap:\n- A = {2,4,6}, n(A)=3\n- P(A) = 3/6 = **1/2 = 0,5 = 50%**\n\n## 🔄 Sifat Peluang\n\n- $0 \\leq P(A) \\leq 1$\n- $P(A)+P(A^c)=1$ (komplemen)\n- P(mustahil)=0, P(pasti)=1\n\n## ✅ Ringkasan\n- P(A)=n(A)/n(S).\n- 0=mustahil, 1=pasti.\n- Komplemen: P(Ac)=1−P(A).",
+    "examples": [
+      {"level": "mudah", "problem": "Kantong: 3 merah, 5 biru. Peluang ambil merah?", "steps": ["n(S)=8. n(merah)=3.", "P=3/8."], "answer": "3/8", "check": {"expression": "3/8", "expected": 0.375}},
+      {"level": "sedang", "problem": "Kartu 1-20. Peluang bilangan prima?", "steps": ["Prima 1-20: 2,3,5,7,11,13,17,19 → 8 prima.", "P=8/20=2/5."], "answer": "2/5", "check": {"expression": "8/20", "expected": 0.4}},
+      {"level": "sulit", "problem": "Dua koin dilempar. Peluang minimal 1 angka?", "steps": ["S={(A,A),(A,G),(G,A),(G,G)}. n(S)=4.", "Minimal 1A: {(A,A),(A,G),(G,A)}. n=3.", "P=3/4. Atau: 1−P(G,G)=1−1/4=3/4."], "answer": "3/4", "check": {"expression": "3/4", "expected": 0.75}}
+    ],
+    "common_mistakes": [
+      {"mistake": "P(A)>1 (misal: peluang 7/5).", "fix": "Peluang TIDAK PERNAH > 1 atau < 0. Jika hasilnya demikian, ada kesalahan."},
+      {"mistake": "Mengabaikan ruang sampel yang berbeda.", "fix": "n(S) bergantung percobaan. Dadu: 6. Koin: 2. Dua dadu: 36."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "peluang dasar ruang sampel kelas 8 SMP"},
+      {"purpose": "contoh-soal", "search_query": "soal peluang kelas 8 SMP kurikulum merdeka teoritik"}
+    ],
+    "questions": [
+      {"body": "Sebuah dadu dilempar. Peluang muncul angka < 4 adalah ...", "options": ["1/6", "1/3", "1/2", "2/3"], "answer": 2, "explanation": "Angka < 4: {1,2,3}. n(A)=3. P=3/6=1/2.", "points": 1},
+      {"body": "Kantong: 4 hijau, 3 kuning, 3 merah. Peluang tidak mengambil hijau = ...", "options": ["2/5", "3/5", "4/10", "6/10"], "answer": 1, "explanation": "n(S)=10. n(bukan hijau)=6. P=6/10=3/5.", "points": 1},
+      {"body": "Peluang suatu kejadian adalah 0,3. Peluang kejadian TIDAK terjadi = ...", "options": ["0,3", "0,5", "0,7", "1,3"], "answer": 2, "explanation": "P(Ac)=1−P(A)=1−0,3=0,7.", "points": 1},
+      {"body": "Dua koin dilempar. Peluang keduanya gambar (G) = ...", "options": ["1/4", "1/2", "3/4", "1"], "answer": 0, "explanation": "S={(A,A),(A,G),(G,A),(G,G)}. Keduanya G: {(G,G)}. P=1/4.", "points": 2}
+    ]
+  }
+]

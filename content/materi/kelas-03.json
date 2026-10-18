@@ -10,96 +10,25 @@
       "Setelah mempelajari materi ini, kamu dapat menguraikan bilangan ke dalam ribuan, ratusan, puluhan, dan satuan.",
       "Setelah mempelajari materi ini, kamu dapat membandingkan dan mengurutkan bilangan sampai ribuan."
     ],
-    "content": "## 🔢 Bilangan hingga Ribuan\n\nSekarang kita naik level! Selain puluhan dan ratusan, kita mengenal **ribuan**.\n\n### Nilai Tempat Baru: Ratusan dan Ribuan\n\n```\nBilangan: 4   3   7   5\nTempat: Ribuan Ratusan Puluhan Satuan\nNilai:  4000 + 300  +  70  +  5  = 4.375\n```\n\n### Contoh Penguraian\n\n- **1.245** = 1 ribu + 2 ratus + 4 puluhan + 5 satuan = 1.000 + 200 + 40 + 5\n- **3.060** = 3 ribu + 0 ratus + 6 puluhan + 0 satuan = 3.000 + 0 + 60 + 0\n- **7.009** = 7 ribu + 0 ratus + 0 puluhan + 9 satuan = 7.000 + 0 + 0 + 9\n\n> Perhatikan titik pemisah ribuan: 1.000 (bukan 1000). Titik memudahkan membaca.\n\n### Membaca Bilangan\n\n- **2.345** = dua ribu tiga ratus empat puluh lima\n- **5.007** = lima ribu tujuh\n- **9.100** = sembilan ribu seratus\n\n## 🔢 Membandingkan Bilangan sampai Ribuan\n\nLangkah:\n1. Bandingkan digit **ribuan** dulu.\n2. Jika sama, bandingkan **ratusan**.\n3. Jika sama, bandingkan **puluhan**.\n4. Jika sama, bandingkan **satuan**.\n\n**Contoh:**\n- 3.456 vs 3.412: ribuan sama (3), ratusan sama (4), puluhan 5 > 1 → **3.456 > 3.412**\n- 7.200 vs 6.999: ribuan 7 > 6 → **7.200 > 6.999**\n\n## ➕ Operasi Hitung sampai Ribuan\n\n### Penjumlahan\n**1.234 + 2.512:**\n- Satuan: 4 + 2 = 6\n- Puluhan: 3 + 1 = 4\n- Ratusan: 2 + 5 = 7\n- Ribuan: 1 + 2 = 3\n- Hasil: **3.746**\n\n### Pengurangan\n**5.678 − 3.245:**\n- Satuan: 8 − 5 = 3\n- Puluhan: 7 − 4 = 3\n- Ratusan: 6 − 2 = 4\n- Ribuan: 5 − 3 = 2\n- Hasil: **2.433**\n\n## ✅ Ringkasan\n\n- Nilai tempat: satuan, puluhan, ratusan, ribuan (dari kanan ke kiri).\n- 1 ribu = 10 ratus = 100 puluhan = 1.000 satuan.\n- Membandingkan: bandingkan dari nilai terbesar ke terkecil.",
+    "content": "## 🔢 Bilangan hingga Ribuan\n\nSekarang kita naik level! Selain puluhan dan ratusan, kita mengenal **ribuan**.\n\n```\nBilangan: 4   3   7   5\nTempat: Ribuan Ratusan Puluhan Satuan\nNilai:  4000 + 300  +  70  +  5  = 4.375\n```\n\n### Contoh Penguraian\n\n- **1.245** = 1 ribu + 2 ratus + 4 puluhan + 5 satuan = 1.000 + 200 + 40 + 5\n- **3.060** = 3 ribu + 0 ratus + 6 puluhan + 0 satuan\n- **7.009** = 7 ribu + 0 ratus + 0 puluhan + 9 satuan\n\n### Membaca Bilangan\n- **2.345** = dua ribu tiga ratus empat puluh lima\n- **5.007** = lima ribu tujuh\n- **9.100** = sembilan ribu seratus\n\n## 📊 Membandingkan Bilangan\n\nBandingkan dari nilai tempat **terbesar** (ribuan dulu).\n\n- 3.456 vs 3.412: ribuan=3=3, ratusan=4=4, puluhan 5>1 → **3.456 > 3.412**\n- 7.200 vs 6.999: ribuan 7>6 → **7.200 > 6.999**\n\n## ✅ Ringkasan\n- Ribuan > Ratusan > Puluhan > Satuan.\n- 1 ribu = 10 ratus = 100 puluhan = 1.000 satuan.\n- Bandingkan dari tempat terbesar ke terkecil.",
     "examples": [
-      {
-        "level": "mudah",
-        "problem": "Uraikan bilangan 6.382 ke dalam ribuan, ratusan, puluhan, dan satuan!",
-        "steps": [
-          "Angka paling kiri (6) → ribuan → nilainya 6.000.",
-          "Angka kedua (3) → ratusan → nilainya 300.",
-          "Angka ketiga (8) → puluhan → nilainya 80.",
-          "Angka paling kanan (2) → satuan → nilainya 2.",
-          "6.382 = 6.000 + 300 + 80 + 2."
-        ],
-        "answer": "6.382 = 6 ribuan + 3 ratusan + 8 puluhan + 2 satuan",
-        "check": { "expression": "6000 + 300 + 80 + 2", "expected": 6382 }
-      },
-      {
-        "level": "sedang",
-        "problem": "Mana yang lebih besar: 4.573 atau 4.537?",
-        "steps": [
-          "Ribuan: 4 = 4 (sama).",
-          "Ratusan: 5 = 5 (sama).",
-          "Puluhan: 7 vs 3. 7 > 3.",
-          "Jadi 4.573 > 4.537."
-        ],
-        "answer": "4.573 lebih besar dari 4.537",
-        "check": null
-      },
-      {
-        "level": "sulit",
-        "problem": "Sekolah memiliki 3.245 buku di perpustakaan. Tahun ini membeli 1.532 buku baru dan meminjamkan 875 buku ke sekolah lain. Berapa buku yang tersisa?",
-        "steps": [
-          "Total setelah beli: 3.245 + 1.532.",
-          "Satuan: 5+2=7. Puluhan: 4+3=7. Ratusan: 2+5=7. Ribuan: 3+1=4. → 4.777.",
-          "Setelah dipinjam: 4.777 − 875.",
-          "Satuan: 7−5=2. Puluhan: 7−7=0. Ratusan: 7−8 tidak cukup, pinjam dari ribuan.",
-          "Ratusan jadi 17−8=9. Ribuan: 3 (berkurang 1).",
-          "Ribuan: 3. Jadi 3.902.",
-          "Buku tersisa: 3.902."
-        ],
-        "answer": "3.902 buku",
-        "check": { "expression": "3245 + 1532 - 875", "expected": 3902 }
-      }
+      {"level": "mudah", "problem": "Uraikan bilangan 6.382!", "steps": ["6 → ribuan → 6.000.", "3 → ratusan → 300.", "8 → puluhan → 80.", "2 → satuan → 2.", "6.382 = 6.000 + 300 + 80 + 2."], "answer": "6.382 = 6 ribuan + 3 ratusan + 8 puluhan + 2 satuan", "check": {"expression": "6000 + 300 + 80 + 2", "expected": 6382}},
+      {"level": "sedang", "problem": "Mana yang lebih besar: 4.573 atau 4.537?", "steps": ["Ribuan: 4=4. Ratusan: 5=5. Puluhan: 7 vs 3. 7>3.", "4.573 > 4.537."], "answer": "4.573 lebih besar", "check": null},
+      {"level": "sulit", "problem": "Sekolah punya 3.245 buku. Beli 1.532, pinjamkan 875. Sisa buku?", "steps": ["3.245 + 1.532 = 4.777.", "4.777 − 875 = 3.902."], "answer": "3.902 buku", "check": {"expression": "3245 + 1532 - 875", "expected": 3902}}
     ],
     "common_mistakes": [
-      {
-        "mistake": "Menulis 2.300 sebagai 2.3 atau 2300 tanpa titik pemisah ribuan.",
-        "fix": "Gunakan titik sebagai pemisah ribuan: 2.300 (bukan 2300 atau 2.3)."
-      },
-      {
-        "mistake": "Mengacaukan nilai tempat: mengira digit ketiga dari kiri adalah puluhan.",
-        "fix": "Hitung dari kanan: satuan (1), puluhan (2), ratusan (3), ribuan (4)."
-      }
+      {"mistake": "Menulis 2.300 sebagai 2300 tanpa titik pemisah ribuan.", "fix": "Gunakan titik sebagai pemisah ribuan: 2.300."},
+      {"mistake": "Mengacaukan nilai tempat.", "fix": "Hitung dari kanan: satuan(1), puluhan(2), ratusan(3), ribuan(4)."}
     ],
     "videos": [
-      {
-        "purpose": "konsep",
-        "search_query": "nilai tempat ribuan ratusan puluhan satuan kelas 3 SD"
-      },
-      {
-        "purpose": "contoh-soal",
-        "search_query": "bilangan ribuan kelas 3 SD penjumlahan pengurangan"
-      }
+      {"purpose": "konsep", "search_query": "nilai tempat ribuan ratusan puluhan satuan kelas 3 SD"},
+      {"purpose": "contoh-soal", "search_query": "bilangan ribuan kelas 3 SD penjumlahan pengurangan"}
     ],
     "questions": [
-      {
-        "body": "Nilai digit 5 pada bilangan 5.723 adalah ...",
-        "options": ["5", "50", "500", "5.000"],
-        "answer": 3,
-        "explanation": "Angka 5 berada di posisi ribuan, sehingga nilainya 5 × 1.000 = 5.000.",
-        "points": 1
-      },
-      {
-        "body": "Bilangan yang terdiri dari 2 ribuan, 4 ratusan, 0 puluhan, dan 7 satuan adalah ...",
-        "options": ["2.047", "2.407", "2.470", "2.740"],
-        "answer": 1,
-        "explanation": "2.000 + 400 + 0 + 7 = 2.407.",
-        "points": 1
-      },
-      {
-        "body": "Urutan bilangan dari terkecil ke terbesar: 3.015, 3.105, 315, 3.501 adalah ...",
-        "options": [
-          "315, 3.015, 3.105, 3.501",
-          "3.015, 315, 3.105, 3.501",
-          "315, 3.501, 3.015, 3.105",
-          "3.501, 3.105, 3.015, 315"
-        ],
-        "answer": 0,
-        "explanation": "315 tidak punya ribuan (paling kecil). Lalu 3.015, 3.105, dan 3.501 (bandingkan ratusan: 0 < 1; lalu 1 < 5).",
-        "points": 2
-      }
+      {"body": "Nilai digit 5 pada bilangan 5.723 adalah ...", "options": ["5", "50", "500", "5.000"], "answer": 3, "explanation": "Angka 5 berada di posisi ribuan, nilainya 5 × 1.000 = 5.000.", "points": 1},
+      {"body": "Bilangan yang terdiri dari 2 ribuan, 4 ratusan, 0 puluhan, dan 7 satuan adalah ...", "options": ["2.047", "2.407", "2.470", "2.740"], "answer": 1, "explanation": "2.000 + 400 + 0 + 7 = 2.407.", "points": 1},
+      {"body": "Urutan dari terkecil ke terbesar: 3.015, 3.105, 315, 3.501 adalah ...", "options": ["315, 3.015, 3.105, 3.501", "3.015, 315, 3.105, 3.501", "315, 3.501, 3.015, 3.105", "3.501, 3.105, 3.015, 315"], "answer": 0, "explanation": "315 paling kecil, lalu 3.015 < 3.105 < 3.501.", "points": 2},
+      {"body": "Hasil dari 2.500 + 3.250 = ...", "options": ["5.570", "5.750", "5.075", "5.705"], "answer": 1, "explanation": "2.500 + 3.250 = 5.750.", "points": 1}
     ]
   },
   {
@@ -107,83 +36,30 @@
     "slug": "garis-bilangan-dasar",
     "title": "Garis Bilangan Dasar",
     "sort_order": 2,
-    "summary": "Garis bilangan adalah cara memvisualisasikan bilangan pada sebuah garis lurus. Dengan garis bilangan, kita bisa membandingkan bilangan, menghitung operasi penjumlahan dan pengurangan, serta mengenal bilangan negatif.",
+    "summary": "Garis bilangan adalah cara memvisualisasikan bilangan pada sebuah garis lurus. Dengan garis bilangan, kita bisa membandingkan bilangan dan menghitung operasi dengan melompat ke kanan (tambah) atau kiri (kurang).",
     "objectives": [
       "Setelah mempelajari materi ini, kamu dapat menentukan posisi bilangan pada garis bilangan.",
-      "Setelah mempelajari materi ini, kamu dapat menggunakan garis bilangan untuk membantu penjumlahan dan pengurangan.",
+      "Setelah mempelajari materi ini, kamu dapat menggunakan garis bilangan untuk penjumlahan dan pengurangan.",
       "Setelah mempelajari materi ini, kamu dapat membandingkan bilangan menggunakan garis bilangan."
     ],
-    "content": "## 📏 Apa itu Garis Bilangan?\n\nGaris bilangan adalah sebuah **garis lurus** dengan titik-titik yang mewakili bilangan secara teratur.\n\n```\n<---|---|---|---|---|---|---|---|---|---|--->\n    0   1   2   3   4   5   6   7   8   9\n```\n\n**Sifat-sifat garis bilangan:**\n- Semakin ke **kanan**, bilangan makin **besar**.\n- Semakin ke **kiri**, bilangan makin **kecil**.\n- Jarak antar bilangan yang berdekatan **sama**.\n\n## 📐 Menentukan Posisi Bilangan\n\nPada garis bilangan 0 sampai 20 dengan interval 1:\n- Bilangan **5** ada di titik ke-5 dari kiri.\n- Bilangan **12** ada di titik ke-12 dari kiri.\n- Bilangan **17** ada di antara 16 dan 18.\n\n### Garis Bilangan dengan Interval Lebih Besar\n\nJika garis bilangan dari 0 sampai 100 dengan interval 10:\n```\n<--|--|--|--|--|--|--|--|--|--|-->\n   0  10 20 30 40 50 60 70 80 90 100\n```\n\nBilangan 35 ada di **tengah-tengah** antara 30 dan 40.\n\n## ➕➖ Garis Bilangan untuk Berhitung\n\n### Penjumlahan = Melompat ke Kanan\n\n**5 + 3**: Mulai di 5, lompat 3 kali ke kanan → mendarat di **8**.\n```\n...---|---|---|---|---|---|---|---...\n      5   6   7   8\n         →→→→\n```\n\n### Pengurangan = Melompat ke Kiri\n\n**9 − 4**: Mulai di 9, lompat 4 kali ke kiri → mendarat di **5**.\n```\n...---|---|---|---|---|---...\n      5   6   7   8   9\n     ←←←←\n```\n\n## ✅ Ringkasan\n\n- Garis bilangan: urut dari kiri (kecil) ke kanan (besar).\n- Penjumlahan → gerak ke kanan.\n- Pengurangan → gerak ke kiri.\n- Jarak antar titik harus sama (interval konsisten).",
+    "content": "## 📏 Garis Bilangan\n\n```\n<---|---|---|---|---|---|---|---|---|---|--->\n    0   1   2   3   4   5   6   7   8   9\n```\n\n**Sifat:**\n- Makin ke **kanan** = makin **besar**\n- Makin ke **kiri** = makin **kecil**\n- Jarak antar bilangan berdekatan **sama**\n\n## ➕ Penjumlahan = Melompat ke Kanan\n\n**5 + 3**: Mulai di 5, lompat 3 ke kanan → **8**.\n\n## ➖ Pengurangan = Melompat ke Kiri\n\n**9 − 4**: Mulai di 9, lompat 4 ke kiri → **5**.\n\n## ✅ Ringkasan\n- Garis bilangan: kiri kecil, kanan besar.\n- Tambah → gerak kanan. Kurang → gerak kiri.",
     "examples": [
-      {
-        "level": "mudah",
-        "problem": "Pada garis bilangan 0-10, di titik manakah bilangan 7 berada?",
-        "steps": [
-          "Hitung dari 0 ke kanan: 0, 1, 2, 3, 4, 5, 6, 7.",
-          "Bilangan 7 ada di titik ke-7 dari 0."
-        ],
-        "answer": "Di titik ke-7 dari kiri (antara 6 dan 8).",
-        "check": null
-      },
-      {
-        "level": "sedang",
-        "problem": "Gunakan garis bilangan untuk menghitung 14 + 6!",
-        "steps": [
-          "Mulai di titik 14 pada garis bilangan.",
-          "Lompat 6 kali ke kanan: 15, 16, 17, 18, 19, 20.",
-          "Mendarat di 20.",
-          "14 + 6 = 20."
-        ],
-        "answer": "20",
-        "check": { "expression": "14 + 6", "expected": 20 }
-      },
-      {
-        "level": "sulit",
-        "problem": "Pada garis bilangan dengan interval 5 (0, 5, 10, 15, ...), bilangan apakah yang ada di titik ke-7?",
-        "steps": [
-          "Interval 5 berarti setiap titik bertambah 5.",
-          "Titik ke-1 = 0, titik ke-2 = 5, titik ke-3 = 10, titik ke-4 = 15, titik ke-5 = 20, titik ke-6 = 25, titik ke-7 = 30.",
-          "Atau: titik ke-n = (n-1) × 5. Titik ke-7 = 6 × 5 = 30."
-        ],
-        "answer": "30",
-        "check": { "expression": "6 * 5", "expected": 30 }
-      }
+      {"level": "mudah", "problem": "Posisi bilangan 7 pada garis bilangan 0-10?", "steps": ["Hitung dari 0 ke kanan: 0,1,2,3,4,5,6,7.", "Posisi ke-7 dari kiri."], "answer": "Di titik ke-7 (antara 6 dan 8)", "check": null},
+      {"level": "sedang", "problem": "Gunakan garis bilangan: 14 + 6 = ?", "steps": ["Mulai di 14.", "Lompat 6 kanan: 15,16,17,18,19,20.", "Hasil: 20."], "answer": "20", "check": {"expression": "14 + 6", "expected": 20}},
+      {"level": "sulit", "problem": "Garis bilangan interval 5 (0,5,10,...). Titik ke-7 = ?", "steps": ["Titik ke-n = (n−1) × 5.", "Titik ke-7 = 6 × 5 = 30."], "answer": "30", "check": {"expression": "6 * 5", "expected": 30}}
     ],
     "common_mistakes": [
-      {
-        "mistake": "Menggambar garis bilangan dengan jarak antar titik yang tidak sama.",
-        "fix": "Gunakan penggaris dan bagi jarak secara merata. Jarak antar bilangan yang berdekatan harus selalu sama."
-      },
-      {
-        "mistake": "Saat menggunakan garis bilangan untuk penjumlahan, menghitung titik awal sebagai lompatan pertama.",
-        "fix": "Titik awal BUKAN lompatan. Kalau mulai dari 5 dan melompat 3, maka lompatan: 5→6 (lompat 1), 6→7 (lompat 2), 7→8 (lompat 3). Hasilnya 8, bukan 7."
-      }
+      {"mistake": "Jarak antar titik tidak sama.", "fix": "Gunakan penggaris, bagi jarak merata."},
+      {"mistake": "Menghitung titik awal sebagai lompatan pertama.", "fix": "Titik awal bukan lompatan. 5+3: lompat 5→6(1), 6→7(2), 7→8(3). Hasil 8."}
     ],
     "videos": [
-      {
-        "purpose": "konsep",
-        "search_query": "garis bilangan kelas 3 SD penjumlahan pengurangan"
-      },
-      {
-        "purpose": "contoh-soal",
-        "search_query": "latihan garis bilangan kelas 3 SD matematika"
-      }
+      {"purpose": "konsep", "search_query": "garis bilangan kelas 3 SD penjumlahan pengurangan"},
+      {"purpose": "contoh-soal", "search_query": "latihan garis bilangan kelas 3 SD matematika"}
     ],
     "questions": [
-      {
-        "body": "Pada garis bilangan, bilangan yang lebih besar selalu berada di ...",
-        "options": ["Sebelah kiri", "Sebelah kanan", "Di tengah", "Di atas"],
-        "answer": 1,
-        "explanation": "Pada garis bilangan, bilangan yang lebih besar selalu di sebelah kanan.",
-        "points": 1
-      },
-      {
-        "body": "Hitung 18 − 7 menggunakan garis bilangan (melompat ke kiri)!",
-        "options": ["9", "10", "11", "25"],
-        "answer": 2,
-        "explanation": "Mulai di 18, lompat 7 kali ke kiri: 17, 16, 15, 14, 13, 12, 11. Hasilnya 11.",
-        "points": 1
-      }
+      {"body": "Pada garis bilangan, bilangan lebih besar selalu berada di ...", "options": ["Sebelah kiri", "Sebelah kanan", "Di tengah", "Di atas"], "answer": 1, "explanation": "Pada garis bilangan, bilangan yang lebih besar selalu di sebelah kanan.", "points": 1},
+      {"body": "Hitung 18 − 7 menggunakan garis bilangan!", "options": ["9", "10", "11", "25"], "answer": 2, "explanation": "Mulai di 18, lompat 7 kali ke kiri: mendarat di 11.", "points": 1},
+      {"body": "Pada garis bilangan 0-20 dengan interval 2 (0,2,4,6,...), titik ke-6 adalah ...", "options": ["6", "8", "10", "12"], "answer": 2, "explanation": "Titik ke-6 = (6−1) × 2 = 10. (Titik ke-1=0, ke-2=2, ke-3=4, ke-4=6, ke-5=8, ke-6=10).", "points": 2}
     ]
   },
   {
@@ -197,64 +73,25 @@
       "Setelah mempelajari materi ini, kamu dapat menyelesaikan pembagian menggunakan hubungan dengan perkalian.",
       "Setelah mempelajari materi ini, kamu dapat memecahkan masalah sehari-hari dengan perkalian dan pembagian."
     ],
-    "content": "## ✖️ Tabel Perkalian 1-10\n\nHafalkan tabel ini — ini adalah fondasi matematika!\n\n```\n× | 1  2  3  4  5  6  7  8  9  10\n--|-------------------------------\n1 | 1  2  3  4  5  6  7  8  9  10\n2 | 2  4  6  8 10 12 14 16 18  20\n3 | 3  6  9 12 15 18 21 24 27  30\n4 | 4  8 12 16 20 24 28 32 36  40\n5 | 5 10 15 20 25 30 35 40 45  50\n6 | 6 12 18 24 30 36 42 48 54  60\n7 | 7 14 21 28 35 42 49 56 63  70\n8 | 8 16 24 32 40 48 56 64 72  80\n9 | 9 18 27 36 45 54 63 72 81  90\n10|10 20 30 40 50 60 70 80 90 100\n```\n\n### Tips Menghafal Cepat\n\n**Perkalian 5**: selalu berakhiran 0 atau 5. (5, 10, 15, 20, 25...)\n\n**Perkalian 9**: jumlah digit hasilnya selalu 9. (9→9, 18→1+8=9, 27→2+7=9, 36→3+6=9...)\n\n**Perkalian 10**: cukup tambahkan 0 di belakang. (10×7 = 70)\n\n**Perkalian genap**: 2×n, 4×n, 6×n, 8×n selalu menghasilkan bilangan genap.\n\n## ➗ Pembagian Menggunakan Tabel Perkalian\n\nPembagian adalah **kebalikan perkalian**.\n\n**42 ÷ 7 = ?**\nTanya: \"Berapa kali 7 untuk mendapat 42?\"\nDari tabel: 7 × 6 = 42, jadi **42 ÷ 7 = 6**.\n\n**56 ÷ 8 = ?**\n8 × 7 = 56, jadi **56 ÷ 8 = 7**.\n\n### Sisa Pembagian\n\n**17 ÷ 5 = ?**\n5 × 3 = 15 (mendekati 17, tidak melebihi).\n17 − 15 = 2 (sisa).\nJadi **17 ÷ 5 = 3 sisa 2** (ditulis: 3 R 2).\n\n## 🔄 Sifat-sifat Perkalian\n\n- **Komutatif**: a × b = b × a. (4 × 7 = 7 × 4 = 28)\n- **Asosiatif**: (a × b) × c = a × (b × c). (2 × 3) × 4 = 2 × (3 × 4) = 24\n- **Distributif**: a × (b + c) = a×b + a×c. 3 × (4+5) = 3×4 + 3×5 = 12+15 = 27\n\n## ✅ Ringkasan\n\n- Hafal tabel perkalian 1-10 — kunci semua hitungan lanjutan.\n- Pembagian: temukan faktor yang sesuai dari tabel perkalian.\n- Sisa: selisih antara bilangan yang dibagi dan hasil kali terdekat.",
+    "content": "## ✖️ Tabel Perkalian 1-10\n\n```\n×  | 1  2  3  4  5  6  7  8  9 10\n---|--------------------------------\n 7 | 7 14 21 28 35 42 49 56 63 70\n 8 | 8 16 24 32 40 48 56 64 72 80\n 9 | 9 18 27 36 45 54 63 72 81 90\n```\n\n**Tips menghafal:**\n- Perkalian 5: selalu berakhiran 0 atau 5\n- Perkalian 9: jumlah digitnya selalu 9 (18→1+8=9, 27→2+7=9)\n- Perkalian 10: tambahkan 0 di belakang\n\n## ➗ Pembagian = Kebalikan Perkalian\n\n**42 ÷ 7**: \"Berapa kali 7 = 42?\" → 7×6=42 → **42 ÷ 7 = 6**\n\n### Sisa Pembagian\n**17 ÷ 5**: 5×3=15 (terdekat). 17−15=2 (sisa). Jadi **17 ÷ 5 = 3 sisa 2**\n\n## 🔄 Sifat Perkalian\n- **Komutatif**: 4×7 = 7×4 = 28\n- **Distributif**: 3×(4+5) = 3×4 + 3×5 = 27\n\n## ✅ Ringkasan\n- Hafal tabel 1-10 — kunci semua hitungan lanjutan.\n- Pembagian: temukan faktor dari tabel perkalian.\n- Sisa: selisih bilangan dan hasil kali terdekat.",
     "examples": [
-      {
-        "level": "mudah",
-        "problem": "Berapa hasil dari 7 × 8?",
-        "steps": [
-          "Dari tabel perkalian baris 7: 7×1=7, 7×2=14, 7×3=21, 7×4=28, 7×5=35, 7×6=42, 7×7=49, 7×8=56.",
-          "7 × 8 = 56."
-        ],
-        "answer": "56",
-        "check": { "expression": "7 * 8", "expected": 56 }
-      },
-      {
-        "level": "sedang",
-        "problem": "Ada 63 kelereng yang akan dibagi sama rata kepada 9 anak. Berapa kelereng setiap anak?",
-        "steps": [
-          "63 ÷ 9 = ?",
-          "Tanya: berapa kali 9 untuk mendapat 63?",
-          "Dari tabel: 9 × 7 = 63.",
-          "Jadi 63 ÷ 9 = 7.",
-          "Setiap anak mendapat 7 kelereng."
-        ],
-        "answer": "7 kelereng per anak",
-        "check": { "expression": "63 / 9", "expected": 7 }
-      },
-      {
-        "level": "sulit",
-        "problem": "Pak Hasan membeli 6 dos telur. Setiap dos berisi 12 butir. Ia memasak 8 butir setiap hari. Berapa hari telur itu habis?",
-        "steps": [
-          "Total telur: 6 × 12 = 72 butir.",
-          "Telur per hari: 8 butir.",
-          "Jumlah hari: 72 ÷ 8.",
-          "Dari tabel: 8 × 9 = 72, jadi 72 ÷ 8 = 9.",
-          "Telur habis dalam 9 hari."
-        ],
-        "answer": "9 hari",
-        "check": { "expression": "6 * 12 / 8", "expected": 9 }
-      }
+      {"level": "mudah", "problem": "Berapa 7 × 8?", "steps": ["Dari tabel: 7×8=56."], "answer": "56", "check": {"expression": "7 * 8", "expected": 56}},
+      {"level": "sedang", "problem": "63 kelereng dibagi rata ke 9 anak. Berapa tiap anak?", "steps": ["63 ÷ 9 = ?", "9 × 7 = 63.", "Tiap anak: 7 kelereng."], "answer": "7 kelereng", "check": {"expression": "63 / 9", "expected": 7}},
+      {"level": "sulit", "problem": "6 dos telur × 12 butir. Dimasak 8/hari. Berapa hari habis?", "steps": ["Total: 6×12=72.", "72 ÷ 8 = 9."], "answer": "9 hari", "check": {"expression": "6 * 12 / 8", "expected": 9}}
     ],
     "common_mistakes": [
-      {
-        "mistake": "Mengira 7 × 8 = 54 (menukar dengan 6 × 9 = 54).",
-        "fix": "Latih tabel perkalian 7: 7×7=49, 7×8=56, 7×9=63. Hafalkan dengan ritme atau lagu."
-      },
-      {
-        "mistake": "Melupakan sifat komutatif sehingga mengira harus menghitung ulang 8×7 padahal sudah tahu 7×8.",
-        "fix": "Ingat: perkalian bersifat komutatif. Jika sudah hafal 7×8=56, maka 8×7=56 otomatis."
-      }
+      {"mistake": "Mengira 7×8=54 (menukar dengan 6×9).", "fix": "7×8=56. Hafal: 7×7=49, 7×8=56, 7×9=63."},
+      {"mistake": "Tidak tahu 8×7 padahal sudah hafal 7×8.", "fix": "Komutatif: 7×8=8×7=56."}
     ],
     "videos": [
-      {
-        "purpose": "konsep",
-        "search_query": "tabel perkalian 1-10 kelas 3 SD cara menghafal cepat"
-      },
-      {
-        "purpose": "contoh-soal",
-        "search_query": "soal perkalian pembagian kelas 3 SD matematika"
-      }
+      {"purpose": "konsep", "search_query": "tabel perkalian 1-10 kelas 3 SD cara menghafal cepat"},
+      {"purpose": "contoh-soal", "search_query": "soal perkalian pembagian kelas 3 SD matematika"}
+    ],
+    "questions": [
+      {"body": "Hasil dari 9 × 7 = ...", "options": ["54", "56", "63", "72"], "answer": 2, "explanation": "9 × 7 = 63. Cek: 9+9+9+9+9+9+9 = 63.", "points": 1},
+      {"body": "48 ÷ 6 = ...", "options": ["6", "7", "8", "9"], "answer": 2, "explanation": "6 × 8 = 48, jadi 48 ÷ 6 = 8.", "points": 1},
+      {"body": "Ada 5 keranjang, tiap keranjang berisi 8 apel. Total apel ada ...", "options": ["35", "38", "40", "45"], "answer": 2, "explanation": "5 × 8 = 40.", "points": 1},
+      {"body": "35 ÷ 6 = ... sisa ...", "options": ["5 sisa 5", "6 sisa 1", "5 sisa 6", "6 sisa 5"], "answer": 0, "explanation": "6×5=30. 35−30=5. Jadi 35÷6 = 5 sisa 5.", "points": 2}
     ]
   },
   {
@@ -268,62 +105,25 @@
       "Setelah mempelajari materi ini, kamu dapat mengurangkan dua pecahan dengan penyebut sama.",
       "Setelah mempelajari materi ini, kamu dapat membandingkan dan mengurutkan pecahan sederhana."
     ],
-    "content": "## 🍕 Ingat Kembali: Apa itu Pecahan?\n\nPecahan **a/b** artinya: ambil **a** bagian dari **b** bagian yang sama besar.\n\n## ➕ Penjumlahan Pecahan Berpenyebut Sama\n\nAturan: **Tambahkan pembilangnya saja, penyebut tetap!**\n\n$$\\frac{2}{5} + \\frac{1}{5} = \\frac{2+1}{5} = \\frac{3}{5}$$\n\n**Mengapa?** Bayangkan pizza dipotong 5: kamu punya 2 potong, temanmu punya 1 potong. Total = **3 potong dari 5** = 3/5.\n\n### Contoh Lain\n\n$$\\frac{3}{8} + \\frac{4}{8} = \\frac{3+4}{8} = \\frac{7}{8}$$\n\n$$\\frac{1}{6} + \\frac{3}{6} = \\frac{4}{6}$$\n\n> Catatan: jika hasil = penyebut, artinya satu keseluruhan. Contoh: 3/3 = 1.\n\n## ➖ Pengurangan Pecahan Berpenyebut Sama\n\nAturan: **Kurangkan pembilangnya saja, penyebut tetap!**\n\n$$\\frac{5}{7} - \\frac{2}{7} = \\frac{5-2}{7} = \\frac{3}{7}$$\n\n### Contoh Lain\n\n$$\\frac{4}{5} - \\frac{1}{5} = \\frac{3}{5}$$\n\n$$\\frac{7}{9} - \\frac{4}{9} = \\frac{3}{9}$$\n\n## 📊 Membandingkan Pecahan\n\n**Penyebut sama**: bandingkan pembilangnya.\n- 3/7 vs 5/7: pembilang 3 < 5, jadi **3/7 < 5/7**.\n\n**Pembilang sama**: bandingkan penyebutnya (penyebut lebih kecil = pecahan lebih besar).\n- 2/5 vs 2/8: penyebut 5 < 8, jadi **2/5 > 2/8**.\n\n> Ingat: jika kamu memotong pizza menjadi lebih banyak potongan, tiap potongan jadi lebih kecil!\n\n## ✅ Ringkasan\n\n- Penjumlahan/pengurangan penyebut sama: operasi hanya pada pembilang.\n- Membandingkan: penyebut sama → bandingkan pembilang; pembilang sama → bandingkan penyebut (terbalik!).",
+    "content": "## ➕ Penjumlahan Pecahan Penyebut Sama\n\n**Aturan: jumlahkan pembilangnya, penyebut tetap!**\n\n$$\\frac{2}{5} + \\frac{1}{5} = \\frac{3}{5}$$\n\n**Contoh:** 3/8 + 4/8 = 7/8\n\n## ➖ Pengurangan Pecahan Penyebut Sama\n\n**Aturan: kurangkan pembilangnya, penyebut tetap!**\n\n$$\\frac{5}{7} - \\frac{2}{7} = \\frac{3}{7}$$\n\n## 📊 Membandingkan Pecahan\n\n**Penyebut sama**: bandingkan pembilang.\n- 3/7 vs 5/7: **3/7 < 5/7**\n\n**Pembilang sama**: penyebut lebih kecil = pecahan lebih besar.\n- 2/5 vs 2/8: **2/5 > 2/8**\n\n> Pizza dipotong lebih banyak → tiap potongan lebih kecil!\n\n## ✅ Ringkasan\n- Penjumlahan/pengurangan penyebut sama: hanya operasi pembilang.\n- Membandingkan: penyebut sama → bandingkan pembilang; pembilang sama → penyebut terbalik!",
     "examples": [
-      {
-        "level": "mudah",
-        "problem": "Hitung: 2/6 + 3/6 = ?",
-        "steps": [
-          "Penyebut sama (6), cukup jumlahkan pembilang.",
-          "2 + 3 = 5.",
-          "Hasilnya: 5/6."
-        ],
-        "answer": "5/6",
-        "check": null
-      },
-      {
-        "level": "sedang",
-        "problem": "Ibu punya 7/8 kg gula. Dipakai untuk membuat kue 3/8 kg. Berapa sisa gula Ibu?",
-        "steps": [
-          "7/8 − 3/8 = ?",
-          "Penyebut sama (8), kurangkan pembilang.",
-          "7 − 3 = 4.",
-          "Sisa gula: 4/8 kg."
-        ],
-        "answer": "4/8 kg (atau setengah kg)",
-        "check": null
-      },
-      {
-        "level": "sulit",
-        "problem": "Urutkan pecahan berikut dari terkecil ke terbesar: 3/10, 7/10, 1/10, 9/10, 5/10.",
-        "steps": [
-          "Semua penyebutnya sama (10).",
-          "Bandingkan pembilang: 1, 3, 5, 7, 9.",
-          "Urutan dari terkecil: 1/10, 3/10, 5/10, 7/10, 9/10."
-        ],
-        "answer": "1/10, 3/10, 5/10, 7/10, 9/10",
-        "check": null
-      }
+      {"level": "mudah", "problem": "2/6 + 3/6 = ?", "steps": ["Penyebut sama (6).", "2+3=5.", "Hasil: 5/6."], "answer": "5/6", "check": null},
+      {"level": "sedang", "problem": "Ibu punya 7/8 kg gula, dipakai 3/8 kg. Sisa?", "steps": ["7/8 − 3/8. Penyebut sama.", "7−3=4.", "Sisa: 4/8 kg."], "answer": "4/8 kg", "check": null},
+      {"level": "sulit", "problem": "Urutkan dari terkecil: 3/10, 7/10, 1/10, 9/10, 5/10.", "steps": ["Penyebut sama (10). Bandingkan pembilang.", "1 < 3 < 5 < 7 < 9."], "answer": "1/10, 3/10, 5/10, 7/10, 9/10", "check": null}
     ],
     "common_mistakes": [
-      {
-        "mistake": "Menjumlahkan penyebut juga: 2/5 + 1/5 = 3/10.",
-        "fix": "Penyebut TIDAK dijumlahkan! Penyebut menunjukkan besar potongan — tetap sama. Hanya pembilang yang dijumlahkan."
-      },
-      {
-        "mistake": "Mengira 2/5 < 2/8 karena 5 < 8.",
-        "fix": "Jika pembilang sama, penyebut lebih BESAR berarti pecahan lebih KECIL. Terbalik! 2/5 > 2/8."
-      }
+      {"mistake": "2/5 + 1/5 = 3/10 (menjumlah penyebut).", "fix": "Penyebut TIDAK dijumlahkan! Hanya pembilang: 2+1=3. Penyebut tetap 5. Hasilnya 3/5."},
+      {"mistake": "Mengira 2/5 < 2/8 karena 5 < 8.", "fix": "Pembilang sama, penyebut lebih BESAR → pecahan lebih KECIL. 2/5 > 2/8."}
     ],
     "videos": [
-      {
-        "purpose": "konsep",
-        "search_query": "penjumlahan pengurangan pecahan penyebut sama kelas 3 SD"
-      },
-      {
-        "purpose": "contoh-soal",
-        "search_query": "soal pecahan kelas 3 4 SD membandingkan mengurutkan"
-      }
+      {"purpose": "konsep", "search_query": "penjumlahan pengurangan pecahan penyebut sama kelas 3 SD"},
+      {"purpose": "contoh-soal", "search_query": "soal pecahan kelas 3 4 SD membandingkan mengurutkan"}
+    ],
+    "questions": [
+      {"body": "4/9 + 3/9 = ...", "options": ["7/18", "7/9", "8/9", "7/0"], "answer": 1, "explanation": "Penyebut sama (9). 4+3=7. Hasil: 7/9.", "points": 1},
+      {"body": "6/11 − 2/11 = ...", "options": ["4/0", "4/22", "4/11", "8/11"], "answer": 2, "explanation": "Penyebut sama (11). 6−2=4. Hasil: 4/11.", "points": 1},
+      {"body": "Manakah yang LEBIH BESAR: 3/8 atau 3/5?", "options": ["3/8", "3/5", "Sama besar", "Tidak bisa dibandingkan"], "answer": 1, "explanation": "Pembilang sama (3). Penyebut 5 < 8, jadi 3/5 > 3/8.", "points": 2},
+      {"body": "1/6 + 4/6 − 2/6 = ...", "options": ["2/6", "3/6", "5/6", "7/6"], "answer": 1, "explanation": "1+4=5, lalu 5−2=3. Hasilnya 3/6.", "points": 2}
     ]
   },
   {
@@ -331,67 +131,31 @@
     "slug": "keliling-luas-persegi-persegi-panjang",
     "title": "Keliling dan Luas Persegi serta Persegi Panjang",
     "sort_order": 5,
-    "summary": "Keliling adalah panjang semua sisi suatu bangun datar. Luas adalah besar daerah yang ditutup oleh suatu bangun datar. Keduanya memiliki rumus yang mudah untuk persegi dan persegi panjang.",
+    "summary": "Keliling adalah panjang semua sisi suatu bangun datar yang diukur mengelilingi tepinya. Luas adalah besar daerah yang ditutup oleh suatu bangun datar. Keduanya memiliki rumus yang mudah untuk persegi dan persegi panjang.",
     "objectives": [
       "Setelah mempelajari materi ini, kamu dapat menghitung keliling persegi dan persegi panjang menggunakan rumus.",
       "Setelah mempelajari materi ini, kamu dapat menghitung luas persegi dan persegi panjang menggunakan rumus.",
       "Setelah mempelajari materi ini, kamu dapat memecahkan masalah sehari-hari berkaitan dengan keliling dan luas."
     ],
-    "content": "## 🔲 Persegi\n\nPersegi memiliki **4 sisi sama panjang** dan **4 sudut siku-siku**.\n\n### Keliling Persegi\n\n$$K = s + s + s + s = 4 \\times s$$\n\ndi mana **s** = panjang satu sisi.\n\n**Contoh:** Persegi dengan sisi 5 cm.\n$$K = 4 \\times 5 = 20 \\text{ cm}$$\n\n### Luas Persegi\n\n$$L = s \\times s = s^2$$\n\n**Contoh:** Persegi dengan sisi 5 cm.\n$$L = 5 \\times 5 = 25 \\text{ cm}^2$$\n\n> Satuan luas selalu **persegi** (cm², m²) karena luas adalah panjang × lebar.\n\n## 🔷 Persegi Panjang\n\nPersegi panjang memiliki **2 pasang sisi sama panjang** dan **4 sudut siku-siku**.\n- **p** = panjang (sisi lebih panjang)\n- **l** = lebar (sisi lebih pendek)\n\n### Keliling Persegi Panjang\n\n$$K = 2 \\times (p + l)$$\n\n**Contoh:** Persegi panjang dengan p = 8 cm, l = 5 cm.\n$$K = 2 \\times (8 + 5) = 2 \\times 13 = 26 \\text{ cm}$$\n\n### Luas Persegi Panjang\n\n$$L = p \\times l$$\n\n**Contoh:** Persegi panjang dengan p = 8 cm, l = 5 cm.\n$$L = 8 \\times 5 = 40 \\text{ cm}^2$$\n\n> **Keliling** dihitung dengan mengelilingi tepinya (satuan panjang: cm, m).\n> **Luas** dihitung dengan mengisi dalamnya (satuan luas: cm², m²).\n\n## 🏠 Aplikasi Sehari-hari\n\n- **Keliling** berguna untuk: memasang pagar, menghitung bingkai foto, mengelilingi lapangan.\n- **Luas** berguna untuk: mengecat lantai, membeli karpet, memberi pupuk pada sawah.\n\n## ✅ Ringkasan\n\n- Persegi: K = 4s, L = s².\n- Persegi panjang: K = 2(p+l), L = p×l.\n- Keliling = jarak mengelilingi tepi (satuan panjang).\n- Luas = daerah di dalam (satuan persegi).",
+    "content": "## 🔲 Persegi\n\n**Keliling:** $K = 4 \\times s$\n**Luas:** $L = s \\times s = s^2$\n\n**Contoh (s = 5 cm):**\n- K = 4 × 5 = **20 cm**\n- L = 5 × 5 = **25 cm²**\n\n## 🔷 Persegi Panjang\n\n**Keliling:** $K = 2 \\times (p + l)$\n**Luas:** $L = p \\times l$\n\n**Contoh (p=8, l=5 cm):**\n- K = 2 × (8+5) = 2 × 13 = **26 cm**\n- L = 8 × 5 = **40 cm²**\n\n> **Keliling** = jalan di tepi (satuan cm, m)\n> **Luas** = isi dalamnya (satuan cm², m²)\n\n## ✅ Ringkasan\n- Persegi: K=4s, L=s²\n- Persegi panjang: K=2(p+l), L=p×l\n- Keliling=panjang (cm). Luas=luas area (cm²).",
     "examples": [
-      {
-        "level": "mudah",
-        "problem": "Hitunglah keliling persegi dengan sisi 7 cm!",
-        "steps": [
-          "Rumus keliling persegi: K = 4 × s.",
-          "s = 7 cm.",
-          "K = 4 × 7 = 28 cm."
-        ],
-        "answer": "28 cm",
-        "check": { "expression": "4 * 7", "expected": 28 }
-      },
-      {
-        "level": "sedang",
-        "problem": "Sebuah ruang kelas berbentuk persegi panjang dengan panjang 10 m dan lebar 7 m. Berapa luas lantainya?",
-        "steps": [
-          "Rumus luas persegi panjang: L = p × l.",
-          "p = 10 m, l = 7 m.",
-          "L = 10 × 7 = 70 m²."
-        ],
-        "answer": "70 m²",
-        "check": { "expression": "10 * 7", "expected": 70 }
-      },
-      {
-        "level": "sulit",
-        "problem": "Pak Amir ingin memasang pagar keliling kebunnya yang berbentuk persegi panjang dengan panjang 15 m dan lebar 9 m. Harga pagar Rp50.000 per meter. Berapa biaya total pemasangan pagar?",
-        "steps": [
-          "Hitung keliling: K = 2 × (p + l) = 2 × (15 + 9) = 2 × 24 = 48 m.",
-          "Biaya = keliling × harga per meter.",
-          "Biaya = 48 × Rp50.000 = Rp2.400.000."
-        ],
-        "answer": "Rp2.400.000",
-        "check": { "expression": "2 * (15 + 9) * 50000", "expected": 2400000 }
-      }
+      {"level": "mudah", "problem": "Keliling persegi sisi 7 cm?", "steps": ["K = 4 × 7 = 28 cm."], "answer": "28 cm", "check": {"expression": "4 * 7", "expected": 28}},
+      {"level": "sedang", "problem": "Luas lantai kelas p=10m, l=7m?", "steps": ["L = 10 × 7 = 70 m²."], "answer": "70 m²", "check": {"expression": "10 * 7", "expected": 70}},
+      {"level": "sulit", "problem": "Pagar kebun 15m×9m. Harga pagar Rp50.000/m. Total biaya?", "steps": ["K = 2×(15+9) = 2×24 = 48 m.", "Biaya = 48 × 50.000 = Rp2.400.000."], "answer": "Rp2.400.000", "check": {"expression": "2 * (15 + 9) * 50000", "expected": 2400000}}
     ],
     "common_mistakes": [
-      {
-        "mistake": "Menggunakan rumus luas untuk menghitung keliling, atau sebaliknya.",
-        "fix": "Keliling = jumlah semua sisi (1D, satuan cm). Luas = panjang × lebar (2D, satuan cm²). Ingat: keliling = 'jalan di tepi', luas = 'isi dalamnya'."
-      },
-      {
-        "mistake": "Lupa mengalikan dengan 2 saat menghitung keliling persegi panjang: K = p + l (salah).",
-        "fix": "Persegi panjang punya 4 sisi: 2 sisi panjang dan 2 sisi lebar. K = p + l + p + l = 2(p+l)."
-      }
+      {"mistake": "Menggunakan rumus luas untuk menghitung keliling.", "fix": "Keliling=jalan di tepi (cm). Luas=isi dalamnya (cm²)."},
+      {"mistake": "K persegi panjang = p+l (lupa ×2).", "fix": "Ada 4 sisi: 2p+2l = 2(p+l). Kalikan 2!"}
     ],
     "videos": [
-      {
-        "purpose": "konsep",
-        "search_query": "keliling luas persegi persegi panjang kelas 3 SD rumus"
-      },
-      {
-        "purpose": "contoh-soal",
-        "search_query": "soal keliling luas persegi panjang kelas 3 4 SD"
-      }
+      {"purpose": "konsep", "search_query": "keliling luas persegi persegi panjang kelas 3 SD rumus"},
+      {"purpose": "contoh-soal", "search_query": "soal keliling luas persegi panjang kelas 3 4 SD"}
+    ],
+    "questions": [
+      {"body": "Keliling persegi dengan sisi 9 cm adalah ...", "options": ["18 cm", "27 cm", "36 cm", "81 cm"], "answer": 2, "explanation": "K = 4 × 9 = 36 cm.", "points": 1},
+      {"body": "Luas persegi panjang dengan p=12 cm dan l=5 cm adalah ...", "options": ["34 cm²", "34 cm", "60 cm", "60 cm²"], "answer": 3, "explanation": "L = p × l = 12 × 5 = 60 cm².", "points": 1},
+      {"body": "Keliling persegi panjang p=8m, l=6m adalah ...", "options": ["14 m", "28 m", "48 m", "56 m"], "answer": 1, "explanation": "K = 2×(8+6) = 2×14 = 28 m.", "points": 1},
+      {"body": "Sebuah persegi memiliki luas 49 cm². Berapa panjang sisinya?", "options": ["6 cm", "7 cm", "8 cm", "9 cm"], "answer": 1, "explanation": "L = s² = 49. s = √49 = 7 cm. (7×7=49 ✓)", "points": 2}
     ]
   },
   {
@@ -399,89 +163,31 @@
     "slug": "sudut-siku-siku-lancip-tumpul",
     "title": "Sudut: Siku-siku, Lancip, dan Tumpul",
     "sort_order": 6,
-    "summary": "Sudut adalah daerah yang terbentuk antara dua sinar garis yang bertemu di satu titik. Sudut bisa kita temukan di mana saja: pojok buku, pintu yang terbuka, atau jarum jam.",
+    "summary": "Sudut adalah daerah yang terbentuk antara dua sinar garis yang bertemu di satu titik. Sudut bisa kita temukan di mana saja: pojok buku, pintu yang terbuka, atau jarum jam. Kita mengenal tiga jenis utama: lancip, siku-siku, dan tumpul.",
     "objectives": [
       "Setelah mempelajari materi ini, kamu dapat mengenali dan membedakan sudut siku-siku, lancip, dan tumpul.",
-      "Setelah mempelajari materi ini, kamu dapat mengidentifikasi jenis sudut di berbagai bangun datar dan benda sehari-hari.",
-      "Setelah mempelajari materi ini, kamu dapat menentukan jenis sudut yang terbentuk oleh jarum jam."
+      "Setelah mempelajari materi ini, kamu dapat mengidentifikasi jenis sudut di berbagai bangun datar.",
+      "Setelah mempelajari materi ini, kamu dapat menentukan jenis sudut pada jarum jam."
     ],
-    "content": "## 📐 Apa itu Sudut?\n\nSudut terbentuk ketika dua sinar garis bertemu di satu **titik sudut**.\n\nBesar sudut diukur dalam satuan **derajat (°)**.\n\n## 📌 Jenis-jenis Sudut\n\n### 1. Sudut Siku-siku (90°)\n\nSudut siku-siku tepat **90 derajat** — seperti pojok buku tulis.\n\n> Tandanya: digambar dengan kotak kecil di pojok.\n\n**Contoh di kehidupan:** pojok buku, perpotongan jalan, sudut pintu yang terbuka penuh.\n\n### 2. Sudut Lancip (< 90°)\n\nSudut lancip **kurang dari 90 derajat** — lebih sempit dari siku-siku, seperti puncak atap yang runcing.\n\n**Contoh di kehidupan:** ujung pensil yang ditajamkan, atap rumah runcing, tanda \">\" dalam matematika.\n\n### 3. Sudut Tumpul (> 90° dan < 180°)\n\nSudut tumpul **lebih dari 90 derajat tapi kurang dari 180 derajat** — lebih lebar dari siku-siku, seperti pintu yang dibuka sedikit.\n\n**Contoh di kehidupan:** pintu yang terbuka setengah, sudut pada huruf \"V\" besar.\n\n### 4. Sudut Lurus (180°)\n\nSudut lurus tepat **180 derajat** — membentuk garis lurus.\n\n## 🕐 Sudut pada Jarum Jam\n\n- Pukul **12.00**: jarum jam dan menit berimpit → sudut **0°**.\n- Pukul **3.00**: jarum pendek dan panjang siku-siku → sudut **90°** (siku-siku).\n- Pukul **6.00**: berseberangan → sudut **180°** (lurus).\n- **Pukul 2.00**: jarum membentuk sudut sekitar **60°** (lancip).\n- **Pukul 8.00**: jarum membentuk sudut sekitar **120°** (tumpul).\n\n## 📐 Sudut dalam Bangun Datar\n\n- **Persegi**: 4 sudut siku-siku (90°).\n- **Segitiga lancip**: ketiga sudutnya lancip (< 90°).\n- **Segitiga tumpul**: salah satu sudutnya tumpul (> 90°).\n- **Segitiga siku-siku**: memiliki tepat 1 sudut siku-siku (90°).\n\n## ✅ Ringkasan\n\n- Lancip: < 90° (sempit, runcing)\n- Siku-siku: = 90° (pas, kotak)\n- Tumpul: > 90° tapi < 180° (lebar)\n- Lurus: = 180° (garis lurus)",
+    "content": "## 📌 Jenis-jenis Sudut\n\n| Jenis | Besar | Ciri |\n|-------|-------|------|\n| **Lancip** | < 90° | Runcing/sempit |\n| **Siku-siku** | = 90° | Kotak, seperti pojok buku |\n| **Tumpul** | > 90° dan < 180° | Lebar |\n| **Lurus** | = 180° | Garis lurus |\n\n## 🕐 Sudut pada Jarum Jam\n\n- Pukul 3.00 → sudut **90°** (siku-siku)\n- Pukul 6.00 → sudut **180°** (lurus)\n- Pukul 2.00 → sudut ≈**60°** (lancip)\n- Pukul 8.00 → sudut ≈**120°** (tumpul)\n\n## 📐 Sudut dalam Bangun Datar\n\n- **Persegi/persegi panjang**: 4 sudut siku-siku\n- **Segitiga lancip**: semua sudut < 90°\n- **Segitiga siku-siku**: ada 1 sudut = 90°\n- Jumlah sudut segitiga = **180°**\n\n## ✅ Ringkasan\n- Lancip < 90° < Siku-siku = 90° < Tumpul < 180°\n- Jumlah sudut segitiga = 180°",
     "examples": [
-      {
-        "level": "mudah",
-        "problem": "Jenis sudut apakah yang terbentuk di pojok buku tulis?",
-        "steps": [
-          "Pojok buku tulis membentuk sudut yang tepat 90°.",
-          "Sudut 90° adalah sudut siku-siku."
-        ],
-        "answer": "Sudut siku-siku (90°)",
-        "check": null
-      },
-      {
-        "level": "sedang",
-        "problem": "Pintu terbuka membentuk sudut 120°. Termasuk jenis sudut apakah itu?",
-        "steps": [
-          "120° > 90° dan 120° < 180°.",
-          "Sudut yang lebih dari 90° tapi kurang dari 180° adalah sudut tumpul."
-        ],
-        "answer": "Sudut tumpul",
-        "check": null
-      },
-      {
-        "level": "sulit",
-        "problem": "Sebuah segitiga memiliki tiga sudut: 40°, 90°, dan 50°. Apa nama jenis segitiga tersebut berdasarkan sudutnya? Verifikasi bahwa jumlah sudutnya 180°!",
-        "steps": [
-          "Hitung jumlah semua sudut: 40° + 90° + 50° = 180°. ✓ (benar!)",
-          "Cek jenis sudut: 40° = lancip, 90° = siku-siku, 50° = lancip.",
-          "Ada tepat 1 sudut siku-siku (90°).",
-          "Segitiga dengan satu sudut siku-siku disebut segitiga siku-siku."
-        ],
-        "answer": "Segitiga siku-siku. Jumlah sudut = 40° + 90° + 50° = 180° ✓",
-        "check": { "expression": "40 + 90 + 50", "expected": 180 }
-      }
+      {"level": "mudah", "problem": "Sudut apa yang terbentuk di pojok buku tulis?", "steps": ["Pojok buku = tepat 90°.", "= Sudut siku-siku."], "answer": "Sudut siku-siku (90°)", "check": null},
+      {"level": "sedang", "problem": "Pintu terbuka membentuk sudut 120°. Jenis sudut apa?", "steps": ["120° > 90° dan < 180°.", "= Sudut tumpul."], "answer": "Sudut tumpul", "check": null},
+      {"level": "sulit", "problem": "Segitiga punya sudut 40°, 90°, x°. Cari x dan jenis segitiganya!", "steps": ["40+90+x=180.", "x=180−130=50°.", "Ada sudut 90° → segitiga siku-siku."], "answer": "x=50°. Segitiga siku-siku.", "check": {"expression": "180 - 40 - 90", "expected": 50}}
     ],
     "common_mistakes": [
-      {
-        "mistake": "Mengira sudut ditentukan oleh panjang sisi garisnya, bukan oleh seberapa terbuka/tertutupnya.",
-        "fix": "Besar sudut hanya bergantung pada 'bukaannya', bukan panjang garis. Dua sudut lancip bisa berbeda panjang garisnya tapi tetap sama jenisnya."
-      },
-      {
-        "mistake": "Menyebut sudut 91° sebagai siku-siku karena 'hampir 90°'.",
-        "fix": "Siku-siku TEPAT 90° — tidak lebih, tidak kurang. 91° sudah termasuk tumpul."
-      }
+      {"mistake": "Besar sudut ditentukan panjang garis.", "fix": "Besar sudut hanya dari 'bukaannya', bukan panjang sisi."},
+      {"mistake": "Sudut 91° dianggap siku-siku.", "fix": "Siku-siku TEPAT 90°. 91° sudah tumpul."}
     ],
     "videos": [
-      {
-        "purpose": "konsep",
-        "search_query": "jenis sudut lancip siku-siku tumpul kelas 3 SD"
-      },
-      {
-        "purpose": "contoh-soal",
-        "search_query": "mengenal sudut lancip tumpul siku-siku kelas 3 SD matematika"
-      }
+      {"purpose": "konsep", "search_query": "jenis sudut lancip siku-siku tumpul kelas 3 SD"},
+      {"purpose": "contoh-soal", "search_query": "mengenal sudut lancip tumpul siku-siku kelas 3 SD matematika"}
     ],
     "questions": [
-      {
-        "body": "Sudut yang besarnya tepat 90° disebut ...",
-        "options": ["Sudut lancip", "Sudut tumpul", "Sudut siku-siku", "Sudut lurus"],
-        "answer": 2,
-        "explanation": "Sudut siku-siku besarnya tepat 90°, ditandai dengan kotak kecil di pojok.",
-        "points": 1
-      },
-      {
-        "body": "Sudut 65° termasuk sudut ...",
-        "options": ["Siku-siku", "Lancip", "Tumpul", "Lurus"],
-        "answer": 1,
-        "explanation": "65° < 90°, sehingga termasuk sudut lancip.",
-        "points": 1
-      },
-      {
-        "body": "Persegi panjang memiliki berapa sudut siku-siku?",
-        "options": ["1", "2", "3", "4"],
-        "answer": 3,
-        "explanation": "Persegi panjang memiliki 4 sudut, dan semua sudutnya adalah siku-siku (90°).",
-        "points": 1
-      }
+      {"body": "Sudut yang besarnya tepat 90° disebut ...", "options": ["Lancip", "Tumpul", "Siku-siku", "Lurus"], "answer": 2, "explanation": "Sudut siku-siku tepat 90°, ditandai kotak kecil di pojok.", "points": 1},
+      {"body": "Sudut 65° termasuk sudut ...", "options": ["Siku-siku", "Lancip", "Tumpul", "Lurus"], "answer": 1, "explanation": "65° < 90°, sehingga termasuk sudut lancip.", "points": 1},
+      {"body": "Persegi panjang memiliki berapa sudut siku-siku?", "options": ["1", "2", "3", "4"], "answer": 3, "explanation": "Persegi panjang memiliki 4 sudut, semuanya siku-siku (90°).", "points": 1},
+      {"body": "Sebuah segitiga memiliki sudut 55° dan 75°. Berapa sudut ketiga? Termasuk segitiga apa?", "options": ["50°, lancip", "60°, lancip", "50°, tumpul", "70°, lancip"], "answer": 0, "explanation": "180−55−75=50°. Semua sudut < 90° → segitiga lancip.", "points": 2}
     ]
   }
 ]

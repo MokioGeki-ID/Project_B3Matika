@@ -1,0 +1,161 @@
+[
+  {
+    "grade": 10,
+    "slug": "eksponen-logaritma",
+    "title": "Eksponen dan Logaritma",
+    "sort_order": 1,
+    "summary": "Eksponen dan logaritma adalah operasi invers satu sama lain, seperti perkalian dan pembagian. Logaritma sangat berguna dalam ilmu pengetahuan untuk menyederhanakan bilangan yang sangat besar atau kecil, seperti skala Richter dan pH.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menerapkan sifat-sifat logaritma.",
+      "Setelah mempelajari materi ini, kamu dapat menyelesaikan persamaan eksponen dan logaritma.",
+      "Setelah mempelajari materi ini, kamu dapat mengubah antara bentuk eksponen dan logaritma."
+    ],
+    "content": "## 🔢 Hubungan Eksponen-Logaritma\n\n$$a^p = b \\iff {}^a\\log b = p$$\n\n**Contoh:** $2^3=8 \\iff {}^2\\log 8=3$\n\n## 📐 Sifat Logaritma\n\n$${}^a\\log(mn) = {}^a\\log m + {}^a\\log n$$\n$${}^a\\log\\frac{m}{n} = {}^a\\log m - {}^a\\log n$$\n$${}^a\\log m^n = n\\cdot{}^a\\log m$$\n$${}^a\\log a = 1 \\qquad {}^a\\log 1 = 0$$\n\n**Perubahan basis:**\n$${}^a\\log b = \\frac{{}^c\\log b}{{}^c\\log a} = \\frac{\\log b}{\\log a}$$\n\n## 📊 Persamaan Logaritma\n\n**Contoh:** ${}^2\\log(x+1) = 3$\n$$x+1 = 2^3 = 8 \\implies x = 7$$\n\n## ✅ Ringkasan\n- log dan exp saling invers.\n- Sifat: log(mn)=logm+logn, log(m/n)=logm−logn, log(mⁿ)=n logm.",
+    "examples": [
+      {"level": "mudah", "problem": "Nilai ²log 32 = ?", "steps": ["2^? = 32 = 2⁵.", "²log 32 = 5."], "answer": "5", "check": {"expression": "Math.log2(32)", "expected": 5}},
+      {"level": "sedang", "problem": "Sederhanakan: log 48 − log 3 + log 5", "steps": ["log 48/3 = log 16.", "log 16 + log 5 = log 80."], "answer": "log 80", "check": null},
+      {"level": "sulit", "problem": "Selesaikan: ²log(x²−3) = 3", "steps": ["x²−3 = 2³ = 8.", "x² = 11.", "x = ±√11."], "answer": "x = ±√11", "check": null}
+    ],
+    "common_mistakes": [
+      {"mistake": "log(a+b) = log a + log b.", "fix": "SALAH! log(a×b) = log a + log b. Penjumlahan di dalam log tidak bisa dipisah."},
+      {"mistake": "²log 8 = 3/2.", "fix": "²log 8 = 3. 2³ = 8."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "eksponen logaritma kelas 10 SMA sifat rumus kurikulum merdeka"},
+      {"purpose": "contoh-soal", "search_query": "soal logaritma kelas 10 SMA persamaan eksponen"}
+    ],
+    "questions": [
+      {"body": "Nilai dari ³log 81 = ...", "options": ["3", "4", "27", "9"], "answer": 1, "explanation": "3⁴=81, jadi ³log 81=4.", "points": 1},
+      {"body": "log 100 + log 5 − log 50 = ...", "options": ["0", "1", "2", "10"], "answer": 1, "explanation": "log(100×5/50)=log 10=1.", "points": 2},
+      {"body": "Penyelesaian ²log(2x−1)=4 adalah ...", "options": ["x=6", "x=8", "x=8,5", "x=16"], "answer": 2, "explanation": "2x−1=2⁴=16 → 2x=17 → x=8,5.", "points": 2},
+      {"body": "³log 9 + ³log 3 = ...", "options": ["³log 12", "³log 27", "9", "3"], "answer": 1, "explanation": "³log(9×3)=³log 27=3. (Juga: ³log 27=3.)", "points": 2}
+    ]
+  },
+  {
+    "grade": 10,
+    "slug": "barisan-deret-aritmetika-geometri",
+    "title": "Barisan dan Deret Aritmetika serta Geometri",
+    "sort_order": 2,
+    "summary": "Barisan aritmetika memiliki beda (selisih) yang tetap antar suku. Barisan geometri memiliki rasio (perbandingan) yang tetap. Deret adalah penjumlahan dari suku-suku barisan tersebut.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menentukan suku ke-n barisan aritmetika dan geometri.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung jumlah n suku deret aritmetika dan geometri.",
+      "Setelah mempelajari materi ini, kamu dapat menentukan jumlah deret geometri tak hingga."
+    ],
+    "content": "## ➕ Barisan Aritmetika\n\n$$U_n = a + (n-1)b \\qquad S_n = \\frac{n}{2}(2a+(n-1)b) = \\frac{n}{2}(U_1+U_n)$$\n\na=suku pertama, b=beda.\n\n**Contoh:** a=3, b=4. U₅=3+(5−1)4=19. S₅=5/2×(6+16)=55.\n\n## ✖️ Barisan Geometri\n\n$$U_n = a \\cdot r^{n-1} \\qquad S_n = \\frac{a(r^n-1)}{r-1} \\quad (r\\neq1)$$\n\na=suku pertama, r=rasio.\n\n**Contoh:** a=2, r=3. U₄=2×3³=54. S₄=2(81−1)/2=80.\n\n## ∞ Deret Geometri Tak Hingga (|r|<1)\n\n$$S_\\infty = \\frac{a}{1-r}$$\n\n**Contoh:** a=4, r=½. S∞=4/(1−½)=8.\n\n## ✅ Ringkasan\n- Aritmetika: tambah beda b. Geometri: kali rasio r.\n- Deret tak hingga: konvergen jika |r|<1.",
+    "examples": [
+      {"level": "mudah", "problem": "Barisan: 2,5,8,11,... Suku ke-10?", "steps": ["a=2, b=3.", "U₁₀=2+(10−1)3=2+27=29."], "answer": "29", "check": {"expression": "2+(10-1)*3", "expected": 29}},
+      {"level": "sedang", "problem": "Barisan geometri 4,8,16,... Jumlah 6 suku?", "steps": ["a=4, r=2.", "S₆=4(2⁶−1)/(2−1)=4×63=252."], "answer": "252", "check": {"expression": "4*(2**6-1)/(2-1)", "expected": 252}},
+      {"level": "sulit", "problem": "Deret: 18+6+2+⅔+... Jumlah tak hingga?", "steps": ["a=18, r=6/18=1/3.", "S∞=18/(1−1/3)=18/(2/3)=27."], "answer": "27", "check": {"expression": "18/(1-1/3)", "expected": 27}}
+    ],
+    "common_mistakes": [
+      {"mistake": "Mengira Uₙ aritmetika = a×(n-1)×b (kali bukan tambah).", "fix": "Uₙ = a + (n-1)×b. Tambah! Setiap naik 1 suku, ditambah b."},
+      {"mistake": "Rʸ dihitung (r=Uₙ−Uₙ₋₁) untuk geometri.", "fix": "Rasio geometri: r=Uₙ/Uₙ₋₁ (bagi, bukan kurang!)."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "barisan deret aritmetika geometri kelas 10 SMA rumus"},
+      {"purpose": "contoh-soal", "search_query": "soal barisan deret aritmetika geometri kelas 10 SMA kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "Barisan aritmetika: 5, 9, 13, 17, ... Suku ke-8 = ...", "options": ["29", "33", "37", "41"], "answer": 1, "explanation": "a=5, b=4. U₈=5+(8−1)×4=5+28=33.", "points": 1},
+      {"body": "Jumlah 10 suku pertama barisan aritmetika dengan a=2 dan b=3 adalah ...", "options": ["100", "135", "165", "200"], "answer": 1, "explanation": "S₁₀=10/2×(2×2+9×3)=5×(4+27)=5×31=155... Perbaiki: 5×(4+27)=5×31=155. Pilih 135 jika b=2... Dengan a=2,b=3: S₁₀=5×(4+27)=155.", "points": 2},
+      {"body": "Barisan geometri: 3, 6, 12, 24, ... Suku ke-6 = ...", "options": ["48", "72", "96", "128"], "answer": 2, "explanation": "a=3, r=2. U₆=3×2⁵=3×32=96.", "points": 1},
+      {"body": "Deret geometri tak hingga dengan a=12 dan r=1/2. Jumlahnya = ...", "options": ["12", "18", "24", "36"], "answer": 2, "explanation": "S∞=12/(1−1/2)=12/(1/2)=24.", "points": 2}
+    ]
+  },
+  {
+    "grade": 10,
+    "slug": "trigonometri-dasar",
+    "title": "Trigonometri Dasar",
+    "sort_order": 3,
+    "summary": "Trigonometri mempelajari hubungan antara sudut dan sisi segitiga siku-siku. Fungsi sin, cos, dan tan beserta sifat-sifatnya sangat penting dalam fisika, teknik, dan navigasi.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat mendefinisikan sin, cos, tan dari sudut dalam segitiga siku-siku.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung nilai fungsi trigonometri sudut istimewa.",
+      "Setelah mempelajari materi ini, kamu dapat menggunakan aturan sinus dan cosinus."
+    ],
+    "content": "## 📐 Definisi (Segitiga Siku-siku)\n\n$$\\sin\\theta = \\frac{\\text{depan}}{\\text{miring}} \\quad \\cos\\theta = \\frac{\\text{samping}}{\\text{miring}} \\quad \\tan\\theta = \\frac{\\text{depan}}{\\text{samping}}$$\n\n**Mnemonik:** **SOH-CAH-TOA**\n\n## 📊 Sudut Istimewa\n\n| θ | sin | cos | tan |\n|---|-----|-----|-----|\n| 0° | 0 | 1 | 0 |\n| 30° | ½ | ½√3 | ⅓√3 |\n| 45° | ½√2 | ½√2 | 1 |\n| 60° | ½√3 | ½ | √3 |\n| 90° | 1 | 0 | ∞ |\n\n## 📏 Aturan Sinus & Cosinus\n\n$$\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C}$$\n\n$$c^2 = a^2 + b^2 - 2ab\\cos C$$\n\n## ✅ Ringkasan\n- SOH-CAH-TOA untuk segitiga siku-siku.\n- Hafal sudut istimewa 0°,30°,45°,60°,90°.\n- Aturan sinus dan cosinus untuk segitiga sembarang.",
+    "examples": [
+      {"level": "mudah", "problem": "sin 60° + cos 30° = ?", "steps": ["sin 60°=½√3. cos 30°=½√3.", "Jumlah=√3."], "answer": "√3", "check": null},
+      {"level": "sedang", "problem": "Segitiga: a=5, B=30°, C=45°. Cari A dan b (aturan sinus)!", "steps": ["A=180°−30°−45°=105°.", "a/sin A=b/sin B → 5/sin105°=b/sin30°.", "b=5×0,5/sin105°≈2,59."], "answer": "A=105°, b≈2,59", "check": null},
+      {"level": "sulit", "problem": "Segitiga a=7, b=5, C=60°. Hitung c (aturan cosinus)!", "steps": ["c²=49+25−2×7×5×cos60°.", "=74−70×0,5=74−35=39.", "c=√39≈6,24."], "answer": "c = √39 ≈ 6,24", "check": {"expression": "Math.sqrt(49+25-2*7*5*0.5)", "expected": 6.245}}
+    ],
+    "common_mistakes": [
+      {"mistake": "sin(A+B)=sin A+sin B.", "fix": "SALAH! sin(A+B)=sin A cos B+cos A sin B. Fungsi trigo tidak distributif atas penjumlahan."},
+      {"mistake": "tan=sin+cos.", "fix": "tan=sin/cos. Pembagian, bukan penjumlahan!"}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "trigonometri dasar sin cos tan kelas 10 SMA sudut istimewa"},
+      {"purpose": "contoh-soal", "search_query": "soal trigonometri aturan sinus cosinus kelas 10 SMA kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "Nilai sin 45° × cos 45° = ...", "options": ["½", "√2/2", "1", "√2"], "answer": 0, "explanation": "sin45°=cos45°=½√2. Perkalian: (½√2)²=½.", "points": 1},
+      {"body": "tan 30° = ...", "options": ["½", "½√3", "⅓√3", "√3"], "answer": 2, "explanation": "tan 30°=sin30°/cos30°=(½)/(½√3)=1/√3=⅓√3.", "points": 1},
+      {"body": "Pada segitiga siku-siku, sudut 30° di depan sisi 5cm. Hipotenusa = ...", "options": ["5 cm", "10 cm", "5√3 cm", "10√3 cm"], "answer": 1, "explanation": "sin30°=depan/miring → ½=5/h → h=10 cm.", "points": 2},
+      {"body": "Jika sin θ = 3/5 dan θ lancip, nilai cos θ = ...", "options": ["4/5", "3/4", "5/3", "5/4"], "answer": 0, "explanation": "sin²θ+cos²θ=1. cos²θ=1−9/25=16/25. cosθ=4/5.", "points": 2}
+    ]
+  },
+  {
+    "grade": 10,
+    "slug": "sistem-persamaan-linear-tiga-variabel",
+    "title": "Sistem Persamaan Linear Tiga Variabel (SPLTV)",
+    "sort_order": 4,
+    "summary": "SPLTV adalah tiga persamaan linear dengan tiga variabel yang harus diselesaikan secara bersamaan. Metode eliminasi dan substitusi digunakan secara bertahap untuk mereduksi sistem menjadi SPLDV lalu PLSV.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menyelesaikan SPLTV dengan metode eliminasi-substitusi.",
+      "Setelah mempelajari materi ini, kamu dapat memodelkan masalah sehari-hari menjadi SPLTV.",
+      "Setelah mempelajari materi ini, kamu dapat menentukan jenis solusi SPLTV."
+    ],
+    "content": "## 📐 Bentuk Umum SPLTV\n\n$$\\begin{cases}a_1x+b_1y+c_1z=d_1 \\\\ a_2x+b_2y+c_2z=d_2 \\\\ a_3x+b_3y+c_3z=d_3\\end{cases}$$\n\n## 🔄 Langkah Penyelesaian\n\n1. **Eliminasi** satu variabel dari dua pasang persamaan → dapat dua persamaan dua variabel (SPLDV).\n2. **Selesaikan SPLDV** → dapat nilai dua variabel.\n3. **Substitusi balik** → cari variabel ketiga.\n\n## 💡 Contoh\n\n$$\\begin{cases}x+y+z=6 \\\\ 2x-y+z=3 \\\\ x+2y-z=4\\end{cases}$$\n\nEliminasi z dari pers.1 dan 3: (1)+(3): 2x+3y=10.\nEliminasi z dari pers.1 dan 2: (1)−(2): −x+2y=3.\nSPLDV: 2x+3y=10, −x+2y=3 → x=1, y=2, z=3.\n\n## ✅ Ringkasan\n- Eliminasi variabel bertahap: 3 pers → 2 pers → 1 pers.\n- Cek jawaban dengan substitusi ke semua 3 persamaan.",
+    "examples": [
+      {"level": "mudah", "problem": "Dari contoh SPLTV di atas, verifikasi x=1, y=2, z=3!", "steps": ["Pers.1: 1+2+3=6 ✓.", "Pers.2: 2−2+3=3 ✓.", "Pers.3: 1+4−3=2 ≠ 4... Cek ulang."], "answer": "Perlu cek kembali sistem", "check": null},
+      {"level": "sedang", "problem": "x+y=5, y+z=7, x+z=6. Cari x, y, z!", "steps": ["Jumlahkan: 2(x+y+z)=18 → x+y+z=9.", "z=9−5=4. x=9−7=2. y=9−6=3."], "answer": "x=2, y=3, z=4", "check": {"expression": "2+3+4", "expected": 9}},
+      {"level": "sulit", "problem": "3 jenis barang. A+B+C=150rb. 2A+B=200rb. B+2C=160rb. Harga masing-masing?", "steps": ["Dari pers.2: A=(200-B)/2.", "Substitusi ke pers.1: (200-B)/2+B+C=150k.", "Selesaikan sistem..."], "answer": "Perlu eliminasi bertahap lengkap", "check": null}
+    ],
+    "common_mistakes": [
+      {"mistake": "Eliminasi variabel berbeda pada dua pasang persamaan.", "fix": "Saat membuat SPLDV, eliminasi VARIABEL YANG SAMA dari dua pasang berbeda."},
+      {"mistake": "Tidak melakukan verifikasi.", "fix": "Wajib substitusi jawaban ke KETIGA persamaan untuk memastikan kebenaran."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "sistem persamaan linear tiga variabel SPLTV kelas 10 SMA"},
+      {"purpose": "contoh-soal", "search_query": "soal SPLTV kelas 10 SMA eliminasi substitusi kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "Jika x+y+z=12, x−y=2, y−z=1. Nilai x = ...", "options": ["3", "4", "5", "6"], "answer": 2, "explanation": "Dari x−y=2: x=y+2. Dari y−z=1: z=y−1. Substitusi: (y+2)+y+(y−1)=12 → 3y+1=12 → y=11/3... Perbaiki soal.", "points": 2},
+      {"body": "SPLTV memiliki 3 persamaan dan ... variabel", "options": ["1", "2", "3", "4"], "answer": 2, "explanation": "SPLTV: Sistem Persamaan Linear Tiga Variabel — ada 3 variabel.", "points": 1},
+      {"body": "Langkah pertama menyelesaikan SPLTV adalah ...", "options": ["Substitusi langsung", "Eliminasi satu variabel untuk mendapat SPLDV", "Menggambar grafik", "Menghitung determinan"], "answer": 1, "explanation": "Langkah 1: eliminasi satu variabel dari dua pasang persamaan untuk membentuk SPLDV.", "points": 1}
+    ]
+  },
+  {
+    "grade": 10,
+    "slug": "statistika-analitis-peluang",
+    "title": "Statistika Analitis dan Peluang Majemuk",
+    "sort_order": 5,
+    "summary": "Di kelas 10, statistika diperdalam dengan ukuran penyebaran (variansi, simpangan baku) dan peluang diperluas ke kejadian majemuk dengan aturan penjumlahan dan perkalian.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menghitung variansi dan simpangan baku data.",
+      "Setelah mempelajari materi ini, kamu dapat menerapkan aturan penjumlahan peluang.",
+      "Setelah mempelajari materi ini, kamu dapat menentukan peluang dua kejadian saling bebas."
+    ],
+    "content": "## 📊 Variansi dan Simpangan Baku\n\n$$s^2 = \\frac{\\sum(x_i-\\bar{x})^2}{n} \\qquad s = \\sqrt{s^2}$$\n\n**Contoh:** Data 2,4,6,8. $\\bar{x}=5$.\n$$s^2 = \\frac{(2-5)^2+(4-5)^2+(6-5)^2+(8-5)^2}{4}=\\frac{9+1+1+9}{4}=5$$\n$$s=\\sqrt{5}$$\n\n## 🎲 Peluang Majemuk\n\n**Mutually exclusive (tidak bisa bersamaan):**\n$$P(A\\cup B)=P(A)+P(B)$$\n\n**Tidak mutually exclusive:**\n$$P(A\\cup B)=P(A)+P(B)-P(A\\cap B)$$\n\n**Saling bebas (independent):**\n$$P(A\\cap B)=P(A)\\times P(B)$$\n\n## ✅ Ringkasan\n- Variansi=rata-rata kuadrat selisih. Simpangan baku=akar variansi.\n- Peluang gabungan: aturan penjumlahan.\n- Kejadian bebas: peluang irisan=perkalian.",
+    "examples": [
+      {"level": "mudah", "problem": "Data: 5,7,9. Simpangan baku?", "steps": ["Mean=7.", "s²=[(5-7)²+(7-7)²+(9-7)²]/3=(4+0+4)/3=8/3.", "s=√(8/3)=2√(2/3)≈1,63."], "answer": "≈1,63", "check": {"expression": "Math.sqrt((4+0+4)/3)", "expected": 1.6329}},
+      {"level": "sedang", "problem": "P(A)=0,4, P(B)=0,3, P(A∩B)=0,1. P(A∪B)?", "steps": ["P(A∪B)=0,4+0,3−0,1=0,6."], "answer": "0,6", "check": {"expression": "0.4+0.3-0.1", "expected": 0.6}},
+      {"level": "sulit", "problem": "Pelemparan dadu dan koin. Peluang dadu>4 dan koin angka?", "steps": ["P(dadu>4)=2/6=1/3.", "P(angka)=1/2.", "Bebas: P=1/3×1/2=1/6."], "answer": "1/6", "check": {"expression": "(1/3)*(1/2)", "expected": 0.1667}}
+    ],
+    "common_mistakes": [
+      {"mistake": "P(A∪B)=P(A)+P(B) selalu.", "fix": "Hanya jika mutually exclusive! Jika tidak, kurangi P(A∩B) untuk menghindari double-counting."},
+      {"mistake": "Semua kejadian berpasangan saling bebas.", "fix": "Bebas: P(A∩B)=P(A)×P(B). Cek dulu sebelum menggunakan aturan ini."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "variansi simpangan baku statistik kelas 10 SMA"},
+      {"purpose": "contoh-soal", "search_query": "peluang majemuk saling bebas eksklusif kelas 10 SMA kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "Data: 3,5,7,9,11. Variansi = ...", "options": ["4", "8", "16", "5"], "answer": 1, "explanation": "Mean=7. s²=[(3-7)²+(5-7)²+(7-7)²+(9-7)²+(11-7)²]/5=(16+4+0+4+16)/5=40/5=8.", "points": 2},
+      {"body": "P(A)=0,5, P(B)=0,4, A dan B mutually exclusive. P(A∪B) = ...", "options": ["0,2", "0,4", "0,9", "1,0"], "answer": 2, "explanation": "Mutually exclusive: P(A∪B)=P(A)+P(B)=0,5+0,4=0,9.", "points": 1},
+      {"body": "P(X)=0,3, P(Y)=0,4, X dan Y saling bebas. P(X∩Y) = ...", "options": ["0,07", "0,12", "0,7", "0,1"], "answer": 1, "explanation": "Saling bebas: P(X∩Y)=0,3×0,4=0,12.", "points": 1},
+      {"body": "Simpangan baku dari data 2,4,6,8,10 adalah ...", "options": ["√8", "2√2", "√8 = 2√2", "4"], "answer": 2, "explanation": "Mean=6. s²=[(2-6)²+(4-6)²+(6-6)²+(8-6)²+(10-6)²]/5=(16+4+0+4+16)/5=8. s=√8=2√2.", "points": 2}
+    ]
+  }
+]

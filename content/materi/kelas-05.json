@@ -6,136 +6,61 @@
     "sort_order": 1,
     "summary": "Di kelas 5, kita belajar penjumlahan dan pengurangan pecahan berbeda penyebut dengan menyamakan penyebut menggunakan KPK, serta perkalian dan pembagian pecahan. Operasi pecahan ini menjadi dasar penting untuk memahami aljabar di SMP.",
     "objectives": [
-      "Setelah mempelajari materi ini, kamu dapat menjumlahkan dan mengurangkan pecahan dengan penyebut berbeda.",
-      "Setelah mempelajari materi ini, kamu dapat mengalikan dua pecahan.",
-      "Setelah mempelajari materi ini, kamu dapat membagi dua pecahan menggunakan konsep pecahan kebalikan.",
-      "Setelah mempelajari materi ini, kamu dapat menyelesaikan masalah sehari-hari yang melibatkan operasi pecahan."
+      "Setelah mempelajari materi ini, kamu dapat menjumlahkan dan mengurangkan pecahan berbeda penyebut.",
+      "Setelah mempelajari materi ini, kamu dapat mengalikan dan membagi pecahan.",
+      "Setelah mempelajari materi ini, kamu dapat menyelesaikan soal campuran operasi pecahan."
     ],
-    "content": "## ➕ Penjumlahan Pecahan Berbeda Penyebut\n\nLangkah: **samakan penyebut** menggunakan KPK, lalu jumlahkan pembilang.\n\n$$\\frac{1}{3} + \\frac{1}{4}$$\n\nKPK(3, 4) = 12. Ubah keduanya:\n$$\\frac{1}{3} = \\frac{4}{12} \\qquad \\frac{1}{4} = \\frac{3}{12}$$\n\n$$\\frac{4}{12} + \\frac{3}{12} = \\frac{7}{12}$$\n\n**Contoh lain:**\n$$\\frac{2}{5} + \\frac{1}{3} = \\frac{6}{15} + \\frac{5}{15} = \\frac{11}{15}$$\nKPK(5,3) = 15. Verifikasi: 11/15 ≈ 0,733. Cek: 2/5 + 1/3 = 0,4 + 0,333 = 0,733 ✓\n\n## ➖ Pengurangan Pecahan Berbeda Penyebut\n\nSama seperti penjumlahan — samakan penyebut dulu.\n\n$$\\frac{3}{4} - \\frac{2}{5}$$\n\nKPK(4, 5) = 20.\n$$\\frac{3}{4} = \\frac{15}{20} \\qquad \\frac{2}{5} = \\frac{8}{20}$$\n\n$$\\frac{15}{20} - \\frac{8}{20} = \\frac{7}{20}$$\n\nVerifikasi: 15/20 − 8/20 = 7/20 ✓\n\n## ✖️ Perkalian Pecahan\n\nKalikan langsung — **pembilang × pembilang**, **penyebut × penyebut**.\n\n$$\\frac{2}{3} \\times \\frac{4}{5} = \\frac{2 \\times 4}{3 \\times 5} = \\frac{8}{15}$$\n\nTidak perlu menyamakan penyebut untuk perkalian!\n\n**Contoh:**\n$$\\frac{3}{7} \\times \\frac{5}{9} = \\frac{15}{63} = \\frac{5}{21}$$\n(Sederhanakan: FPB(15,63) = 3. 15÷3 = 5, 63÷3 = 21.)\n\n## ➗ Pembagian Pecahan\n\nUntuk membagi pecahan, **balikkan (inversi) pecahan pembagi lalu kalikan**.\n\n$$\\frac{a}{b} \\div \\frac{c}{d} = \\frac{a}{b} \\times \\frac{d}{c}$$\n\n**Contoh:**\n$$\\frac{3}{5} \\div \\frac{2}{7} = \\frac{3}{5} \\times \\frac{7}{2} = \\frac{21}{10} = 2\\frac{1}{10}$$\n\nVerifikasi: 21/10 × 2/7 = 42/70 = 3/5 ✓\n\n## 🔢 Pecahan Campuran\n\nPecahan campuran seperti $2\\frac{1}{3}$ = bilangan bulat + pecahan = $\\frac{7}{3}$.\n\nCara ubah: $2\\frac{1}{3} = \\frac{(2 \\times 3) + 1}{3} = \\frac{7}{3}$\n\n## ✅ Ringkasan\n\n- Jumlah/kurang berbeda penyebut: samakan dulu (pakai KPK), lalu operasi pembilang.\n- Kali: langsung kalikan pembilang dan penyebut.\n- Bagi: balik pecahan pembagi, lalu kalikan.",
+    "content": "## ➕➖ Penjumlahan/Pengurangan Beda Penyebut\n\n**Samakan penyebut dengan KPK!**\n\n$$\\frac{1}{3}+\\frac{1}{4}= \\frac{4}{12}+\\frac{3}{12}=\\frac{7}{12}$$\n\nKPK(3,4)=12. Ubah keduanya ke /12.\n\n$$\\frac{3}{5}-\\frac{1}{4}=\\frac{12}{20}-\\frac{5}{20}=\\frac{7}{20}$$\n\n## ✖️ Perkalian Pecahan\n\n**Kalikan langsung: pembilang×pembilang, penyebut×penyebut.**\n\n$$\\frac{2}{3}\\times\\frac{4}{5}=\\frac{2\\times4}{3\\times5}=\\frac{8}{15}$$\n\n## ➗ Pembagian Pecahan\n\n**Balik pecahan pembagi (kebalikan), lalu kalikan.**\n\n$$\\frac{3}{4}\\div\\frac{2}{5}=\\frac{3}{4}\\times\\frac{5}{2}=\\frac{15}{8}=1\\frac{7}{8}$$\n\n## 🔢 Pecahan Campuran\n\n$$2\\frac{1}{3}=\\frac{7}{3} \\qquad \\frac{11}{4}=2\\frac{3}{4}$$\n\n## ✅ Ringkasan\n- Beda penyebut: samakan dulu (KPK).\n- Kali: pembilang×pembilang, penyebut×penyebut.\n- Bagi: balik pembagi, lalu kalikan.",
     "examples": [
-      {
-        "level": "mudah",
-        "problem": "Hitung: 1/4 + 2/3",
-        "steps": [
-          "Penyebut berbeda (4 dan 3). KPK(4,3) = 12.",
-          "1/4 = 3/12 (kalikan dengan 3).",
-          "2/3 = 8/12 (kalikan dengan 4).",
-          "3/12 + 8/12 = 11/12.",
-          "Verifikasi: 1/4 = 0,25; 2/3 ≈ 0,667. Jumlah ≈ 0,917. 11/12 ≈ 0,917. ✓"
-        ],
-        "answer": "11/12",
-        "check": null
-      },
-      {
-        "level": "sedang",
-        "problem": "Seutas tali panjangnya 5/6 m. Dipotong 3/8 m. Berapa sisa panjang tali?",
-        "steps": [
-          "5/6 − 3/8. KPK(6,8) = 24.",
-          "5/6 = 20/24. 3/8 = 9/24.",
-          "20/24 − 9/24 = 11/24 m.",
-          "Verifikasi: 5/6 ≈ 0,833; 3/8 = 0,375. Selisih ≈ 0,458. 11/24 ≈ 0,458. ✓"
-        ],
-        "answer": "11/24 m",
-        "check": null
-      },
-      {
-        "level": "sulit",
-        "problem": "Sebuah toko membeli 3/4 kg gula putih dengan harga Rp16.000 per kg. Berapa uang yang harus dibayar? Lalu, gula itu dibagi rata ke dalam 6 kantong. Berapa kg isi tiap kantong?",
-        "steps": [
-          "Harga: 3/4 × Rp16.000 = Rp12.000.",
-          "Isi tiap kantong: 3/4 ÷ 6 = 3/4 × 1/6 = 3/24 = 1/8 kg.",
-          "Verifikasi: 6 × 1/8 = 6/8 = 3/4 kg ✓. Biaya: 0,75 × 16.000 = 12.000 ✓."
-        ],
-        "answer": "Biaya = Rp12.000. Isi tiap kantong = 1/8 kg.",
-        "check": { "expression": "0.75 * 16000", "expected": 12000 }
-      }
+      {"level": "mudah", "problem": "2/3 + 1/4 = ?", "steps": ["KPK(3,4)=12.", "2/3=8/12. 1/4=3/12.", "8/12+3/12=11/12."], "answer": "11/12", "check": null},
+      {"level": "sedang", "problem": "3/4 × 8/9 = ? (sederhanakan!)", "steps": ["Cross-simplify: 3/9=1/3, 4/8=1/2.", "Atau: (3×8)/(4×9)=24/36=2/3."], "answer": "2/3", "check": null},
+      {"level": "sulit", "problem": "Kain 3½m dipotong @¾m. Berapa potong? Sisa?", "steps": ["3½=7/2.", "7/2÷3/4=7/2×4/3=28/6=14/3=4⅔.", "4 potong, sisa 2/3×3/4=½m."], "answer": "4 potong, sisa ½m", "check": null}
     ],
     "common_mistakes": [
-      {
-        "mistake": "Menjumlah langsung tanpa menyamakan penyebut: 1/3 + 1/4 = 2/7.",
-        "fix": "Penyebut berbeda harus disamakan dulu. 1/3 + 1/4: KPK(3,4)=12 → 4/12 + 3/12 = 7/12 (bukan 2/7)."
-      },
-      {
-        "mistake": "Membalik kedua pecahan saat membagi: (a/b) ÷ (c/d) = (b/a) × (c/d).",
-        "fix": "Hanya pecahan PEMBAGI (yang di belakang ÷) yang dibalik. Pecahan pertama tetap: (a/b) × (d/c)."
-      }
+      {"mistake": "1/3+1/4=2/7 (tambah pembilang dan penyebut).", "fix": "Samakan penyebut dulu! 1/3+1/4=4/12+3/12=7/12."},
+      {"mistake": "2/3÷3/4=2/3×3/4 (lupa balik).", "fix": "Bagi: balik PEMBAGI. 2/3÷3/4=2/3×4/3=8/9."}
     ],
     "videos": [
-      {
-        "purpose": "konsep",
-        "search_query": "operasi pecahan penjumlahan pengurangan perkalian pembagian kelas 5 SD"
-      },
-      {
-        "purpose": "contoh-soal",
-        "search_query": "soal cerita pecahan kelas 5 SD matematika kurikulum merdeka"
-      }
+      {"purpose": "konsep", "search_query": "operasi pecahan berbeda penyebut kelas 5 SD kali bagi"},
+      {"purpose": "contoh-soal", "search_query": "soal pecahan campuran kelas 5 SD kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "1/2 + 1/3 = ...", "options": ["2/5", "2/6", "5/6", "3/6"], "answer": 2, "explanation": "KPK(2,3)=6. 1/2=3/6, 1/3=2/6. 3/6+2/6=5/6.", "points": 1},
+      {"body": "3/4 × 2/3 = ...", "options": ["5/12", "6/12", "1/2", "2/4"], "answer": 2, "explanation": "(3×2)/(4×3)=6/12=1/2.", "points": 1},
+      {"body": "2/5 ÷ 4/7 = ...", "options": ["8/35", "14/20", "7/10", "14/35"], "answer": 2, "explanation": "2/5÷4/7=2/5×7/4=14/20=7/10.", "points": 2},
+      {"body": "1⅓ + 2¼ = ?", "options": ["3⁷⁄₁₂", "3½", "3⅓", "3¹⁰⁄₁₂"], "answer": 0, "explanation": "1+2=3. 1/3+1/4=4/12+3/12=7/12. Hasil: 3 7/12.", "points": 2}
     ]
   },
   {
     "grade": 5,
-    "slug": "kecepatan-debit-skala-jarak-waktu",
-    "title": "Kecepatan, Debit, Skala, Jarak, dan Waktu",
+    "slug": "kecepatan-debit-skala",
+    "title": "Kecepatan, Debit, dan Skala",
     "sort_order": 2,
-    "summary": "Kecepatan adalah jarak yang ditempuh per satuan waktu. Debit adalah volume cairan yang mengalir per satuan waktu. Skala peta menyatakan perbandingan jarak pada peta dengan jarak sebenarnya.",
+    "summary": "Kecepatan mengukur jarak yang ditempuh per satuan waktu. Debit mengukur volume air yang mengalir per satuan waktu. Skala adalah perbandingan ukuran gambar/peta dengan ukuran aslinya.",
     "objectives": [
-      "Setelah mempelajari materi ini, kamu dapat menghitung kecepatan, jarak, atau waktu jika dua variabel lainnya diketahui.",
-      "Setelah mempelajari materi ini, kamu dapat menghitung debit aliran cairan.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung kecepatan, jarak, atau waktu dari dua yang lain.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung debit aliran air.",
       "Setelah mempelajari materi ini, kamu dapat menggunakan skala peta untuk menghitung jarak sebenarnya."
     ],
-    "content": "## 🚗 Kecepatan, Jarak, dan Waktu\n\n### Hubungan Tiga Variabel\n\n$$\\text{Kecepatan (v)} = \\frac{\\text{Jarak (s)}}{\\text{Waktu (t)}}$$\n\nDari rumus ini:\n- $s = v \\times t$ (jarak = kecepatan × waktu)\n- $t = \\frac{s}{v}$ (waktu = jarak ÷ kecepatan)\n\n> **Tips Mudah:** Ingat segitiga: S di atas, V dan T di bawah.\n> - Tutup S → V × T\n> - Tutup V → S ÷ T\n> - Tutup T → S ÷ V\n\n### Satuan\n- Kecepatan: km/jam, m/s, m/menit\n- Jarak: km, m\n- Waktu: jam, menit, detik\n\n**Perhatikan konsistensi satuan!** Jika v dalam km/jam dan t dalam jam, maka s dalam km.\n\n### Contoh\n\n**Sebuah bus melaju dengan kecepatan 60 km/jam selama 2,5 jam. Berapa jarak yang ditempuh?**\n$$s = v \\times t = 60 \\times 2{,}5 = 150 \\text{ km}$$\n\n**Jarak Jakarta-Bandung ≈ 150 km. Jika ditempuh dalam 3 jam, berapa kecepatan rata-rata?**\n$$v = \\frac{s}{t} = \\frac{150}{3} = 50 \\text{ km/jam}$$\n\n## 💧 Debit\n\nDebit adalah **volume zat cair yang mengalir per satuan waktu**.\n\n$$\\text{Debit (Q)} = \\frac{\\text{Volume (V)}}{\\text{Waktu (t)}}$$\n\nSatuan debit: liter/detik, liter/menit, m³/jam.\n\n**Contoh:** Keran mengisi bak 120 liter dalam 4 menit.\n$$Q = \\frac{120}{4} = 30 \\text{ liter/menit}$$\n\n## 🗺️ Skala Peta\n\nSkala peta = perbandingan jarak di peta : jarak sebenarnya.\n\nSkala **1 : 500.000** artinya 1 cm pada peta = 500.000 cm = 5 km di lapangan.\n\n$$\\text{Jarak sebenarnya} = \\text{Jarak peta} \\times \\text{Skala}$$\n\n**Contoh:** Pada peta berskala 1:300.000, jarak antara dua kota = 6 cm.\n$$\\text{Jarak sebenarnya} = 6 \\times 300.000 = 1.800.000 \\text{ cm} = 18 \\text{ km}$$\n\n**Mencari jarak di peta:**\n$$\\text{Jarak peta} = \\frac{\\text{Jarak sebenarnya}}{\\text{Skala}}$$\n\nJika jarak sebenarnya 25 km dan skala 1:500.000:\n$$\\text{Jarak peta} = \\frac{25 \\times 100.000}{500.000} = 5 \\text{ cm}$$\n\n## ✅ Ringkasan\n\n- v = s/t; s = v×t; t = s/v (konsistensi satuan!)\n- Debit Q = V/t (volume per waktu)\n- Skala: jarak sebenarnya = jarak peta × skala penyebut",
+    "content": "## 🚗 Kecepatan\n\n$$v=\\frac{s}{t} \\quad s=v\\times t \\quad t=\\frac{s}{v}$$\n\n- **v** = kecepatan (km/jam atau m/s)\n- **s** = jarak (km atau m)\n- **t** = waktu (jam atau detik)\n\n**Contoh:** v=60km/jam, t=2½jam → s=60×2,5=**150 km**\n\n## 💧 Debit\n\n$$Q=\\frac{V}{t} \\quad V=Q\\times t$$\n\n- **Q** = debit (liter/detik)\n- **V** = volume (liter)\n- **t** = waktu (detik)\n\n## 🗺️ Skala Peta\n\n$$\\text{Skala}=\\frac{\\text{Ukuran gambar}}{\\text{Ukuran asli}}$$\n\n**Skala 1:500.000** → 1 cm di peta = 500.000 cm = **5 km** asli.\n\nJarak di peta 3 cm → jarak asli = 3×5 = **15 km**\n\n## ✅ Ringkasan\n- v=s/t. Ingat: segitiga s,v,t.\n- Debit=volume/waktu.\n- Skala: peta×skala=asli.",
     "examples": [
-      {
-        "level": "mudah",
-        "problem": "Amir bersepeda dengan kecepatan 15 km/jam selama 2 jam. Berapa jarak yang ditempuh?",
-        "steps": [
-          "Rumus: s = v × t.",
-          "s = 15 km/jam × 2 jam = 30 km."
-        ],
-        "answer": "30 km",
-        "check": { "expression": "15 * 2", "expected": 30 }
-      },
-      {
-        "level": "sedang",
-        "problem": "Sebuah keran bisa mengisi kolam bervolume 9.000 liter dalam 3 jam. Berapa debit keran tersebut dalam liter/menit?",
-        "steps": [
-          "3 jam = 3 × 60 = 180 menit.",
-          "Debit = Volume ÷ Waktu = 9.000 ÷ 180 = 50 liter/menit.",
-          "Verifikasi: 50 liter/menit × 180 menit = 9.000 liter ✓."
-        ],
-        "answer": "50 liter/menit",
-        "check": { "expression": "9000 / 180", "expected": 50 }
-      },
-      {
-        "level": "sulit",
-        "problem": "Pada peta berskala 1:250.000, jarak dua desa = 8 cm. Ayah berkendara ke desa itu dengan kecepatan 50 km/jam. Berapa lama perjalanan Ayah?",
-        "steps": [
-          "Jarak sebenarnya: 8 cm × 250.000 = 2.000.000 cm = 20 km.",
-          "Waktu: t = s/v = 20 km ÷ 50 km/jam = 0,4 jam = 24 menit.",
-          "Verifikasi: 50 × 0,4 = 20 km ✓."
-        ],
-        "answer": "24 menit",
-        "check": { "expression": "(8 * 250000 / 100000) / 50 * 60", "expected": 24 }
-      }
+      {"level": "mudah", "problem": "Mobil, v=80km/jam, t=3jam. Jarak?", "steps": ["s=v×t=80×3=240km."], "answer": "240 km", "check": {"expression": "80 * 3", "expected": 240}},
+      {"level": "sedang", "problem": "Keran isi kolam 500L dalam 25 menit. Debit?", "steps": ["Q=V/t=500/25=20 L/menit."], "answer": "20 L/menit", "check": {"expression": "500 / 25", "expected": 20}},
+      {"level": "sulit", "problem": "Peta skala 1:200.000. Dua kota berjarak 6cm. Jarak asli dan waktu tempuh 60km/jam?", "steps": ["Jarak=6×200.000=1.200.000cm=12km.", "t=s/v=12/60=0,2jam=12menit."], "answer": "12 km, 12 menit", "check": {"expression": "6 * 200000 / 100000", "expected": 12}}
     ],
     "common_mistakes": [
-      {
-        "mistake": "Tidak konsisten satuan: kecepatan km/jam tapi waktu dalam menit, sehingga hasil jarak salah.",
-        "fix": "Konversi dulu ke satuan yang sama. Jika v = 60 km/jam dan t = 30 menit, ubah t = 0,5 jam dulu. s = 60 × 0,5 = 30 km."
-      },
-      {
-        "mistake": "Mengalikan skala peta dengan jarak, tapi lupa mengonversi cm ke km.",
-        "fix": "Setelah menghitung jarak dalam cm, bagi dengan 100.000 untuk mendapat km (karena 1 km = 100.000 cm)."
-      }
+      {"mistake": "Satuan tidak sesuai: kecepatan km/jam tapi waktu dalam menit.", "fix": "Samakan satuan! 30 menit = 0,5 jam. Atau ubah kecepatan ke km/menit."},
+      {"mistake": "Arahkan skala terbalik.", "fix": "Jarak asli = jarak peta × penyebut skala. 1:500.000 → ×500.000."}
     ],
     "videos": [
-      {
-        "purpose": "konsep",
-        "search_query": "kecepatan jarak waktu kelas 5 SD rumus segitiga"
-      },
-      {
-        "purpose": "contoh-soal",
-        "search_query": "soal skala peta debit kelas 5 SD matematika"
-      }
+      {"purpose": "konsep", "search_query": "kecepatan jarak waktu kelas 5 SD rumus segitiga"},
+      {"purpose": "contoh-soal", "search_query": "soal skala peta debit kelas 5 SD matematika"}
+    ],
+    "questions": [
+      {"body": "Sepeda motor, v=60km/jam, t=1,5jam. Jarak tempuh = ...", "options": ["61,5 km", "40 km", "90 km", "120 km"], "answer": 2, "explanation": "s=v×t=60×1,5=90 km.", "points": 1},
+      {"body": "Jarak 240km, kecepatan 80km/jam. Waktu tempuh = ...", "options": ["2 jam", "3 jam", "4 jam", "5 jam"], "answer": 1, "explanation": "t=s/v=240/80=3 jam.", "points": 1},
+      {"body": "Peta skala 1:1.000.000. Jarak di peta 4,5cm. Jarak asli = ...", "options": ["4,5 km", "45 km", "450 km", "4.500 km"], "answer": 1, "explanation": "Jarak=4,5×1.000.000cm=4.500.000cm=45km.", "points": 2},
+      {"body": "Keran mengalirkan 12 L/menit. Berapa liter dalam 15 menit?", "options": ["27 L", "80 L", "180 L", "27 L"], "answer": 2, "explanation": "V=Q×t=12×15=180 L.", "points": 1}
     ]
   },
   {
@@ -143,70 +68,31 @@
     "slug": "volume-kubus-balok",
     "title": "Volume Kubus dan Balok",
     "sort_order": 3,
-    "summary": "Volume adalah banyaknya ruang yang ditempati oleh suatu bangun ruang. Volume kubus dan balok dihitung dengan mengalikan dimensi-dimensinya. Satuan volume adalah cm³, dm³, atau m³.",
+    "summary": "Volume adalah banyaknya ruang yang diisi oleh suatu bangun ruang. Kubus dan balok adalah dua bangun ruang paling umum yang ada di sekitar kita. Menghitung volumenya penting untuk berbagai keperluan praktis.",
     "objectives": [
-      "Setelah mempelajari materi ini, kamu dapat menghitung volume kubus menggunakan rumus V = s³.",
-      "Setelah mempelajari materi ini, kamu dapat menghitung volume balok menggunakan rumus V = p × l × t.",
-      "Setelah mempelajari materi ini, kamu dapat menyelesaikan masalah berkaitan dengan volume dalam kehidupan sehari-hari."
+      "Setelah mempelajari materi ini, kamu dapat menghitung volume kubus dan balok.",
+      "Setelah mempelajari materi ini, kamu dapat mencari sisi yang tidak diketahui dari volume.",
+      "Setelah mempelajari materi ini, kamu dapat memecahkan masalah sehari-hari berkaitan dengan volume."
     ],
-    "content": "## 📦 Apa itu Volume?\n\nVolume adalah **besar ruang** yang diisi oleh suatu benda tiga dimensi.\n\nSatuan volume:\n- **cm³** (sentimeter kubik) — untuk benda kecil\n- **dm³** = **liter** — untuk cairan\n- **m³** (meter kubik) — untuk benda besar\n\n> Bayangkan mengisi kotak dengan kubus-kubus kecil berukuran 1 cm × 1 cm × 1 cm. Banyaknya kubus kecil = volume kotak!\n\n## 🎲 Volume Kubus\n\nKubus memiliki **6 sisi persegi sama besar**. Semua rusuknya sama panjang (s).\n\n$$V = s \\times s \\times s = s^3$$\n\n**Contoh:** Kubus dengan rusuk 5 cm.\n$$V = 5^3 = 5 \\times 5 \\times 5 = 125 \\text{ cm}^3$$\n\n### Mencari Rusuk dari Volume\n\nJika V = 216 cm³, berapa panjang rusuk?\n$$s = \\sqrt[3]{216} = 6 \\text{ cm}$$\n(karena 6 × 6 × 6 = 216)\n\n## 📦 Volume Balok\n\nBalok memiliki **3 dimensi berbeda**: panjang (p), lebar (l), tinggi (t).\n\n$$V = p \\times l \\times t$$\n\n**Contoh:** Balok dengan p = 8 cm, l = 5 cm, t = 4 cm.\n$$V = 8 \\times 5 \\times 4 = 160 \\text{ cm}^3$$\n\n**Mencari dimensi yang tidak diketahui:**\nJika V = 120 cm³, p = 10 cm, l = 4 cm:\n$$t = \\frac{V}{p \\times l} = \\frac{120}{10 \\times 4} = \\frac{120}{40} = 3 \\text{ cm}$$\n\n## 💧 Hubungan Volume dan Kapasitas\n\n- **1 dm³ = 1 liter**\n- **1 m³ = 1.000 liter**\n- **1 cm³ = 1 mL** (mililiter)\n\n**Contoh:** Aquarium berbentuk balok 50 cm × 30 cm × 40 cm.\n$$V = 50 \\times 30 \\times 40 = 60.000 \\text{ cm}^3 = 60.000 \\text{ mL} = 60 \\text{ liter}$$\n\n## ✅ Ringkasan\n\n- Kubus: V = s³.\n- Balok: V = p × l × t.\n- 1 dm³ = 1 liter. 1 cm³ = 1 mL.\n- Untuk mencari dimensi: bagi volume dengan hasil kali dimensi yang diketahui.",
+    "content": "## 📦 Volume\n\nVolume = **banyaknya ruang** yang diisi (satuan: cm³, m³, liter)\n\n$$1 \\text{ L} = 1 \\text{ dm}^3 = 1.000 \\text{ cm}^3$$\n\n## 🟦 Kubus\n\n$$V = s \\times s \\times s = s^3$$\n\n**Contoh (s=4cm):** V = 4³ = 64 cm³\n\n## 📦 Balok\n\n$$V = p \\times l \\times t$$\n\n**Contoh (p=5, l=4, t=3cm):** V = 5×4×3 = 60 cm³\n\n## 💧 Hubungan Volume dengan Kapasitas\n\n- Kolam 2m×1,5m×1m = 3 m³ = **3.000 L**\n\n## ✅ Ringkasan\n- Kubus: V=s³\n- Balok: V=p×l×t\n- 1m³ = 1.000 L = 1.000.000 cm³",
     "examples": [
-      {
-        "level": "mudah",
-        "problem": "Hitunglah volume kubus dengan rusuk 7 cm!",
-        "steps": [
-          "Rumus: V = s³ = s × s × s.",
-          "V = 7 × 7 × 7.",
-          "7 × 7 = 49. 49 × 7 = 343.",
-          "V = 343 cm³."
-        ],
-        "answer": "343 cm³",
-        "check": { "expression": "7 * 7 * 7", "expected": 343 }
-      },
-      {
-        "level": "sedang",
-        "problem": "Sebuah kotak hadiah berbentuk balok dengan panjang 20 cm, lebar 15 cm, dan tinggi 10 cm. Berapa volume kotak hadiah tersebut?",
-        "steps": [
-          "Rumus: V = p × l × t.",
-          "V = 20 × 15 × 10.",
-          "20 × 15 = 300. 300 × 10 = 3.000.",
-          "V = 3.000 cm³."
-        ],
-        "answer": "3.000 cm³",
-        "check": { "expression": "20 * 15 * 10", "expected": 3000 }
-      },
-      {
-        "level": "sulit",
-        "problem": "Sebuah bak mandi berbentuk balok berukuran 1,5 m × 0,8 m × 0,6 m. Berapa kapasitas bak dalam liter? Jika kran mengisi 30 liter/menit, berapa menit untuk mengisi penuh?",
-        "steps": [
-          "Ubah ke dm: 1,5 m = 15 dm; 0,8 m = 8 dm; 0,6 m = 6 dm.",
-          "V = 15 × 8 × 6 = 720 dm³ = 720 liter.",
-          "Waktu = Volume ÷ Debit = 720 ÷ 30 = 24 menit.",
-          "Verifikasi: 30 liter/menit × 24 menit = 720 liter ✓."
-        ],
-        "answer": "720 liter. Waktu pengisian = 24 menit.",
-        "check": { "expression": "15 * 8 * 6", "expected": 720 }
-      }
+      {"level": "mudah", "problem": "Volume kubus sisi 6cm?", "steps": ["V=6³=216cm³."], "answer": "216 cm³", "check": {"expression": "6 ** 3", "expected": 216}},
+      {"level": "sedang", "problem": "Aquarium 50cm×30cm×40cm. Berapa liter air penuh?", "steps": ["V=50×30×40=60.000cm³.", "60.000÷1.000=60L."], "answer": "60 L", "check": {"expression": "50 * 30 * 40 / 1000", "expected": 60}},
+      {"level": "sulit", "problem": "Kolam renang 25m×10m diisi sampai kedalaman 1,5m. Berapa liter?", "steps": ["V=25×10×1,5=375m³.", "375m³=375.000L."], "answer": "375.000 L", "check": {"expression": "25 * 10 * 1.5 * 1000", "expected": 375000}}
     ],
     "common_mistakes": [
-      {
-        "mistake": "Menghitung V = s² (lupa dimensi ketiga) untuk kubus.",
-        "fix": "Kubus punya 3 dimensi sama, jadi V = s × s × s = s³ (tiga kali dikalikan), bukan s²."
-      },
-      {
-        "mistake": "Salah konversi: mengira 1 m³ = 100 liter.",
-        "fix": "1 m = 10 dm. Jadi 1 m³ = 10 × 10 × 10 = 1.000 dm³ = 1.000 liter (bukan 100)."
-      }
+      {"mistake": "V=4×3=12 cm² (hanya dua sisi, dan satuannya salah).", "fix": "Volume pakai 3 dimensi. V=p×l×t cm³."},
+      {"mistake": "1m³=100L.", "fix": "1m³=1000L. 1m=100cm, jadi 1m³=100³cm³=1.000.000cm³=1.000L."}
     ],
     "videos": [
-      {
-        "purpose": "konsep",
-        "search_query": "volume kubus balok kelas 5 SD rumus dan penerapan"
-      },
-      {
-        "purpose": "contoh-soal",
-        "search_query": "soal volume kubus balok kelas 5 SD cerita"
-      }
+      {"purpose": "konsep", "search_query": "volume kubus balok kelas 5 SD rumus satuan liter"},
+      {"purpose": "contoh-soal", "search_query": "soal volume kubus balok kelas 5 SD kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "Volume balok p=8cm, l=5cm, t=3cm adalah ...", "options": ["16 cm³", "24 cm³", "120 cm³", "240 cm³"], "answer": 2, "explanation": "V=p×l×t=8×5×3=120 cm³.", "points": 1},
+      {"body": "Volume kubus dengan sisi 5cm adalah ...", "options": ["15 cm³", "25 cm³", "75 cm³", "125 cm³"], "answer": 3, "explanation": "V=s³=5³=125 cm³.", "points": 1},
+      {"body": "Balok volume=240cm³, p=8cm, l=6cm. Tinggi t=?", "options": ["3 cm", "4 cm", "5 cm", "6 cm"], "answer": 2, "explanation": "240=8×6×t → 240=48t → t=5cm.", "points": 2},
+      {"body": "Volume 1 dm³ = ... cm³", "options": ["10 cm³", "100 cm³", "1.000 cm³", "10.000 cm³"], "answer": 2, "explanation": "1dm=10cm. 1dm³=10×10×10=1.000 cm³.", "points": 1}
     ]
   },
   {
@@ -214,69 +100,31 @@
     "slug": "penyajian-data-diagram-lingkaran",
     "title": "Penyajian Data: Diagram Lingkaran",
     "sort_order": 4,
-    "summary": "Diagram lingkaran (pie chart) menyajikan data sebagai bagian-bagian dari keseluruhan lingkaran. Setiap bagian (sektor) mewakili proporsi dari total, dinyatakan dalam persen atau derajat.",
+    "summary": "Diagram lingkaran (pie chart) menyajikan data dalam bentuk lingkaran yang dibagi menjadi juring-juring. Setiap juring mewakili proporsi satu kategori terhadap keseluruhan data.",
     "objectives": [
-      "Setelah mempelajari materi ini, kamu dapat membaca dan menginterpretasikan data dari diagram lingkaran.",
-      "Setelah mempelajari materi ini, kamu dapat menghitung sudut dan persentase setiap sektor diagram lingkaran.",
-      "Setelah mempelajari materi ini, kamu dapat menentukan nilai data dari persentase atau sudut pada diagram lingkaran."
+      "Setelah mempelajari materi ini, kamu dapat membaca dan menginterpretasikan diagram lingkaran.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung persentase dan jumlah data dari diagram lingkaran.",
+      "Setelah mempelajari materi ini, kamu dapat membuat diagram lingkaran sederhana."
     ],
-    "content": "## 🥧 Apa itu Diagram Lingkaran?\n\nDiagram lingkaran (pie chart) menampilkan data sebagai **bagian-bagian dari sebuah lingkaran penuh (360°)**.\n\n- Lingkaran penuh = **100%** keseluruhan data.\n- Setiap sektor (irisan) menunjukkan **proporsi** dari total.\n\n## 📊 Membaca Diagram Lingkaran\n\n**Contoh:** Hobi siswa kelas 5 (40 siswa)\n\n| Hobi | Siswa | Persen | Sudut |\n|------|-------|--------|-------|\n| Membaca | 10 | 25% | 90° |\n| Olahraga | 16 | 40% | 144° |\n| Menggambar | 8 | 20% | 72° |\n| Bermain Game | 6 | 15% | 54° |\n| **Total** | **40** | **100%** | **360°** |\n\nVerifikasi: 10+16+8+6 = 40 ✓. 25+40+20+15 = 100% ✓. 90+144+72+54 = 360° ✓.\n\n## 🔢 Menghitung Sudut Sektor\n\n$$\\text{Sudut} = \\frac{\\text{nilai data}}{\\text{total data}} \\times 360°$$\n\n**Contoh:** Hobi Olahraga = 16 dari 40.\n$$\\text{Sudut} = \\frac{16}{40} \\times 360° = 0{,}4 \\times 360° = 144°$$\n\n## 💯 Menghitung Persentase\n\n$$\\text{Persen} = \\frac{\\text{nilai data}}{\\text{total data}} \\times 100\\%$$\n\n**Contoh:** Hobi Membaca = 10 dari 40.\n$$\\text{Persen} = \\frac{10}{40} \\times 100\\% = 25\\%$$\n\n## 🔄 Mencari Nilai dari Persentase\n\nJika diketahui 30% dari 120 siswa suka sepak bola:\n$$\\text{Siswa} = 30\\% \\times 120 = \\frac{30}{100} \\times 120 = 36 \\text{ siswa}$$\n\n## ✅ Ringkasan\n\n- Diagram lingkaran: setiap sektor = proporsi dari keseluruhan.\n- Sudut = (nilai/total) × 360°.\n- Persen = (nilai/total) × 100%.\n- Total sudut = 360°, Total persen = 100%.",
+    "content": "## 🥧 Diagram Lingkaran\n\nTotal lingkaran = **100%** atau **360°**.\n\n### Contoh:\n40 siswa ditanya hobi:\n- Olahraga: 15 → 15/40=37,5%\n- Musik: 10 → 25%\n- Membaca: 8 → 20%\n- Memasak: 7 → 17,5%\n\n### Cara Membaca:\n1. Lihat persentase atau nilai sudut tiap bagian.\n2. Hitung nilai jika diketahui total: nilai=(%/100)×total.\n\n**Contoh:** Total 200 siswa, olahraga 35%.\nNilai = 35/100 × 200 = **70 siswa**\n\n## ✅ Ringkasan\n- Tiap bagian = proporsi dari keseluruhan.\n- Total = 100% = 360°.\n- Nilai = persen/100 × total.",
     "examples": [
-      {
-        "level": "mudah",
-        "problem": "Dari diagram hobi di atas, berapa persen siswa yang suka Menggambar?",
-        "steps": [
-          "Siswa yang suka menggambar: 8.",
-          "Total siswa: 40.",
-          "Persen = (8/40) × 100% = 0,2 × 100% = 20%."
-        ],
-        "answer": "20%",
-        "check": { "expression": "(8 / 40) * 100", "expected": 20 }
-      },
-      {
-        "level": "sedang",
-        "problem": "Dari data yang sama, berapa derajat sudut sektor untuk hobi Bermain Game?",
-        "steps": [
-          "Bermain Game: 6 siswa dari 40.",
-          "Sudut = (6/40) × 360° = 0,15 × 360° = 54°.",
-          "Verifikasi: 54° / 360° = 0,15 = 15% = 6/40. ✓"
-        ],
-        "answer": "54°",
-        "check": { "expression": "(6 / 40) * 360", "expected": 54 }
-      },
-      {
-        "level": "sulit",
-        "problem": "Sebuah diagram lingkaran menunjukkan pengeluaran bulanan keluarga: Makanan 40%, Pendidikan 25%, Transportasi 20%, Tabungan 15%. Jika total pengeluaran Rp4.000.000, berapa rupiah untuk masing-masing kategori?",
-        "steps": [
-          "Makanan: 40% × Rp4.000.000 = Rp1.600.000.",
-          "Pendidikan: 25% × Rp4.000.000 = Rp1.000.000.",
-          "Transportasi: 20% × Rp4.000.000 = Rp800.000.",
-          "Tabungan: 15% × Rp4.000.000 = Rp600.000.",
-          "Total: 1.600.000 + 1.000.000 + 800.000 + 600.000 = Rp4.000.000 ✓."
-        ],
-        "answer": "Makanan Rp1.600.000, Pendidikan Rp1.000.000, Transportasi Rp800.000, Tabungan Rp600.000.",
-        "check": { "expression": "0.4 * 4000000 + 0.25 * 4000000 + 0.20 * 4000000 + 0.15 * 4000000", "expected": 4000000 }
-      }
+      {"level": "mudah", "problem": "Olahraga 37,5%, total 40 siswa. Berapa siswa suka olahraga?", "steps": ["37,5/100 × 40=15."], "answer": "15 siswa", "check": {"expression": "37.5 / 100 * 40", "expected": 15}},
+      {"level": "sedang", "problem": "Diagram: A=40%, B=25%, C=20%, D=15%. Total 120 orang. Berapa orang A dan C?", "steps": ["A: 40%×120=48.", "C: 20%×120=24."], "answer": "A=48, C=24 orang", "check": {"expression": "40/100*120", "expected": 48}},
+      {"level": "sulit", "problem": "Total anggaran Rp12juta. Transport 25%, Makan 35%, Akomodasi 30%, Lain 10%. Masing-masing?", "steps": ["Transport: 0,25×12=3jt.", "Makan: 0,35×12=4,2jt.", "Akomodasi: 0,30×12=3,6jt.", "Lain: 0,10×12=1,2jt."], "answer": "T=3jt, M=4,2jt, A=3,6jt, L=1,2jt", "check": {"expression": "0.25*12+0.35*12+0.30*12+0.10*12", "expected": 12}}
     ],
     "common_mistakes": [
-      {
-        "mistake": "Menambahkan sudut semua sektor tapi hasilnya bukan 360°.",
-        "fix": "Jumlah semua sudut HARUS tepat 360°. Jika tidak, ada yang salah dalam perhitungan. Cek setiap sektor."
-      },
-      {
-        "mistake": "Membaca persentase dari diagram dan menganggapnya sudah dalam derajat.",
-        "fix": "Persentase dan derajat berbeda! 40% ≠ 40°. Ubah: 40% × 360° = 144°."
-      }
+      {"mistake": "Mengira persentase paling besar = paling banyak orangnya selalu benar.", "fix": "Hanya benar jika total populasinya sama. Selalu hitung: nilai=persen/100×total."},
+      {"mistake": "Total persen ≠ 100%.", "fix": "Periksa: jumlahkan semua persen. Harus tepat 100%. Jika tidak, ada yang salah."}
     ],
     "videos": [
-      {
-        "purpose": "konsep",
-        "search_query": "diagram lingkaran pie chart kelas 5 SD cara membaca"
-      },
-      {
-        "purpose": "contoh-soal",
-        "search_query": "soal diagram lingkaran persen sudut kelas 5 6 SD"
-      }
+      {"purpose": "konsep", "search_query": "diagram lingkaran pie chart kelas 5 SD membaca data persen"},
+      {"purpose": "contoh-soal", "search_query": "soal diagram lingkaran kelas 5 SD kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "Diagram lingkaran: olahraga 40%, total 200 siswa. Jumlah yang suka olahraga = ...", "options": ["40 siswa", "60 siswa", "80 siswa", "100 siswa"], "answer": 2, "explanation": "40/100×200=80 siswa.", "points": 1},
+      {"body": "Diagram: Matematika 25%, IPA 30%, IPS 20%, Bahasa 25%. Total 4 bagian = ...", "options": ["80%", "90%", "100%", "110%"], "answer": 2, "explanation": "25+30+20+25=100%. Diagram lingkaran harus total 100%.", "points": 1},
+      {"body": "Jika total 360° dan suatu bagian 90°, berapa persen bagian tersebut?", "options": ["9%", "25%", "30%", "90%"], "answer": 1, "explanation": "90°/360°×100%=25%.", "points": 2},
+      {"body": "Budget Rp5.000.000, transportasi 20%. Biaya transportasi = ...", "options": ["Rp200.000", "Rp500.000", "Rp1.000.000", "Rp2.000.000"], "answer": 2, "explanation": "20/100×5.000.000=1.000.000.", "points": 1}
     ]
   },
   {
@@ -284,68 +132,31 @@
     "slug": "penyajian-data-diagram-garis",
     "title": "Penyajian Data: Diagram Garis",
     "sort_order": 5,
-    "summary": "Diagram garis menampilkan data yang berubah seiring waktu. Titik-titik data dihubungkan dengan garis sehingga tren naik atau turun mudah terlihat.",
+    "summary": "Diagram garis sangat cocok untuk menampilkan perubahan data dari waktu ke waktu (tren). Titik-titik data dihubungkan dengan garis sehingga kita bisa melihat apakah nilainya naik, turun, atau stabil.",
     "objectives": [
-      "Setelah mempelajari materi ini, kamu dapat membaca dan menginterpretasikan data dari diagram garis.",
-      "Setelah mempelajari materi ini, kamu dapat mengidentifikasi tren (naik, turun, stabil) dari diagram garis.",
-      "Setelah mempelajari materi ini, kamu dapat membuat diagram garis dari data yang diberikan."
+      "Setelah mempelajari materi ini, kamu dapat membaca dan menginterpretasikan diagram garis.",
+      "Setelah mempelajari materi ini, kamu dapat menentukan tren (naik/turun/stabil) dari diagram garis.",
+      "Setelah mempelajari materi ini, kamu dapat membandingkan dua set data dalam satu diagram garis."
     ],
-    "content": "## 📈 Apa itu Diagram Garis?\n\nDiagram garis menampilkan data yang **berubah seiring waktu**. Cocok untuk data berurutan seperti suhu harian, penjualan bulanan, atau nilai ulangan per semester.\n\n### Komponen Diagram Garis\n\n- **Sumbu X (mendatar)**: waktu atau urutan (hari, bulan, tahun)\n- **Sumbu Y (tegak)**: nilai data\n- **Titik data**: satu titik per pengamatan\n- **Garis penghubung**: menunjukkan tren perubahan\n\n## 📊 Contoh: Suhu Harian Kota A (Senin–Sabtu)\n\n| Hari | Suhu (°C) |\n|------|----------|\n| Senin | 28 |\n| Selasa | 30 |\n| Rabu | 32 |\n| Kamis | 31 |\n| Jumat | 33 |\n| Sabtu | 29 |\n\n```\n°C\n33 |              •\n32 |         •\n31 |              •  (Kamis)\n30 |    •\n29 |                   •\n28 | •\n   +--+--+--+--+--+--\n    Sn Sl Ra Km Jm Sb\n```\n\n**Tren**: Umumnya naik dari Senin ke Jumat, lalu turun Sabtu.\n\n## 🔍 Membaca Diagram Garis\n\n- **Titik tertinggi** = nilai maksimum → Jumat (33°C)\n- **Titik terendah** = nilai minimum → Senin (28°C)\n- **Tren naik**: garis mengarah ke kanan-atas\n- **Tren turun**: garis mengarah ke kanan-bawah\n- **Stabil**: garis mendatar\n\n## 🧮 Menghitung dari Diagram Garis\n\n**Rata-rata suhu** = (28+30+32+31+33+29) ÷ 6 = 183 ÷ 6 = **30,5°C**\n\n**Kenaikan terbesar**: Selasa ke Rabu = 32−30 = **2°C**\n\n**Penurunan terbesar**: Jumat ke Sabtu = 33−29 = **4°C**\n\n## ✏️ Membuat Diagram Garis\n\n1. Tentukan rentang nilai untuk sumbu Y.\n2. Plot (tandai) titik-titik sesuai nilai.\n3. Hubungkan titik-titik dengan garis lurus.\n4. Beri judul, label sumbu, dan keterangan.\n\n## ✅ Ringkasan\n\n- Diagram garis: ideal untuk data yang berubah seiring waktu.\n- Garis menanjak = tren naik; garis menurun = tren turun.\n- Identifikasi titik tertinggi, terendah, dan tren umum.",
+    "content": "## 📈 Diagram Garis\n\nKegunaannya: menampilkan **tren/perubahan** data seiring waktu.\n\n### Contoh: Suhu Rata-rata (°C)\n\n```\n35 |              *\n30 |        *        *\n25 |   *\n20 |*\n    Jan Feb Mar Apr Mei\n```\n\n- Jan: 20°, Feb: 25°, Mar: 30°, Apr: 35°, Mei: 30°\n- Tren: **naik** Jan–Apr, lalu **turun** Apr–Mei.\n\n### Membaca Diagram Garis:\n1. Sumbu X: waktu (hari, bulan, tahun)\n2. Sumbu Y: nilai data\n3. Garis naik → nilai bertambah\n4. Garis turun → nilai berkurang\n\n## ✅ Ringkasan\n- Diagram garis: tren waktu.\n- Garis naik = meningkat. Turun = berkurang.\n- Bisa bandingkan 2+ kelompok dalam satu grafik.",
     "examples": [
-      {
-        "level": "mudah",
-        "problem": "Dari data suhu di atas, pada hari apa suhu paling tinggi?",
-        "steps": [
-          "Baca semua nilai: Senin=28, Selasa=30, Rabu=32, Kamis=31, Jumat=33, Sabtu=29.",
-          "Nilai tertinggi: 33°C.",
-          "33°C terjadi pada hari Jumat."
-        ],
-        "answer": "Jumat (33°C)",
-        "check": null
-      },
-      {
-        "level": "sedang",
-        "problem": "Berapa rata-rata suhu dari Senin sampai Sabtu?",
-        "steps": [
-          "Total suhu: 28+30+32+31+33+29 = 183.",
-          "Jumlah hari: 6.",
-          "Rata-rata: 183 ÷ 6 = 30,5°C."
-        ],
-        "answer": "30,5°C",
-        "check": { "expression": "(28 + 30 + 32 + 31 + 33 + 29) / 6", "expected": 30.5 }
-      },
-      {
-        "level": "sulit",
-        "problem": "Penjualan minuman es teh kios Bu Sari (dalam gelas): Senin=40, Selasa=35, Rabu=50, Kamis=45, Jumat=60, Sabtu=80. Tentukan hari dengan kenaikan terbesar, total penjualan, dan rata-rata per hari.",
-        "steps": [
-          "Kenaikan tiap hari: Sl-Sn = 35−40 = −5 (turun). Ra-Sl = 50−35 = 15. Km-Ra = 45−50 = −5 (turun). Jm-Km = 60−45 = 15. Sb-Jm = 80−60 = 20.",
-          "Kenaikan terbesar: Sabtu vs Jumat = 20 gelas.",
-          "Total: 40+35+50+45+60+80 = 310 gelas.",
-          "Rata-rata: 310 ÷ 6 ≈ 51,7 gelas/hari."
-        ],
-        "answer": "Kenaikan terbesar: Jumat→Sabtu (+20). Total: 310 gelas. Rata-rata: ≈51,7 gelas/hari.",
-        "check": { "expression": "(40 + 35 + 50 + 45 + 60 + 80) / 6", "expected": 51.666666666666664 }
-      }
+      {"level": "mudah", "problem": "Dari data suhu di atas, kapan suhu tertinggi?", "steps": ["Titik tertinggi: April, 35°C."], "answer": "April (35°C)", "check": null},
+      {"level": "sedang", "problem": "Kenaikan suhu Jan–Apr? Penurunan Apr–Mei?", "steps": ["Jan→Apr: 35−20=15°C (naik).", "Apr→Mei: 35−30=5°C (turun)."], "answer": "Naik 15°C, turun 5°C", "check": null},
+      {"level": "sulit", "problem": "Penjualan toko: Jan=500, Feb=600, Mar=550, Apr=700, Mei=800. Bulan mana tren negatif?", "steps": ["Jan→Feb: 100 naik.", "Feb→Mar: 50 turun (NEGATIF).", "Mar→Apr: 150 naik.", "Apr→Mei: 100 naik.", "Tren negatif: Feb→Mar."], "answer": "Februari ke Maret (turun 50)", "check": null}
     ],
     "common_mistakes": [
-      {
-        "mistake": "Menggunakan diagram garis untuk data yang tidak berurutan (misal: tinggi badan 5 teman).",
-        "fix": "Diagram garis cocok untuk data berurutan waktu. Untuk membandingkan kategori tidak berurutan, gunakan diagram batang."
-      },
-      {
-        "mistake": "Menghitung 'kenaikan' dengan membandingkan hari yang tidak berdekatan.",
-        "fix": "Kenaikan/penurunan dihitung ANTAR TITIK BERDEKATAN. Bandingkan hari ke-n dengan hari ke-(n+1)."
-      }
+      {"mistake": "Menggambar titik tidak sesuai skala sumbu Y.", "fix": "Buat grid dan perhatikan skala tiap kotak. Misalnya 1 kotak = 5 unit."},
+      {"mistake": "Garis horizontal = nilai tidak berubah bukan nol.", "fix": "Garis horizontal berarti nilai TETAP, bukan nol. Nol berarti titik di sumbu X."}
     ],
     "videos": [
-      {
-        "purpose": "konsep",
-        "search_query": "diagram garis kelas 5 SD cara membaca tren data"
-      },
-      {
-        "purpose": "contoh-soal",
-        "search_query": "soal diagram garis kelas 5 6 SD rata-rata statistika"
-      }
+      {"purpose": "konsep", "search_query": "diagram garis kelas 5 SD membaca data tren waktu"},
+      {"purpose": "contoh-soal", "search_query": "soal diagram garis kelas 5 SD kurikulum merdeka matematika"}
+    ],
+    "questions": [
+      {"body": "Diagram garis paling cocok digunakan untuk menampilkan ...", "options": ["Hobi siswa", "Suhu tiap bulan", "Persentase nilai", "Bangun datar"], "answer": 1, "explanation": "Diagram garis terbaik untuk data yang berubah seiring waktu, seperti suhu tiap bulan.", "points": 1},
+      {"body": "Penjualan: Jan=200, Feb=350, Mar=300. Dari Februari ke Maret tren ...", "options": ["Naik", "Stabil", "Turun", "Tidak ada"], "answer": 2, "explanation": "350→300, nilainya berkurang. Tren turun.", "points": 1},
+      {"body": "Suhu harian: Sen=28°, Sel=30°, Rab=30°, Kam=32°. Pada hari apa suhu stabil?", "options": ["Senin-Selasa", "Selasa-Rabu", "Rabu-Kamis", "Senin-Rabu"], "answer": 1, "explanation": "Selasa=30°, Rabu=30°. Nilainya sama → stabil.", "points": 1},
+      {"body": "Dari data penjualan Jan=500, Feb=600, Mar=550, Apr=700, Mei=800. Kenaikan terbesar terjadi pada ...", "options": ["Jan→Feb", "Feb→Mar", "Mar→Apr", "Apr→Mei"], "answer": 2, "explanation": "Mar→Apr: 700−550=150 (kenaikan terbesar).", "points": 2}
     ]
   }
 ]

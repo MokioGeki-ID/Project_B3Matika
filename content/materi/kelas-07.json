@@ -1,0 +1,192 @@
+[
+  {
+    "grade": 7,
+    "slug": "bilangan-bulat-rasional",
+    "title": "Bilangan Bulat dan Bilangan Rasional",
+    "sort_order": 1,
+    "summary": "Bilangan rasional mencakup semua bilangan yang dapat dinyatakan sebagai a/b (b≠0), termasuk bilangan bulat, pecahan, dan desimal berulang. Operasi pada bilangan rasional mengikuti aturan tanda dan pecahan yang sudah kita pelajari.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menentukan jenis-jenis bilangan dalam sistem bilangan.",
+      "Setelah mempelajari materi ini, kamu dapat melakukan operasi hitung pada bilangan rasional.",
+      "Setelah mempelajari materi ini, kamu dapat membandingkan dan mengurutkan bilangan rasional."
+    ],
+    "content": "## 🔢 Sistem Bilangan\n\n```\nBilangan Real\n├── Bilangan Rasional (a/b, b≠0)\n│   ├── Bilangan Bulat (...-2,-1,0,1,2...)\n│   │   ├── Bilangan Negatif (-1,-2,...)\n│   │   ├── Nol (0)\n│   │   └── Bilangan Asli/Cacah (1,2,3,...)\n│   └── Pecahan (1/2, 3/4, 0,333...)\n└── Bilangan Irasional (√2, π, ...)\n```\n\n## ✖️ Operasi Bilangan Bulat\n\n**Aturan tanda:**\n- (+)×(+)=(+), (−)×(−)=(+), (+)×(−)=(−)\n\n$$\\frac{3}{4} + \\frac{-5}{8} = \\frac{6}{8}+\\frac{-5}{8}=\\frac{1}{8}$$\n\n## 📊 Membandingkan Bilangan Rasional\n\n- Ubah ke desimal atau penyebut sama.\n- $\\frac{3}{5}=0{,}6$ vs $\\frac{5}{8}=0{,}625$ → $\\frac{3}{5}<\\frac{5}{8}$\n\n## ✅ Ringkasan\n- Semua bilangan bulat adalah bilangan rasional.\n- Bilangan irasional: tidak bisa ditulis a/b.\n- Operasi: aturan tanda + aturan pecahan.",
+    "examples": [
+      {"level": "mudah", "problem": "Apakah √9 bilangan rasional?", "steps": ["√9=3.", "3 = 3/1 (bisa ditulis a/b).", "Ya, bilangan rasional."], "answer": "Ya, √9=3 adalah bilangan rasional", "check": {"expression": "Math.sqrt(9)", "expected": 3}},
+      {"level": "sedang", "problem": "Urutkan: -3/4, 1/2, -1/3, 2/5 dari kecil ke besar!", "steps": ["Ubah ke desimal: -0,75; 0,5; -0,333; 0,4.", "Urut: -0,75 < -0,333 < 0,4 < 0,5."], "answer": "-3/4, -1/3, 2/5, 1/2", "check": null},
+      {"level": "sulit", "problem": "(-2/3)×(9/4) + 3/2 = ?", "steps": ["(-2/3)×(9/4)=-18/12=-3/2.", "-3/2+3/2=0."], "answer": "0", "check": {"expression": "(-2/3)*(9/4) + 3/2", "expected": 0}}
+    ],
+    "common_mistakes": [
+      {"mistake": "Mengira π adalah bilangan rasional.", "fix": "π ≈ 3,14159... tidak berulang dan tidak berhenti. Ini bilangan irasional."},
+      {"mistake": "0,333... = 1/3 dianggap irasional.", "fix": "0,333... berulang → rasional! Hanya yang tidak berulang dan tidak berhenti yang irasional."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "bilangan rasional irasional sistem bilangan kelas 7 SMP"},
+      {"purpose": "contoh-soal", "search_query": "operasi bilangan rasional kelas 7 SMP kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "Manakah yang BUKAN bilangan rasional?", "options": ["0,25", "1/7", "√5", "−3"], "answer": 2, "explanation": "√5 ≈ 2,236... tidak berulang dan tidak berhenti → bilangan irasional.", "points": 1},
+      {"body": "Hasil dari (−3/5) × (−10/9) = ...", "options": ["−2/3", "2/3", "−30/45", "6/3"], "answer": 1, "explanation": "Tanda (−)×(−)=(+). Nilai: 3/5×10/9=30/45=2/3.", "points": 1},
+      {"body": "Manakah yang benar: −3/4 ... −2/5?", "options": ["−3/4 > −2/5", "−3/4 = −2/5", "−3/4 < −2/5", "Tidak bisa dibandingkan"], "answer": 2, "explanation": "−3/4=−0,75. −2/5=−0,4. −0,75 < −0,4.", "points": 2},
+      {"body": "(-5) + 3/2 = ...", "options": ["−7/2", "−3/2", "−3", "−7"], "answer": 0, "explanation": "-5 + 3/2 = -10/2 + 3/2 = -7/2.", "points": 1}
+    ]
+  },
+  {
+    "grade": 7,
+    "slug": "bentuk-aljabar",
+    "title": "Bentuk Aljabar",
+    "sort_order": 2,
+    "summary": "Aljabar menggunakan huruf sebagai variabel untuk mewakili bilangan yang belum diketahui. Operasi pada bentuk aljabar mengikuti aturan yang sama dengan operasi bilangan, dengan tambahan aturan pengelompokan suku sejenis.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat mengenali komponen bentuk aljabar: variabel, koefisien, konstanta.",
+      "Setelah mempelajari materi ini, kamu dapat menyederhanakan bentuk aljabar dengan mengelompokkan suku sejenis.",
+      "Setelah mempelajari materi ini, kamu dapat melakukan operasi penjumlahan, pengurangan, dan perkalian bentuk aljabar."
+    ],
+    "content": "## 🔡 Komponen Bentuk Aljabar\n\n$$5x^2 - 3x + 7$$\n\n| Komponen | Contoh | Keterangan |\n|----------|--------|-----------|\n| **Variabel** | x | Huruf perwakil bilangan |\n| **Koefisien** | 5 (dari 5x²), -3 (dari -3x) | Bilangan di depan variabel |\n| **Konstanta** | 7 | Bilangan tanpa variabel |\n| **Suku** | 5x², -3x, 7 | Setiap bagian terpisah (+/-) |\n\n## ➕ Suku Sejenis\n\nSuku sejenis: variabel DAN pangkat sama.\n- 3x dan 5x → sejenis\n- 3x dan 5x² → TIDAK sejenis\n- 2xy dan -7xy → sejenis\n\n**Operasi penjumlahan/pengurangan hanya untuk suku sejenis!**\n$$3x + 5x = 8x \\qquad 7y^2 - 2y^2 = 5y^2$$\n\n## ✖️ Perkalian\n\n$$a(b+c) = ab + ac \\quad (\\text{distributif})$$\n$$3(2x-5)=6x-15$$\n$$(x+2)(x+3)=x^2+5x+6$$\n\n## ✅ Ringkasan\n- Kelompokkan suku sejenis sebelum operasi.\n- Koefisien dioperasikan, variabel tetap (untuk +/-).\n- Perkalian: gunakan sifat distributif.",
+    "examples": [
+      {"level": "mudah", "problem": "Sederhanakan: 4x + 3y − 2x + 5y", "steps": ["Kelompokkan: (4x−2x)+(3y+5y).", "=2x+8y."], "answer": "2x + 8y", "check": null},
+      {"level": "sedang", "problem": "Hitung: 3(2x−4)+5x", "steps": ["Distributif: 6x−12+5x.", "Gabung sejenis: 11x−12."], "answer": "11x − 12", "check": null},
+      {"level": "sulit", "problem": "(2x+3)(x−4) = ?", "steps": ["FOIL: 2x·x+2x·(−4)+3·x+3·(−4).", "=2x²−8x+3x−12.", "=2x²−5x−12."], "answer": "2x² − 5x − 12", "check": null}
+    ],
+    "common_mistakes": [
+      {"mistake": "3x+5y=8xy.", "fix": "3x dan 5y TIDAK sejenis (variabel berbeda). Tidak bisa digabung."},
+      {"mistake": "3(x+2)=3x+2 (lupa kalikan konstanta).", "fix": "3(x+2)=3·x+3·2=3x+6. Kalikan SEMUA suku dalam kurung."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "bentuk aljabar variabel koefisien kelas 7 SMP kurikulum merdeka"},
+      {"purpose": "contoh-soal", "search_query": "soal aljabar suku sejenis operasi kelas 7 SMP"}
+    ],
+    "questions": [
+      {"body": "Koefisien dari −7x² adalah ...", "options": ["−7", "7", "x²", "−7x"], "answer": 0, "explanation": "Koefisien adalah bilangan di depan variabel. Pada −7x², koefisiennya −7.", "points": 1},
+      {"body": "Bentuk sederhana dari 5x + 3y − 2x + y adalah ...", "options": ["3x+4y", "3x+3y", "7x+4y", "3x+2y"], "answer": 0, "explanation": "(5x−2x)+(3y+y)=3x+4y.", "points": 1},
+      {"body": "Hasil dari 4(3x − 2) = ...", "options": ["12x−2", "12x−8", "7x−6", "12x+8"], "answer": 1, "explanation": "4×3x−4×2=12x−8.", "points": 1},
+      {"body": "Hasil dari (x+4)(x−3) = ...", "options": ["x²+x−12", "x²−x−12", "x²+7x−12", "x²−7x+12"], "answer": 0, "explanation": "x·x+x·(−3)+4·x+4·(−3)=x²−3x+4x−12=x²+x−12.", "points": 2}
+    ]
+  },
+  {
+    "grade": 7,
+    "slug": "persamaan-pertidaksamaan-linear-satu-variabel",
+    "title": "Persamaan dan Pertidaksamaan Linear Satu Variabel",
+    "sort_order": 3,
+    "summary": "Persamaan linear satu variabel (PLSV) adalah kalimat matematika berbentuk ax+b=c yang harus dicari nilai variabelnya. Pertidaksamaan linear menggunakan tanda <, >, ≤, ≥ dengan solusi berupa himpunan nilai.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menyelesaikan persamaan linear satu variabel.",
+      "Setelah mempelajari materi ini, kamu dapat menyelesaikan pertidaksamaan linear satu variabel.",
+      "Setelah mempelajari materi ini, kamu dapat menggambarkan solusi pertidaksamaan pada garis bilangan."
+    ],
+    "content": "## ⚖️ Persamaan Linear Satu Variabel\n\n$$ax + b = c$$\n\nCara: isolasi variabel (x) ke satu sisi.\n\n**Contoh: 3x + 5 = 14**\n$$3x = 14 - 5 = 9 \\implies x = 3$$\n\n**Contoh: 2(x-3)=8**\n$$2x-6=8 \\implies 2x=14 \\implies x=7$$\n\n## ≤≥ Pertidaksamaan Linear\n\nSama seperti persamaan, KECUALI jika **kali/bagi dengan bilangan negatif**, tanda berbalik!\n\n**Contoh: -2x > 6**\n$$x < -3 \\quad (\\text{tanda berbalik!})$$\n\n**Notasi garis bilangan:**\n- x < 3 → titik terbuka di 3, panah ke kiri\n- x ≥ 3 → titik tertutup di 3, panah ke kanan\n\n## ✅ Ringkasan\n- PLSV: isolasi x dengan operasi invers.\n- Pertidaksamaan: sama, tapi tanda balik jika ×/÷ negatif.",
+    "examples": [
+      {"level": "mudah", "problem": "Selesaikan: 5x − 7 = 13", "steps": ["5x = 13+7 = 20.", "x = 20/5 = 4."], "answer": "x = 4", "check": {"expression": "(13 + 7) / 5", "expected": 4}},
+      {"level": "sedang", "problem": "3(2x+1) = 27", "steps": ["6x+3=27.", "6x=24.", "x=4."], "answer": "x = 4", "check": {"expression": "(27-3)/6", "expected": 4}},
+      {"level": "sulit", "problem": "-3x + 8 ≤ -4. Tentukan x dan gambar!", "steps": ["-3x ≤ -12.", "x ≥ 4 (bagi -3, tanda berbalik).", "Garis: titik tertutup di 4, panah ke kanan."], "answer": "x ≥ 4", "check": null}
+    ],
+    "common_mistakes": [
+      {"mistake": "Lupa membalik tanda pertidaksamaan saat bagi bilangan negatif.", "fix": "Jika dibagi/-1, -2, dll. → tanda WAJIB berbalik. -2x>6 → x<-3."},
+      {"mistake": "x/3=4 dijawab x=4/3.", "fix": "Keduanya sisi dikali 3: x=4×3=12."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "persamaan linear satu variabel kelas 7 SMP cara menyelesaikan"},
+      {"purpose": "contoh-soal", "search_query": "pertidaksamaan linear satu variabel kelas 7 SMP soal latihan"}
+    ],
+    "questions": [
+      {"body": "Penyelesaian dari 4x − 6 = 18 adalah ...", "options": ["x=3", "x=4", "x=5", "x=6"], "answer": 3, "explanation": "4x=18+6=24. x=24/4=6.", "points": 1},
+      {"body": "Penyelesaian dari 2(x+3) = 14 adalah ...", "options": ["x=2", "x=4", "x=7", "x=8"], "answer": 1, "explanation": "2x+6=14. 2x=8. x=4.", "points": 1},
+      {"body": "Penyelesaian dari −3x > 12 adalah ...", "options": ["x>−4", "x<−4", "x>4", "x<4"], "answer": 1, "explanation": "x < 12/(−3) = −4. Bagi −3 → tanda berbalik: x < −4.", "points": 2},
+      {"body": "Umur Ani = 3 kali umur Budi. Selisihnya 16 tahun. Umur Budi = ...", "options": ["6 tahun", "7 tahun", "8 tahun", "9 tahun"], "answer": 2, "explanation": "A=3B, A−B=16 → 3B−B=16 → 2B=16 → B=8.", "points": 2}
+    ]
+  },
+  {
+    "grade": 7,
+    "slug": "rasio-perbandingan-senilai-berbalik-nilai",
+    "title": "Rasio, Perbandingan Senilai, dan Berbalik Nilai",
+    "sort_order": 4,
+    "summary": "Perbandingan senilai terjadi ketika dua besaran berubah dalam arah yang sama. Perbandingan berbalik nilai terjadi ketika dua besaran berubah dalam arah berlawanan. Keduanya banyak diaplikasikan dalam kehidupan nyata.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menentukan jenis perbandingan (senilai/berbalik).",
+      "Setelah mempelajari materi ini, kamu dapat menyelesaikan soal perbandingan senilai.",
+      "Setelah mempelajari materi ini, kamu dapat menyelesaikan soal perbandingan berbalik nilai."
+    ],
+    "content": "## ⬆️ Perbandingan Senilai\n\nJika A naik → B naik (atau A turun → B turun).\n\n$$\\frac{a_1}{b_1} = \\frac{a_2}{b_2}$$\n\n**Contoh:** 3 kg = Rp45.000. Berapa 7 kg?\n$$\\frac{3}{45.000}=\\frac{7}{?} \\implies ? = \\frac{7 \\times 45.000}{3} = 105.000$$\n\n## ⬇️ Perbandingan Berbalik Nilai\n\nJika A naik → B turun (atau sebaliknya).\n\n$$a_1 \\times b_1 = a_2 \\times b_2$$\n\n**Contoh:** 4 pekerja = 12 hari. Jika 6 pekerja, berapa hari?\n$$4 \\times 12 = 6 \\times ? \\implies ? = \\frac{48}{6} = 8 \\text{ hari}$$\n\n## ✅ Ringkasan\n- Senilai: rasio tetap → a₁/b₁=a₂/b₂\n- Berbalik: hasil kali tetap → a₁×b₁=a₂×b₂",
+    "examples": [
+      {"level": "mudah", "problem": "5 karyawan selesai 10 hari. 10 karyawan berapa hari? (berbalik)", "steps": ["5×10=10×?. ?=50/10=5 hari."], "answer": "5 hari", "check": {"expression": "5*10/10", "expected": 5}},
+      {"level": "sedang", "problem": "Bensin 20L untuk 240km. Untuk 150km butuh berapa liter? (senilai)", "steps": ["20/240=x/150. x=20×150/240=12,5L."], "answer": "12,5 L", "check": {"expression": "20*150/240", "expected": 12.5}},
+      {"level": "sulit", "problem": "Peta 1:250.000. A ke B di peta 6cm. Waktu 90km/jam?", "steps": ["Jarak=6×250.000=1.500.000cm=15km.", "t=15/90=1/6jam=10menit."], "answer": "10 menit", "check": {"expression": "6*250000/100000/90*60", "expected": 10}}
+    ],
+    "common_mistakes": [
+      {"mistake": "Semua perbandingan dihitung dengan rasio a/b.", "fix": "Berbalik nilai: kalikan! a×b=konstan, bukan a/b=konstan."},
+      {"mistake": "Salah identifikasi jenis perbandingan.", "fix": "Tanya: jika A bertambah, B ikut bertambah (senilai) atau berkurang (berbalik)?"}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "perbandingan senilai berbalik nilai kelas 7 SMP perbedaan"},
+      {"purpose": "contoh-soal", "search_query": "soal perbandingan senilai berbalik nilai kelas 7 SMP kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "12 pekerja menyelesaikan proyek 20 hari. Jika 15 pekerja, berapa hari? (berbalik)", "options": ["14 hari", "16 hari", "18 hari", "25 hari"], "answer": 1, "explanation": "12×20=15×?. ?=240/15=16 hari.", "points": 2},
+      {"body": "Harga 8 buku Rp120.000. Harga 5 buku = ... (senilai)", "options": ["Rp60.000", "Rp75.000", "Rp80.000", "Rp100.000"], "answer": 1, "explanation": "8/120.000=5/? → ?=5×120.000/8=75.000.", "points": 1},
+      {"body": "Contoh perbandingan BERBALIK NILAI adalah ...", "options": ["Makin banyak barang, makin mahal total harga", "Makin cepat mobil, makin singkat waktu tempuh", "Makin panjang kain, makin banyak meter", "Makin banyak siswa, makin tinggi total nilai"], "answer": 1, "explanation": "Kecepatan dan waktu berlawanan arah (senilai terbalik). Lebih cepat = lebih sedikit waktu.", "points": 1}
+    ]
+  },
+  {
+    "grade": 7,
+    "slug": "aritmetika-sosial",
+    "title": "Aritmetika Sosial (Jual Beli, Bunga, Diskon)",
+    "sort_order": 5,
+    "summary": "Aritmetika sosial menerapkan matematika dalam konteks ekonomi sehari-hari: jual beli (untung/rugi), diskon, pajak, dan bunga bank sederhana. Kemampuan ini sangat penting untuk kecerdasan finansial.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menghitung untung, rugi, dan persentasenya.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung harga setelah diskon dan pajak.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung bunga tunggal."
+    ],
+    "content": "## 💰 Untung dan Rugi\n\n$$\\text{Untung} = HJ - HB \\quad (HJ>HB)$$\n$$\\text{Rugi} = HB - HJ \\quad (HB>HJ)$$\n$$\\%\\text{Untung}=\\frac{\\text{Untung}}{HB}\\times 100\\%$$\n\n**Contoh:** HB=Rp80.000, HJ=Rp100.000.\nUntung=20.000. %Untung=20.000/80.000×100%=**25%**\n\n## 🏷️ Diskon\n\n$$\\text{Harga setelah diskon}=HJ\\times(1-\\%\\text{diskon})$$\n\n**Contoh:** Rp200.000, diskon 20%.\nHarga=200.000×0,8=**Rp160.000**\n\n## 💵 Pajak (PPN)\n\n$$\\text{Harga+PPN}=HJ\\times(1+\\%\\text{pajak})$$\n\n## 🏦 Bunga Tunggal\n\n$$B=M\\times r\\times t$$\n\nB=bunga, M=modal, r=rate/tahun, t=tahun.\n\n**Contoh:** M=5.000.000, r=6%/thn, t=2thn.\nB=5.000.000×0,06×2=**Rp600.000**\n\n## ✅ Ringkasan\n- Untung=HJ>HB. Rugi=HB>HJ.\n- Diskon: kurangi persen dari harga jual.\n- Bunga tunggal: B=M×r×t.",
+    "examples": [
+      {"level": "mudah", "problem": "Beli Rp50.000, jual Rp65.000. Untung/rugi dan persennya?", "steps": ["HJ>HB→Untung. Untung=65.000−50.000=15.000.", "%=15.000/50.000×100%=30%."], "answer": "Untung Rp15.000 (30%)", "check": {"expression": "15000/50000*100", "expected": 30}},
+      {"level": "sedang", "problem": "Sepatu Rp450.000 diskon 15%. Bayar berapa?", "steps": ["Diskon=15%×450.000=67.500.", "Bayar=450.000−67.500=382.500."], "answer": "Rp382.500", "check": {"expression": "450000 * (1 - 0.15)", "expected": 382500}},
+      {"level": "sulit", "problem": "Tabungan Rp10jt, bunga 8%/tahun, 18 bulan. Total?", "steps": ["t=18/12=1,5 thn.", "B=10.000.000×0,08×1,5=1.200.000.", "Total=10.000.000+1.200.000=11.200.000."], "answer": "Rp11.200.000", "check": {"expression": "10000000 * 0.08 * 1.5", "expected": 1200000}}
+    ],
+    "common_mistakes": [
+      {"mistake": "%Untung = Untung/HJ×100% (dibagi harga jual).", "fix": "%Untung = Untung/HB×100%. Patokannya selalu HARGA BELI!"},
+      {"mistake": "Diskon 20% berarti bayar 20%.", "fix": "Diskon 20% = bayar 80% dari harga asli! Bayar = HJ×(1−0,2)=HJ×0,8."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "aritmetika sosial untung rugi diskon bunga kelas 7 SMP"},
+      {"purpose": "contoh-soal", "search_query": "soal aritmetika sosial kelas 7 SMP kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "Beli buku Rp40.000, jual Rp52.000. Persentase untung = ...", "options": ["25%", "30%", "32%", "40%"], "answer": 1, "explanation": "Untung=12.000. %=12.000/40.000×100%=30%.", "points": 1},
+      {"body": "Harga tas Rp300.000 diskon 25%. Harga setelah diskon = ...", "options": ["Rp225.000", "Rp250.000", "Rp275.000", "Rp75.000"], "answer": 0, "explanation": "300.000×(1−0,25)=300.000×0,75=225.000.", "points": 1},
+      {"body": "Modal Rp6.000.000, bunga 10%/thn, 6 bulan. Bunga = ...", "options": ["Rp300.000", "Rp600.000", "Rp60.000", "Rp3.000.000"], "answer": 0, "explanation": "B=6.000.000×0,1×(6/12)=6.000.000×0,05=300.000.", "points": 2},
+      {"body": "Pedagang mengalami rugi 20% dari harga beli Rp500.000. Harga jual = ...", "options": ["Rp400.000", "Rp420.000", "Rp480.000", "Rp600.000"], "answer": 0, "explanation": "Rugi=20%×500.000=100.000. HJ=500.000−100.000=400.000.", "points": 2}
+    ]
+  },
+  {
+    "grade": 7,
+    "slug": "statistika-penyajian-data-kelompok",
+    "title": "Statistika: Penyajian Data Kelompok",
+    "sort_order": 6,
+    "summary": "Ketika data sangat banyak, kita mengelompokkannya ke dalam interval/kelas. Dari data berkelompok, kita bisa membuat tabel frekuensi, histogram, dan menghitung mean, median, serta modus dengan metode khusus.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat membuat tabel distribusi frekuensi data kelompok.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung mean data kelompok menggunakan nilai tengah kelas.",
+      "Setelah mempelajari materi ini, kamu dapat membaca dan membuat histogram."
+    ],
+    "content": "## 📊 Tabel Distribusi Frekuensi\n\n| Nilai | Frekuensi (f) | Nilai Tengah (x) | f×x |\n|-------|--------------|-----------------|------|\n| 60−69 | 5 | 64,5 | 322,5 |\n| 70−79 | 12 | 74,5 | 894 |\n| 80−89 | 10 | 84,5 | 845 |\n| 90−99 | 3 | 94,5 | 283,5 |\n| **Total** | **30** | | **2345** |\n\n### Mean Data Kelompok\n$$\\bar{x}=\\frac{\\sum f_i x_i}{\\sum f_i}=\\frac{2345}{30}\\approx 78{,}2$$\n\n### Modus\nKelas dengan frekuensi tertinggi = kelas **70−79**. Modus ≈ 74,5\n\n### Histogram\nGrafik batang berimpitan: sumbu X=kelas, sumbu Y=frekuensi.\n\n## ✅ Ringkasan\n- Data kelompok: buat kelas interval, hitung frekuensi.\n- Mean: Σ(f×x)/Σf. Nilai tengah kelas=(batas bawah+batas atas)/2.\n- Modus: kelas dengan f terbesar.",
+    "examples": [
+      {"level": "mudah", "problem": "Nilai tengah kelas 80−89?", "steps": ["x=(80+89)/2=84,5."], "answer": "84,5", "check": {"expression": "(80+89)/2", "expected": 84.5}},
+      {"level": "sedang", "problem": "Dari tabel di atas, berapa persen siswa nilai ≥80?", "steps": ["f≥80: 10+3=13.", "13/30×100%=43,3%."], "answer": "≈43,3%", "check": {"expression": "(10+3)/30*100", "expected": 43.333}},
+      {"level": "sulit", "problem": "Mean dari: [50-59:3], [60-69:7], [70-79:15], [80-89:5]?", "steps": ["x₁=54,5, x₂=64,5, x₃=74,5, x₄=84,5.", "Σfx=3×54,5+7×64,5+15×74,5+5×84,5=163,5+451,5+1117,5+422,5=2155.", "Mean=2155/30=71,8."], "answer": "≈71,8", "check": {"expression": "(3*54.5+7*64.5+15*74.5+5*84.5)/(3+7+15+5)", "expected": 71.833}}
+    ],
+    "common_mistakes": [
+      {"mistake": "Nilai tengah kelas 70-79 dihitung sebagai 70 atau 79.", "fix": "Nilai tengah = (batas bawah + batas atas) / 2 = (70+79)/2 = 74,5."},
+      {"mistake": "Mean dihitung hanya dari nilai tengah tanpa mempertimbangkan frekuensi.", "fix": "Harus menggunakan rata-rata berbobot: Σ(f×x)/Σf, bukan Σx/n_kelas."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "data kelompok tabel frekuensi histogram kelas 7 8 SMP"},
+      {"purpose": "contoh-soal", "search_query": "soal statistika data berkelompok mean median modus kelas 7 SMP"}
+    ],
+    "questions": [
+      {"body": "Nilai tengah kelas interval 40−49 adalah ...", "options": ["44", "44,5", "45", "49"], "answer": 1, "explanation": "(40+49)/2=89/2=44,5.", "points": 1},
+      {"body": "Dari tabel contoh (Nilai 60-99, total 30 siswa), kelas modus adalah ...", "options": ["60−69", "70−79", "80−89", "90−99"], "answer": 1, "explanation": "Frekuensi tertinggi=12, pada kelas 70−79. Modus ada di kelas 70−79.", "points": 1},
+      {"body": "Jika f=5,8,12,6,4 dan nilai tengah=55,65,75,85,95. Mean = ...", "options": ["72,9", "74,5", "75,0", "76,3"], "answer": 0, "explanation": "Σfx=5×55+8×65+12×75+6×85+4×95=275+520+900+510+380=2585. Mean=2585/35≈73,9≈72,9 (terdekat).", "points": 2}
+    ]
+  }
+]

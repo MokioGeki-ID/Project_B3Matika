@@ -1,0 +1,193 @@
+[
+  {
+    "grade": 12,
+    "slug": "integral-lanjut-aplikasi",
+    "title": "Integral Lanjut dan Aplikasinya",
+    "sort_order": 1,
+    "summary": "Integral tentu digunakan untuk menghitung luas daerah di antara dua kurva, volume benda putar, dan panjang busur. Teknik integrasi parsial dan substitusi trigonometri diperlukan untuk integral yang lebih kompleks.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menghitung luas daerah antara dua kurva.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung volume benda putar (metode cakram/cincin).",
+      "Setelah mempelajari materi ini, kamu dapat menerapkan integrasi parsial."
+    ],
+    "content": "## 📐 Luas Daerah Antara Dua Kurva\n\n$$L = \\int_a^b [f(x)-g(x)]\\,dx \\quad \\text{(jika }f(x)\\geq g(x)\\text{)}$$\n\n**Langkah:**\n1. Cari titik potong dua kurva (f(x)=g(x)).\n2. Tentukan mana yang lebih atas.\n3. Integralkan selisihnya.\n\n**Contoh:** y=x² dan y=x antara x=0 dan x=1.\n$$L=\\int_0^1(x-x^2)\\,dx=\\left[\\frac{x^2}{2}-\\frac{x^3}{3}\\right]_0^1=\\frac{1}{2}-\\frac{1}{3}=\\frac{1}{6}$$\n\n## 🔄 Volume Benda Putar (Metode Cakram)\n\n$$V = \\pi\\int_a^b [f(x)]^2\\,dx$$\n\n**Contoh:** y=x diputar sumbu X, 0≤x≤2:\n$$V=\\pi\\int_0^2 x^2\\,dx=\\pi\\left[\\frac{x^3}{3}\\right]_0^2=\\frac{8\\pi}{3}$$\n\n## ∫ Integrasi Parsial\n\n$$\\int u\\,dv = uv - \\int v\\,du$$\n\n## ✅ Ringkasan\n- Luas antara dua kurva: integral |atas−bawah|.\n- Volume cakram: π∫[f(x)]²dx.\n- Integrasi parsial: ∫u dv = uv − ∫v du.",
+    "examples": [
+      {"level": "mudah", "problem": "Luas antara y=4−x² dan sumbu X?", "steps": ["Potong X: x=±2.", "L=∫₋₂²(4−x²)dx=[4x−x³/3]₋₂².", "=(8−8/3)−(−8+8/3)=16−16/3=32/3."], "answer": "32/3 satuan luas", "check": {"expression": "32/3", "expected": 10.667}},
+      {"level": "sedang", "problem": "Volume y=√x diputar sumbu X, 0≤x≤4?", "steps": ["V=π∫₀⁴(√x)²dx=π∫₀⁴x dx=π[x²/2]₀⁴=π×8=8π."], "answer": "8π ≈ 25,13 satuan volume", "check": {"expression": "8*Math.PI", "expected": 25.133}},
+      {"level": "sulit", "problem": "∫x·eˣ dx (integrasi parsial)?", "steps": ["u=x, dv=eˣdx → du=dx, v=eˣ.", "∫x·eˣdx=x·eˣ−∫eˣdx=xeˣ−eˣ+C=eˣ(x−1)+C."], "answer": "eˣ(x−1) + C", "check": null}
+    ],
+    "common_mistakes": [
+      {"mistake": "L = ∫[f(x)−g(x)]dx tanpa memeriksa mana yang lebih atas.", "fix": "Pastikan f(x)≥g(x) di interval. Jika tidak, swap atau gunakan nilai absolut."},
+      {"mistake": "Volume = ∫[f(x)]dx (lupa π dan pangkat 2).", "fix": "Volume cakram = π∫[f(x)]²dx. Harus ada π dan kuadrat!"}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "integral luas daerah volume benda putar kelas 12 SMA"},
+      {"purpose": "contoh-soal", "search_query": "soal integral aplikasi luas volume kelas 12 SMA kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "Luas daerah antara y=x dan y=x² dari x=0 ke x=1 adalah ...", "options": ["1/6", "1/3", "1/2", "1"], "answer": 0, "explanation": "L=∫₀¹(x−x²)dx=[x²/2−x³/3]₀¹=1/2−1/3=1/6.", "points": 2},
+      {"body": "Volume benda putar y=2 diputar sumbu X dari x=0 ke x=3 adalah ...", "options": ["4π", "12π", "24π", "36π"], "answer": 1, "explanation": "V=π∫₀³4dx=4π[x]₀³=12π.", "points": 2},
+      {"body": "Titik potong y=x dan y=x² berada di ...", "options": ["x=0 dan x=1", "x=0 dan x=−1", "x=1 dan x=2", "x=−1 dan x=1"], "answer": 0, "explanation": "x=x² → x²−x=0 → x(x−1)=0 → x=0 atau x=1.", "points": 1},
+      {"body": "∫ x dx dengan batas 1 sampai 4 = ...", "options": ["7,5", "15/2", "6", "8"], "answer": 0, "explanation": "[x²/2]₁⁴=16/2−1/2=15/2=7,5.", "points": 1}
+    ]
+  },
+  {
+    "grade": 12,
+    "slug": "program-linear",
+    "title": "Program Linear",
+    "sort_order": 2,
+    "summary": "Program linear adalah metode matematika untuk mengoptimalkan (memaksimumkan atau meminimumkan) suatu fungsi tujuan yang tunduk pada kendala linear. Metode ini banyak digunakan dalam bisnis, industri, dan logistik.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat memformulasikan masalah program linear.",
+      "Setelah mempelajari materi ini, kamu dapat menentukan daerah feasibel dari sistem pertidaksamaan.",
+      "Setelah mempelajari materi ini, kamu dapat menemukan nilai optimal dengan metode sudut (vertex)."
+    ],
+    "content": "## 📋 Komponen Program Linear\n\n1. **Variabel keputusan**: x dan y (yang dicari)\n2. **Fungsi tujuan**: Z=ax+by (yang dioptimalkan)\n3. **Kendala**: pertidaksamaan linear yang harus dipenuhi\n4. **Non-negatif**: x≥0, y≥0\n\n## 📐 Metode Penyelesaian\n\n1. **Gambar** semua kendala → temukan daerah feasibel.\n2. **Cari titik sudut** (vertex) daerah feasibel.\n3. **Hitung nilai Z** di setiap titik sudut.\n4. **Nilai terbesar/terkecil** adalah solusi optimal.\n\n## 💡 Contoh\n\nMaksimumkan Z=3x+2y dengan kendala:\n- x+y≤4, x+2y≤6, x≥0, y≥0\n\nTitik sudut: (0,0),(4,0),(2,2),(0,3).\n- Z(0,0)=0, Z(4,0)=12, Z(2,2)=10, Z(0,3)=6.\n- **Maksimum Z=12 di (4,0).**\n\n## ✅ Ringkasan\n- Gambar daerah feasibel (irisan semua kendala).\n- Cek semua titik sudut untuk nilai Z optimal.",
+    "examples": [
+      {"level": "mudah", "problem": "Z=2x+3y, titik sudut: (0,0),(6,0),(2,4),(0,4). Nilai maks?", "steps": ["Z(0,0)=0. Z(6,0)=12. Z(2,4)=4+12=16. Z(0,4)=12.", "Maks Z=16 di (2,4)."], "answer": "Z_maks = 16 di (2,4)", "check": {"expression": "2*2+3*4", "expected": 16}},
+      {"level": "sedang", "problem": "Pabrik buat x produk A (laba 50rb) dan y produk B (laba 80rb). Mesin: 2x+3y≤120. Tenaga: x+y≤50. Maks laba?", "steps": ["Titik sudut: (0,0),(50,0),(30,20),(0,40).", "Z=50.000x+80.000y.", "Z(30,20)=50k×30+80k×20=1.500k+1.600k=3.100k.", "Z(0,40)=3.200k. Maks di (0,40): Rp3.200.000."], "answer": "Rp3.200.000", "check": {"expression": "80000*40", "expected": 3200000}},
+      {"level": "sulit", "problem": "Meminimalkan Z=x+2y dengan x+y≥5, 2x+y≥7, x≥0, y≥0?", "steps": ["Titik sudut: (7,0),(2,3),(0,5).", "Z(7,0)=7. Z(2,3)=2+6=8. Z(0,5)=10.", "Min Z=7 di (7,0)."], "answer": "Z_min = 7 di (7,0)", "check": {"expression": "7+2*0", "expected": 7}}
+    ],
+    "common_mistakes": [
+      {"mistake": "Solusi optimal selalu di tengah daerah feasibel.", "fix": "Solusi optimal SELALU berada di salah satu titik SUDUT (vertex) daerah feasibel. Cek semua sudut!"},
+      {"mistake": "Lupa kendala x≥0 dan y≥0.", "fix": "Selalu tambahkan x≥0 dan y≥0 kecuali soal menyatakan sebaliknya. Ini batas fisik yang logis."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "program linear kelas 12 SMA daerah feasibel fungsi tujuan"},
+      {"purpose": "contoh-soal", "search_query": "soal program linear kelas 12 SMA maksimum minimum kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "Dalam program linear, nilai optimal fungsi tujuan ditemukan di ...", "options": ["Titik asal (0,0)", "Titik tengah daerah feasibel", "Salah satu titik sudut (vertex)", "Semua titik di daerah feasibel"], "answer": 2, "explanation": "Teorema program linear: solusi optimal selalu berada di titik sudut (vertex) daerah feasibel.", "points": 1},
+      {"body": "Z=4x+3y. Titik-titik sudut: (0,0),(5,0),(3,4),(0,6). Nilai maksimum Z = ...", "options": ["18", "20", "24", "28"], "answer": 1, "explanation": "Z(0,0)=0. Z(5,0)=20. Z(3,4)=12+12=24. Z(0,6)=18. Maks Z=24 di (3,4).", "points": 2},
+      {"body": "Pertidaksamaan x+y≤6, 2x+y≤8, x≥0, y≥0. Salah satu titik sudut daerah feasibel adalah ...", "options": ["(2,4)", "(3,3)", "(4,0)", "(0,8)"], "answer": 0, "explanation": "Potong x+y=6 dan 2x+y=8: kurang → x=2. y=4. Titik (2,4) ada di batas kedua garis.", "points": 2}
+    ]
+  },
+  {
+    "grade": 12,
+    "slug": "transformasi-fungsi-komposisi-invers",
+    "title": "Komposisi Fungsi dan Fungsi Invers",
+    "sort_order": 3,
+    "summary": "Komposisi fungsi menggabungkan dua fungsi sehingga output satu menjadi input yang lain. Fungsi invers 'membatalkan' efek fungsi asalnya, seperti logaritma adalah invers dari eksponen.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menghitung dan menyederhanakan komposisi fungsi.",
+      "Setelah mempelajari materi ini, kamu dapat menemukan fungsi invers.",
+      "Setelah mempelajari materi ini, kamu dapat memverifikasi pasangan fungsi invers."
+    ],
+    "content": "## 🔗 Komposisi Fungsi\n\n$$(f\\circ g)(x) = f(g(x))$$\n\n**Evaluasi kanan dulu!** g(x) dihitung lebih dulu.\n\n**Contoh:** f(x)=2x+1, g(x)=x².\n$$(f\\circ g)(3)=f(g(3))=f(9)=2(9)+1=19$$\n$$(g\\circ f)(3)=g(f(3))=g(7)=49$$\n\n**f∘g ≠ g∘f !** Komposisi tidak komutatif.\n\n## 🔄 Fungsi Invers\n\nJika f(a)=b, maka f⁻¹(b)=a.\n\n**Cara mencari f⁻¹(x):**\n1. Ganti f(x) dengan y.\n2. Nyatakan x dalam y.\n3. Ganti y dengan x (tukar variabel).\n\n**Contoh:** f(x)=3x+5.\n$$y=3x+5 \\implies x=\\frac{y-5}{3} \\implies f^{-1}(x)=\\frac{x-5}{3}$$\n\n**Verifikasi:** $(f\\circ f^{-1})(x)=x$ dan $(f^{-1}\\circ f)(x)=x$.\n\n## ✅ Ringkasan\n- Komposisi: kanan ke kiri. f∘g: hitung g dulu.\n- Invers: tukar x dan y, lalu selesaikan.\n- Cek: f∘f⁻¹=identitas.",
+    "examples": [
+      {"level": "mudah", "problem": "f(x)=x+3. Cari f⁻¹(x)!", "steps": ["y=x+3 → x=y−3.", "f⁻¹(x)=x−3."], "answer": "f⁻¹(x) = x − 3", "check": null},
+      {"level": "sedang", "problem": "f(x)=2x+1, g(x)=x²−3. (f∘g)(2)?", "steps": ["g(2)=4−3=1.", "f(1)=2(1)+1=3.", "(f∘g)(2)=3."], "answer": "3", "check": {"expression": "2*(4-3)+1", "expected": 3}},
+      {"level": "sulit", "problem": "f(x)=(x+2)/(x−1), x≠1. Cari f⁻¹(x) dan verifikasi!", "steps": ["y=(x+2)/(x−1) → y(x−1)=x+2 → yx−y=x+2.", "x(y−1)=y+2 → x=(y+2)/(y−1).", "f⁻¹(x)=(x+2)/(x−1).", "Menarik: f⁻¹=f! Ini fungsi swa-invers."], "answer": "f⁻¹(x) = (x+2)/(x−1)", "check": null}
+    ],
+    "common_mistakes": [
+      {"mistake": "(f∘g)(x) = f(x)·g(x).", "fix": "(f∘g)(x)=f(g(x)), bukan perkalian! f∘g artinya substitusi g ke dalam f."},
+      {"mistake": "f⁻¹(x) = 1/f(x).", "fix": "f⁻¹ adalah FUNGSI INVERS (kebalikan operasi), bukan kebalikan nilai! f⁻¹≠1/f."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "komposisi fungsi invers kelas 12 SMA cara mencari"},
+      {"purpose": "contoh-soal", "search_query": "soal komposisi fungsi invers kelas 12 SMA kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "f(x)=x−4 dan g(x)=2x+3. (f∘g)(5) = ...", "options": ["9", "10", "12", "13"], "answer": 2, "explanation": "g(5)=13. f(13)=13−4=9. Jawab: 9.", "points": 2},
+      {"body": "Fungsi invers dari f(x)=5x−3 adalah ...", "options": ["f⁻¹(x)=(x+3)/5", "f⁻¹(x)=(x−3)/5", "f⁻¹(x)=5x+3", "f⁻¹(x)=1/(5x−3)"], "answer": 0, "explanation": "y=5x−3 → x=(y+3)/5. f⁻¹(x)=(x+3)/5.", "points": 1},
+      {"body": "Jika f⁻¹(3)=5, maka f(5) = ...", "options": ["1/3", "3", "5", "1/5"], "answer": 1, "explanation": "Definisi invers: jika f⁻¹(b)=a maka f(a)=b. f⁻¹(3)=5 → f(5)=3.", "points": 2},
+      {"body": "Pernyataan yang BENAR tentang f⁻¹(x) adalah ...", "options": ["f⁻¹(x)=1/f(x)", "(f∘f⁻¹)(x)=f(x)", "(f∘f⁻¹)(x)=x", "f⁻¹ selalu ada untuk setiap fungsi"], "answer": 2, "explanation": "(f∘f⁻¹)(x)=x adalah sifat definisi fungsi invers. Invers tidak selalu ada (hanya untuk fungsi bijektif).", "points": 2}
+    ]
+  },
+  {
+    "grade": 12,
+    "slug": "statistika-inferensial",
+    "title": "Statistika Inferensial: Uji Hipotesis dan Regresi",
+    "sort_order": 4,
+    "summary": "Statistika inferensial memungkinkan kita membuat kesimpulan tentang populasi dari sampel yang terbatas. Konsep selang kepercayaan, uji hipotesis, dan regresi linear digunakan luas dalam penelitian ilmiah.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat memahami konsep selang kepercayaan.",
+      "Setelah mempelajari materi ini, kamu dapat memahami dasar uji hipotesis.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung persamaan regresi linear sederhana."
+    ],
+    "content": "## 📊 Statistika Deskriptif vs Inferensial\n\n- **Deskriptif**: meringkas data yang ada (mean, std, grafik).\n- **Inferensial**: membuat kesimpulan tentang populasi dari sampel.\n\n## 🎯 Selang Kepercayaan\n\nEstimasi nilai parameter populasi dengan tingkat keyakinan tertentu:\n$$\\bar{x} \\pm z_{\\alpha/2}\\cdot\\frac{s}{\\sqrt{n}}$$\n\n**Contoh (95%):** x̄=80, s=10, n=25, z=1,96.\n$$80\\pm 1{,}96\\cdot\\frac{10}{5}=80\\pm 3{,}92=[76{,}08;83{,}92]$$\n\n## 🔬 Uji Hipotesis\n\n- **H₀**: hipotesis nol (yang diuji)\n- **H₁**: hipotesis alternatif\n- Jika p-value < α → **tolak H₀**\n\n## 📈 Regresi Linear\n\n$$\\hat{y} = a + bx$$\n\n$$b = \\frac{n\\sum xy - \\sum x \\sum y}{n\\sum x^2 - (\\sum x)^2} \\qquad a=\\bar{y}-b\\bar{x}$$\n\n## ✅ Ringkasan\n- Selang kepercayaan: x̄ ± margin of error.\n- Uji hipotesis: tolak H₀ jika bukti cukup kuat.\n- Regresi: hubungan linear antara dua variabel.",
+    "examples": [
+      {"level": "mudah", "problem": "n=100, x̄=70, s=5. Selang kepercayaan 95%?", "steps": ["z=1,96. SE=5/10=0,5.", "70±1,96×0,5=70±0,98=[69,02; 70,98]."], "answer": "[69,02 ; 70,98]", "check": {"expression": "1.96*5/Math.sqrt(100)", "expected": 0.98}},
+      {"level": "sedang", "problem": "Data x=[1,2,3,4,5], y=[3,5,7,9,11]. Persamaan regresi?", "steps": ["x̄=3, ȳ=7.", "Σxy=1×3+2×5+3×7+4×9+5×11=3+10+21+36+55=125.", "Σx²=1+4+9+16+25=55.", "b=(5×125−15×35)/(5×55−225)=(625−525)/(275−225)=100/50=2.", "a=7−2×3=1.", "ŷ=1+2x."], "answer": "ŷ = 1 + 2x", "check": {"expression": "(5*125-15*35)/(5*55-15**2)", "expected": 2}},
+      {"level": "sulit", "problem": "Nilai korelasi r mendekati 0. Apa artinya?", "steps": ["r mengukur kekuatan hubungan linear.", "r≈0: tidak ada hubungan linear yang kuat.", "Catatan: bisa ada hubungan non-linear!"], "answer": "Tidak ada hubungan linear yang kuat", "check": null}
+    ],
+    "common_mistakes": [
+      {"mistake": "Selang kepercayaan 95% berarti 95% data ada di interval.", "fix": "Artinya: 95% dari selang kepercayaan yang dibangun dengan cara ini akan mengandung parameter populasi yang sebenarnya."},
+      {"mistake": "Tolak H₀ = H₀ salah.", "fix": "Menolak H₀ artinya ada BUKTI yang cukup bahwa H₀ tidak benar. Ini bukan jaminan H₀ pasti salah."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "statistika inferensial uji hipotesis regresi kelas 12 SMA"},
+      {"purpose": "contoh-soal", "search_query": "soal regresi linear selang kepercayaan kelas 12 SMA kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "Perbedaan statistika deskriptif dan inferensial adalah ...", "options": ["Deskriptif: generalisasi. Inferensial: meringkas.", "Deskriptif: meringkas data. Inferensial: simpulkan populasi dari sampel.", "Deskriptif: lebih akurat. Inferensial: perkiraan.", "Tidak ada perbedaan."], "answer": 1, "explanation": "Deskriptif meringkas data yang ada. Inferensial membuat kesimpulan tentang populasi dari sampel.", "points": 1},
+      {"body": "Selang kepercayaan yang lebih lebar menunjukkan ...", "options": ["Sampel lebih besar", "Presisi lebih tinggi", "Ketidakpastian lebih besar", "Data lebih normal"], "answer": 2, "explanation": "Interval lebih lebar = estimasi kurang presisi = lebih banyak ketidakpastian.", "points": 2},
+      {"body": "Koefisien regresi b>0 menunjukkan bahwa ...", "options": ["y menurun saat x naik", "y naik saat x naik", "y tidak berubah", "hubungan sempurna"], "answer": 1, "explanation": "b>0 berarti hubungan positif: saat x naik, y juga naik.", "points": 1},
+      {"body": "Dalam uji hipotesis, p-value=0,03 dan α=0,05. Keputusannya adalah ...", "options": ["Gagal tolak H₀", "Tolak H₀", "Terima H₁ secara pasti", "Tidak bisa diputuskan"], "answer": 1, "explanation": "p-value (0,03) < α (0,05) → tolak H₀. Ada bukti cukup bahwa H₀ tidak benar.", "points": 2}
+    ]
+  },
+  {
+    "grade": 12,
+    "slug": "geometri-analitik-irisan-kerucut",
+    "title": "Geometri Analitik: Irisan Kerucut",
+    "sort_order": 5,
+    "summary": "Irisan kerucut terbentuk dari perpotongan bidang datar dengan kerucut ganda. Empat jenis irisan kerucut — lingkaran, elips, parabola, dan hiperbola — semuanya memiliki persamaan dan sifat yang berbeda-beda.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat mengenali dan menulis persamaan lingkaran, elips, dan parabola.",
+      "Setelah mempelajari materi ini, kamu dapat menentukan unsur-unsur (pusat, jari-jari, fokus) dari persamaannya.",
+      "Setelah mempelajari materi ini, kamu dapat menyelesaikan masalah yang melibatkan irisan kerucut."
+    ],
+    "content": "## ⭕ Lingkaran\n\nPusat (a,b), jari-jari r:\n$$(x-a)^2+(y-b)^2=r^2$$\n\n## 🥚 Elips\n\n$$\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1 \\quad (a>b)$$\n\n- Pusat: (0,0)\n- Sumbu major: 2a (horizontal)\n- Fokus: $c=\\sqrt{a^2-b^2}$, di (±c, 0)\n\n## 📈 Parabola\n\n$$y^2=4px \\quad \\text{(kanan, fokus di (p,0))}$$\n$$x^2=4py \\quad \\text{(atas, fokus di (0,p))}$$\n\n## ✖️ Hiperbola\n\n$$\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$$\n\n- Fokus: $c=\\sqrt{a^2+b^2}$, di (±c, 0)\n- Asimtot: $y=\\pm\\frac{b}{a}x$\n\n## ✅ Ringkasan\n- Lingkaran: jarak dari pusat = r.\n- Elips: penjumlahan jarak ke dua fokus = konstan.\n- Parabola: equidistant dari fokus dan direktriks.",
+    "examples": [
+      {"level": "mudah", "problem": "Lingkaran pusat (3,−2), r=5. Persamaan?", "steps": ["(x−3)²+(y+2)²=25."], "answer": "(x−3)² + (y+2)² = 25", "check": null},
+      {"level": "sedang", "problem": "Elips x²/25+y²/9=1. Tentukan a, b, c, dan titik fokus!", "steps": ["a²=25→a=5. b²=9→b=3.", "c=√(25−9)=√16=4.", "Fokus: (±4, 0)."], "answer": "a=5, b=3, c=4, fokus (±4,0)", "check": {"expression": "Math.sqrt(25-9)", "expected": 4}},
+      {"level": "sulit", "problem": "Persamaan parabola dengan vertex (0,0) dan fokus (0,3). Bentuk persamaan?", "steps": ["Parabola ke atas: x²=4py.", "p=3.", "x²=12y."], "answer": "x² = 12y", "check": null}
+    ],
+    "common_mistakes": [
+      {"mistake": "c=√(a²+b²) untuk elips.", "fix": "Elips: c=√(a²−b²) (kurang). Hiperbola: c=√(a²+b²) (jumlah). Keduanya berbeda!"},
+      {"mistake": "Jika sumbu Y lebih panjang di elips, tetap gunakan x²/a²+y²/b²=1 dengan a>b.", "fix": "Jika sumbu Y lebih panjang, tulis x²/b²+y²/a²=1 atau y²/a²+x²/b²=1 dengan a=sumbu major."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "irisan kerucut lingkaran elips parabola hiperbola kelas 12 SMA"},
+      {"purpose": "contoh-soal", "search_query": "soal elips parabola hiperbola kelas 12 SMA kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "Persamaan lingkaran dengan pusat (−2,3) dan jari-jari 4 adalah ...", "options": ["(x+2)²+(y−3)²=4", "(x−2)²+(y+3)²=16", "(x+2)²+(y−3)²=16", "(x−2)²+(y+3)²=4"], "answer": 2, "explanation": "(x−(−2))²+(y−3)²=4² → (x+2)²+(y−3)²=16.", "points": 1},
+      {"body": "Elips x²/16+y²/9=1. Titik-titik fokusnya adalah ...", "options": ["(±√7, 0)", "(±4, 0)", "(0, ±√7)", "(±3, 0)"], "answer": 0, "explanation": "a²=16, b²=9. c=√(16−9)=√7. Fokus: (±√7, 0).", "points": 2},
+      {"body": "Parabola y²=8x mempunyai fokus di ...", "options": ["(2, 0)", "(8, 0)", "(0, 2)", "(4, 0)"], "answer": 0, "explanation": "y²=4px → 4p=8 → p=2. Fokus di (p,0)=(2,0).", "points": 2},
+      {"body": "Jenis irisan kerucut x²/4−y²/9=1 adalah ...", "options": ["Lingkaran", "Elips", "Parabola", "Hiperbola"], "answer": 3, "explanation": "Bentuk x²/a²−y²/b²=1 (pengurangan) adalah hiperbola.", "points": 1}
+    ]
+  },
+  {
+    "grade": 12,
+    "slug": "kalkulus-lanjut-diferensial-parsial",
+    "title": "Pengantar Kalkulus Lanjut: Fungsi Dua Variabel",
+    "sort_order": 6,
+    "summary": "Banyak fenomena nyata bergantung pada lebih dari satu variabel. Fungsi dua variabel f(x,y) dan turunan parsialnya memungkinkan kita menganalisis perubahan terhadap masing-masing variabel secara independen.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menghitung nilai fungsi dua variabel.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung turunan parsial fungsi dua variabel.",
+      "Setelah mempelajari materi ini, kamu dapat menentukan titik stasioner fungsi dua variabel."
+    ],
+    "content": "## 📐 Fungsi Dua Variabel\n\n$$z = f(x,y)$$\n\n**Contoh:** f(x,y)=x²+3xy−y²\n\nNilai: f(2,1)=4+6−1=**9**\n\n## 🔄 Turunan Parsial\n\nTurunkan terhadap satu variabel; **anggap variabel lain sebagai konstanta**.\n\n$$\\frac{\\partial f}{\\partial x} = f_x \\qquad \\frac{\\partial f}{\\partial y} = f_y$$\n\n**Contoh:** f(x,y)=x²+3xy−y²\n$$f_x=2x+3y \\qquad f_y=3x-2y$$\n\n## 🎯 Titik Stasioner\n\nTitik di mana fₓ=0 DAN f_y=0 secara bersamaan.\n\n**Contoh:** f(x,y)=x²+y²−2x−4y+5\n$$f_x=2x-2=0\\implies x=1 \\qquad f_y=2y-4=0\\implies y=2$$\nTitik stasioner: **(1,2)**. f(1,2)=1+4−2−8+5=**0**.\n\n## ✅ Ringkasan\n- Fungsi dua variabel: substitusi keduanya untuk nilai.\n- Turunan parsial: turunkan satu, anggap lainnya konstan.\n- Stasioner: fₓ=0 DAN f_y=0.",
+    "examples": [
+      {"level": "mudah", "problem": "f(x,y)=2x²−5y. f(3,2)?", "steps": ["f(3,2)=2(9)−5(2)=18−10=8."], "answer": "8", "check": {"expression": "2*9-5*2", "expected": 8}},
+      {"level": "sedang", "problem": "f(x,y)=x³+2xy−y². Cari fₓ dan f_y!", "steps": ["fₓ=3x²+2y (anggap y konstan).", "f_y=2x−2y (anggap x konstan)."], "answer": "fₓ = 3x²+2y, f_y = 2x−2y", "check": null},
+      {"level": "sulit", "problem": "f(x,y)=x²+y²−4x+6y+5. Titik stasioner?", "steps": ["fₓ=2x−4=0 → x=2.", "f_y=2y+6=0 → y=−3.", "Stasioner: (2,−3). f(2,−3)=4+9−8−18+5=−8."], "answer": "(2, −3), nilai minimum −8", "check": {"expression": "4+9-4*2+6*(-3)+5", "expected": -8}}
+    ],
+    "common_mistakes": [
+      {"mistake": "Turunan parsial terhadap x juga menurunkan y.", "fix": "Turunan parsial: turunkan SATU variabel, anggap yang lain KONSTAN (tidak diturunkan)."},
+      {"mistake": "Titik stasioner: cukup fₓ=0 saja.", "fix": "Harus fₓ=0 DAN f_y=0 secara bersamaan. Keduanya wajib nol."}
+    ],
+    "videos": [
+      {"purpose": "konsep", "search_query": "fungsi dua variabel turunan parsial kelas 12 SMA pengantar kalkulus lanjut"},
+      {"purpose": "contoh-soal", "search_query": "turunan parsial titik stasioner fungsi dua variabel SMA kurikulum merdeka"}
+    ],
+    "questions": [
+      {"body": "f(x,y)=3x²y−4y³. Nilai f(2,1) = ...", "options": ["8", "12", "−4", "8"], "answer": 0, "explanation": "f(2,1)=3(4)(1)−4(1)=12−4=8.", "points": 1},
+      {"body": "f(x,y)=5x²+3xy−2y². Turunan parsial terhadap x (fₓ) = ...", "options": ["10x+3y", "10x+3", "5x+3y", "10x−4y"], "answer": 0, "explanation": "fₓ: turunkan terhadap x, y dianggap konstan. fₓ=10x+3y.", "points": 1},
+      {"body": "f(x,y)=x²+y²−6x+2y+10. Titik stasioner terletak di ...", "options": ["(3,−1)", "(−3,1)", "(3,1)", "(−3,−1)"], "answer": 0, "explanation": "fₓ=2x−6=0→x=3. f_y=2y+2=0→y=−1. Stasioner: (3,−1).", "points": 2},
+      {"body": "f(x,y)=x²y. Turunan parsial terhadap y (f_y) = ...", "options": ["2xy", "x²", "x²+y²", "2x"], "answer": 1, "explanation": "f_y: x dianggap konstan. f_y=x²·1=x².", "points": 2}
+    ]
+  }
+]
