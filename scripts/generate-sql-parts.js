@@ -162,7 +162,7 @@ for (const t of allTopics) {
   for (const q of t.questions) {
     totalQ++;
     p3.push(`INSERT INTO public.questions (topic_id, body, options, answer, explanation, points)`);
-    p3.push(`SELECT t.id, ${sq(q.body)}, ${jsonSq(q.options)}, ${q.answer ?? 0}, ${sq(q.explanation ?? null)}, ${q.points ?? 1}`);
+    p3.push(`SELECT t.id, ${sq(q.body)}, ${jsonSq(q.options)}, to_jsonb(${q.answer ?? 0}::int), ${sq(q.explanation ?? null)}, ${q.points ?? 1}`);
     p3.push(`FROM public.topics t`);
     p3.push(`WHERE t.grade = ${t.grade} AND t.title = ${sq(t.title)}`);
     p3.push(`  AND NOT EXISTS (`);
