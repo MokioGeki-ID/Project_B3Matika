@@ -76,6 +76,16 @@ yarn-error.log*
 .vercel
 
 # ==========================================
+# BACKUP MATERI (jangan commit ke GitHub)
+# ==========================================
+/backups/
+
+# ==========================================
+# VERIFIKASI VIDEO (laporan sementara)
+# ==========================================
+content/video-verification-report.json
+
+# ==========================================
 # MISC
 # ==========================================
 /.phpunit.cache

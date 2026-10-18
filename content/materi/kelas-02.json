@@ -1,0 +1,448 @@
+[
+  {
+    "grade": 2,
+    "slug": "bilangan-cacah-sampai-100",
+    "title": "Bilangan Cacah sampai 100",
+    "sort_order": 1,
+    "summary": "Di kelas 2, kita memperluas pemahaman bilangan hingga 100. Kita belajar nilai tempat ratusan-puluhan-satuan, serta mengenal pola bilangan ganjil dan genap.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat membaca dan menulis bilangan cacah sampai 100.",
+      "Setelah mempelajari materi ini, kamu dapat menguraikan bilangan ke dalam nilai tempat (puluhan dan satuan).",
+      "Setelah mempelajari materi ini, kamu dapat membedakan bilangan ganjil dan genap.",
+      "Setelah mempelajari materi ini, kamu dapat mengurutkan bilangan sampai 100."
+    ],
+    "content": "## 🔢 Bilangan sampai 100\n\nKamu sudah kenal bilangan sampai 20. Sekarang kita lanjutkan sampai **100**!\n\n### Pola Bilangan\n\nBilangan 1–100 tersusun dalam pola yang teratur:\n- Setelah 9, ada 10 (sepuluh)\n- Setelah 19, ada 20 (dua puluh)\n- Setelah 29, ada 30 (tiga puluh)\n- ... dst. sampai 99, lalu 100 (seratus)\n\n### Nama Bilangan (21–100)\n\n- 21 = dua puluh satu\n- 35 = tiga puluh lima\n- 47 = empat puluh tujuh\n- 58 = lima puluh delapan\n- 69 = enam puluh sembilan\n- 70 = tujuh puluh\n- 83 = delapan puluh tiga\n- 94 = sembilan puluh empat\n- 100 = **seratus**\n\n## 🏠 Nilai Tempat: Puluhan dan Satuan\n\nUntuk bilangan dua digit:\n```\nBilangan:   5  3\nTempat:  Puluhan  Satuan\nNilai:      50  +  3  = 53\n```\n\n**Contoh:**\n- **47** = 4 puluhan + 7 satuan = 40 + 7\n- **80** = 8 puluhan + 0 satuan = 80 + 0\n- **29** = 2 puluhan + 9 satuan = 20 + 9\n\n## 🔵🔴 Bilangan Ganjil dan Genap\n\n**Bilangan genap** berakhiran 0, 2, 4, 6, atau 8.\nContoh: 2, 4, 6, 8, 10, 12, ... 98, 100.\n\n**Bilangan ganjil** berakhiran 1, 3, 5, 7, atau 9.\nContoh: 1, 3, 5, 7, 9, 11, ... 97, 99.\n\n> Cara mudah: Bilangan genap bisa dibagi 2 sama rata. Kalau punya 8 kelereng, bagi 2 kelompok, masing-masing dapat 4. Kalau punya 7, sisa 1 — itu ganjil!\n\n## 📋 Mengurutkan Bilangan sampai 100\n\n**Urutan naik (dari terkecil):** 23, 45, 67, 89 → sudah berurutan naik.\n\n**Urutan turun (dari terbesar):** 89, 67, 45, 23.\n\nCara cepat membandingkan:\n1. Bandingkan **puluhan** dulu. Puluhan lebih besar → bilangan lebih besar.\n2. Kalau puluhan sama, baru bandingkan **satuan**.\n\nContoh: 56 vs 63 → puluhan 5 < puluhan 6 → **56 < 63**.\nContoh: 48 vs 41 → puluhan sama (4), satuan 8 > 1 → **48 > 41**.\n\n## ✅ Ringkasan\n\n- Bilangan sampai 100: nilai tempat puluhan dan satuan.\n- Genap: berakhir 0,2,4,6,8. Ganjil: berakhir 1,3,5,7,9.\n- Membandingkan: lihat puluhan dulu, lalu satuan.",
+    "examples": [
+      {
+        "level": "mudah",
+        "problem": "Tuliskan bilangan 'tujuh puluh enam' dalam lambang angka.",
+        "steps": [
+          "Tujuh puluh = 70.",
+          "Enam = 6.",
+          "Digabung: 70 + 6 = 76."
+        ],
+        "answer": "76",
+        "check": null
+      },
+      {
+        "level": "sedang",
+        "problem": "Uraikan bilangan 83 dalam bentuk puluhan dan satuan!",
+        "steps": [
+          "Angka 8 di tempat puluhan: 8 × 10 = 80.",
+          "Angka 3 di tempat satuan: 3.",
+          "83 = 80 + 3 = 8 puluhan + 3 satuan."
+        ],
+        "answer": "83 = 8 puluhan + 3 satuan = 80 + 3",
+        "check": { "expression": "80 + 3", "expected": 83 }
+      },
+      {
+        "level": "sulit",
+        "problem": "Urutkan bilangan berikut dari terbesar ke terkecil: 67, 76, 7, 70, 60.",
+        "steps": [
+          "Bandingkan puluhan masing-masing: 67→6, 76→7, 7→0, 70→7, 60→6.",
+          "Puluhan 7 paling besar. Ada dua: 76 (satuan 6) dan 70 (satuan 0). 76 > 70.",
+          "Puluhan 6 berikutnya. Ada dua: 67 (satuan 7) dan 60 (satuan 0). 67 > 60.",
+          "Terkecil: 7 (puluhan 0).",
+          "Urutan turun: 76, 70, 67, 60, 7."
+        ],
+        "answer": "76, 70, 67, 60, 7",
+        "check": null
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Membandingkan 69 dan 71 berdasarkan satuan saja (9 > 1 sehingga mengira 69 > 71).",
+        "fix": "Selalu bandingkan puluhan dulu. Puluhan 6 < puluhan 7, jadi 69 < 71."
+      },
+      {
+        "mistake": "Menganggap bilangan 10, 20, 30 adalah bilangan ganjil karena 1, 2, 3 ada angka ganjil.",
+        "fix": "Ganjil/genap ditentukan oleh digit terakhir. 10 berakhir dengan 0 → genap. 20 berakhir 0 → genap. 30 berakhir 0 → genap."
+      }
+    ],
+    "videos": [
+      {
+        "purpose": "konsep",
+        "search_query": "bilangan cacah sampai 100 nilai tempat kelas 2 SD"
+      },
+      {
+        "purpose": "contoh-soal",
+        "search_query": "bilangan ganjil genap urutan kelas 2 SD matematika"
+      }
+    ],
+    "questions": [
+      {
+        "body": "Bilangan 'sembilan puluh empat' dalam angka adalah ...",
+        "options": ["49", "94", "904", "490"],
+        "answer": 1,
+        "explanation": "Sembilan puluh = 90, empat = 4. Jadi 90 + 4 = 94.",
+        "points": 1
+      },
+      {
+        "body": "Bilangan genap di antara 55, 62, 73, 81 adalah ...",
+        "options": ["55", "62", "73", "81"],
+        "answer": 1,
+        "explanation": "62 berakhiran angka 2, sehingga termasuk bilangan genap.",
+        "points": 1
+      },
+      {
+        "body": "Nilai tempat digit 7 pada bilangan 73 adalah ...",
+        "options": ["7", "3", "70", "30"],
+        "answer": 2,
+        "explanation": "Angka 7 berada di tempat puluhan, nilainya 7 × 10 = 70.",
+        "points": 2
+      },
+      {
+        "body": "Urutan bilangan 34, 43, 30, 40 dari terkecil ke terbesar adalah ...",
+        "options": ["34, 43, 30, 40", "30, 34, 40, 43", "43, 40, 34, 30", "40, 43, 30, 34"],
+        "answer": 1,
+        "explanation": "Bandingkan puluhan: 30 < 34 (keduanya puluhan 3, satuan 0 < 4). 40 < 43. Puluhan 3 < puluhan 4. Urutan: 30, 34, 40, 43.",
+        "points": 2
+      }
+    ]
+  },
+  {
+    "grade": 2,
+    "slug": "penjumlahan-menyimpan-pengurangan-meminjam",
+    "title": "Penjumlahan Menyimpan dan Pengurangan Meminjam",
+    "sort_order": 2,
+    "summary": "Ketika menjumlah dan hasilnya mencapai 10 atau lebih, kita menyimpan nilai ke kolom puluhan. Ketika mengurangi dan satuan tidak cukup, kita meminjam dari puluhan.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menjumlahkan dua bilangan (sampai 100) dengan teknik menyimpan.",
+      "Setelah mempelajari materi ini, kamu dapat mengurangi dua bilangan (sampai 100) dengan teknik meminjam.",
+      "Setelah mempelajari materi ini, kamu dapat mengecek jawaban dengan cara sebaliknya (cek penjumlahan dengan pengurangan)."
+    ],
+    "content": "## ➕ Penjumlahan Menyimpan\n\nPenjumlahan menyimpan terjadi ketika **penjumlahan satuan menghasilkan 10 atau lebih**. Kita simpan kelebihan ke kolom puluhan.\n\n### Cara Mengerjakan (Susun ke Bawah)\n\n**Contoh: 47 + 38**\n\n```\n  47\n+ 38\n----\n```\n\n**Langkah 1 — Tambah satuan:**\n7 + 8 = 15\n→ Tulis **5** di kolom satuan, simpan **1** ke kolom puluhan.\n\n**Langkah 2 — Tambah puluhan (+ simpanan):**\n4 + 3 + 1 (simpanan) = 8\n→ Tulis **8** di kolom puluhan.\n\n```\n  47\n+ 38\n----\n  85\n```\n\nJadi **47 + 38 = 85**.\n\n> Verifikasi: 85 − 38 = 47 ✓\n\n### Contoh Lain\n\n**26 + 45:**\n- Satuan: 6 + 5 = 11 → tulis 1, simpan 1.\n- Puluhan: 2 + 4 + 1 = 7.\n- Hasil: **71**. ✓ (cek: 71 − 45 = 26)\n\n**53 + 29:**\n- Satuan: 3 + 9 = 12 → tulis 2, simpan 1.\n- Puluhan: 5 + 2 + 1 = 8.\n- Hasil: **82**. ✓ (cek: 82 − 29 = 53)\n\n## ➖ Pengurangan Meminjam\n\nPengurangan meminjam terjadi ketika **satuan yang dikurangi lebih besar dari satuan yang mengurangi**. Kita pinjam 1 dari puluhan.\n\n### Cara Mengerjakan\n\n**Contoh: 62 − 35**\n\n```\n  62\n- 35\n----\n```\n\n**Langkah 1 — Kurangi satuan:**\n2 − 5 tidak cukup! Pinjam 1 dari puluhan.\n→ 62 menjadi: puluhan jadi 5 (berkurang 1), satuan jadi 12.\n→ 12 − 5 = **7** (tulis di satuan).\n\n**Langkah 2 — Kurangi puluhan:**\n5 − 3 = **2** (tulis di puluhan).\n\n```\n  62\n- 35\n----\n  27\n```\n\nJadi **62 − 35 = 27**.\n\n> Verifikasi: 27 + 35 = 62 ✓\n\n### Contoh Lain\n\n**84 − 47:**\n- Satuan: 4 − 7 tidak cukup, pinjam 1. Satuan jadi 14. 14 − 7 = 7. Puluhan: 7 (= 8−1).\n- Puluhan: 7 − 4 = 3.\n- Hasil: **37**. ✓ (cek: 37 + 47 = 84)\n\n## ✅ Ringkasan\n\n- Menyimpan: satuan ≥ 10 → tulis satuan, simpan 1 ke puluhan.\n- Meminjam: satuan tidak cukup → pinjam 1 dari puluhan (satuan +10, puluhan −1).\n- Selalu cek hasil dengan operasi kebalikan.",
+    "examples": [
+      {
+        "level": "mudah",
+        "problem": "Hitung 36 + 47 dengan teknik menyimpan!",
+        "steps": [
+          "Susun ke bawah:",
+          "  36",
+          "+ 47",
+          "Langkah 1 — Satuan: 6 + 7 = 13 → tulis 3, simpan 1.",
+          "Langkah 2 — Puluhan: 3 + 4 + 1(simpanan) = 8.",
+          "Hasil: 83."
+        ],
+        "answer": "83",
+        "check": { "expression": "36 + 47", "expected": 83 }
+      },
+      {
+        "level": "sedang",
+        "problem": "Toko Pak Budi punya 73 buku. Terjual 45 buku. Berapa buku yang tersisa?",
+        "steps": [
+          "Operasi: pengurangan. 73 − 45.",
+          "Satuan: 3 − 5 tidak cukup, pinjam 1 dari puluhan.",
+          "Satuan jadi 13. Puluhan jadi 6.",
+          "Satuan: 13 − 5 = 8.",
+          "Puluhan: 6 − 4 = 2.",
+          "Hasil: 28 buku tersisa."
+        ],
+        "answer": "28 buku",
+        "check": { "expression": "73 - 45", "expected": 28 }
+      },
+      {
+        "level": "sulit",
+        "problem": "Ani mengumpulkan 57 koin. Budi mengumpulkan 29 koin. Mereka menggabungkan koin, lalu memberikan 38 koin kepada adik. Berapa koin yang tersisa?",
+        "steps": [
+          "Langkah 1: Gabungkan koin Ani dan Budi: 57 + 29.",
+          "Satuan: 7 + 9 = 16 → tulis 6, simpan 1.",
+          "Puluhan: 5 + 2 + 1 = 8.",
+          "57 + 29 = 86.",
+          "Langkah 2: Berikan 38 koin: 86 − 38.",
+          "Satuan: 6 − 8 tidak cukup, pinjam 1. Satuan jadi 16. 16 − 8 = 8. Puluhan jadi 7.",
+          "Puluhan: 7 − 3 = 4.",
+          "86 − 38 = 48.",
+          "Koin tersisa: 48."
+        ],
+        "answer": "48 koin",
+        "check": { "expression": "57 + 29 - 38", "expected": 48 }
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Lupa menambahkan simpanan ke kolom puluhan setelah menyimpan.",
+        "fix": "Tandai kecil angka simpanan di atas kolom puluhan sebelum menjumlahkan."
+      },
+      {
+        "mistake": "Saat meminjam, lupa mengurangi 1 dari kolom puluhan dan hanya menambah 10 ke satuan.",
+        "fix": "Meminjam harus dilakukan dua hal sekaligus: satuan +10 DAN puluhan −1."
+      }
+    ],
+    "videos": [
+      {
+        "purpose": "konsep",
+        "search_query": "penjumlahan teknik menyimpan kelas 2 SD matematika"
+      },
+      {
+        "purpose": "contoh-soal",
+        "search_query": "pengurangan teknik meminjam kelas 2 SD latihan soal"
+      }
+    ]
+  },
+  {
+    "grade": 2,
+    "slug": "dasar-perkalian-pembagian",
+    "title": "Dasar Perkalian dan Pembagian",
+    "sort_order": 3,
+    "summary": "Perkalian adalah penjumlahan berulang dengan bilangan yang sama. Pembagian adalah kebalikan perkalian: membagi sesuatu menjadi kelompok-kelompok yang sama besar.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat memahami perkalian sebagai penjumlahan berulang.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung hasil perkalian bilangan 1 sampai 5.",
+      "Setelah mempelajari materi ini, kamu dapat memahami hubungan perkalian dan pembagian.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung pembagian dasar menggunakan tabel perkalian."
+    ],
+    "content": "## ✖️ Perkalian = Penjumlahan Berulang\n\nPerkalian adalah cara cepat menjumlahkan bilangan yang sama berkali-kali.\n\n**3 × 4** artinya: **3 + 3 + 3 + 3** (tiga dijumlahkan sebanyak 4 kali) = **12**.\n\nAtau juga: **4 + 4 + 4** (empat dijumlahkan 3 kali) = **12**. (Hasilnya sama!)\n\n> Bayangkan: kamu punya 3 kotak, masing-masing berisi 4 kue. Total kue = 3 × 4 = 12 kue.\n\n### Tanda dan Cara Baca\n\n**2 × 5 = 10** dibaca: \"dua kali lima sama dengan sepuluh.\"\n\n### Tabel Perkalian 1 sampai 5\n\n```\nPerkalian dengan 2:\n2×1=2, 2×2=4, 2×3=6, 2×4=8, 2×5=10\n\nPerkalian dengan 3:\n3×1=3, 3×2=6, 3×3=9, 3×4=12, 3×5=15\n\nPerkalian dengan 4:\n4×1=4, 4×2=8, 4×3=12, 4×4=16, 4×5=20\n\nPerkalian dengan 5:\n5×1=5, 5×2=10, 5×3=15, 5×4=20, 5×5=25\n```\n\n### Sifat Perkalian\n\n**Sifat komutatif**: urutan tidak mempengaruhi hasil.\n- 3 × 4 = 4 × 3 = 12\n- 2 × 5 = 5 × 2 = 10\n\n**Perkalian dengan 0**: hasilnya selalu 0.\n- 7 × 0 = 0 (tujuh kelompok kosong = tidak ada)\n\n**Perkalian dengan 1**: hasilnya bilangan itu sendiri.\n- 9 × 1 = 9\n\n## ➗ Pembagian = Kebalikan Perkalian\n\nPembagian membagi sejumlah benda menjadi **kelompok-kelompok sama besar**.\n\n**12 ÷ 3 = 4** artinya: 12 benda dibagi menjadi 3 kelompok → masing-masing kelompok dapat **4**.\n\n### Hubungan Perkalian dan Pembagian\n\nJika **3 × 4 = 12**, maka:\n- 12 ÷ 3 = **4**\n- 12 ÷ 4 = **3**\n\nKetiga kalimat matematika ini saling berhubungan — keluarga fakta perkalian!\n\n> Tips: untuk menghitung pembagian, ingat tabel perkalian. Berapa dikali 3 sama dengan 12? Jawabannya 4, jadi 12 ÷ 3 = 4.\n\n## ✅ Ringkasan\n\n- Perkalian = penjumlahan berulang. 4 × 3 = 4+4+4 = 12.\n- Sifat komutatif: a × b = b × a.\n- Pembagian = kebalikan perkalian.\n- Gunakan tabel perkalian untuk menghitung pembagian.",
+    "examples": [
+      {
+        "level": "mudah",
+        "problem": "Berapa hasil dari 5 × 4?",
+        "steps": [
+          "5 × 4 berarti 5 dijumlahkan sebanyak 4 kali.",
+          "5 + 5 + 5 + 5 = 20.",
+          "Atau ingat tabel perkalian 5: 5×4 = 20."
+        ],
+        "answer": "20",
+        "check": { "expression": "5 * 4", "expected": 20 }
+      },
+      {
+        "level": "sedang",
+        "problem": "Ibu membeli 4 kantong apel. Setiap kantong berisi 6 apel. Berapa total apel Ibu?",
+        "steps": [
+          "Total apel = 4 kantong × 6 apel per kantong.",
+          "4 × 6 = 6 + 6 + 6 + 6 = 24.",
+          "Total apel: 24 buah."
+        ],
+        "answer": "24 apel",
+        "check": { "expression": "4 * 6", "expected": 24 }
+      },
+      {
+        "level": "sulit",
+        "problem": "Ada 18 permen yang akan dibagikan kepada 3 anak dengan jumlah yang sama. Berapa permen yang diterima setiap anak? Jelaskan hubungannya dengan perkalian!",
+        "steps": [
+          "Kita perlu menghitung 18 ÷ 3.",
+          "Gunakan tabel perkalian: berapa dikali 3 = 18?",
+          "3 × 6 = 18 (karena 3+3+3+3+3+3 = 18).",
+          "Jadi 18 ÷ 3 = 6.",
+          "Hubungan: 3 × 6 = 18, maka 18 ÷ 3 = 6 dan 18 ÷ 6 = 3."
+        ],
+        "answer": "6 permen per anak",
+        "check": { "expression": "18 / 3", "expected": 6 }
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Mengira 5 × 0 = 5 (lupa bahwa perkalian dengan 0 selalu 0).",
+        "fix": "Bayangkan: 5 keranjang kosong berisi 0 benda. Totalnya tetap 0. Jadi 5 × 0 = 0."
+      },
+      {
+        "mistake": "Salah memahami pembagian: mengira 12 ÷ 3 = 36 (dikalikan, bukan dibagi).",
+        "fix": "Pembagian ÷ adalah kebalikan perkalian ×. Tanyakan: 'Berapa kali 3 untuk mendapat 12?' Jawabannya 4."
+      }
+    ],
+    "videos": [
+      {
+        "purpose": "konsep",
+        "search_query": "perkalian penjumlahan berulang kelas 2 SD matematika dasar"
+      },
+      {
+        "purpose": "contoh-soal",
+        "search_query": "pembagian dasar kelas 2 SD tabel perkalian"
+      }
+    ]
+  },
+  {
+    "grade": 2,
+    "slug": "pengukuran-panjang-berat-waktu-uang",
+    "title": "Pengukuran Panjang, Berat, Waktu, dan Uang",
+    "sort_order": 4,
+    "summary": "Mengukur adalah cara menentukan panjang, berat, atau waktu suatu benda atau kegiatan. Di kelas 2, kita mulai mengenal satuan baku: centimeter (cm), meter (m), kilogram (kg), dan jam.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat mengukur panjang benda menggunakan penggaris (cm dan m).",
+      "Setelah mempelajari materi ini, kamu dapat membaca berat benda menggunakan timbangan sederhana (kg dan g).",
+      "Setelah mempelajari materi ini, kamu dapat membaca jam (menunjukkan jam penuh dan setengah jam).",
+      "Setelah mempelajari materi ini, kamu dapat mengenal nilai mata uang Rupiah dan melakukan penjumlahan sederhana."
+    ],
+    "content": "## 📏 Pengukuran Panjang\n\n### Satuan Panjang Baku\n\n- **Centimeter (cm)**: untuk mengukur benda kecil (pensil, buku, jari).\n- **Meter (m)**: untuk mengukur benda besar (tinggi badan, lebar ruangan).\n- **1 meter = 100 centimeter**\n\n### Cara Mengukur dengan Penggaris\n\n1. Tempelkan ujung penggaris (angka 0) tepat di ujung benda.\n2. Baca angka di ujung benda lainnya.\n3. Itulah panjang benda dalam cm.\n\n**Contoh:** Pensil diukur dari 0 cm ke 14 cm → panjang pensil = **14 cm**.\n\n## ⚖️ Pengukuran Berat\n\n### Satuan Berat\n\n- **Gram (g)**: untuk benda ringan (kertas, koin).\n- **Kilogram (kg)**: untuk benda berat (beras, orang).\n- **1 kilogram = 1.000 gram**\n\n> Bayangkan 1 kg beras. Itu kira-kira seberat 1.000 lembar kertas! Berat badan kamu mungkin sekitar 20-25 kg.\n\n### Membaca Timbangan\n\nJarum timbangan menunjuk ke angka → itulah berat benda tersebut.\n\n## 🕐 Membaca Jam\n\n### Jam Analog (Jarum)\n\n**Jam penuh**: jarum panjang (menit) menunjuk ke 12, jarum pendek (jam) menunjuk ke angka jam.\n- Contoh: jarum pendek di 7, jarum panjang di 12 → pukul **07.00** (tujuh pagi).\n\n**Setengah jam**: jarum panjang menunjuk ke 6 (tepat di tengah).\n- Contoh: jarum pendek di antara 3 dan 4, jarum panjang di 6 → pukul **03.30** (setengah empat).\n\n## 💰 Mengenal Uang Rupiah\n\n### Nilai Uang Koin dan Kertas\n\n**Koin:** Rp100, Rp200, Rp500, Rp1.000\n**Uang kertas:** Rp1.000, Rp2.000, Rp5.000, Rp10.000, Rp20.000, Rp50.000, Rp100.000\n\n### Penjumlahan Uang Sederhana\n\nJika kamu punya Rp2.000 + Rp1.000 = Rp3.000.\nJika barang harganya Rp5.000 dan kamu bayar Rp10.000, kembalian = Rp10.000 - Rp5.000 = Rp5.000.\n\n## ✅ Ringkasan\n\n- Panjang: cm (kecil), m (besar). 1 m = 100 cm.\n- Berat: g (ringan), kg (berat). 1 kg = 1.000 g.\n- Waktu: jarum panjang = menit, jarum pendek = jam.\n- Uang Rupiah: kenali nilai koin dan kertas, latih perhitungan belanja.",
+    "examples": [
+      {
+        "level": "mudah",
+        "problem": "Penggaris menunjukkan panjang sebuah pensil dari angka 0 sampai angka 17. Berapa panjang pensil tersebut?",
+        "steps": [
+          "Penggaris dibaca dari 0 ke 17.",
+          "Jarak dari 0 ke 17 = 17.",
+          "Panjang pensil = 17 cm."
+        ],
+        "answer": "17 cm",
+        "check": null
+      },
+      {
+        "level": "sedang",
+        "problem": "Risa membeli 2 buah permen seharga Rp500 tiap buah. Ia membayar dengan uang Rp2.000. Berapa kembaliannya?",
+        "steps": [
+          "Total harga: 2 × Rp500 = Rp1.000.",
+          "Uang dibayarkan: Rp2.000.",
+          "Kembalian: Rp2.000 - Rp1.000 = Rp1.000."
+        ],
+        "answer": "Rp1.000",
+        "check": { "expression": "2000 - 2 * 500", "expected": 1000 }
+      },
+      {
+        "level": "sulit",
+        "problem": "Panjang meja belajar Doni 120 cm. Tinggi Doni 115 cm. Siapa yang lebih tinggi, Doni atau mejanya? Berapa selisihnya?",
+        "steps": [
+          "Panjang meja = 120 cm. Tinggi Doni = 115 cm.",
+          "Bandingkan: 120 cm vs 115 cm.",
+          "120 > 115, jadi meja lebih panjang/tinggi dari Doni.",
+          "Selisih: 120 - 115 = 5 cm.",
+          "Meja lebih tinggi 5 cm dari Doni."
+        ],
+        "answer": "Meja lebih tinggi, selisih 5 cm.",
+        "check": { "expression": "120 - 115", "expected": 5 }
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Mengira 1 meter = 10 centimeter.",
+        "fix": "Ingat: 1 meter = 100 centimeter (satu ratus, bukan sepuluh)."
+      },
+      {
+        "mistake": "Membaca jam dengan menukar jarum: jarum pendek dianggap menit, jarum panjang dianggap jam.",
+        "fix": "Jarum PENDEK = JAM. Jarum PANJANG = MENIT. Ingat: jam lebih 'berat' bergerak lambat, seperti orang gemuk (pendek gemuk = jam)."
+      }
+    ],
+    "videos": [
+      {
+        "purpose": "konsep",
+        "search_query": "pengukuran panjang cm meter kelas 2 SD membaca jam"
+      },
+      {
+        "purpose": "contoh-soal",
+        "search_query": "soal pengukuran berat uang rupiah kelas 2 SD"
+      }
+    ],
+    "questions": [
+      {
+        "body": "1 meter sama dengan berapa centimeter?",
+        "options": ["10 cm", "100 cm", "1.000 cm", "10.000 cm"],
+        "answer": 1,
+        "explanation": "1 meter = 100 centimeter.",
+        "points": 1
+      },
+      {
+        "body": "Jarum panjang jam menunjuk ke angka 12 dan jarum pendek menunjuk ke angka 8. Pukul berapa itu?",
+        "options": ["Pukul 08.30", "Pukul 08.00", "Pukul 12.08", "Pukul 12.00"],
+        "answer": 1,
+        "explanation": "Jarum panjang di 12 berarti menit = 0 (tepat). Jarum pendek di 8 berarti jam ke-8. Jadi pukul 08.00.",
+        "points": 1
+      },
+      {
+        "body": "Ibu membeli buah seharga Rp3.000 dan sayur seharga Rp4.500. Berapa total belanjaan Ibu?",
+        "options": ["Rp6.500", "Rp7.000", "Rp7.500", "Rp8.000"],
+        "answer": 2,
+        "explanation": "Rp3.000 + Rp4.500 = Rp7.500.",
+        "points": 2
+      }
+    ]
+  },
+  {
+    "grade": 2,
+    "slug": "pecahan-sederhana",
+    "title": "Pecahan Sederhana: Setengah, Sepertiga, Seperempat",
+    "sort_order": 5,
+    "summary": "Pecahan adalah cara menyatakan bagian dari suatu keseluruhan. Setengah (½), sepertiga (⅓), dan seperempat (¼) adalah pecahan sederhana yang sering kita temui dalam kehidupan sehari-hari.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menyebut dan menulis pecahan ½, ⅓, dan ¼.",
+      "Setelah mempelajari materi ini, kamu dapat menggambar dan menunjukkan bagian yang mewakili pecahan sederhana.",
+      "Setelah mempelajari materi ini, kamu dapat membandingkan pecahan sederhana."
+    ],
+    "content": "## 🍕 Apa itu Pecahan?\n\nPecahan adalah bagian dari suatu **keseluruhan**. Ketika kita membagi sesuatu menjadi beberapa bagian yang **sama besar**, setiap bagiannya adalah pecahan.\n\n## ½ — Setengah\n\nJika sebuah pizza dibagi menjadi **2 bagian sama besar**, setiap bagian adalah **setengah (½)**.\n\n- **1** = jumlah bagian yang diambil (pembilang)\n- **2** = jumlah bagian keseluruhan (penyebut)\n\n> 1 setengah pizza artinya kamu mendapat 1 dari 2 bagian yang sama.\n\n## ⅓ — Sepertiga\n\nJika cokelat dibagi menjadi **3 bagian sama besar**, setiap bagian adalah **sepertiga (⅓)**.\n\nContoh: kue ulang tahun dipotong menjadi 3, setiap anak mendapat ⅓ kue.\n\n## ¼ — Seperempat\n\nJika semangka dibagi menjadi **4 bagian sama besar**, setiap bagian adalah **seperempat (¼)**.\n\nContoh: satu batang cokelat dibagi 4 orang → masing-masing dapat ¼ batang.\n\n## 📊 Membandingkan Pecahan Sederhana\n\nJika keseluruhannya sama besar (misalnya satu pizza), maka:\n- Makin banyak potongan → setiap potongan makin kecil.\n- **½ > ⅓ > ¼** (setengah lebih besar dari sepertiga, yang lebih besar dari seperempat)\n\nBayangkan pizza yang sama dibagi:\n- 2 orang → tiap orang dapat banyak (**½**)\n- 3 orang → sedikit lebih kecil (**⅓**)\n- 4 orang → lebih kecil lagi (**¼**)\n\n## 🖊️ Cara Menulis Pecahan\n\nPecahan ditulis dengan garis horizontal:\n- Angka di **atas** garis = **pembilang** (berapa bagian yang diambil)\n- Angka di **bawah** garis = **penyebut** (total bagian keseluruhan)\n\n## ✅ Ringkasan\n\n- ½ (setengah) = 1 dari 2 bagian sama.\n- ⅓ (sepertiga) = 1 dari 3 bagian sama.\n- ¼ (seperempat) = 1 dari 4 bagian sama.\n- Penyebut makin besar → pecahan makin kecil (syarat: pembilang sama).",
+    "examples": [
+      {
+        "level": "mudah",
+        "problem": "Rina memotong kue ulang tahun menjadi 2 bagian sama besar. Ia memakan satu bagian. Berapa bagian kue yang Rina makan?",
+        "steps": [
+          "Total potongan: 2.",
+          "Rina memakan: 1 potongan.",
+          "Pecahan yang dimakan: 1 dari 2 = ½ (setengah)."
+        ],
+        "answer": "½ (setengah) kue",
+        "check": null
+      },
+      {
+        "level": "sedang",
+        "problem": "Sebuah semangka dipotong menjadi 4 bagian sama besar. Arya memakan 1 bagian. Tulis pecahan yang menunjukkan bagian semangka Arya!",
+        "steps": [
+          "Total potongan semangka: 4.",
+          "Arya memakan: 1 potongan.",
+          "Pecahan: 1/4 = ¼ (seperempat).",
+          "Penyebut = 4 (jumlah potongan), pembilang = 1 (bagian Arya)."
+        ],
+        "answer": "¼ (seperempat)",
+        "check": null
+      },
+      {
+        "level": "sulit",
+        "problem": "Tiga kakak beradik membagi rata satu batang cokelat. Setelah itu, Kakak pertama memberikan bagiannya ke adik bungsu. Berapa total bagian cokelat yang dimiliki adik bungsu sekarang?",
+        "steps": [
+          "Cokelat dibagi 3 sama rata → masing-masing mendapat ⅓.",
+          "Kakak pertama memberikan ⅓ ke adik bungsu.",
+          "Adik bungsu: bagiannya sendiri (⅓) + pemberian kakak (⅓) = ⅓ + ⅓ = 2/3.",
+          "Adik bungsu sekarang punya 2/3 batang cokelat."
+        ],
+        "answer": "2/3 (dua pertiga) batang cokelat",
+        "check": null
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Mengira ¼ lebih besar dari ½ karena 4 > 2.",
+        "fix": "Makin besar penyebut, makin KECIL pecahannya (dengan pembilang sama 1). Bayangkan pizza: dibagi 4 lebih kecil per potong dari dibagi 2."
+      },
+      {
+        "mistake": "Menganggap pecahan hanya bisa untuk makanan.",
+        "fix": "Pecahan berlaku untuk semua hal yang bisa dibagi sama: waktu (½ jam = 30 menit), uang (¼ dari Rp1.000 = Rp250), jarak, dll."
+      }
+    ],
+    "videos": [
+      {
+        "purpose": "konsep",
+        "search_query": "pecahan sederhana setengah sepertiga seperempat kelas 2 SD"
+      },
+      {
+        "purpose": "contoh-soal",
+        "search_query": "mengenal pecahan 1/2 1/3 1/4 kelas 2 SD matematika"
+      }
+    ],
+    "questions": [
+      {
+        "body": "Sebuah roti dipotong menjadi 2 bagian sama besar. Satu bagian disebut ...",
+        "options": ["Sepertiga", "Seperempat", "Setengah", "Seperlima"],
+        "answer": 2,
+        "explanation": "1 dari 2 bagian sama besar disebut setengah (½).",
+        "points": 1
+      },
+      {
+        "body": "Pecahan yang paling besar nilainya di antara ½, ⅓, dan ¼ adalah ...",
+        "options": ["¼", "⅓", "½", "Sama besar"],
+        "answer": 2,
+        "explanation": "½ lebih besar dari ⅓ yang lebih besar dari ¼. Semakin besar penyebut, semakin kecil nilai pecahan (jika pembilang sama).",
+        "points": 1
+      },
+      {
+        "body": "Ibu memotong apel menjadi 4 bagian sama besar. Ayah memakan 1 bagian. Lambang pecahan bagian Ayah adalah ...",
+        "options": ["4/1", "1/4", "4/4", "1/1"],
+        "answer": 1,
+        "explanation": "Pembilang = bagian yang dimakan = 1. Penyebut = total potongan = 4. Jadi ¼.",
+        "points": 1
+      },
+      {
+        "body": "Tiga saudara membagi kue sama rata. Satu saudara mendapat ... bagian.",
+        "options": ["½", "⅓", "¼", "⅕"],
+        "answer": 1,
+        "explanation": "Kue dibagi 3 sama rata. Setiap orang mendapat 1 dari 3 bagian = ⅓ (sepertiga).",
+        "points": 1
+      }
+    ]
+  }
+]

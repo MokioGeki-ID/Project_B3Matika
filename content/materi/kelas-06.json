@@ -1,0 +1,390 @@
+[
+  {
+    "grade": 6,
+    "slug": "bilangan-bulat-negatif-operasi-campuran",
+    "title": "Bilangan Bulat Negatif dan Operasi Hitung Campuran",
+    "sort_order": 1,
+    "summary": "Bilangan bulat mencakup bilangan negatif, nol, dan positif. Operasi hitung campuran melibatkan lebih dari satu operasi (penjumlahan, pengurangan, perkalian, pembagian) dengan urutan yang harus diperhatikan.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menentukan posisi bilangan bulat negatif pada garis bilangan.",
+      "Setelah mempelajari materi ini, kamu dapat menjumlahkan, mengurangkan, mengalikan, dan membagi bilangan bulat.",
+      "Setelah mempelajari materi ini, kamu dapat menyelesaikan operasi hitung campuran dengan urutan operasi yang benar."
+    ],
+    "content": "## 🌡️ Bilangan Bulat Negatif\n\nBilangan bulat adalah: ..., −3, −2, −1, **0**, 1, 2, 3, ...\n\n**Bilangan negatif** ada di kiri 0 pada garis bilangan.\n\n```\n<---|---|---|---|---|---|---|---|---|--->\n   -4  -3  -2  -1   0   1   2   3   4\n```\n\n**Contoh di kehidupan:**\n- Suhu di puncak gunung: −5°C (lima derajat di bawah nol)\n- Hutang: −Rp50.000 (minus lima puluh ribu rupiah)\n- Kedalaman laut: −200 m (dua ratus meter di bawah permukaan)\n\n### Membandingkan Bilangan Bulat\n\n- Bilangan makin ke kanan = makin besar.\n- −2 > −5 (karena −2 di sebelah kanan −5)\n- −3 < 1 (karena −3 di sebelah kiri 1)\n\n## ➕➖ Operasi dengan Bilangan Bulat\n\n### Penjumlahan\n\n- **Positif + Positif** = Positif. 4 + 3 = 7\n- **Negatif + Negatif** = Negatif. (−4) + (−3) = −7\n- **Positif + Negatif** = kurangi, ambil tanda yang nilainya lebih besar. 7 + (−3) = 4; (−7) + 3 = −4\n\n### Pengurangan = Menambah Kebalikannya\n\n$$a - b = a + (-b)$$\n\n- 5 − 8 = 5 + (−8) = −3\n- (−4) − (−7) = (−4) + 7 = 3\n- (−6) − 3 = (−6) + (−3) = −9\n\n### Perkalian dan Pembagian\n\n**Aturan tanda:**\n- **Positif × Positif = Positif**: 4 × 3 = 12\n- **Negatif × Negatif = Positif**: (−4) × (−3) = 12\n- **Positif × Negatif = Negatif**: 4 × (−3) = −12\n- **Negatif × Positif = Negatif**: (−4) × 3 = −12\n\n*Aturan sama berlaku untuk pembagian!*\n\n> Cara mudah ingat: **Tanda berbeda → Negatif. Tanda sama → Positif.**\n\n## 🔢 Operasi Hitung Campuran\n\n**Urutan Operasi (KABAKO):**\n\n1. **KA**rang dalam tanda kurung dulu.\n2. **B**ilangannya jika ada pangkat/akar.\n3. Perkalian dan pembagian (dari **KI**ri ke kanan).\n4. Penjumlahan dan pengurangan (dari kiri ke kanan).\n\n> Ingat: **\"Kurung dulu, lalu pangkat, lalu kali/bagi, terakhir tambah/kurang\"**\n\n**Contoh:**\n$$3 + 4 \\times 2 - 6 ÷ 3$$\n$$= 3 + 8 - 2 \\quad \\text{(kali dan bagi dulu)}$$\n$$= 11 - 2 = 9 \\quad \\text{(kiri ke kanan)}$$\n\n**Dengan kurung:**\n$$(3 + 4) \\times 2 - 6 ÷ 3$$\n$$= 7 \\times 2 - 6 ÷ 3 \\quad \\text{(kurung dulu)}$$\n$$= 14 - 2 = 12$$\n\n## ✅ Ringkasan\n\n- Bilangan bulat: ..., −2, −1, 0, 1, 2, ...\n- Semakin kiri pada garis bilangan = makin kecil.\n- Perkalian/pembagian: tanda sama → positif; tanda beda → negatif.\n- Urutan operasi: kurung → pangkat → kali/bagi → tambah/kurang.",
+    "examples": [
+      {
+        "level": "mudah",
+        "problem": "Hitung: (−5) + (−8)",
+        "steps": [
+          "Keduanya negatif.",
+          "Tambahkan nilainya: 5 + 8 = 13.",
+          "Hasilnya negatif: −13."
+        ],
+        "answer": "−13",
+        "check": { "expression": "-5 + -8", "expected": -13 }
+      },
+      {
+        "level": "sedang",
+        "problem": "Suhu di puncak gunung pada pagi hari −3°C. Siang harinya suhu naik 11°C. Berapa suhu siang hari?",
+        "steps": [
+          "Suhu awal: −3°C. Kenaikan: +11°C.",
+          "Suhu siang: (−3) + 11 = 11 − 3 = 8°C.",
+          "Suhu siang hari adalah 8°C."
+        ],
+        "answer": "8°C",
+        "check": { "expression": "-3 + 11", "expected": 8 }
+      },
+      {
+        "level": "sulit",
+        "problem": "Hitunglah: 5 + (−3) × 4 ÷ (−2) − (−7)",
+        "steps": [
+          "Kurung: tidak ada kurung yang mengubah urutan.",
+          "Kali dan bagi (kiri ke kanan): (−3) × 4 = −12. Lalu −12 ÷ (−2) = 6.",
+          "Ungkapan sekarang: 5 + 6 − (−7).",
+          "Pengurangan dengan negatif: − (−7) = + 7.",
+          "5 + 6 + 7 = 18."
+        ],
+        "answer": "18",
+        "check": { "expression": "5 + (-3) * 4 / (-2) - (-7)", "expected": 18 }
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Dalam operasi campuran, menjumlahkan/mengurangi terlebih dahulu sebelum mengalikan.",
+        "fix": "Perkalian dan pembagian SELALU dilakukan sebelum penjumlahan dan pengurangan (kecuali ada kurung)."
+      },
+      {
+        "mistake": "Mengira (−5) − (−3) = −8 (mengurangi langsung).",
+        "fix": "(−5) − (−3) = (−5) + 3 = −2. Pengurangan bilangan negatif = penambahan kebalikannya."
+      }
+    ],
+    "videos": [
+      {
+        "purpose": "konsep",
+        "search_query": "bilangan bulat negatif operasi kelas 6 SD urutan operasi"
+      },
+      {
+        "purpose": "contoh-soal",
+        "search_query": "operasi hitung campuran bilangan bulat kelas 6 SD soal"
+      }
+    ],
+    "questions": [
+      {
+        "body": "Hasil dari (−6) × (−4) adalah ...",
+        "options": ["-24", "24", "-10", "10"],
+        "answer": 1,
+        "explanation": "Negatif × Negatif = Positif. 6 × 4 = 24. Hasilnya +24.",
+        "points": 1
+      },
+      {
+        "body": "Urutan operasi yang benar untuk: 8 + 2 × 5 adalah ...",
+        "options": [
+          "Hitung 8+2 dulu = 10, lalu 10×5 = 50",
+          "Hitung 2×5 dulu = 10, lalu 8+10 = 18",
+          "Hitung 8×5 dulu = 40, lalu 40+2 = 42",
+          "Hitung 8+5 dulu = 13, lalu 13×2 = 26"
+        ],
+        "answer": 1,
+        "explanation": "Perkalian dilakukan sebelum penjumlahan. 2×5 = 10. Lalu 8+10 = 18.",
+        "points": 2
+      },
+      {
+        "body": "Suhu di lemari es −4°C. Suhu di luar 28°C. Selisih suhu keduanya adalah ...",
+        "options": ["24°C", "32°C", "-32°C", "-24°C"],
+        "answer": 1,
+        "explanation": "Selisih = 28 − (−4) = 28 + 4 = 32°C.",
+        "points": 2
+      }
+    ]
+  },
+  {
+    "grade": 6,
+    "slug": "rasio-proporsi-perbandingan",
+    "title": "Rasio, Proporsi, dan Perbandingan",
+    "sort_order": 2,
+    "summary": "Rasio menyatakan hubungan antara dua besaran. Proporsi adalah persamaan antara dua rasio. Perbandingan senilai dan berbalik nilai memiliki karakteristik berbeda dalam penyelesaian masalah.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menyatakan dan menyederhanakan rasio.",
+      "Setelah mempelajari materi ini, kamu dapat menentukan nilai perbandingan senilai menggunakan metode silang.",
+      "Setelah mempelajari materi ini, kamu dapat membedakan dan menyelesaikan masalah perbandingan senilai dan berbalik nilai."
+    ],
+    "content": "## 🔢 Rasio\n\nRasio menyatakan hubungan antara dua besaran dengan satuan yang sama.\n\nRasio a : b dibaca \"a berbanding b\".\n\n**Menyederhanakan rasio**: bagi keduanya dengan FPB.\n\n**Contoh:** Rasio 12 : 8\nFPB(12,8) = 4. Bagi keduanya: **12÷4 : 8÷4 = 3 : 2**\n\n**Contoh konteks:** Kelas ada 18 laki-laki dan 24 perempuan.\nRasio laki-laki : perempuan = 18 : 24 = **3 : 4** (FPB = 6).\n\n## 🔄 Perbandingan Senilai\n\nPerbandingan senilai: jika satu besaran naik, besaran lain juga **naik** secara proporsional.\n\n**Contoh:** 2 kg gula seharga Rp26.000. Berapa harga 5 kg?\n\n$$\\frac{2}{5} = \\frac{Rp26.000}{x}$$\n\nGunakan metode silang:\n$$2 \\times x = 5 \\times 26.000$$\n$$x = \\frac{5 \\times 26.000}{2} = \\frac{130.000}{2} = Rp65.000$$\n\nVerifikasi: 2 kg → Rp26.000; 1 kg → Rp13.000; 5 kg → Rp65.000 ✓\n\n**Tanda pengenal perbandingan senilai:**\n\"Makin banyak ... makin besar ...\" atau \"Makin sedikit ... makin kecil ...\"\n\n## 🔃 Perbandingan Berbalik Nilai\n\nPerbandingan berbalik nilai: jika satu besaran naik, besaran lain **turun** secara proporsional.\n\n**Contoh:** 6 pekerja bisa menyelesaikan proyek dalam 12 hari. Jika pekerjanya 9 orang, berapa hari?\n\n$$\\text{Pekerja} \\times \\text{Hari} = \\text{tetap} \\quad (6 \\times 12 = 72)$$\n\n$$9 \\times x = 72$$\n$$x = 72 ÷ 9 = 8 \\text{ hari}$$\n\nVerifikasi: 6 × 12 = 72. 9 × 8 = 72 ✓\n\n**Tanda pengenal berbalik nilai:**\n\"Makin banyak pekerja → makin cepat selesai\", atau \"Makin kencang → makin cepat sampai\".\n\n## 🏫 Membagi Sesuai Rasio\n\n**Contoh:** Uang Rp120.000 dibagi untuk Ani dan Budi dengan rasio 2 : 3.\n\nTotal bagian = 2 + 3 = 5.\n- Ani: (2/5) × 120.000 = Rp48.000.\n- Budi: (3/5) × 120.000 = Rp72.000.\n\nVerifikasi: 48.000 + 72.000 = 120.000 ✓. Rasio: 48.000 : 72.000 = 2 : 3 ✓\n\n## ✅ Ringkasan\n\n- Rasio: sederhanakan dengan FPB.\n- Senilai: satu naik, yang lain naik → silang kali, atau harga satuan.\n- Berbalik: satu naik, yang lain turun → kalikan dua besaran awal.",
+    "examples": [
+      {
+        "level": "mudah",
+        "problem": "Sederhanakan rasio 36 : 24!",
+        "steps": [
+          "FPB(36, 24): faktor 36 = {1,2,3,4,6,9,12,18,36}; faktor 24 = {1,2,3,4,6,8,12,24}.",
+          "FPB = 12.",
+          "36 ÷ 12 = 3. 24 ÷ 12 = 2.",
+          "Rasio yang sudah disederhanakan: 3 : 2."
+        ],
+        "answer": "3 : 2",
+        "check": null
+      },
+      {
+        "level": "sedang",
+        "problem": "Sebuah mobil menghabiskan 8 liter bensin untuk menempuh 96 km. Berapa liter bensin yang dibutuhkan untuk 132 km?",
+        "steps": [
+          "Ini perbandingan senilai: makin jauh → makin banyak bensin.",
+          "8/x = 96/132. Silang: 96x = 8 × 132 = 1.056.",
+          "x = 1.056 ÷ 96 = 11 liter.",
+          "Verifikasi: 8 liter → 96 km. 1 liter → 12 km. 11 liter → 132 km ✓."
+        ],
+        "answer": "11 liter",
+        "check": { "expression": "8 * 132 / 96", "expected": 11 }
+      },
+      {
+        "level": "sulit",
+        "problem": "Hadiah lomba Rp900.000 dibagi kepada juara 1, 2, dan 3 dengan rasio 4:3:2. Berapa uang yang diterima masing-masing juara?",
+        "steps": [
+          "Total bagian: 4 + 3 + 2 = 9 bagian.",
+          "Nilai 1 bagian: Rp900.000 ÷ 9 = Rp100.000.",
+          "Juara 1: 4 × Rp100.000 = Rp400.000.",
+          "Juara 2: 3 × Rp100.000 = Rp300.000.",
+          "Juara 3: 2 × Rp100.000 = Rp200.000.",
+          "Total: 400.000 + 300.000 + 200.000 = Rp900.000 ✓."
+        ],
+        "answer": "Juara 1: Rp400.000, Juara 2: Rp300.000, Juara 3: Rp200.000",
+        "check": { "expression": "4 * (900000 / 9) + 3 * (900000 / 9) + 2 * (900000 / 9)", "expected": 900000 }
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Salah membedakan perbandingan senilai dan berbalik nilai.",
+        "fix": "Tanya: 'Jika satu variabel naik, variabel lainnya ikut naik atau turun?' Naik → senilai. Turun → berbalik nilai."
+      },
+      {
+        "mistake": "Dalam rasio 3:4, mengira 3 dan 4 adalah jumlah, bukan perbandingan.",
+        "fix": "Rasio 3:4 berarti untuk setiap 3 bagian pertama, ada 4 bagian kedua. Total baru bisa dihitung jika total keseluruhannya diketahui."
+      }
+    ],
+    "videos": [
+      {
+        "purpose": "konsep",
+        "search_query": "perbandingan senilai berbalik nilai kelas 6 SD rasio"
+      },
+      {
+        "purpose": "contoh-soal",
+        "search_query": "soal perbandingan membagi dengan rasio kelas 6 SD"
+      }
+    ]
+  },
+  {
+    "grade": 6,
+    "slug": "luas-keliling-lingkaran",
+    "title": "Luas dan Keliling Lingkaran",
+    "sort_order": 3,
+    "summary": "Lingkaran memiliki keliling yang dihitung menggunakan π (pi ≈ 3,14) dan diameter atau jari-jari. Luas lingkaran bergantung pada kuadrat jari-jarinya.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menghitung keliling lingkaran menggunakan rumus K = π × d atau K = 2πr.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung luas lingkaran menggunakan rumus L = πr².",
+      "Setelah mempelajari materi ini, kamu dapat menyelesaikan masalah sehari-hari berkaitan dengan lingkaran."
+    ],
+    "content": "## ⭕ Bagian-bagian Lingkaran\n\n- **Pusat (O)**: titik di tengah lingkaran.\n- **Jari-jari (r)**: jarak dari pusat ke titik mana pun di lingkaran.\n- **Diameter (d)**: garis lurus yang melewati pusat, menghubungkan dua titik di lingkaran.\n- **$d = 2r$** dan **$r = d/2$**\n\n## 🔢 Nilai π (Pi)\n\nπ (pi) adalah bilangan irasional: 3,14159265...\n\nDalam perhitungan sekolah, gunakan:\n- **π ≈ 3,14** (desimal)\n- **π ≈ 22/7** (pecahan, berguna jika r adalah kelipatan 7)\n\n## 📏 Keliling Lingkaran\n\n$$K = \\pi \\times d = \\pi \\times 2r = 2\\pi r$$\n\n**Contoh 1:** Lingkaran dengan jari-jari 7 cm.\n$$K = 2 \\times \\frac{22}{7} \\times 7 = 2 \\times 22 = 44 \\text{ cm}$$\n\n**Contoh 2:** Lingkaran dengan diameter 10 cm.\n$$K = \\pi \\times d = 3{,}14 \\times 10 = 31{,}4 \\text{ cm}$$\n\n## 📐 Luas Lingkaran\n\n$$L = \\pi \\times r^2 = \\pi r^2$$\n\n**Contoh 1:** Jari-jari 7 cm.\n$$L = \\frac{22}{7} \\times 7^2 = \\frac{22}{7} \\times 49 = 22 \\times 7 = 154 \\text{ cm}^2$$\n\n**Contoh 2:** Jari-jari 5 cm.\n$$L = 3{,}14 \\times 5^2 = 3{,}14 \\times 25 = 78{,}5 \\text{ cm}^2$$\n\n## 💡 Tips Memilih π\n\n- Gunakan **22/7** jika jari-jari/diameter adalah kelipatan 7 (7, 14, 21, 28, ...)\n- Gunakan **3,14** untuk jari-jari lainnya\n\n## 🏆 Penerapan\n\n**Menghitung panjang lintasan lari berbentuk oval (stadion)**:\n- Sisi lurus 2 × 100 m = 200 m\n- Dua setengah lingkaran (= 1 lingkaran penuh) dengan r = 36,5 m:\n- K lingkaran = 2 × 3,14 × 36,5 ≈ 229,22 m\n- Total lintasan ≈ 200 + 229,22 ≈ 429,22 m ≈ 400 m (standar stadion)\n\n## ✅ Ringkasan\n\n- Keliling: K = 2πr = πd.\n- Luas: L = πr².\n- π ≈ 3,14 atau 22/7 (pilih sesuai kemudahan hitung).",
+    "examples": [
+      {
+        "level": "mudah",
+        "problem": "Hitunglah keliling roda sepeda yang memiliki jari-jari 35 cm! (Gunakan π = 22/7)",
+        "steps": [
+          "Jari-jari r = 35 cm. 35 adalah kelipatan 7 → gunakan π = 22/7.",
+          "K = 2πr = 2 × (22/7) × 35.",
+          "= 2 × 22 × 5 (karena 35/7 = 5).",
+          "= 2 × 110 = 220 cm."
+        ],
+        "answer": "220 cm",
+        "check": { "expression": "2 * (22/7) * 35", "expected": 220 }
+      },
+      {
+        "level": "sedang",
+        "problem": "Hitunglah luas taman berbentuk lingkaran dengan diameter 14 m! (π = 22/7)",
+        "steps": [
+          "Diameter = 14 m → jari-jari r = 14/2 = 7 m.",
+          "L = πr² = (22/7) × 7².",
+          "= (22/7) × 49 = 22 × 7 = 154 m²."
+        ],
+        "answer": "154 m²",
+        "check": { "expression": "(22/7) * 7 * 7", "expected": 154 }
+      },
+      {
+        "level": "sulit",
+        "problem": "Sebuah kolam renang berbentuk lingkaran berdiameter 20 m dikelilingi jalan setapak selebar 2 m. Berapa luas jalan setapak tersebut? (π = 3,14)",
+        "steps": [
+          "Jari-jari kolam: r₁ = 20/2 = 10 m.",
+          "Jari-jari kolam + jalan: r₂ = 10 + 2 = 12 m.",
+          "Luas lingkaran besar: L₂ = 3,14 × 12² = 3,14 × 144 = 452,16 m².",
+          "Luas lingkaran kecil (kolam): L₁ = 3,14 × 10² = 3,14 × 100 = 314 m².",
+          "Luas jalan = L₂ − L₁ = 452,16 − 314 = 138,16 m²."
+        ],
+        "answer": "138,16 m²",
+        "check": { "expression": "3.14 * 12 * 12 - 3.14 * 10 * 10", "expected": 138.16 }
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Menggunakan diameter sebagai jari-jari sehingga luas = π × d² (salah besar).",
+        "fix": "Jari-jari = setengah diameter (r = d/2). Selalu cek: r atau d yang diberikan soal?"
+      },
+      {
+        "mistake": "Mengira rumus keliling adalah K = πr (bukan 2πr).",
+        "fix": "K = πd = 2πr. Ingat: diameter = 2 × jari-jari. Jika pakai jari-jari, kalikan 2 lebih dulu."
+      }
+    ],
+    "videos": [
+      {
+        "purpose": "konsep",
+        "search_query": "luas keliling lingkaran kelas 6 SD rumus pi jari-jari"
+      },
+      {
+        "purpose": "contoh-soal",
+        "search_query": "soal luas keliling lingkaran kelas 6 SD pi 3,14 22/7"
+      }
+    ]
+  },
+  {
+    "grade": 6,
+    "slug": "volume-luas-permukaan-bangun-ruang",
+    "title": "Volume dan Luas Permukaan Bangun Ruang",
+    "sort_order": 4,
+    "summary": "Luas permukaan adalah total luas semua sisi luar bangun ruang. Volume adalah kapasitas ruang yang ditempati bangun ruang. Kita pelajari tabung, kerucut, dan bola di kelas 6.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menghitung volume tabung, kerucut, dan bola.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung luas permukaan kubus, balok, dan tabung.",
+      "Setelah mempelajari materi ini, kamu dapat memecahkan masalah berkaitan dengan volume dan luas permukaan."
+    ],
+    "content": "## 🥫 Tabung (Silinder)\n\nTabung memiliki alas dan tutup berbentuk lingkaran, serta sisi samping yang disebut selimut.\n\n- **Jari-jari (r)**: jari-jari lingkaran alas.\n- **Tinggi (t)**: jarak alas ke tutup.\n\n$$V_{tabung} = \\pi r^2 t$$\n\n$$LP_{tabung} = 2\\pi r^2 + 2\\pi r t = 2\\pi r(r + t)$$\n\n**Contoh:** r = 7 cm, t = 10 cm. (π = 22/7)\n$$V = \\frac{22}{7} \\times 7^2 \\times 10 = \\frac{22}{7} \\times 49 \\times 10 = 1.540 \\text{ cm}^3$$\n$$LP = 2 \\times \\frac{22}{7} \\times 7 \\times (7+10) = 2 \\times 22 \\times 17 = 748 \\text{ cm}^2$$\n\n## 🍦 Kerucut\n\nKerucut memiliki alas lingkaran dan ujung runcing.\n\n- **Garis pelukis (s)**: garis dari ujung kerucut ke tepi alas.\n- **$s = \\sqrt{r^2 + t^2}$**\n\n$$V_{kerucut} = \\frac{1}{3} \\pi r^2 t$$\n\n$$LP_{kerucut} = \\pi r^2 + \\pi r s = \\pi r(r + s)$$\n\n**Contoh:** r = 6 cm, t = 8 cm.\n$$s = \\sqrt{6^2 + 8^2} = \\sqrt{36+64} = \\sqrt{100} = 10 \\text{ cm}$$\n$$V = \\frac{1}{3} \\times 3{,}14 \\times 36 \\times 8 = \\frac{1}{3} \\times 904{,}32 = 301{,}44 \\text{ cm}^3$$\n\n## ⚽ Bola\n\n$$V_{bola} = \\frac{4}{3} \\pi r^3$$\n\n$$LP_{bola} = 4\\pi r^2$$\n\n**Contoh:** r = 7 cm. (π = 22/7)\n$$V = \\frac{4}{3} \\times \\frac{22}{7} \\times 7^3 = \\frac{4}{3} \\times \\frac{22}{7} \\times 343 = \\frac{4}{3} \\times 1.078 = \\frac{4.312}{3} ≈ 1.437{,}3 \\text{ cm}^3$$\n$$LP = 4 \\times \\frac{22}{7} \\times 49 = 4 \\times 154 = 616 \\text{ cm}^2$$\n\n## 🧊 Ringkasan Rumus\n\n| Bangun | Volume | Luas Permukaan |\n|--------|--------|----------------|\n| Kubus | s³ | 6s² |\n| Balok | p×l×t | 2(pl+pt+lt) |\n| Tabung | πr²t | 2πr(r+t) |\n| Kerucut | ⅓πr²t | πr(r+s) |\n| Bola | 4/3πr³ | 4πr² |",
+    "examples": [
+      {
+        "level": "mudah",
+        "problem": "Hitunglah volume tabung dengan jari-jari 10 cm dan tinggi 15 cm! (π = 3,14)",
+        "steps": [
+          "Rumus: V = πr²t.",
+          "V = 3,14 × 10² × 15.",
+          "= 3,14 × 100 × 15.",
+          "= 3,14 × 1.500.",
+          "= 4.710 cm³."
+        ],
+        "answer": "4.710 cm³",
+        "check": { "expression": "3.14 * 100 * 15", "expected": 4710 }
+      },
+      {
+        "level": "sedang",
+        "problem": "Sebuah topi ulang tahun berbentuk kerucut dengan jari-jari 6 cm dan garis pelukis 10 cm. Berapa luas permukaan bahan yang dipakai untuk membuat topi? (tanpa alas, π = 3,14)",
+        "steps": [
+          "Luas selimut kerucut = πrs = 3,14 × 6 × 10 = 188,4 cm².",
+          "Tidak ada alas (topi terbuka di bawah).",
+          "Luas bahan = 188,4 cm²."
+        ],
+        "answer": "188,4 cm²",
+        "check": { "expression": "3.14 * 6 * 10", "expected": 188.4 }
+      },
+      {
+        "level": "sulit",
+        "problem": "Sebuah kaleng cat berbentuk tabung berdiameter 28 cm dan tinggi 30 cm. Berapa liter cat yang bisa ditampung? Berapa luas permukaan bagian luar kaleng (termasuk alas dan tutup)? (π = 22/7)",
+        "steps": [
+          "r = 28/2 = 14 cm. t = 30 cm.",
+          "Volume: V = πr²t = (22/7) × 14² × 30 = (22/7) × 196 × 30.",
+          "= 22 × 28 × 30 = 18.480 cm³ = 18,48 liter (karena 1 liter = 1.000 cm³).",
+          "Luas permukaan: LP = 2πr(r+t) = 2 × (22/7) × 14 × (14+30).",
+          "= 2 × 22 × 2 × 44 = 3.872 cm².",
+          "Verifikasi volume: (22/7) × 196 × 30 = 22 × 28 × 30 = 18.480 cm³ ✓."
+        ],
+        "answer": "Volume = 18.480 cm³ ≈ 18,48 liter. Luas permukaan = 3.872 cm².",
+        "check": { "expression": "(22/7) * 14 * 14 * 30", "expected": 18480 }
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Menggunakan rumus luas permukaan padahal ditanya volume, atau sebaliknya.",
+        "fix": "Volume → berapa ruang di DALAM (satuan kubik: cm³). Luas permukaan → berapa luas bagian LUAR (satuan persegi: cm²)."
+      },
+      {
+        "mistake": "Lupa mengalikan 1/3 untuk volume kerucut.",
+        "fix": "Kerucut = 1/3 tabung. Jangan lupa: V_kerucut = 1/3 × πr²t."
+      }
+    ],
+    "videos": [
+      {
+        "purpose": "konsep",
+        "search_query": "volume tabung kerucut bola kelas 6 SD rumus"
+      },
+      {
+        "purpose": "contoh-soal",
+        "search_query": "luas permukaan bangun ruang kelas 6 SMP soal cerita"
+      }
+    ]
+  },
+  {
+    "grade": 6,
+    "slug": "statistika-mean-median-modus",
+    "title": "Statistika: Mean, Median, dan Modus",
+    "sort_order": 5,
+    "summary": "Mean (rata-rata), median (nilai tengah), dan modus (nilai paling sering muncul) adalah tiga ukuran pemusatan data. Ketiganya memberikan gambaran berbeda tentang sekumpulan data.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menghitung mean dari sekumpulan data.",
+      "Setelah mempelajari materi ini, kamu dapat menentukan median dari data yang sudah diurutkan.",
+      "Setelah mempelajari materi ini, kamu dapat menentukan modus dari sekumpulan data.",
+      "Setelah mempelajari materi ini, kamu dapat memilih ukuran pemusatan yang paling tepat sesuai konteks."
+    ],
+    "content": "## 📊 Tiga Ukuran Pemusatan Data\n\nUkuran pemusatan mendeskripsikan data dengan **satu nilai representatif**.\n\n## 📐 Mean (Rata-rata)\n\n$$\\text{Mean} = \\frac{\\text{Jumlah semua data}}{\\text{Banyak data}}$$\n\n**Contoh:** Nilai ulangan 5 siswa: 70, 85, 90, 65, 80.\n$$\\text{Mean} = \\frac{70+85+90+65+80}{5} = \\frac{390}{5} = 78$$\n\n**Kapan pakai mean?** Ketika semua data penting dan tidak ada nilai ekstrem (outlier).\n\n## 📍 Median (Nilai Tengah)\n\nMedian adalah **nilai tengah** setelah data diurutkan.\n\n**Jika banyak data ganjil:** Median = nilai data di posisi tengah.\n\nData: 65, 70, **80**, 85, 90. Median = **80** (posisi ke-3 dari 5 data).\n\n**Jika banyak data genap:** Median = rata-rata dua nilai tengah.\n\nData: 65, 70, 80, 85, 90, 95 (6 data). Dua nilai tengah: 80 dan 85.\n$$\\text{Median} = \\frac{80+85}{2} = 82{,}5$$\n\n**Kapan pakai median?** Ketika ada nilai ekstrem yang bisa memengaruhi mean.\n\n> Contoh: Gaji karyawan (5 orang): Rp3 juta, Rp3,5 juta, Rp4 juta, Rp4,5 juta, Rp50 juta (bos).\n> Mean = Rp13 juta (tidak representatif). Median = Rp4 juta (lebih mewakili).\n\n## 🎯 Modus\n\nModus adalah **nilai yang paling sering muncul** dalam data.\n\n**Contoh:** Nilai: 7, 8, 7, 9, 8, 7, 6, 8, 7. Modus = **7** (muncul 4 kali).\n\n- **Bimodus**: dua nilai sering muncul sama banyak. Contoh: 2, 3, 3, 4, 4, 5. Modus = 3 dan 4.\n- **Tidak ada modus**: semua nilai muncul tepat sekali. Contoh: 1, 2, 3, 4, 5.\n\n**Kapan pakai modus?** Untuk data kategorik (warna favorit, jenis olahraga) atau mencari yang paling populer.\n\n## 📋 Perbandingan Mean, Median, Modus\n\n| | Mean | Median | Modus |\n|-|------|--------|-------|\n| **Definisi** | Rata-rata | Nilai tengah | Paling sering |\n| **Pengaruh outlier** | Besar | Kecil | Tidak ada |\n| **Cocok untuk** | Data merata | Ada outlier | Data kategorik |\n\n## ✅ Ringkasan\n\n- Mean = Σdata ÷ n (pengaruhi oleh outlier).\n- Median = nilai tengah data terurut (tahan terhadap outlier).\n- Modus = nilai terbanyak (bisa lebih dari satu atau tidak ada).",
+    "examples": [
+      {
+        "level": "mudah",
+        "problem": "Tentukan modus dari data: 5, 3, 7, 5, 9, 3, 5, 7, 3, 5.",
+        "steps": [
+          "Hitung kemunculan setiap nilai: 3 muncul 3 kali, 5 muncul 4 kali, 7 muncul 2 kali, 9 muncul 1 kali.",
+          "Nilai yang paling sering muncul: 5 (4 kali).",
+          "Modus = 5."
+        ],
+        "answer": "Modus = 5",
+        "check": null
+      },
+      {
+        "level": "sedang",
+        "problem": "Data tinggi badan 7 siswa (cm): 152, 158, 160, 155, 158, 163, 161. Tentukan mean, median, dan modus!",
+        "steps": [
+          "Mean: (152+158+160+155+158+163+161) ÷ 7 = 1.107 ÷ 7 = 158,14 cm.",
+          "Median: Urutkan: 152, 155, 158, 158, 160, 161, 163. Posisi tengah (ke-4): 158. Median = 158 cm.",
+          "Modus: 158 muncul 2 kali (paling banyak). Modus = 158 cm.",
+          "Verifikasi mean: 152+158+160+155+158+163+161 = 1.107. 1.107÷7 = 158,14 ✓."
+        ],
+        "answer": "Mean ≈ 158,14 cm, Median = 158 cm, Modus = 158 cm.",
+        "check": { "expression": "(152 + 158 + 160 + 155 + 158 + 163 + 161) / 7", "expected": 158.14285714285714 }
+      },
+      {
+        "level": "sulit",
+        "problem": "Nilai ulangan 6 siswa: 70, x, 80, 85, 90, 75. Jika mean = 80, tentukan nilai x. Lalu tentukan median dan modus!",
+        "steps": [
+          "Mean = 80: (70+x+80+85+90+75) / 6 = 80.",
+          "400+x = 80 × 6 = 480.",
+          "x = 480 − 400 = 80.",
+          "Data lengkap: 70, 80, 80, 85, 90, 75.",
+          "Median: Urutkan: 70, 75, 80, 80, 85, 90. Dua tengah: 80 dan 80. Median = (80+80)/2 = 80.",
+          "Modus: 80 muncul dua kali. Modus = 80."
+        ],
+        "answer": "x = 80. Median = 80. Modus = 80.",
+        "check": { "expression": "480 - (70 + 80 + 85 + 90 + 75)", "expected": 80 }
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Menghitung median tanpa mengurutkan data terlebih dahulu.",
+        "fix": "Median HARUS dari data yang sudah diurutkan (dari terkecil ke terbesar). Jangan ambil nilai tengah dari data yang acak."
+      },
+      {
+        "mistake": "Mengira mean sama dengan median, sehingga tidak perlu menghitung keduanya.",
+        "fix": "Mean dan median bisa berbeda, terutama jika ada outlier (nilai ekstrem). Contoh: data {1,2,3,4,100}: mean = 22, median = 3."
+      }
+    ],
+    "videos": [
+      {
+        "purpose": "konsep",
+        "search_query": "mean median modus kelas 6 SD statistika rata-rata nilai tengah"
+      },
+      {
+        "purpose": "contoh-soal",
+        "search_query": "soal mean median modus kelas 6 SD SMP perbedaan kapan dipakai"
+      }
+    ]
+  }
+]

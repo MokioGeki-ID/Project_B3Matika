@@ -1,0 +1,449 @@
+[
+  {
+    "grade": 4,
+    "slug": "kelipatan-faktor-kpk-fpb",
+    "title": "Kelipatan, Faktor, KPK, dan FPB",
+    "sort_order": 1,
+    "summary": "Kelipatan adalah hasil perkalian sebuah bilangan dengan bilangan asli. Faktor adalah bilangan yang habis membagi suatu bilangan. KPK (Kelipatan Persekutuan Terkecil) dan FPB (Faktor Persekutuan Terbesar) penting untuk operasi pecahan dan pemecahan masalah.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menentukan kelipatan dan faktor suatu bilangan.",
+      "Setelah mempelajari materi ini, kamu dapat mencari KPK dari dua bilangan menggunakan kelipatan persekutuan.",
+      "Setelah mempelajari materi ini, kamu dapat mencari FPB dari dua bilangan menggunakan faktor persekutuan.",
+      "Setelah mempelajari materi ini, kamu dapat menerapkan KPK dan FPB dalam pemecahan masalah sehari-hari."
+    ],
+    "content": "## 🔢 Kelipatan\n\nKelipatan bilangan **n** adalah: n × 1, n × 2, n × 3, ...\n\n**Kelipatan 3**: 3, 6, 9, 12, 15, 18, 21, 24, ...\n**Kelipatan 4**: 4, 8, 12, 16, 20, 24, 28, 32, ...\n\n> Kelipatan tidak pernah habis — selalu ada yang lebih besar!\n\n## 🔢 Faktor\n\nFaktor bilangan **n** adalah bilangan yang **habis membagi n** (sisa 0).\n\n**Faktor 12**: 1, 2, 3, 4, 6, 12 *(semua bilangan yang bisa membagi 12 habis-habisan)*\n- 12 ÷ 1 = 12 ✓ | 12 ÷ 2 = 6 ✓ | 12 ÷ 3 = 4 ✓\n- 12 ÷ 4 = 3 ✓ | 12 ÷ 6 = 2 ✓ | 12 ÷ 12 = 1 ✓\n\n**Faktor 18**: 1, 2, 3, 6, 9, 18\n\n> Faktor selalu terbatas (tidak sebanyak kelipatan)!\n\n## 🔵 KPK — Kelipatan Persekutuan Terkecil\n\nKPK dari dua bilangan adalah **kelipatan persekutuan yang paling kecil**.\n\n**Contoh: KPK dari 4 dan 6**\n\nKelipatan 4: 4, 8, **12**, 16, 20, **24**, ...\nKelipatan 6: 6, **12**, 18, **24**, 30, ...\n\nKelipatan persekutuan: 12, 24, 36, ...\n**KPK(4, 6) = 12** (yang terkecil)\n\n### Cara Faktorisasi Prima\n\n$$4 = 2^2 \\quad\\quad 6 = 2 \\times 3$$\n\nKPK = ambil semua faktor prima dengan pangkat tertinggi:\n$$\\text{KPK}(4,6) = 2^2 \\times 3 = 4 \\times 3 = 12$$\n\n## 🔴 FPB — Faktor Persekutuan Terbesar\n\nFPB dari dua bilangan adalah **faktor persekutuan yang paling besar**.\n\n**Contoh: FPB dari 12 dan 18**\n\nFaktor 12: {1, 2, 3, **4**, **6**, 12}\nFaktor 18: {1, 2, 3, **6**, 9, 18}\n\nFaktor persekutuan: 1, 2, 3, 6\n**FPB(12, 18) = 6** (yang terbesar)\n\n### Cara Faktorisasi Prima\n\n$$12 = 2^2 \\times 3 \\quad\\quad 18 = 2 \\times 3^2$$\n\nFPB = ambil faktor prima dengan pangkat **terkecil** yang sama:\n$$\\text{FPB}(12,18) = 2^1 \\times 3^1 = 2 \\times 3 = 6$$\n\n## 🏫 Penerapan KPK dan FPB\n\n**KPK** dipakai untuk: \"paling cepat bertemu kembali\" — jadwal berulang.\n**FPB** dipakai untuk: \"dibagi sama rata sebesar-besarnya\" — membagi ke kelompok.\n\n**Contoh KPK:** Lampu A menyala tiap 4 detik, lampu B tiap 6 detik. Kapan menyala bersamaan? → KPK(4,6) = 12 detik.\n\n**Contoh FPB:** 12 apel dan 18 jeruk dibagi ke wadah-wadah agar setiap wadah dapat jumlah yang sama. Maksimal berapa wadah? → FPB(12,18) = 6 wadah (2 apel + 3 jeruk per wadah).\n\n## ✅ Ringkasan\n\n- Kelipatan: n×1, n×2, n×3, ... (tak terbatas)\n- Faktor: bilangan yang habis membagi (terbatas)\n- KPK: kelipatan persekutuan terkecil → untuk masalah \"kapan bertemu lagi\"\n- FPB: faktor persekutuan terbesar → untuk masalah \"bagi rata sebesar mungkin\"",
+    "examples": [
+      {
+        "level": "mudah",
+        "problem": "Sebutkan semua faktor dari bilangan 20!",
+        "steps": [
+          "Coba bagi 20 dengan semua bilangan dari 1 sampai 20:",
+          "20 ÷ 1 = 20 ✓ → faktor: 1 dan 20",
+          "20 ÷ 2 = 10 ✓ → faktor: 2 dan 10",
+          "20 ÷ 4 = 5 ✓ → faktor: 4 dan 5",
+          "20 ÷ 3 = 6 sisa 2 ✗ (bukan faktor)",
+          "Faktor 20: {1, 2, 4, 5, 10, 20}."
+        ],
+        "answer": "1, 2, 4, 5, 10, 20",
+        "check": null
+      },
+      {
+        "level": "sedang",
+        "problem": "Tentukan KPK dari 6 dan 8!",
+        "steps": [
+          "Kelipatan 6: 6, 12, 18, 24, 30, 36, ...",
+          "Kelipatan 8: 8, 16, 24, 32, 40, ...",
+          "Kelipatan persekutuan pertama yang muncul: 24.",
+          "KPK(6, 8) = 24."
+        ],
+        "answer": "24",
+        "check": null
+      },
+      {
+        "level": "sulit",
+        "problem": "Bu Sari punya 36 kue cokelat dan 48 kue vanila. Ia ingin membaginya ke kotak-kotak, tiap kotak berisi cokelat dan vanila dengan jumlah sama. Berapa kotak yang bisa dibuat (semaksimal mungkin)?",
+        "steps": [
+          "Masalah ini meminta FPB agar pembagian maksimal.",
+          "Faktor 36: 1, 2, 3, 4, 6, 9, 12, 18, 36.",
+          "Faktor 48: 1, 2, 3, 4, 6, 8, 12, 16, 24, 48.",
+          "Faktor persekutuan: 1, 2, 3, 4, 6, 12.",
+          "FPB(36, 48) = 12.",
+          "Bisa dibuat 12 kotak.",
+          "Tiap kotak: 36÷12 = 3 kue cokelat dan 48÷12 = 4 kue vanila."
+        ],
+        "answer": "12 kotak (3 cokelat + 4 vanila per kotak)",
+        "check": { "expression": "Math.min(36, 48)", "expected": 36 }
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Menukar KPK dan FPB: menggunakan FPB untuk soal 'kapan bertemu' atau KPK untuk soal 'bagi rata'.",
+        "fix": "KPK = 'paling Kecil tapi Kompak' → jadwal bertemu. FPB = 'paling Besar bagi Bersama' → bagi rata. Hafalkan asosiasinya!"
+      },
+      {
+        "mistake": "Mengira faktor 12 termasuk 5 atau 7 (karena tidak mencoba membagi).",
+        "fix": "Selalu uji coba: bagi 12 dengan 5 → 12÷5 = 2,4 (ada sisa) → 5 bukan faktor 12. Hanya yang habis dibagi yang jadi faktor."
+      }
+    ],
+    "videos": [
+      {
+        "purpose": "konsep",
+        "search_query": "KPK FPB kelipatan faktor kelas 4 SD cara mencari"
+      },
+      {
+        "purpose": "contoh-soal",
+        "search_query": "soal cerita KPK FPB kelas 4 SD matematika kurikulum merdeka"
+      }
+    ]
+  },
+  {
+    "grade": 4,
+    "slug": "pecahan-senilai-desimal-persen",
+    "title": "Pecahan Senilai, Desimal, dan Persen",
+    "sort_order": 2,
+    "summary": "Pecahan senilai adalah pecahan dengan nilai sama tapi bentuk berbeda. Desimal dan persen adalah cara lain menyatakan pecahan. Ketiganya saling bisa dikonversi.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menentukan pecahan yang senilai.",
+      "Setelah mempelajari materi ini, kamu dapat mengubah pecahan menjadi desimal dan sebaliknya.",
+      "Setelah mempelajari materi ini, kamu dapat mengubah pecahan/desimal menjadi persen dan sebaliknya."
+    ],
+    "content": "## 🔄 Pecahan Senilai\n\nDua pecahan **senilai** jika memiliki nilai yang sama meski terlihat berbeda.\n\nCara membuat pecahan senilai: **kalikan atau bagi** pembilang dan penyebut dengan bilangan yang sama.\n\n$$\\frac{1}{2} = \\frac{2}{4} = \\frac{3}{6} = \\frac{4}{8} = \\frac{50}{100}$$\n\nVerifikasi: 1÷2 = 0.5, 2÷4 = 0.5, 50÷100 = 0.5 ✓\n\n**Menyederhanakan pecahan**: bagi pembilang dan penyebut dengan FPB mereka.\n\n$$\\frac{12}{18} \\xrightarrow{÷6} \\frac{2}{3}$$\n\nFPB(12,18) = 6. Jadi 12/18 = 2/3.\n\n## 🔢 Desimal\n\nDesimal adalah cara lain menulis pecahan dengan penyebut **10, 100, 1000, ...**\n\n$$\\frac{3}{10} = 0{,}3 \\qquad \\frac{7}{100} = 0{,}07 \\qquad \\frac{25}{100} = 0{,}25$$\n\n### Nilai Tempat Desimal\n```\n  0 , 2   5   7\n    |  |   |   |\n    |  |   |   Seperseribu (0,001)\n    |  |   Perseratus (0,01)\n    |  Persepuluh (0,1)\n    Koma\n```\n\n### Mengubah Pecahan ke Desimal\n\nBagi pembilang dengan penyebut:\n$$\\frac{3}{4} = 3 ÷ 4 = 0{,}75$$\n$$\\frac{1}{5} = 1 ÷ 5 = 0{,}2$$\n\n## 💯 Persen (%)\n\nPersen artinya **per seratus** (per = tiap, seratus = 100).\n\n$$\\frac{37}{100} = 37\\%$$\n$$0{,}45 = 45\\%$$\n\n### Konversi Antar Bentuk\n\n| Pecahan | Desimal | Persen |\n|---------|---------|--------|\n| 1/2 | 0,5 | 50% |\n| 1/4 | 0,25 | 25% |\n| 3/4 | 0,75 | 75% |\n| 1/5 | 0,2 | 20% |\n| 1/10 | 0,1 | 10% |\n\n### Cara Mengubah\n\n- **Pecahan → Persen**: bagi lalu ×100. ½ = 0,5 × 100 = 50%.\n- **Persen → Desimal**: bagi 100. 35% = 35÷100 = 0,35.\n- **Desimal → Persen**: ×100. 0,72 × 100 = 72%.\n\n## ✅ Ringkasan\n\n- Pecahan senilai: kalikan/bagi pembilang dan penyebut dengan angka sama.\n- Sederhanakan: bagi dengan FPB.\n- Desimal ↔ Pecahan: pembilang/penyebut adalah nilai tepat desimal.\n- Persen = per seratus. Konversi: ÷100 (→desimal) atau ×100 (→persen).",
+    "examples": [
+      {
+        "level": "mudah",
+        "problem": "Tunjukkan bahwa 2/3 dan 8/12 adalah pecahan yang senilai!",
+        "steps": [
+          "Kalikan pembilang dan penyebut 2/3 dengan 4:",
+          "2/3 = (2×4)/(3×4) = 8/12. ✓",
+          "Verifikasi: 2÷3 ≈ 0,6667 dan 8÷12 ≈ 0,6667. ✓"
+        ],
+        "answer": "2/3 = 8/12 (senilai, dikalikan dengan 4)",
+        "check": null
+      },
+      {
+        "level": "sedang",
+        "problem": "Ubah 0,35 menjadi pecahan dan persen!",
+        "steps": [
+          "0,35 = 35/100 (desimal ke perseratus).",
+          "Sederhanakan 35/100: FPB(35,100) = 5. 35÷5 = 7, 100÷5 = 20. Jadi 7/20.",
+          "Persen: 0,35 × 100 = 35%.",
+          "Hasil: 0,35 = 7/20 = 35%."
+        ],
+        "answer": "0,35 = 7/20 = 35%",
+        "check": { "expression": "0.35 * 100", "expected": 35 }
+      },
+      {
+        "level": "sulit",
+        "problem": "Di kelas 4A ada 40 siswa. Sebanyak 60% hadir. Berapa siswa yang hadir? Berapa yang tidak hadir?",
+        "steps": [
+          "60% artinya 60 dari setiap 100.",
+          "Hadir = 60% × 40 = (60/100) × 40 = 0,6 × 40 = 24 siswa.",
+          "Tidak hadir = 40 − 24 = 16 siswa.",
+          "Cek: 24/40 = 0,6 = 60% ✓. 16/40 = 0,4 = 40% ✓. 60% + 40% = 100% ✓."
+        ],
+        "answer": "24 siswa hadir, 16 siswa tidak hadir.",
+        "check": { "expression": "0.6 * 40", "expected": 24 }
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Mengira 0,7 = 7% (lupa bahwa 0,7 = 70%).",
+        "fix": "Persen = desimal × 100. 0,7 × 100 = 70%, bukan 7%. Ingat: 0,07 = 7%."
+      },
+      {
+        "mistake": "Salah menyederhanakan: membagi hanya pembilang saja atau hanya penyebut saja.",
+        "fix": "Sederhanakan dengan membagi KEDUANYA (pembilang DAN penyebut) dengan FPB yang sama."
+      }
+    ],
+    "videos": [
+      {
+        "purpose": "konsep",
+        "search_query": "pecahan senilai desimal persen kelas 4 SD konversi"
+      },
+      {
+        "purpose": "contoh-soal",
+        "search_query": "mengubah pecahan ke desimal persen kelas 4 5 SD latihan"
+      }
+    ]
+  },
+  {
+    "grade": 4,
+    "slug": "pembulatan-penaksiran",
+    "title": "Pembulatan dan Penaksiran Hasil Hitung",
+    "sort_order": 3,
+    "summary": "Pembulatan adalah cara menyederhanakan bilangan ke satuan, puluhan, ratusan, atau ribuan terdekat. Penaksiran menggunakan bilangan yang sudah dibulatkan untuk menghitung hasil perkiraan dengan cepat.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat membulatkan bilangan ke satuan, puluhan, ratusan, dan ribuan terdekat.",
+      "Setelah mempelajari materi ini, kamu dapat menaksir hasil penjumlahan, pengurangan, dan perkalian.",
+      "Setelah mempelajari materi ini, kamu dapat memilih tingkat pembulatan yang tepat sesuai konteks."
+    ],
+    "content": "## 🔢 Pembulatan Bilangan\n\nPembulatan adalah cara menyederhanakan bilangan agar lebih mudah digunakan.\n\n### Aturan Pembulatan\n\n**Digit yang diperhatikan**: digit tepat di sebelah kanan tempat yang dibulatkan.\n\n- Jika digit tersebut **≥ 5**: bulatkan **ke atas** (tambah 1 pada digit yang dibulatkan).\n- Jika digit tersebut **< 5**: bulatkan **ke bawah** (tetap, digit dibulatkan tidak berubah).\n\n### Membulatkan ke Puluhan Terdekat\n\n- **47** → digit satuan = 7 ≥ 5 → bulatkan ke atas → **50**\n- **43** → digit satuan = 3 < 5 → bulatkan ke bawah → **40**\n- **65** → digit satuan = 5 ≥ 5 → bulatkan ke atas → **70**\n\n### Membulatkan ke Ratusan Terdekat\n\n- **348** → digit puluhan = 4 < 5 → bulatkan ke bawah → **300**\n- **762** → digit puluhan = 6 ≥ 5 → bulatkan ke atas → **800**\n- **250** → digit puluhan = 5 ≥ 5 → bulatkan ke atas → **300**\n\n### Membulatkan ke Ribuan Terdekat\n\n- **3.412** → digit ratusan = 4 < 5 → **3.000**\n- **7.650** → digit ratusan = 6 ≥ 5 → **8.000**\n\n## 🎯 Penaksiran\n\nPenaksiran menggunakan bilangan bulat yang sudah dibulatkan untuk mendapat **perkiraan cepat**.\n\n### Penaksiran Penjumlahan\n\n**297 + 412** (bulatkan ke ratusan):\n- 297 ≈ 300\n- 412 ≈ 400\n- Taksiran: 300 + 400 = **700**\n- Hasil tepat: 709 (taksiran dekat!)\n\n### Penaksiran Pengurangan\n\n**583 − 246** (bulatkan ke ratusan):\n- 583 ≈ 600\n- 246 ≈ 200\n- Taksiran: 600 − 200 = **400**\n- Hasil tepat: 337 (taksiran cukup dekat)\n\n### Penaksiran Perkalian\n\n**48 × 21** (bulatkan ke puluhan):\n- 48 ≈ 50\n- 21 ≈ 20\n- Taksiran: 50 × 20 = **1.000**\n- Hasil tepat: 1.008 (sangat dekat!)\n\n## 🛒 Penerapan dalam Belanja\n\nBu Tini belanja: Rp4.750 + Rp3.200 + Rp6.890.\nTaksiran (ke ribuan): 5.000 + 3.000 + 7.000 = Rp15.000.\nHasil tepat: Rp14.840. (Taksiran cukup!)\n\n## ✅ Ringkasan\n\n- Bulatkan: lihat digit kanan tempat yang dibulatkan. ≥ 5 → naik; < 5 → tetap.\n- Penaksiran = perkiraan cepat menggunakan bilangan yang dibulatkan.\n- Berguna untuk mengecek kewajaran jawaban dan estimasi cepat.",
+    "examples": [
+      {
+        "level": "mudah",
+        "problem": "Bulatkan 367 ke ratusan terdekat!",
+        "steps": [
+          "Tempat yang dibulatkan: ratusan (angka 3).",
+          "Digit di sebelah kanannya: puluhan = 6.",
+          "6 ≥ 5 → bulatkan ke atas.",
+          "367 dibulatkan ke ratusan terdekat = 400."
+        ],
+        "answer": "400",
+        "check": null
+      },
+      {
+        "level": "sedang",
+        "problem": "Taksirkan hasil dari 493 + 317 menggunakan pembulatan ke ratusan!",
+        "steps": [
+          "493 ≈ 500 (digit puluhan = 9 ≥ 5, naik ke 500).",
+          "317 ≈ 300 (digit puluhan = 1 < 5, tetap 300).",
+          "Taksiran: 500 + 300 = 800.",
+          "Hasil tepat: 493 + 317 = 810. (Taksiran mendekati!)"
+        ],
+        "answer": "Taksiran: 800 (hasil tepat: 810)",
+        "check": { "expression": "493 + 317", "expected": 810 }
+      },
+      {
+        "level": "sulit",
+        "problem": "Ibu membeli 4 karung beras, masing-masing beratnya 24,7 kg. Taksirkan total berat beras, lalu hitung tepat. Berapa selisih taksiran dengan hasil tepat?",
+        "steps": [
+          "Taksiran: 24,7 ≈ 25 kg. Total taksiran = 4 × 25 = 100 kg.",
+          "Hasil tepat: 4 × 24,7 = 98,8 kg.",
+          "Selisih: 100 − 98,8 = 1,2 kg.",
+          "Taksiran lebih besar 1,2 kg dari hasil tepat."
+        ],
+        "answer": "Taksiran: 100 kg. Tepat: 98,8 kg. Selisih: 1,2 kg.",
+        "check": { "expression": "4 * 24.7", "expected": 98.8 }
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Membulatkan 345 ke ratusan terdekat menjadi 400 (karena 45 > 40, padahal cukup lihat digit puluhan saja).",
+        "fix": "Untuk membulatkan ke ratusan, hanya lihat digit PULUHAN saja. 345: digit puluhan = 4 < 5 → 300 (bukan 400)."
+      },
+      {
+        "mistake": "Menganggap taksiran harus sama persis dengan hasil tepat.",
+        "fix": "Taksiran adalah PERKIRAAN. Wajar ada selisih. Yang penting masuk akal dan cepat dihitung."
+      }
+    ],
+    "videos": [
+      {
+        "purpose": "konsep",
+        "search_query": "pembulatan bilangan kelas 4 SD puluhan ratusan ribuan"
+      },
+      {
+        "purpose": "contoh-soal",
+        "search_query": "penaksiran pembulatan kelas 4 SD matematika soal"
+      }
+    ],
+    "questions": [
+      {
+        "body": "Hasil pembulatan 476 ke ratusan terdekat adalah ...",
+        "options": ["400", "470", "500", "480"],
+        "answer": 2,
+        "explanation": "Digit puluhan = 7 ≥ 5, bulatkan ke atas: 476 → 500.",
+        "points": 1
+      },
+      {
+        "body": "Taksiran dari 389 + 214 (dibulatkan ke ratusan) adalah ...",
+        "options": ["500", "600", "700", "603"],
+        "answer": 1,
+        "explanation": "389 ≈ 400 (digit puluhan 8 ≥ 5). 214 ≈ 200 (digit puluhan 1 < 5). Taksiran: 400 + 200 = 600.",
+        "points": 2
+      },
+      {
+        "body": "Harga sebuah pensil Rp2.350. Ayah membulatkan ke ratusan untuk menaksir. Taksiran harga pensil tersebut adalah ...",
+        "options": ["Rp2.000", "Rp2.300", "Rp2.400", "Rp2.500"],
+        "answer": 2,
+        "explanation": "Digit puluhan = 5 ≥ 5, bulatkan ke atas: Rp2.350 → Rp2.400.",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "grade": 4,
+    "slug": "sifat-bangun-datar-sudut",
+    "title": "Sifat-sifat Bangun Datar dan Sudut",
+    "sort_order": 4,
+    "summary": "Setiap bangun datar memiliki sifat khusus berkaitan dengan jumlah sisi, sudut, dan simetrinya. Memahami sifat ini membantu kita mengenali, menggambar, dan menggunakan bangun datar dalam kehidupan.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menyebutkan sifat-sifat bangun datar (sisi, sudut, simetri) untuk persegi, persegi panjang, segitiga, trapesium, jajargenjang, dan belah ketupat.",
+      "Setelah mempelajari materi ini, kamu dapat membedakan bangun datar berdasarkan sifat-sifatnya.",
+      "Setelah mempelajari materi ini, kamu dapat menentukan banyaknya sumbu simetri suatu bangun datar."
+    ],
+    "content": "## 📐 Sifat-sifat Bangun Datar\n\n### Persegi\n- **Sisi**: 4 sisi sama panjang\n- **Sudut**: 4 sudut siku-siku (90°)\n- **Diagonal**: 2 diagonal sama panjang dan saling tegak lurus\n- **Simetri**: 4 sumbu simetri (horizontal, vertikal, 2 diagonal)\n\n### Persegi Panjang\n- **Sisi**: 2 pasang sisi sama panjang (sisi berhadapan sama)\n- **Sudut**: 4 sudut siku-siku (90°)\n- **Diagonal**: 2 diagonal sama panjang tapi tidak tegak lurus\n- **Simetri**: 2 sumbu simetri (horizontal dan vertikal)\n\n### Segitiga\n- **Sisi**: 3 sisi, **Sudut**: 3 sudut. Jumlah semua sudut = 180°.\n- **Jenis berdasarkan sisi**:\n  - *Sama sisi*: ketiga sisi sama panjang, semua sudut 60°\n  - *Sama kaki*: dua sisi sama panjang\n  - *Sembarang*: semua sisi berbeda\n- **Jenis berdasarkan sudut**:\n  - *Lancip*: semua sudut < 90°\n  - *Siku-siku*: ada satu sudut = 90°\n  - *Tumpul*: ada satu sudut > 90°\n\n### Trapesium\n- **Sisi**: 4 sisi, **sepasang sisi sejajar** (disebut alas dan atap)\n- **Sudut**: jumlah sudut = 360°\n- **Trapesium sama kaki**: kedua kaki sama panjang, punya 1 sumbu simetri\n\n### Jajargenjang\n- **Sisi**: 4 sisi, sisi berhadapan sejajar dan sama panjang\n- **Sudut**: sudut berhadapan sama besar; sudut berdekatan berjumlah 180°\n- **Diagonal**: saling membagi dua sama panjang\n- **Simetri**: 0 sumbu simetri (bukan, kecuali persegi panjang)\n\n### Belah Ketupat\n- **Sisi**: 4 sisi sama panjang (seperti persegi yang miring)\n- **Sudut**: sudut berhadapan sama besar\n- **Diagonal**: saling tegak lurus dan membagi dua sama panjang\n- **Simetri**: 2 sumbu simetri (kedua diagonal)\n\n## ↔️ Sumbu Simetri\n\nSumbu simetri adalah garis yang membagi bangun menjadi **dua bagian yang merupakan bayangan cermin satu sama lain**.\n\n- Persegi: **4** sumbu simetri\n- Persegi panjang: **2** sumbu simetri\n- Segitiga sama sisi: **3** sumbu simetri\n- Segitiga sama kaki: **1** sumbu simetri\n- Lingkaran: **tak terhingga** (garis apapun melalui pusat)\n\n## ✅ Ringkasan\n\n| Bangun | Sisi | Sudut | Simetri |\n|--------|------|-------|---------|\n| Persegi | 4 sama | 4 × 90° | 4 |\n| Persegi panjang | 2 pasang | 4 × 90° | 2 |\n| Segitiga sama sisi | 3 sama | 3 × 60° | 3 |\n| Jajargenjang | 2 pasang | berbeda | 0 |\n| Belah ketupat | 4 sama | berbeda | 2 |",
+    "examples": [
+      {
+        "level": "mudah",
+        "problem": "Sebuah bangun datar punya 4 sisi sama panjang dan 4 sudut siku-siku. Bangun apa itu?",
+        "steps": [
+          "4 sisi sama panjang: bisa persegi atau belah ketupat.",
+          "4 sudut siku-siku (90°): hanya berlaku untuk persegi.",
+          "Bangun yang memenuhi kedua syarat: persegi."
+        ],
+        "answer": "Persegi",
+        "check": null
+      },
+      {
+        "level": "sedang",
+        "problem": "Sebuah segitiga memiliki sudut 50°, 70°, dan x°. Tentukan nilai x dan jenis segitiganya berdasarkan sudut!",
+        "steps": [
+          "Jumlah sudut segitiga = 180°.",
+          "50° + 70° + x° = 180°.",
+          "120° + x° = 180°.",
+          "x° = 180° − 120° = 60°.",
+          "Semua sudut (50°, 70°, 60°) < 90° → segitiga lancip."
+        ],
+        "answer": "x = 60°. Segitiga lancip (semua sudut < 90°).",
+        "check": { "expression": "180 - 50 - 70", "expected": 60 }
+      },
+      {
+        "level": "sulit",
+        "problem": "Pak Dedi punya sebidang tanah berbentuk trapesium. Sisi-sisinya: atas 8 m, bawah 14 m, kiri 6 m, kanan 6 m. Berapa keliling tanah Pak Dedi? Termasuk jenis trapesium apa?",
+        "steps": [
+          "Keliling = jumlah semua sisi: 8 + 14 + 6 + 6 = 34 m.",
+          "Sisi kiri = sisi kanan = 6 m (kedua kaki sama panjang).",
+          "Trapesium dengan kaki sama panjang disebut trapesium sama kaki."
+        ],
+        "answer": "Keliling = 34 m. Jenis: Trapesium sama kaki.",
+        "check": { "expression": "8 + 14 + 6 + 6", "expected": 34 }
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Mengira jajargenjang punya sudut siku-siku seperti persegi panjang.",
+        "fix": "Jajargenjang hanya mensyaratkan sisi berhadapan sejajar — sudutnya tidak harus 90°. Persegi panjang adalah jajargenjang khusus dengan sudut 90°."
+      },
+      {
+        "mistake": "Mengatakan belah ketupat sama dengan persegi hanya karena semua sisinya sama panjang.",
+        "fix": "Persegi punya 4 sudut siku-siku. Belah ketupat tidak perlu. Persegi adalah belah ketupat khusus, tapi tidak semua belah ketupat adalah persegi."
+      }
+    ],
+    "videos": [
+      {
+        "purpose": "konsep",
+        "search_query": "sifat bangun datar kelas 4 SD trapesium jajargenjang belah ketupat"
+      },
+      {
+        "purpose": "contoh-soal",
+        "search_query": "sumbu simetri bangun datar kelas 4 SD soal latihan"
+      }
+    ]
+  },
+  {
+    "grade": 4,
+    "slug": "statistika-penyajian-data-diagram-batang",
+    "title": "Statistika: Penyajian Data dengan Diagram Batang",
+    "sort_order": 5,
+    "summary": "Diagram batang adalah cara menyajikan data menggunakan batang-batang persegi panjang. Tinggi batang menunjukkan nilai data, sehingga mudah dibandingkan secara visual.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat membaca dan menginterpretasikan data dari diagram batang.",
+      "Setelah mempelajari materi ini, kamu dapat membuat diagram batang dari data yang diberikan.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung jumlah, selisih, dan rata-rata dari data pada diagram batang."
+    ],
+    "content": "## 📊 Diagram Batang\n\nDiagram batang (bar chart) menggunakan **batang persegi panjang** untuk menampilkan data. Tinggi batang = nilai data.\n\n### Komponen Diagram Batang\n\n- **Judul**: menjelaskan isi diagram.\n- **Sumbu mendatar (horizontal)**: kategori data (nama, hari, jenis).\n- **Sumbu tegak (vertikal)**: skala angka (nilai data).\n- **Batang**: tingginya menunjukkan nilai data tiap kategori.\n- **Keterangan skala**: nilai di sumbu tegak harus merata dan konsisten.\n\n### Contoh: Nilai Ulangan Matematika Kelas 4\n\n```\nNilai\n100 |         ████\n 90 |    ████ ████\n 80 | ████ ████ ████ ████\n 70 | ████\n    +--+--+--+--+--\n      Ani Budi Cici Doni Eka\n```\n\nBacaan: Ani = 80, Budi = 90, Cici = 100, Doni = 80, Eka = 80.\n\n## 🔍 Membaca Diagram Batang\n\n1. Lihat kategori di sumbu mendatar.\n2. Baca nilai di sumbu tegak setinggi ujung batang.\n3. Bandingkan tinggi batang untuk perbandingan.\n\n## ✏️ Membuat Diagram Batang\n\n1. **Tentukan skala** yang sesuai dengan rentang data.\n2. **Gambar sumbu** tegak (nilai) dan mendatar (kategori).\n3. **Gambar batang** setinggi nilai datanya.\n4. **Beri judul** dan label sumbu.\n\n## 🧮 Menghitung dari Diagram\n\nDari contoh di atas (Ani=80, Budi=90, Cici=100, Doni=80, Eka=80):\n\n**Total**: 80+90+100+80+80 = **430**\n\n**Rata-rata**: 430 ÷ 5 = **86**\n\n**Selisih terbesar dan terkecil**: 100 − 80 = **20**\n\n## ✅ Ringkasan\n\n- Diagram batang: mudah membandingkan nilai antar kategori.\n- Baca: ikuti tinggi batang ke sumbu tegak.\n- Hitung: jumlah, rata-rata, selisih dari data yang dibaca.",
+    "examples": [
+      {
+        "level": "mudah",
+        "problem": "Dari diagram batang nilai ulangan (Ani=80, Budi=90, Cici=100, Doni=80, Eka=80), siapa yang mendapat nilai tertinggi?",
+        "steps": [
+          "Perhatikan batang yang paling tinggi.",
+          "Cici memiliki batang setinggi 100 — yang tertinggi.",
+          "Cici mendapat nilai tertinggi."
+        ],
+        "answer": "Cici (nilai 100)",
+        "check": null
+      },
+      {
+        "level": "sedang",
+        "problem": "Dari diagram yang sama, hitung rata-rata nilai semua siswa!",
+        "steps": [
+          "Total nilai: 80 + 90 + 100 + 80 + 80 = 430.",
+          "Jumlah siswa: 5.",
+          "Rata-rata: 430 ÷ 5 = 86."
+        ],
+        "answer": "86",
+        "check": { "expression": "(80 + 90 + 100 + 80 + 80) / 5", "expected": 86 }
+      },
+      {
+        "level": "sulit",
+        "problem": "Data penjualan buku per bulan: Jan=150, Feb=200, Mar=175, Apr=225, Mei=250. Buatkan ringkasan statistik dan tentukan bulan dengan penjualan tertinggi dan terendah. Berapa rata-rata penjualan per bulan?",
+        "steps": [
+          "Total penjualan: 150+200+175+225+250 = 1.000 buku.",
+          "Rata-rata: 1.000 ÷ 5 = 200 buku per bulan.",
+          "Tertinggi: Mei (250 buku).",
+          "Terendah: Januari (150 buku).",
+          "Selisih: 250 − 150 = 100 buku."
+        ],
+        "answer": "Rata-rata = 200 buku/bulan. Tertinggi: Mei (250). Terendah: Jan (150). Selisih = 100.",
+        "check": { "expression": "(150 + 200 + 175 + 225 + 250) / 5", "expected": 200 }
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Salah membaca nilai karena batang tidak tepat di garis skala — menebak nilainya.",
+        "fix": "Tarik garis horizontal dari ujung batang ke sumbu tegak secara imajiner. Baca nilai di situ. Kalau di antara dua garis, estimasikan secara proporsional."
+      },
+      {
+        "mistake": "Membuat skala yang tidak merata (misal: 0, 10, 20, 50, 100).",
+        "fix": "Skala harus konsisten dan merata: 0, 10, 20, 30, 40, 50 atau 0, 50, 100, 150, 200. Jarak antar nilai harus sama."
+      }
+    ],
+    "videos": [
+      {
+        "purpose": "konsep",
+        "search_query": "diagram batang kelas 4 SD cara membaca membuat"
+      },
+      {
+        "purpose": "contoh-soal",
+        "search_query": "soal statistika diagram batang kelas 4 SD rata-rata"
+      }
+    ]
+  },
+  {
+    "grade": 4,
+    "slug": "keliling-luas-persegi-panjang",
+    "title": "Keliling dan Luas Persegi Panjang (Lanjutan)",
+    "sort_order": 6,
+    "summary": "Di kelas 4, kita memperdalam pemahaman keliling dan luas persegi panjang, termasuk menemukan sisi yang tidak diketahui jika keliling atau luas sudah diketahui, serta menghitung luas gabungan bangun. Konsep ini banyak digunakan dalam pengukuran ruangan, pembuatan kerajinan, dan pemasangan keramik.",
+    "objectives": [
+      "Setelah mempelajari materi ini, kamu dapat menghitung keliling dan luas persegi panjang dengan rumus.",
+      "Setelah mempelajari materi ini, kamu dapat mencari panjang sisi yang tidak diketahui jika keliling atau luas diketahui.",
+      "Setelah mempelajari materi ini, kamu dapat menghitung luas bangun gabungan yang terdiri dari persegi dan persegi panjang."
+    ],
+    "content": "## 📐 Rumus Keliling dan Luas\n\n**Persegi Panjang:**\n$$K = 2(p + l) \\qquad L = p \\times l$$\n\n**Persegi:**\n$$K = 4s \\qquad L = s^2$$\n\n## 🔍 Mencari Sisi yang Tidak Diketahui\n\n### Dari Keliling yang Diketahui\n\n**Soal**: Keliling persegi panjang = 36 cm, panjang = 10 cm. Cari lebar!\n\n$$K = 2(p + l)$$\n$$36 = 2(10 + l)$$\n$$18 = 10 + l$$\n$$l = 18 - 10 = 8 \\text{ cm}$$\n\nVerifikasi: K = 2(10+8) = 2×18 = 36 cm ✓\n\n### Dari Luas yang Diketahui\n\n**Soal**: Luas persegi panjang = 48 cm², panjang = 8 cm. Cari lebar!\n\n$$L = p \\times l$$\n$$48 = 8 \\times l$$\n$$l = 48 ÷ 8 = 6 \\text{ cm}$$\n\nVerifikasi: L = 8 × 6 = 48 cm² ✓\n\n## 🏗️ Luas Bangun Gabungan\n\nUntuk bangun gabungan, **pecah menjadi bangun-bangun sederhana**, hitung masing-masing, lalu jumlahkan.\n\n**Contoh: Bentuk huruf L**\n```\n████████ ← (8 cm × 3 cm)\n████\n████ ← (4 cm × 5 cm)\n████\n```\n\nLuas = (8 × 3) + (4 × 5) = 24 + 20 = **44 cm²**\n\nAtau hitung luas persegi besar lalu kurangi bagian yang hilang.\n\n## 💡 Penerapan\n\nSeorang tukang akan memasang keramik di lantai berukuran 5 m × 4 m. Setiap keramik berukuran 50 cm × 50 cm. Berapa banyak keramik yang dibutuhkan?\n\n- Luas lantai: 5 m × 4 m = 20 m²\n- Luas keramik: 0,5 m × 0,5 m = 0,25 m²\n- Jumlah keramik: 20 ÷ 0,25 = **80 keramik**\n\n## ✅ Ringkasan\n\n- Rumus: K = 2(p+l), L = p×l untuk persegi panjang.\n- Mencari sisi: substitusikan yang diketahui, selesaikan aljabar sederhana.\n- Bangun gabungan: pecah menjadi bagian-bagian lebih kecil.",
+    "examples": [
+      {
+        "level": "mudah",
+        "problem": "Hitunglah luas persegi panjang dengan panjang 12 cm dan lebar 7 cm!",
+        "steps": [
+          "Rumus: L = p × l.",
+          "L = 12 × 7 = 84 cm²."
+        ],
+        "answer": "84 cm²",
+        "check": { "expression": "12 * 7", "expected": 84 }
+      },
+      {
+        "level": "sedang",
+        "problem": "Keliling sebuah persegi adalah 52 cm. Berapa panjang sisi dan luas persegi itu?",
+        "steps": [
+          "K = 4s → 52 = 4s → s = 52 ÷ 4 = 13 cm.",
+          "L = s² = 13 × 13 = 169 cm²."
+        ],
+        "answer": "Sisi = 13 cm, Luas = 169 cm²",
+        "check": { "expression": "13 * 13", "expected": 169 }
+      },
+      {
+        "level": "sulit",
+        "problem": "Sebuah kolam renang berbentuk persegi panjang berukuran 25 m × 10 m. Di sekelilingnya dipasang ubin selebar 1 m. Berapa luas daerah ubin tersebut?",
+        "steps": [
+          "Luas kolam: 25 × 10 = 250 m².",
+          "Dengan ubin 1 m di semua sisi, dimensi luar: (25+2) × (10+2) = 27 × 12 = 324 m².",
+          "Luas ubin = Luas luar − Luas kolam = 324 − 250 = 74 m²."
+        ],
+        "answer": "74 m²",
+        "check": { "expression": "(25 + 2) * (10 + 2) - 25 * 10", "expected": 74 }
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Saat mencari lebar dari luas, membagi dengan panjang secara terbalik: l = L × p.",
+        "fix": "Dari L = p × l, maka l = L ÷ p (bagi, bukan kali). Contoh: L=48, p=8 → l = 48÷8 = 6."
+      },
+      {
+        "mistake": "Menghitung luas bangun gabungan dengan mencari keliling lalu mengalikan.",
+        "fix": "Luas ≠ Keliling. Untuk bangun gabungan, pecah menjadi bagian, hitung luas masing-masing, jumlahkan."
+      }
+    ],
+    "videos": [
+      {
+        "purpose": "konsep",
+        "search_query": "keliling luas persegi panjang kelas 4 mencari sisi tidak diketahui"
+      },
+      {
+        "purpose": "contoh-soal",
+        "search_query": "luas bangun gabungan kelas 4 5 SD soal cerita"
+      }
+    ]
+  }
+]

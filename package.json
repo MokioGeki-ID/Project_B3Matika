@@ -14,7 +14,11 @@
     "check:env": "node scripts/check-env.js",
     "seed:superadmin": "node scripts/seed-superadmin.js",
     "lint:css": "stylelint \"resources/css/**/*.css\"",
-    "test:ui": "playwright test"
+    "test:ui": "playwright test",
+    "materi:validate": "node scripts/validate-materi.js",
+    "materi:verify-videos": "node scripts/verify-videos.js",
+    "materi:backup": "node scripts/backup-materi.js",
+    "materi:import": "node scripts/import-materi.js"
   },
   "dependencies": {
     "@fontsource/poppins": "^5.3.0",
@@ -27,6 +31,7 @@
     "express-rate-limit": "^8.7.0",
     "framer-motion": "^14.0.0",
     "jsonwebtoken": "^9.0.3",
+    "katex": "^0.16.47",
     "ls": "^1.0.0",
     "lucide-react": "^1.55.0",
     "nodemailer": "^10.0.15",
