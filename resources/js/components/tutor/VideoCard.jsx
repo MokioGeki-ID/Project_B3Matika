@@ -1,31 +1,82 @@
-import { Play, Clock, ExternalLink } from 'lucide-react';
+import { Play, Clock, ExternalLink, AlertCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { 
+  extractYouTubeId,
+  normalizeYouTubeUrl,
+  getYouTubeThumbnailWithFallbacks,
+  isValidYouTubeUrl
+} from '@/utils/youtubeHelper';
 
 /**
- * VideoCard - Display recommended video tutorial
+ * VideoCard - Display recommended video tutorial with robust YouTube link handling
  * @param {Object} props
  * @param {string} props.videoCode - Video code from AI (e.g., "V1", "V2")
  * @param {string} props.title - Video title
  * @param {string} props.duration - Video duration (e.g., "5:30")
  * @param {string} props.youtubeUrl - YouTube URL
- * @param {string} props.thumbnailUrl - YouTube thumbnail URL (optional)
+ * @param {string} props.thumbnailUrl - YouTube thumbnail URL (optional, will be generated if not provided)
  */
 export default function VideoCard({ videoCode, title, duration, youtubeUrl, thumbnailUrl }) {
-  // Extract YouTube video ID for thumbnail if not provided
-  const getYouTubeThumbnail = (url) => {
-    if (thumbnailUrl) return thumbnailUrl;
-    
-    const regex = /(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]+)/;
-    const match = url.match(regex);
-    
-    if (match && match[1]) {
-      return `https://img.youtube.com/vi/${match[1]}/mqdefault.jpg`;
+  const [currentThumbnail, setCurrentThumbnail] = useState(null);
+  const [thumbnailError, setThumbnailError] = useState(false);
+  const [thumbnailFallbacks, setThumbnailFallbacks] = useState([]);
+  const [fallbackIndex, setFallbackIndex] = useState(0);
+
+  // Validate and normalize YouTube URL
+  const videoId = extractYouTubeId(youtubeUrl);
+  const normalizedUrl = normalizeYouTubeUrl(youtubeUrl);
+  const isValid = isValidYouTubeUrl(youtubeUrl);
+
+  // Initialize thumbnails on mount
+  useEffect(() => {
+    if (!isValid) {
+      setThumbnailError(true);
+      return;
     }
+
+    // If custom thumbnail provided, use it first
+    if (thumbnailUrl) {
+      setCurrentThumbnail(thumbnailUrl);
+      setThumbnailFallbacks(getYouTubeThumbnailWithFallbacks(youtubeUrl));
+    } else {
+      // Generate fallback chain
+      const fallbacks = getYouTubeThumbnailWithFallbacks(youtubeUrl);
+      setThumbnailFallbacks(fallbacks);
+      setCurrentThumbnail(fallbacks[0]);
+    }
+  }, [youtubeUrl, thumbnailUrl, isValid]);
+
+  // Handle thumbnail load error - try next fallback
+  const handleThumbnailError = () => {
+    const nextIndex = fallbackIndex + 1;
     
-    return null;
+    if (nextIndex < thumbnailFallbacks.length) {
+      setFallbackIndex(nextIndex);
+      setCurrentThumbnail(thumbnailFallbacks[nextIndex]);
+    } else {
+      // All fallbacks failed
+      setThumbnailError(true);
+    }
   };
 
-  const thumbnail = getYouTubeThumbnail(youtubeUrl);
+  // If URL is invalid, show error state
+  if (!isValid) {
+    return (
+      <motion.div
+        className="video-card video-card-error"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+      >
+        <div className="video-card-error-content">
+          <AlertCircle size={32} />
+          <p className="video-card-error-title">URL Video Tidak Valid</p>
+          <p className="video-card-error-url">{youtubeUrl}</p>
+        </div>
+      </motion.div>
+    );
+  }
 
   return (
     <motion.div
@@ -36,24 +87,34 @@ export default function VideoCard({ videoCode, title, duration, youtubeUrl, thum
       whileHover={{ scale: 1.02 }}
     >
       <a 
-        href={youtubeUrl} 
+        href={normalizedUrl} 
         target="_blank" 
         rel="noopener noreferrer"
         className="video-card-link"
       >
         <div className="video-card-thumbnail">
-          {thumbnail ? (
-            <img src={thumbnail} alt={title} loading="lazy" />
+          {!thumbnailError && currentThumbnail ? (
+            <>
+              <img 
+                src={currentThumbnail} 
+                alt={title} 
+                loading="lazy"
+                onError={handleThumbnailError}
+              />
+              <div className="video-card-play-overlay">
+                <div className="video-play-button">
+                  <Play size={32} fill="white" />
+                </div>
+              </div>
+            </>
           ) : (
             <div className="video-card-placeholder">
               <Play size={48} strokeWidth={1.5} />
+              <p className="video-card-placeholder-text">
+                {thumbnailError ? 'Preview tidak tersedia' : 'Memuat...'}
+              </p>
             </div>
           )}
-          <div className="video-card-play-overlay">
-            <div className="video-play-button">
-              <Play size={32} fill="white" />
-            </div>
-          </div>
         </div>
 
         <div className="video-card-content">

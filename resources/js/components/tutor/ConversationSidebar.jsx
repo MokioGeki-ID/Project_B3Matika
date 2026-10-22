@@ -1,5 +1,5 @@
 import ConversationList from './ConversationList';
-import ToneSwitch from './ToneSwitch';
+import TonePicker from './TonePicker';
 
 /**
  * ConversationSidebar - Desktop sidebar with conversation list
@@ -8,6 +8,7 @@ import ToneSwitch from './ToneSwitch';
  * @param {string} props.activeTone - Current conversation tone
  * @param {Function} props.onSelectConversation - Callback when conversation is selected
  * @param {Function} props.onConversationCreated - Callback when new conversation is created
+ * @param {Function} props.onConversationDeleted - Callback when conversation is deleted
  * @param {Function} props.onToneChange - Callback when tone is changed
  */
 export default function ConversationSidebar({ 
@@ -15,6 +16,7 @@ export default function ConversationSidebar({
   activeTone,
   onSelectConversation,
   onConversationCreated,
+  onConversationDeleted,
   onToneChange
 }) {
   return (
@@ -31,10 +33,10 @@ export default function ConversationSidebar({
           </div>
         </div>
 
-        {/* Tone switcher */}
+        {/* Tone picker */}
         {activeConversationId && (
-          <div className="sidebar-tone-switch">
-            <ToneSwitch
+          <div className="sidebar-tone-picker">
+            <TonePicker
               tone={activeTone}
               onChange={onToneChange}
             />
@@ -48,14 +50,8 @@ export default function ConversationSidebar({
           activeConversationId={activeConversationId}
           onSelectConversation={onSelectConversation}
           onConversationCreated={onConversationCreated}
+          onConversationDeleted={onConversationDeleted}
         />
-      </div>
-
-      {/* Footer hint */}
-      <div className="conversation-sidebar-footer">
-        <p className="sidebar-hint">
-          💡 Klik percakapan untuk memulai chat
-        </p>
       </div>
     </aside>
   );

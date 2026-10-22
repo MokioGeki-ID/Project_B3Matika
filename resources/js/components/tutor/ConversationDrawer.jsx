@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ConversationList from './ConversationList';
-import ToneSwitch from './ToneSwitch';
+import TonePicker from './TonePicker';
 
 /**
  * ConversationDrawer - Mobile drawer that slides from left
@@ -13,6 +13,7 @@ import ToneSwitch from './ToneSwitch';
  * @param {string} props.activeTone - Current conversation tone
  * @param {Function} props.onSelectConversation - Callback when conversation is selected
  * @param {Function} props.onConversationCreated - Callback when new conversation is created
+ * @param {Function} props.onConversationDeleted - Callback when conversation is deleted
  * @param {Function} props.onToneChange - Callback when tone is changed
  */
 export default function ConversationDrawer({ 
@@ -22,6 +23,7 @@ export default function ConversationDrawer({
   activeTone,
   onSelectConversation,
   onConversationCreated,
+  onConversationDeleted,
   onToneChange
 }) {
   const drawerRef = useRef(null);
@@ -99,10 +101,10 @@ export default function ConversationDrawer({
               </button>
             </div>
 
-            {/* Tone switcher */}
+            {/* Tone picker */}
             {activeConversationId && (
-              <div className="drawer-tone-switch">
-                <ToneSwitch
+              <div className="drawer-tone-picker">
+                <TonePicker
                   tone={activeTone}
                   onChange={onToneChange}
                 />
@@ -118,6 +120,7 @@ export default function ConversationDrawer({
                   onConversationCreated(conv);
                   onClose(); // Close drawer after creation
                 }}
+                onConversationDeleted={onConversationDeleted}
               />
             </div>
           </motion.aside>

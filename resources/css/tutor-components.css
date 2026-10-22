@@ -1002,12 +1002,954 @@
 
 /* Styling untuk welcome screen */
 .welcome-content .tutor-mascot-img {
+  width: 64px;
+  height: 64px;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
 }
 
 /* Styling untuk empty state */
 .messages-empty .tutor-mascot-img {
+  width: 64px;
+  height: 64px;
   border-radius: 12px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  object-fit: cover;
+}
+
+
+/* ================================================================
+   CONFIRM DIALOG
+   ================================================================ */
+
+.confirm-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 16px;
+}
+
+.confirm-dialog {
+  background: var(--card);
+  border-radius: var(--radius, 12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  max-width: 440px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.confirm-dialog-header {
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.confirm-dialog-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+
+.confirm-dialog-close-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+
+.confirm-dialog-close-btn:hover {
+  background: var(--hover);
+}
+
+.confirm-dialog-close-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.confirm-dialog-content {
+  padding: 20px;
+}
+
+.confirm-dialog-message {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.confirm-dialog-actions {
+  padding: 16px 20px 20px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.confirm-dialog-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s;
+  min-width: 100px;
+}
+
+.confirm-dialog-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.confirm-dialog-btn.cancel {
+  background: var(--hover);
+  color: var(--text);
+}
+
+.confirm-dialog-btn.cancel:hover:not(:disabled) {
+  background: var(--line);
+}
+
+.confirm-dialog-btn.confirm {
+  background: var(--blue);
+  color: white;
+}
+
+.confirm-dialog-btn.confirm:hover:not(:disabled) {
+  background: var(--blue-dark, #1d4ed8);
+}
+
+.confirm-dialog-btn.confirm.destructive {
+  background: #dc2626;
+}
+
+.confirm-dialog-btn.confirm.destructive:hover:not(:disabled) {
+  background: #b91c1c;
+}
+
+/* ================================================================
+   TOAST NOTIFICATION
+   ================================================================ */
+
+.toast {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  background: var(--card);
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 400px;
+  z-index: 9998;
+  border-left: 4px solid var(--blue);
+}
+
+.toast-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+}
+
+.toast-message {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.toast-close-btn {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+
+.toast-close-btn:hover {
+  background: var(--hover);
+}
+
+.toast-success {
+  border-left-color: #16a34a;
+}
+
+.toast-success .toast-icon {
+  color: #16a34a;
+}
+
+.toast-error {
+  border-left-color: #dc2626;
+}
+
+.toast-error .toast-icon {
+  color: #dc2626;
+}
+
+.toast-info {
+  border-left-color: var(--blue);
+}
+
+.toast-info .toast-icon {
+  color: var(--blue);
+}
+
+@media (max-width: 640px) {
+  .toast {
+    top: 72px;
+    right: 16px;
+    left: 16px;
+    max-width: none;
+  }
+}
+
+/* ================================================================
+   WELCOME STATE
+   ================================================================ */
+
+.welcome-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  padding: 40px 20px;
+}
+
+.welcome-state-content {
+  max-width: 720px;
+  width: 100%;
+  text-align: center;
+}
+
+.welcome-state-logo {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.welcome-state-logo .tutor-mascot-img {
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.welcome-state-greeting {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+
+.welcome-state-name {
+  color: var(--blue);
+}
+
+.welcome-state-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+
+.welcome-state-subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0 0 32px 0;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.welcome-state-suggestions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.welcome-suggestion-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.welcome-suggestion-card:hover {
+  background: var(--hover);
+  border-color: var(--blue);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-card-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--blue-light, rgba(59, 130, 246, 0.1));
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.suggestion-card-text {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .welcome-state-title {
+    font-size: 24px;
+  }
+
+  .welcome-state-greeting {
+    font-size: 20px;
+  }
+
+  .welcome-state-suggestions {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-suggestion-card {
+    padding: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome-suggestion-card {
+    transition: none;
+  }
+}
+
+
+/* ================================================================
+   VOICE INPUT & OUTPUT
+   ================================================================ */
+
+/* Voice Input Button */
+.voice-input-btn {
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.15s;
+}
+
+.voice-input-btn:hover:not(:disabled) {
+  background: var(--hover);
+  color: var(--blue);
+}
+
+.voice-input-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.voice-input-btn.listening {
+  background: var(--blue-light, rgba(59, 130, 246, 0.1));
+  color: var(--blue);
+}
+
+.voice-input-btn.disabled {
+  color: var(--text-secondary);
+}
+
+/* Listening Indicator */
+.voice-listening-indicator {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 12px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  min-width: 280px;
+  z-index: 100;
+}
+
+.listening-indicator-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.listening-wave {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 24px;
+}
+
+.wave-bar {
+  width: 4px;
+  height: 100%;
+  background: var(--blue);
+  border-radius: 2px;
+}
+
+.listening-text {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.listening-time {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.listening-transcript {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+}
+
+.transcript-label {
+  color: var(--text-secondary);
+  margin-right: 8px;
+}
+
+.transcript-text {
+  color: var(--text);
+  font-style: italic;
+}
+
+/* Voice Error Message */
+.voice-error-message {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 8px;
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+/* Voice Output Button */
+.voice-output-btn {
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 6px;
+  font-size: 13px;
+  transition: all 0.15s;
+}
+
+.voice-output-btn:hover:not(:disabled) {
+  background: var(--hover);
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.voice-output-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.voice-output-btn.playing {
+  background: var(--blue-light, rgba(59, 130, 246, 0.1));
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.voice-output-btn.disabled {
+  color: var(--text-secondary);
+  border-color: var(--line);
+}
+
+.voice-output-label {
+  font-size: 13px;
+}
+
+/* Message Actions */
+.message-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+
+.message-action-btn {
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 6px;
+  font-size: 13px;
+  transition: all 0.15s;
+}
+
+.message-action-btn:hover {
+  background: var(--hover);
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.message-action-btn:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 640px) {
+  .voice-listening-indicator {
+    left: 16px;
+    right: 16px;
+    transform: none;
+    min-width: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wave-bar {
+    animation: none;
+  }
+  
+  .voice-input-btn.listening {
+    animation: none;
+  }
+}
+
+
+/* ================================================================
+   PHASE 3: TONE PICKER (Segmented Control)
+   ================================================================ */
+.tone-picker {
+  display: flex;
+  background: var(--surface, #f3f4f6);
+  border-radius: 12px;
+  padding: 4px;
+  position: relative;
+}
+
+[data-theme="dark"] .tone-picker {
+  background: rgba(255,255,255,0.05);
+}
+
+.tone-option {
+  flex: 1;
+  padding: 10px 16px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 180ms ease;
+  position: relative;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.tone-option:hover:not(.active) {
+  color: var(--text);
+  background: rgba(0,0,0,0.03);
+}
+
+[data-theme="dark"] .tone-option:hover:not(.active) {
+  background: rgba(255,255,255,0.05);
+}
+
+.tone-option.active {
+  background: white;
+  color: var(--navy, #1b2468);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+[data-theme="dark"] .tone-option.active {
+  background: rgba(255,255,255,0.12);
+  color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.sidebar-tone-picker {
+  padding: 0 16px 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.drawer-tone-picker {
+  padding: 0 16px 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+/* ================================================================
+   PHASE 3: CONVERSATION SEARCH
+   ================================================================ */
+.conversation-search {
+  position: relative;
+  padding: 16px;
+  border-bottom: 1px solid var(--line);
+  background: var(--card);
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 38px;
+  background: var(--surface, #f3f4f6);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--text);
+  transition: all 180ms ease;
+}
+
+[data-theme="dark"] .search-input {
+  background: rgba(255,255,255,0.05);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--blue, #0284c7);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(2,132,199,0.1);
+}
+
+[data-theme="dark"] .search-input:focus {
+  background: rgba(255,255,255,0.08);
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+}
+
+.search-input::placeholder {
+  color: var(--text-muted);
+}
+
+.search-clear-btn {
+  position: absolute;
+  right: 8px;
+  padding: 6px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 180ms ease;
+}
+
+.search-clear-btn:hover {
+  background: rgba(0,0,0,0.05);
+  color: var(--text);
+}
+
+[data-theme="dark"] .search-clear-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* ================================================================
+   PHASE 3: CONVERSATION GROUPING
+   ================================================================ */
+.conversation-group {
+  margin-bottom: 8px;
+}
+
+.group-label {
+  padding: 12px 16px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  position: sticky;
+  top: 0;
+  background: var(--card);
+  z-index: 2;
+  border-bottom: 1px solid transparent;
+}
+
+.conversation-group:first-child .group-label {
+  padding-top: 8px;
+}
+
+/* Empty state untuk search */
+.conversation-search-empty {
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.search-empty-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  background: var(--surface, #f3f4f6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .search-empty-icon {
+  background: rgba(255,255,255,0.05);
+}
+
+.search-empty-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.search-empty-description {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* ================================================================
+   PHASE 3: SCROLL TO BOTTOM BUTTON
+   ================================================================ */
+.scroll-to-bottom {
+  position: absolute;
+  bottom: 120px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 200ms ease;
+  z-index: 10;
+}
+
+[data-theme="dark"] .scroll-to-bottom {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.scroll-to-bottom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  background: white;
+}
+
+[data-theme="dark"] .scroll-to-bottom:hover {
+  background: rgba(255,255,255,0.15);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+}
+
+.scroll-to-bottom:active {
+  transform: translateY(0);
+}
+
+.scroll-icon {
+  color: var(--navy, #1b2468);
+}
+
+[data-theme="dark"] .scroll-icon {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .scroll-to-bottom {
+    bottom: 100px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ================================================================
+   PHASE 3: REMOVE GRADIENT FROM SIDEBAR HEADER
+   ================================================================ */
+.conversation-sidebar-header {
+  padding: 20px 16px 16px;
+  border-bottom: 1px solid var(--line);
+  background: var(--card);
+  flex-shrink: 0;
+}
+
+.drawer-header {
+  padding: 20px 16px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--card);
+  flex-shrink: 0;
+}
+
+
+/* ================================================================
+   FASE 4: VIDEO CARD ERROR & LOADING STATES
+   ================================================================ */
+
+/* Error state untuk video card dengan URL tidak valid */
+.video-card-error {
+  background: var(--surface, #f3f4f6);
+  border: 1px solid var(--line);
+  border-radius: var(--radius, 10px);
+  padding: 20px;
+  text-align: center;
+}
+
+[data-theme="dark"] .video-card-error {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.video-card-error-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-muted);
+}
+
+.video-card-error-content svg {
+  color: var(--warn, #f59e0b);
+}
+
+.video-card-error-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+
+.video-card-error-url {
+  font-size: 11px;
+  color: var(--text-muted);
+  word-break: break-all;
+  margin: 0;
+  font-family: ui-monospace, Menlo, monospace;
+}
+
+/* Placeholder improvements */
+.video-card-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 160px;
+  background: var(--surface, #f3f4f6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .video-card-placeholder {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.video-card-placeholder-text {
+  font-size: 12px;
+  margin: 0;
+  color: var(--text-muted);
+}
+
+/* Smooth loading state for thumbnail */
+.video-card-thumbnail img {
+  opacity: 0;
+  animation: fadeInImage 0.3s ease forwards;
+}
+
+@keyframes fadeInImage {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Prevent layout shift during thumbnail load */
+.video-card-thumbnail {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--surface, #f3f4f6);
+  border-radius: var(--radius, 10px) var(--radius, 10px) 0 0;
+}
+
+[data-theme="dark"] .video-card-thumbnail {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.video-card-thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

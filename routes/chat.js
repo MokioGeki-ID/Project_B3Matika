@@ -325,6 +325,28 @@ export default async function handler(req, res) {
       // Don't fail the request - message was already sent to client
     }
 
+    // 13. AUTO-GENERATE TITLE (BACKGROUND) - Only for first AI response
+    // Check if this is the first AI response (message_count = 2: 1 user + 1 ai)
+    const { count: messageCount } = await supabase
+      .from('tutor_messages')
+      .select('*', { count: 'exact', head: true })
+      .eq('conversation_id', conversation_id);
+
+    if (messageCount === 2) {
+      // This is first AI response - generate title in background (don't block response)
+      import('./_lib/titleGenerator.js')
+        .then(({ generateConversationTitle, updateConversationTitle }) => {
+          return generateConversationTitle(user_message, conversation.tone)
+            .then(newTitle => {
+              return updateConversationTitle(supabase, conversation_id, newTitle);
+            });
+        })
+        .catch(err => {
+          console.error('Background title generation failed:', err);
+          // Silent fail - don't affect user experience
+        });
+    }
+
     // Send completion signal
     res.write(`data: ${JSON.stringify({ done: true })}\n\n`);
     res.end();

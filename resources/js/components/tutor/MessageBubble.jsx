@@ -1,9 +1,11 @@
-import { User, Image as ImageIcon, FileText, File } from 'lucide-react';
+import { User, Image as ImageIcon, FileText, File, Copy, Check } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { parseAIResponse } from '@/utils/aiResponseParser';
 import MaterialCard from './MaterialCard';
 import VideoCard from './VideoCard';
+import VoiceOutput from './VoiceOutput';
 import MathContent from '@/components/MathContent';
+import { useState } from 'react';
 
 /**
  * MessageBubble - Display user or AI message with attachments and recommendations
@@ -15,6 +17,7 @@ import MathContent from '@/components/MathContent';
 export default function MessageBubble({ message, topics = [], videos = [] }) {
   const isUser = message.role === 'user';
   const { content, meta = {}, attachments = [] } = message;
+  const [copied, setCopied] = useState(false);
 
   // Parse AI response for recommendations
   const { topicIds, videoCodes } = isUser ? { topicIds: [], videoCodes: [] } : parseAIResponse(content);
@@ -42,6 +45,17 @@ export default function MessageBubble({ message, topics = [], videos = [] }) {
   const recommendedVideos = videoCodes
     .map(code => videos.find(v => v.code === code))
     .filter(Boolean);
+
+  // Copy to clipboard
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(content);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
+  };
 
   return (
     <motion.div 
@@ -112,6 +126,26 @@ export default function MessageBubble({ message, topics = [], videos = [] }) {
             <MathContent content={content} />
           )}
         </div>
+
+        {/* AI Message Actions */}
+        {!isUser && (
+          <div className="message-actions">
+            <button
+              className="message-action-btn"
+              onClick={handleCopy}
+              title="Salin teks"
+              aria-label="Salin teks"
+            >
+              {copied ? <Check size={16} /> : <Copy size={16} />}
+              <span>{copied ? 'Tersalin' : 'Salin'}</span>
+            </button>
+            
+            <VoiceOutput 
+              text={content}
+              onError={(err) => console.error('TTS Error:', err)}
+            />
+          </div>
+        )}
 
         {/* Material recommendations (only for AI messages) */}
         {!isUser && recommendedTopics.length > 0 && (

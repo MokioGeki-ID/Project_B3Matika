@@ -8,16 +8,31 @@ import {
   MessageBubble,
   TypingIndicator,
   FileUploader,
-  AttachmentPreview
+  AttachmentPreview,
+  WelcomeState,
+  Toast,
+  VoiceInput,
+  ScrollToBottom
 } from '@/components/tutor';
+import {
+  getActiveConversation,
+  saveActiveConversation,
+  setDraftState,
+  isDraftState,
+  clearActiveConversation,
+  getDraftInput,
+  saveDraftInput,
+  clearDraftInput,
+  clearTutorSession
+} from '@/utils/sessionStorage';
 
 export default function TutorChat() {
   const { user } = useAuth();
   
   // Conversation state
-  const [conversations, setConversations] = useState([]);
   const [activeConversationId, setActiveConversationId] = useState(null);
   const [activeConversation, setActiveConversation] = useState(null);
+  const [isDraft, setIsDraft] = useState(false);
   
   // Messages state
   const [messages, setMessages] = useState([]);
@@ -29,49 +44,181 @@ export default function TutorChat() {
   const [streaming, setStreaming] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [showUploader, setShowUploader] = useState(false);
-  const [apiStatus, setApiStatus] = useState('checking'); // checking, online, offline
+  const [toast, setToast] = useState({ show: false, message: '', type: 'info' });
+  const [showScrollButton, setShowScrollButton] = useState(false);
   
-  // Material & video catalogs (loaded from topics table)
+  // Material & video catalogs
   const [topics, setTopics] = useState([]);
   const [videos, setVideos] = useState([]);
   
   // Refs
   const messagesEndRef = useRef(null);
+  const messagesContainerRef = useRef(null);
   const textareaRef = useRef(null);
   const abortControllerRef = useRef(null);
 
-  // Check API health on mount
-  useEffect(() => {
-    const checkHealth = async () => {
-      try {
-        const res = await fetch('/api/chat?health=1');
-        if (res.ok) {
-          setApiStatus('online');
-        } else {
-          setApiStatus('offline');
-        }
-      } catch (err) {
-        setApiStatus('offline');
-      }
-    };
-    checkHealth();
-  }, []);
+  // Toast helper
+  const showToast = (message, type = 'info') => {
+    setToast({ show: true, message, type });
+  };
 
-  // Load topics catalog for material recommendations (graceful fallback)
+  // Voice handlers
+  const handleVoiceTranscript = (transcript) => {
+    // Append transcript to input
+    setInput(prev => {
+      const newText = prev ? `${prev} ${transcript}` : transcript;
+      return newText.trim();
+    });
+  };
+
+  const handleVoiceError = (error) => {
+    showToast(error, 'error');
+  };
+
+  // Initialize: restore session or start draft
+  useEffect(() => {
+    if (!user?.id) return;
+
+    const savedState = getActiveConversation(user.id);
+    
+    if (savedState === 'draft') {
+      // Restore draft state
+      setIsDraft(true);
+      setActiveConversationId(null);
+      setMessages([]);
+      
+      // Restore draft input if any
+      const draftText = getDraftInput(user.id);
+      if (draftText) {
+        setInput(draftText);
+      }
+    } else if (savedState) {
+      // Try to load saved conversation
+      loadConversation(savedState);
+    } else {
+      // Start with draft (new conversation state)
+      handleNewDraft();
+    }
+  }, [user?.id]);
+
+  // Load conversation by ID
+  const loadConversation = async (conversationId) => {
+    try {
+      setLoading(true);
+      
+      // Load conversation details
+      const convResponse = await api.get(`/tutor/conversations/${conversationId}`);
+      
+      if (!convResponse.conversation) {
+        // Conversation not found or not owned by user
+        clearActiveConversation(user.id);
+        handleNewDraft();
+        return;
+      }
+
+      setActiveConversation(convResponse.conversation);
+      setActiveConversationId(conversationId);
+      setIsDraft(false);
+      
+      // Save to session
+      saveActiveConversation(user.id, conversationId);
+      
+      // Load messages
+      const msgResponse = await api.get(`/tutor/${conversationId}/messages`);
+      setMessages(msgResponse.messages || []);
+    } catch (err) {
+      console.error('Error loading conversation:', err);
+      
+      // If 404 or forbidden, clear and start fresh
+      if (err.status === 404 || err.status === 403) {
+        clearActiveConversation(user.id);
+        handleNewDraft();
+      } else {
+        showToast('Gagal memuat percakapan', 'error');
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Start new draft conversation (not saved to DB yet)
+  const handleNewDraft = () => {
+    setIsDraft(true);
+    setActiveConversationId(null);
+    setActiveConversation(null);
+    setMessages([]);
+    setInput('');
+    setAttachments([]);
+    
+    // Save draft state to session
+    if (user?.id) {
+      setDraftState(user.id);
+      clearDraftInput(user.id);
+    }
+  };
+
+  // Handle conversation selection from sidebar
+  const handleSelectConversation = async (conversationId) => {
+    if (conversationId === activeConversationId && !isDraft) {
+      // Already on this conversation
+      return;
+    }
+
+    await loadConversation(conversationId);
+  };
+
+  // Handle "New Conversation" button
+  const handleConversationCreated = (result) => {
+    if (result === 'draft') {
+      // Don't create new draft if already in draft
+      if (isDraft) return;
+      
+      handleNewDraft();
+    } else if (result?.id) {
+      // Actual conversation created
+      loadConversation(result.id);
+    }
+  };
+
+  // Handle conversation deleted
+  const handleConversationDeleted = (deletedId) => {
+    if (deletedId === activeConversationId) {
+      // Active conversation was deleted, go to draft
+      handleNewDraft();
+    }
+  };
+
+  // Handle tone change
+  const handleToneChange = async (newTone) => {
+    if (!activeConversationId || isDraft) return;
+
+    try {
+      await api.patch(`/tutor/conversations/${activeConversationId}`, {
+        tone: newTone
+      });
+
+      setActiveConversation(prev => ({ ...prev, tone: newTone }));
+      showToast('Gaya jawaban berhasil diubah', 'success');
+    } catch (err) {
+      console.error('Error changing tone:', err);
+      showToast('Gagal mengubah gaya jawaban', 'error');
+    }
+  };
+
+  // Load topics catalog
   useEffect(() => {
     const loadTopics = async () => {
       try {
         const response = await api.get('/topics');
         setTopics(response.topics || []);
       } catch (err) {
-        // Endpoint mungkin belum ada, abaikan error ini
         console.warn('Topics endpoint not available:', err.message);
       }
     };
     loadTopics();
   }, []);
 
-  // Load videos for active conversation's topic
+  // Load videos for active topic
   useEffect(() => {
     const loadVideos = async () => {
       if (!activeConversation?.topic_id) {
@@ -90,7 +237,7 @@ export default function TutorChat() {
     loadVideos();
   }, [activeConversation?.topic_id]);
 
-  // Auto-scroll to bottom when messages change
+  // Auto-scroll to bottom
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -98,6 +245,23 @@ export default function TutorChat() {
   useEffect(() => {
     scrollToBottom();
   }, [messages, streaming]);
+
+  // Track scroll position to show/hide scroll button
+  useEffect(() => {
+    const container = messagesContainerRef.current;
+    if (!container) return;
+
+    const handleScroll = () => {
+      const { scrollTop, scrollHeight, clientHeight } = container;
+      const distanceFromBottom = scrollHeight - scrollTop - clientHeight;
+      
+      // Show button if user scrolled up more than 300px from bottom
+      setShowScrollButton(distanceFromBottom > 300);
+    };
+
+    container.addEventListener('scroll', handleScroll);
+    return () => container.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Auto-resize textarea
   useEffect(() => {
@@ -107,69 +271,25 @@ export default function TutorChat() {
     }
   }, [input]);
 
-  // Load messages when conversation changes
+  // Save draft input to session storage
   useEffect(() => {
-    if (!activeConversationId) {
-      setMessages([]);
-      return;
+    if (isDraft && user?.id && input) {
+      saveDraftInput(user.id, input);
     }
+  }, [input, isDraft, user?.id]);
 
-    loadMessages();
-  }, [activeConversationId]);
-
-  const loadMessages = async () => {
-    if (!activeConversationId) return;
-
-    try {
-      setLoading(true);
-      
-      const response = await api.get(`/tutor/${activeConversationId}/messages`);
-      setMessages(response.messages || []);
-    } catch (err) {
-      console.error('Error loading messages:', err);
-      setMessages([]);
-    } finally {
-      setLoading(false);
+  // Clear session on logout
+  useEffect(() => {
+    if (!user) {
+      clearTutorSession(user?.id);
     }
-  };
+  }, [user]);
 
-  const handleSelectConversation = async (conversationId) => {
-    setActiveConversationId(conversationId);
+  // Send message
+  const sendMessage = async (messageText = null) => {
+    const textToSend = messageText || input.trim();
     
-    // Load conversation details dari local state jika ada
-    try {
-      const convResponse = await api.get('/tutor/conversations');
-      const conv = (convResponse.conversations || []).find(c => c.id === conversationId);
-      if (conv) setActiveConversation(conv);
-    } catch (err) {
-      console.warn('Error loading conversation details:', err);
-    }
-  };
-
-  const handleConversationCreated = (conversation) => {
-    setActiveConversationId(conversation.id);
-    setActiveConversation(conversation);
-    setMessages([]);
-  };
-
-  const handleToneChange = async (newTone) => {
-    if (!activeConversationId) return;
-
-    try {
-      await api.patch(`/tutor/conversations/${activeConversationId}`, {
-        tone: newTone
-      });
-
-      // Update local state
-      setActiveConversation(prev => ({ ...prev, tone: newTone }));
-    } catch (err) {
-      console.error('Error changing tone:', err);
-      alert('Gagal mengubah nada bahasa');
-    }
-  };
-
-  const sendMessage = async () => {
-    if (!input.trim() || streaming || !activeConversationId) return;
+    if (!textToSend || streaming) return;
 
     // Cancel any ongoing request
     if (abortControllerRef.current) {
@@ -177,8 +297,33 @@ export default function TutorChat() {
     }
     abortControllerRef.current = new AbortController();
 
-    const userMessage = input.trim();
     const attachmentIds = attachments.map(a => a.id);
+    let conversationId = activeConversationId;
+
+    // If in draft mode, create conversation first
+    if (isDraft) {
+      try {
+        const createResponse = await api.post('/tutor/conversations', {
+          title: 'Percakapan Baru', // Temporary title, will be updated after first AI response
+          tone: 'baku'
+        });
+
+        conversationId = createResponse.conversation.id;
+        setActiveConversationId(conversationId);
+        setActiveConversation(createResponse.conversation);
+        setIsDraft(false);
+        
+        // Save to session
+        if (user?.id) {
+          saveActiveConversation(user.id, conversationId);
+          clearDraftInput(user.id);
+        }
+      } catch (err) {
+        console.error('Error creating conversation:', err);
+        showToast('Gagal membuat percakapan', 'error');
+        return;
+      }
+    }
 
     // Clear input and attachments immediately
     setInput('');
@@ -187,9 +332,9 @@ export default function TutorChat() {
 
     // Add user message to UI
     const userMsg = {
-      id: Date.now(), // Temporary ID
+      id: 'temp-user-' + Date.now(),
       role: 'user',
-      content: userMessage,
+      content: textToSend,
       attachments: attachments,
       created_at: new Date().toISOString()
     };
@@ -198,7 +343,7 @@ export default function TutorChat() {
     setStreaming(true);
 
     // Add empty AI message placeholder
-    const aiMsgId = Date.now() + 1;
+    const aiMsgId = 'temp-ai-' + Date.now();
     const aiMsg = {
       id: aiMsgId,
       role: 'assistant',
@@ -221,8 +366,8 @@ export default function TutorChat() {
           ...(token ? { Authorization: `Bearer ${token}` } : {}),
         },
         body: JSON.stringify({
-          conversation_id: activeConversationId,
-          user_message: userMessage,
+          conversation_id: conversationId,
+          user_message: textToSend,
           attachments: attachmentIds
         }),
         signal: abortControllerRef.current.signal
@@ -281,7 +426,7 @@ export default function TutorChat() {
                 }
               } catch (e) {
                 if (e.message && !e.message.includes('JSON')) {
-                  throw e; // Re-throw application errors, not JSON parse errors
+                  throw e;
                 }
               }
             }
@@ -290,8 +435,25 @@ export default function TutorChat() {
         done = done || readerDone;
       }
 
-      // Reload messages to get actual saved messages with IDs from database
-      await loadMessages();
+      // Reload conversation to get updated title (if first message)
+      if (messages.length === 0) {
+        try {
+          const convResponse = await api.get(`/tutor/conversations/${conversationId}`);
+          if (convResponse.conversation) {
+            setActiveConversation(convResponse.conversation);
+          }
+        } catch (err) {
+          console.warn('Failed to reload conversation:', err);
+        }
+      }
+
+      // Reload messages to get actual saved messages with real IDs
+      try {
+        const msgResponse = await api.get(`/tutor/${conversationId}/messages`);
+        setMessages(msgResponse.messages || []);
+      } catch (err) {
+        console.warn('Failed to reload messages:', err);
+      }
 
     } catch (err) {
       if (err.name === 'AbortError') return;
@@ -313,6 +475,8 @@ export default function TutorChat() {
         }
         return updated;
       });
+      
+      showToast('Gagal mengirim pesan', 'error');
     } finally {
       setStreaming(false);
       abortControllerRef.current = null;
@@ -335,64 +499,21 @@ export default function TutorChat() {
     setAttachments(newAttachments);
   };
 
-  // Welcome screen when no conversation selected
-  if (!activeConversationId) {
-    return (
-      <div className="tutor-chat-container">
-        <ConversationDrawer
-          isOpen={drawerOpen}
-          onClose={() => setDrawerOpen(false)}
-          activeConversationId={activeConversationId}
-          activeTone={activeConversation?.tone || 'baku'}
-          onSelectConversation={handleSelectConversation}
-          onConversationCreated={handleConversationCreated}
-          onToneChange={handleToneChange}
-        />
+  // Handle suggestion click from welcome state
+  const handleSuggestionClick = (text) => {
+    setInput(text);
+    // Focus textarea after setting input
+    setTimeout(() => {
+      textareaRef.current?.focus();
+    }, 100);
+  };
 
-        <ConversationSidebar
-          activeConversationId={activeConversationId}
-          activeTone={activeConversation?.tone || 'baku'}
-          onSelectConversation={handleSelectConversation}
-          onConversationCreated={handleConversationCreated}
-          onToneChange={handleToneChange}
-        />
+  // Calculate character count percentage for warning
+  const charCount = input.length;
+  const charMax = 4000;
+  const charPercent = (charCount / charMax) * 100;
 
-        <main className="tutor-chat-main">
-          <div className="tutor-welcome">
-            <button 
-              className="mobile-menu-btn"
-              onClick={() => setDrawerOpen(true)}
-              aria-label="Buka menu"
-            >
-              <Menu size={24} />
-            </button>
-
-            <div className="welcome-content">
-              <div className="welcome-logo">
-                <img src="/images/ai-tutor-mascot.jpg" alt="AI Tutor B3Matika" className="tutor-mascot-img" />
-              </div>
-              <h1>Selamat Datang di AI Tutor B3Matika!</h1>
-              <p className="welcome-subtitle">
-                Tutor Matematika dan Game Master Teka-teki Logika
-              </p>
-              <p className="welcome-description">
-                Saya siap membantu kamu belajar matematika dari SD hingga SMA/SMK,
-                bermain teka-teki logika, dan memandu penyelesaian soal step-by-step.
-              </p>
-              <button 
-                className="welcome-cta-btn"
-                onClick={() => setDrawerOpen(true)}
-              >
-                Mulai Percakapan Baru
-              </button>
-            </div>
-          </div>
-        </main>
-      </div>
-    );
-  }
-
-  // Main chat interface
+  // Main render
   return (
     <div className="tutor-chat-container">
       <ConversationDrawer
@@ -402,6 +523,7 @@ export default function TutorChat() {
         activeTone={activeConversation?.tone || 'baku'}
         onSelectConversation={handleSelectConversation}
         onConversationCreated={handleConversationCreated}
+        onConversationDeleted={handleConversationDeleted}
         onToneChange={handleToneChange}
       />
 
@@ -410,6 +532,7 @@ export default function TutorChat() {
         activeTone={activeConversation?.tone || 'baku'}
         onSelectConversation={handleSelectConversation}
         onConversationCreated={handleConversationCreated}
+        onConversationDeleted={handleConversationDeleted}
         onToneChange={handleToneChange}
       />
 
@@ -426,35 +549,35 @@ export default function TutorChat() {
 
           <div className="header-info">
             <div className="header-avatar">
-              {/* Logo B3Matika kecil di header chat */}
-              <img src="/images/ai-tutor-mascot.jpg" alt="AI Tutor" className="tutor-mascot-img" style={{width: 28, height: 28, borderRadius: '8px'}} />
+              <img 
+                src="/images/ai-tutor-mascot.jpg" 
+                alt="AI Tutor" 
+                className="tutor-mascot-img" 
+                width={28}
+                height={28}
+                style={{borderRadius: '8px'}} 
+              />
             </div>
             <div className="header-text">
               <h2 className="header-title">
                 {activeConversation?.title || 'AI Tutor'}
               </h2>
-              <div className="header-status">
-                <span className={`status-dot ${apiStatus === 'online' ? 'online' : apiStatus === 'checking' ? 'checking' : 'offline'}`} />
-                <span className="status-text">
-                  {apiStatus === 'online' ? 'Online' : apiStatus === 'checking' ? 'Menghubungkan' : 'Offline'}
-                </span>
-              </div>
             </div>
           </div>
         </header>
 
         {/* Messages area */}
-        <div className="tutor-chat-messages">
-          {loading && messages.length === 0 ? (
+        <div ref={messagesContainerRef} className="tutor-chat-messages">
+          {loading ? (
             <div className="messages-loading">
               <Loader size={32} className="spin" />
               <p>Memuat pesan...</p>
             </div>
           ) : messages.length === 0 ? (
-            <div className="messages-empty">
-            <img src="/images/ai-tutor-mascot.jpg" alt="AI Tutor B3Matika" className="tutor-mascot-img" style={{width:64,height:64}} />
-              <p>Mulai percakapan dengan mengirim pesan pertama!</p>
-            </div>
+            <WelcomeState 
+              user={user} 
+              onSuggestionClick={handleSuggestionClick}
+            />
           ) : (
             <>
               {messages.map((message) => (
@@ -487,7 +610,7 @@ export default function TutorChat() {
                 </button>
               </div>
               <FileUploader
-                conversationId={activeConversationId}
+                conversationId={activeConversationId || 'temp'}
                 attachments={attachments}
                 onAttachmentsChange={handleAttachmentsChange}
                 disabled={streaming}
@@ -519,6 +642,12 @@ export default function TutorChat() {
               )}
             </button>
 
+            <VoiceInput
+              onTranscript={handleVoiceTranscript}
+              disabled={streaming}
+              onError={handleVoiceError}
+            />
+
             <textarea
               ref={textareaRef}
               className="input-textarea"
@@ -528,7 +657,7 @@ export default function TutorChat() {
               onKeyDown={handleKeyDown}
               disabled={streaming}
               rows={1}
-              maxLength={4000}
+              maxLength={charMax}
             />
 
             <button
@@ -547,12 +676,29 @@ export default function TutorChat() {
 
           <div className="input-hint">
             <span>Enter = kirim · Shift+Enter = baris baru</span>
-            <span className="input-char-count">
-              {input.length}/4000
-            </span>
+            {charPercent > 80 && (
+              <span className="input-char-count">
+                {charCount}/{charMax}
+              </span>
+            )}
           </div>
         </div>
+
+        {/* Scroll to bottom button */}
+        <ScrollToBottom
+          show={showScrollButton}
+          onClick={scrollToBottom}
+        />
       </main>
+
+      {/* Toast Notification */}
+      <Toast
+        show={toast.show}
+        onClose={() => setToast({ show: false, message: '', type: 'info' })}
+        message={toast.message}
+        type={toast.type}
+        duration={3000}
+      />
     </div>
   );
 }

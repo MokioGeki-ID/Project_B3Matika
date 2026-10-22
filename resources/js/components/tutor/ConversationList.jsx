@@ -2,7 +2,48 @@ import { useState, useEffect } from 'react';
 import { Plus, Loader, AlertCircle, MessageSquare } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ConversationItem from './ConversationItem';
+import ConversationSearch from './ConversationSearch';
+import ConfirmDialog from './ConfirmDialog';
+import Toast from './Toast';
 import { api } from '@/lib/api';
+
+/**
+ * Group conversations by date
+ * @param {Array} conversations - Array of conversations
+ * @returns {Object} Grouped conversations
+ */
+function groupConversationsByDate(conversations) {
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const yesterday = new Date(today);
+  yesterday.setDate(yesterday.getDate() - 1);
+  const lastWeek = new Date(today);
+  lastWeek.setDate(lastWeek.getDate() - 7);
+
+  const groups = {
+    today: [],
+    yesterday: [],
+    lastWeek: [],
+    older: [],
+  };
+
+  conversations.forEach((conv) => {
+    const convDate = new Date(conv.updated_at || conv.created_at);
+    const convDay = new Date(convDate.getFullYear(), convDate.getMonth(), convDate.getDate());
+
+    if (convDay.getTime() === today.getTime()) {
+      groups.today.push(conv);
+    } else if (convDay.getTime() === yesterday.getTime()) {
+      groups.yesterday.push(conv);
+    } else if (convDate >= lastWeek) {
+      groups.lastWeek.push(conv);
+    } else {
+      groups.older.push(conv);
+    }
+  });
+
+  return groups;
+}
 
 /**
  * ConversationList - List of conversations with create, rename, delete
@@ -10,11 +51,13 @@ import { api } from '@/lib/api';
  * @param {string} props.activeConversationId - Currently active conversation ID
  * @param {Function} props.onSelectConversation - Callback when conversation is selected
  * @param {Function} props.onConversationCreated - Callback when new conversation is created
+ * @param {Function} props.onConversationDeleted - Callback when conversation is deleted
  */
 export default function ConversationList({ 
   activeConversationId, 
   onSelectConversation,
-  onConversationCreated 
+  onConversationCreated,
+  onConversationDeleted
 }) {
   const [conversations, setConversations] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -22,13 +65,25 @@ export default function ConversationList({
   const [creating, setCreating] = useState(false);
   const [cursor, setCursor] = useState(null);
   const [hasMore, setHasMore] = useState(false);
+  
+  // Dialog and toast state
+  const [deleteDialog, setDeleteDialog] = useState({ isOpen: false, conversation: null });
+  const [toast, setToast] = useState({ show: false, message: '', type: 'info' });
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const showToast = (message, type = 'info') => {
+    setToast({ show: true, message, type });
+  };
+
+  const hideToast = () => {
+    setToast({ show: false, message: '', type: 'info' });
+  };
 
   const loadConversations = async (nextCursor = null) => {
     try {
       setLoading(true);
       setError(null);
 
-      // Backend memakai cursor-based pagination (bukan page/limit)
       const url = nextCursor
         ? `/tutor/conversations?cursor=${encodeURIComponent(nextCursor)}`
         : '/tutor/conversations';
@@ -37,10 +92,13 @@ export default function ConversationList({
 
       const { conversations: data, nextCursor: newCursor, hasMore: more } = response;
 
+      // Filter: hanya tampilkan percakapan yang memiliki minimal 1 pesan
+      const filteredData = (data || []).filter(conv => conv.message_count > 0);
+
       if (!nextCursor) {
-        setConversations(data || []);
+        setConversations(filteredData);
       } else {
-        setConversations(prev => [...prev, ...(data || [])]);
+        setConversations(prev => [...prev, ...filteredData]);
       }
 
       setHasMore(!!more);
@@ -58,42 +116,9 @@ export default function ConversationList({
   }, []);
 
   const handleCreateConversation = async () => {
-    try {
-      setCreating(true);
-      setError(null);
-
-      const now = new Date();
-      const defaultTitle = `Chat ${now.toLocaleDateString('id-ID', { 
-        day: 'numeric', 
-        month: 'short', 
-        hour: '2-digit', 
-        minute: '2-digit' 
-      })}`;
-
-      const response = await api.post('/tutor/conversations', {
-        title: defaultTitle,
-        tone: 'baku'
-      });
-
-      const newConversation = response.conversation;
-      
-      // Add to list
-      setConversations(prev => [newConversation, ...prev]);
-      
-      // Notify parent
-      if (onConversationCreated) {
-        onConversationCreated(newConversation);
-      }
-      
-      // Auto-select new conversation
-      if (onSelectConversation) {
-        onSelectConversation(newConversation.id);
-      }
-    } catch (err) {
-      console.error('Error creating conversation:', err);
-      setError(err.message || 'Gagal membuat percakapan baru');
-    } finally {
-      setCreating(false);
+    // Tidak langsung membuat di database, hanya notify parent untuk masuk ke draft state
+    if (onConversationCreated) {
+      onConversationCreated('draft');
     }
   };
 
@@ -117,26 +142,46 @@ export default function ConversationList({
     }
   };
 
-  const handleDelete = async (conversationId) => {
+  const handleDeleteRequest = (conversation) => {
+    setDeleteDialog({ isOpen: true, conversation });
+  };
+
+  const handleDeleteConfirm = async () => {
+    if (!deleteDialog.conversation) return;
+
+    const conversationId = deleteDialog.conversation.id;
+    const conversationTitle = deleteDialog.conversation.title;
+
     try {
       await api.delete(`/tutor/conversations/${conversationId}`);
 
-      // Remove from list
+      // Remove from list (optimistic update)
       setConversations(prev => prev.filter(conv => conv.id !== conversationId));
 
-      // If deleted conversation was active, select first available or create new
-      if (conversationId === activeConversationId) {
-        const remaining = conversations.filter(conv => conv.id !== conversationId);
-        if (remaining.length > 0) {
-          onSelectConversation(remaining[0].id);
-        } else {
-          // No conversations left, create new one
-          handleCreateConversation();
-        }
+      // Notify parent that conversation was deleted
+      if (onConversationDeleted) {
+        onConversationDeleted(conversationId);
       }
+
+      showToast('Percakapan berhasil dihapus', 'success');
+      setDeleteDialog({ isOpen: false, conversation: null });
     } catch (err) {
       console.error('Error deleting conversation:', err);
-      throw err;
+      showToast('Gagal menghapus percakapan', 'error');
+      
+      // Rollback optimistic update jika gagal
+      loadConversations();
+    }
+  };
+
+  const handleDeleteCancel = () => {
+    setDeleteDialog({ isOpen: false, conversation: null });
+  };
+
+  const handleDelete = async (conversationId) => {
+    const conversation = conversations.find(c => c.id === conversationId);
+    if (conversation) {
+      handleDeleteRequest(conversation);
     }
   };
 
@@ -146,6 +191,16 @@ export default function ConversationList({
     }
   };
 
+  // Filter conversations by search query
+  const filteredConversations = searchQuery
+    ? conversations.filter((conv) =>
+        conv.title.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : conversations;
+
+  // Group filtered conversations
+  const groupedConversations = groupConversationsByDate(filteredConversations);
+
   return (
     <div className="conversation-list">
       {/* Create new button */}
@@ -154,13 +209,18 @@ export default function ConversationList({
         onClick={handleCreateConversation}
         disabled={creating}
       >
-        {creating ? (
-          <Loader size={18} className="spin" />
-        ) : (
-          <Plus size={18} />
-        )}
+        <Plus size={18} />
         <span>Percakapan Baru</span>
       </button>
+
+      {/* Search bar */}
+      <div className="conversation-search-wrapper">
+        <ConversationSearch
+          value={searchQuery}
+          onChange={setSearchQuery}
+          placeholder="Cari percakapan..."
+        />
+      </div>
 
       {/* Error message */}
       {error && (
@@ -198,21 +258,104 @@ export default function ConversationList({
         </div>
       )}
 
-      {/* Conversation list */}
-      <div className="conversation-list-items">
-        <AnimatePresence>
-          {conversations.map((conversation) => (
-            <ConversationItem
-              key={conversation.id}
-              conversation={conversation}
-              isActive={conversation.id === activeConversationId}
-              onClick={onSelectConversation}
-              onRename={handleRename}
-              onDelete={handleDelete}
-            />
-          ))}
-        </AnimatePresence>
-      </div>
+      {/* No search results */}
+      {!loading && searchQuery && filteredConversations.length === 0 && (
+        <div className="conversation-list-empty">
+          <MessageSquare size={48} strokeWidth={1} opacity={0.3} />
+          <p>Tidak ada hasil untuk "{searchQuery}"</p>
+          <button 
+            className="conversation-list-empty-btn"
+            onClick={() => setSearchQuery('')}
+          >
+            Hapus Pencarian
+          </button>
+        </div>
+      )}
+
+      {/* Conversation list with grouping */}
+      {!loading && filteredConversations.length > 0 && (
+        <div className="conversation-list-items">
+          {/* Today */}
+          {groupedConversations.today.length > 0 && (
+            <div className="conversation-group">
+              <div className="conversation-group-label">Hari Ini</div>
+              <AnimatePresence>
+                {groupedConversations.today.map((conversation) => (
+                  <ConversationItem
+                    key={conversation.id}
+                    conversation={conversation}
+                    isActive={conversation.id === activeConversationId}
+                    onClick={onSelectConversation}
+                    onRename={handleRename}
+                    onDelete={handleDelete}
+                    onShowToast={showToast}
+                  />
+                ))}
+              </AnimatePresence>
+            </div>
+          )}
+
+          {/* Yesterday */}
+          {groupedConversations.yesterday.length > 0 && (
+            <div className="conversation-group">
+              <div className="conversation-group-label">Kemarin</div>
+              <AnimatePresence>
+                {groupedConversations.yesterday.map((conversation) => (
+                  <ConversationItem
+                    key={conversation.id}
+                    conversation={conversation}
+                    isActive={conversation.id === activeConversationId}
+                    onClick={onSelectConversation}
+                    onRename={handleRename}
+                    onDelete={handleDelete}
+                    onShowToast={showToast}
+                  />
+                ))}
+              </AnimatePresence>
+            </div>
+          )}
+
+          {/* Last 7 Days */}
+          {groupedConversations.lastWeek.length > 0 && (
+            <div className="conversation-group">
+              <div className="conversation-group-label">7 Hari Terakhir</div>
+              <AnimatePresence>
+                {groupedConversations.lastWeek.map((conversation) => (
+                  <ConversationItem
+                    key={conversation.id}
+                    conversation={conversation}
+                    isActive={conversation.id === activeConversationId}
+                    onClick={onSelectConversation}
+                    onRename={handleRename}
+                    onDelete={handleDelete}
+                    onShowToast={showToast}
+                  />
+                ))}
+              </AnimatePresence>
+            </div>
+          )}
+
+          {/* Older */}
+          {groupedConversations.older.length > 0 && (
+            <div className="conversation-group">
+              <div className="conversation-group-label">Lebih Lama</div>
+              <AnimatePresence>
+                {groupedConversations.older.map((conversation) => (
+                  <ConversationItem
+                    key={conversation.id}
+                    conversation={conversation}
+                    isActive={conversation.id === activeConversationId}
+                    onClick={onSelectConversation}
+                    onRename={handleRename}
+                    onDelete={handleDelete}
+                    onShowToast={showToast}
+                  />
+                ))}
+              </AnimatePresence>
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Load more */}
       {hasMore && (
@@ -228,6 +371,28 @@ export default function ConversationList({
           )}
         </button>
       )}
+
+      {/* Confirm Delete Dialog */}
+      <ConfirmDialog
+        isOpen={deleteDialog.isOpen}
+        onClose={handleDeleteCancel}
+        onConfirm={handleDeleteConfirm}
+        title="Hapus percakapan?"
+        message={`Percakapan "${deleteDialog.conversation?.title}" beserta semua pesan dan file akan dihapus permanen. Tindakan ini tidak dapat dibatalkan.`}
+        confirmText="Hapus"
+        cancelText="Batal"
+        destructive={true}
+        loading={false}
+      />
+
+      {/* Toast Notification */}
+      <Toast
+        show={toast.show}
+        onClose={hideToast}
+        message={toast.message}
+        type={toast.type}
+        duration={3000}
+      />
     </div>
   );
 }

@@ -46,9 +46,19 @@ async function listConversations(req, res) {
     const { user } = await requireAuth(req);
     const cursor = req.query.cursor || null;
 
+    // Query dengan subquery untuk message_count
     let query = supabase
       .from('tutor_conversations')
-      .select('id, title, tone, topic_id, created_at, updated_at, last_message_at')
+      .select(`
+        id, 
+        title, 
+        tone, 
+        topic_id, 
+        created_at, 
+        updated_at, 
+        last_message_at,
+        message_count:tutor_messages(count)
+      `)
       .eq('user_id', user.id)
       .order('last_message_at', { ascending: false })
       .limit(PAGE_SIZE + 1);
@@ -73,12 +83,18 @@ async function listConversations(req, res) {
       return errorResponse(res, 'Gagal memuat riwayat obrolan.', 500);
     }
 
-    const hasMore = data.length > PAGE_SIZE;
-    const conversations = hasMore ? data.slice(0, PAGE_SIZE) : data;
-    const nextCursor = hasMore ? data[PAGE_SIZE - 1].last_message_at : null;
+    // Transform message_count dari array ke number
+    const conversations = (data || []).map(conv => ({
+      ...conv,
+      message_count: Array.isArray(conv.message_count) ? conv.message_count[0]?.count || 0 : 0
+    }));
+
+    const hasMore = conversations.length > PAGE_SIZE;
+    const conversationsSlice = hasMore ? conversations.slice(0, PAGE_SIZE) : conversations;
+    const nextCursor = hasMore ? conversations[PAGE_SIZE - 1].last_message_at : null;
 
     return res.status(200).json({
-      conversations,
+      conversations: conversationsSlice,
       nextCursor,
       hasMore,
     });
