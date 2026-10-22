@@ -1,0 +1,155 @@
+{
+  "grade": 9,
+  "topics": [
+    {
+      "title": "Perpangkatan (eksponen) dan bentuk akar",
+      "slug": "perpangkatan-eksponen-dan-bentuk-akar",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "oaC7dxb9-3I",
+          "url": "https://www.youtube.com/watch?v=oaC7dxb9-3I",
+          "title": "Perpangkatan dan Bentuk Akar [Part 1]  - Konsep Perpangkatan",
+          "channel": "Benni al azhri",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Perpangkatan dan Bentuk Akar [Part 1] - Konsep Perpangkatan",
+          "gemini_claim_channel": "Benni al azhri"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "pnIDGdE_ZAQ",
+          "url": "https://www.youtube.com/watch?v=pnIDGdE_ZAQ",
+          "title": "Kumpulan Soal PH PTS PAS ASPD USEK Matematika SMP Kelas 9 - Bilangan Berpangkat dan Bentuk Akar",
+          "channel": "Edu-Vid",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Kumpulan Soal PH PTS PAS ASPD USEK Matematika SMP Kelas 9 - Bilangan Berpangkat dan Bentuk Akar",
+          "gemini_claim_channel": "Edu-Vid"
+        }
+      ]
+    },
+    {
+      "title": "Persamaan kuadrat dan fungsi kuadrat",
+      "slug": "persamaan-kuadrat-dan-fungsi-kuadrat",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "lWjpBTqp9kA",
+          "url": "https://www.youtube.com/watch?v=lWjpBTqp9kA",
+          "title": "Matematika Kelas 9 : Persamaan Kuadrat (part 1  Bentuk Umum)",
+          "channel": "Rumah Belajar Kamil",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Matematika Kelas 9 : Persamaan Kuadrat (part 1 Bentuk Umum)",
+          "gemini_claim_channel": "Rumah Belajar Kamil"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "QHDnsLqzq-M",
+          "url": "https://www.youtube.com/watch?v=QHDnsLqzq-M",
+          "title": "Matematika Kelas 9 : Fungsi Kuadrat (Part 1 : Bentuk umum dan grafik fungsi kuadrat)",
+          "channel": "Rumah Belajar Kamil",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Matematika Kelas 9 : Fungsi Kuadrat (Part 1 : Bentuk umum dan grafik fungsi kuadrat)",
+          "gemini_claim_channel": "Rumah Belajar Kamil"
+        }
+      ]
+    },
+    {
+      "title": "Transformasi geometri (translasi, refleksi, rotasi, dilatasi)",
+      "slug": "transformasi-geometri-translasi-refleksi-rotasi-dilatasi",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "ZDwqCBHBVsY",
+          "url": "https://www.youtube.com/watch?v=ZDwqCBHBVsY",
+          "title": "Kurikulum Merdeka Matematika Kelas 9 Bab 3 Transformasi Geometri",
+          "channel": "Portal Edukasi",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Kurikulum Merdeka Matematika Kelas 9 Bab 3 Transformasi Geometri",
+          "gemini_claim_channel": "Portal Edukasi"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "4ojT0jS_pR8",
+          "url": "https://www.youtube.com/watch?v=4ojT0jS_pR8",
+          "title": "(LENGKAP) TRANSFORMASI GEOMETRI - Translasi, Refleksi, Rotasi dan Dilatasi",
+          "channel": "Matematika Hebat",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "(LENGKAP) TRANSFORMASI GEOMETRI - Translasi, Refleksi, Rotasi dan Dilatasi",
+          "gemini_claim_channel": "Matematika Hebat"
+        }
+      ]
+    },
+    {
+      "title": "Kesebangunan dan kekongruenan bangun datar",
+      "slug": "kesebangunan-dan-kekongruenan-bangun-datar",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "g1BmqWJ6WuI",
+          "url": "https://www.youtube.com/watch?v=g1BmqWJ6WuI",
+          "title": "Kesebangunan dan Kekongruenan | Matematika Kelas 9 SAMPAI PAHAM!",
+          "channel": "Alam Matematik",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Kesebangunan dan Kekongruenan | Matematika Kelas 9 SAMPAI PAHAM!",
+          "gemini_claim_channel": "Alam Matematik"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "BzYhJfNOpiw",
+          "url": "https://www.youtube.com/watch?v=BzYhJfNOpiw",
+          "title": "Kesebangunan - soal dan pembahasan materi kesebangunan matematika tingkat SMP kelas ix",
+          "channel": "Matematika Hebat",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Kesebangunan - soal dan pembahasan materi kesebangunan matematika tingkat SMP kelas ix",
+          "gemini_claim_channel": "Matematika Hebat"
+        }
+      ]
+    },
+    {
+      "title": "Geometri: bangun ruang sisi lengkung (tabung, kerucut, bola)",
+      "slug": "geometri-bangun-ruang-sisi-lengkung-tabung-kerucut-bola",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "RZUnF70ejOU",
+          "url": "https://www.youtube.com/watch?v=RZUnF70ejOU",
+          "title": "Matematika Kelas 9: Bangun Ruang Sisi Lengkung (Tabung, Kerucut, Bola)",
+          "channel": "Portal Edukasi",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Matematika Kelas 9: Bangun Ruang Sisi Lengkung (Tabung, Kerucut, Bola)",
+          "gemini_claim_channel": "Portal Edukasi"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "XrdlZ2mBaoM",
+          "url": "https://www.youtube.com/watch?v=XrdlZ2mBaoM",
+          "title": "Bangun Ruang Sisi Lengkung Lengkap | Tabung, Kerucut, Bola",
+          "channel": "Alam Matematik",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Bangun Ruang Sisi Lengkung Lengkap | Tabung, Kerucut, Bola",
+          "gemini_claim_channel": "Alam Matematik"
+        }
+      ]
+    }
+  ]
+}
