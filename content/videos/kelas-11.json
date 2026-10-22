@@ -1,0 +1,215 @@
+{
+  "grade": 11,
+  "topics": [
+    {
+      "title": "Komposisi fungsi dan fungsi invers",
+      "slug": "komposisi-fungsi-dan-fungsi-invers",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "wIVQKtO2T4s",
+          "url": "https://www.youtube.com/watch?v=wIVQKtO2T4s",
+          "title": "Komposisi Fungsi - Matematika Wajib Kelas XI Kurikulum Merdeka",
+          "channel": "BSMath Channel",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Komposisi Fungsi - Matematika Wajib Kelas XI Kurikulum Merdeka",
+          "gemini_claim_channel": "BSMath Channel"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "J0ptZgJcUwk",
+          "url": "https://www.youtube.com/watch?v=J0ptZgJcUwk",
+          "title": "Invers Fungsi Komposisi - Matematika SMA Kelas XI Kurikulum Merdeka",
+          "channel": "BSMath Channel",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Invers Fungsi Komposisi - Matematika SMA Kelas XI Kurikulum Merdeka",
+          "gemini_claim_channel": "BSMath Channel"
+        }
+      ]
+    },
+    {
+      "title": "Lingkaran (persamaan lingkaran dan garis singgung lingkaran)",
+      "slug": "lingkaran-persamaan-dan-garis-singgung-lingkaran",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "A1EVg6s0NDg",
+          "url": "https://www.youtube.com/watch?v=A1EVg6s0NDg",
+          "title": "Geometri Analitik Fase F | Persamaan Lingkaran Bagian 1 - Konsep Dasar dan Persamaan Lingkaran",
+          "channel": "m4th-lab",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Geometri Analitik Fase F | Persamaan Lingkaran Bagian 1 - Konsep Dasar dan Persamaan Lingkaran",
+          "gemini_claim_channel": "m4th-lab"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "AIwvYarMAZw",
+          "url": "https://www.youtube.com/watch?v=AIwvYarMAZw",
+          "title": "Persamaan Garis Singgung Lingkaran di Suatu Titik Pada Lingkaran - SMA Kelas XI Kurikulum Merdeka",
+          "channel": "BSMath Channel",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Persamaan Garis Singgung Lingkaran di Suatu Titik Pada Lingkaran - SMA Kelas XI Kurikulum Merdeka",
+          "gemini_claim_channel": "BSMath Channel"
+        }
+      ]
+    },
+    {
+      "title": "Logika matematika (pernyataan majemuk, implikasi, biimplikasi, penarikan kesimpulan)",
+      "slug": "logika-matematika-pernyataan-majemuk-penarikan-kesimpulan",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "F0DWr5tDGSk",
+          "url": "https://www.youtube.com/watch?v=F0DWr5tDGSk",
+          "title": "Logika Matematika Part. 2 | Pernyataan Majemuk, Konjungsi, Disjungsi, Implikasi, Biimplikasi",
+          "channel": "BOM Matematika",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Logika Matematika Part. 2 | Pernyataan Majemuk, Konjungsi, Disjungsi, Implikasi, Biimplikasi",
+          "gemini_claim_channel": "BOM Matematika"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "SIHwvKMJxZ8",
+          "url": "https://www.youtube.com/watch?v=SIHwvKMJxZ8",
+          "title": "Menarik Kesimpulan dengan Logika Matematika",
+          "channel": "Pak Agus Sumarsono",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Menarik Kesimpulan dengan Logika Matematika",
+          "gemini_claim_channel": "Pak Agus Sumarsono"
+        }
+      ]
+    },
+    {
+      "title": "Matriks (operasi, determinan, invers)",
+      "slug": "matriks-operasi-determinan-invers",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "CzrlEdZdhB0",
+          "url": "https://www.youtube.com/watch?v=CzrlEdZdhB0",
+          "title": "Matriks Matematika Wajib Kelas 11 - Invers Matriks Ordo 2x2 dan Ordo 3x3 dan Sifat-sifatnya",
+          "channel": "m4th-lab",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Matriks Matematika Wajib Kelas 11 - Invers Matriks Ordo 2x2 dan Ordo 3x3 dan Sifat-sifatnya",
+          "gemini_claim_channel": "m4th-lab"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "rLkFDW8deW0",
+          "url": "https://www.youtube.com/watch?v=rLkFDW8deW0",
+          "title": "Determinan dan Invers Matriks Ordo 3x3",
+          "channel": "Matematika Hebat",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Determinan dan Invers Matriks Ordo 3x3",
+          "gemini_claim_channel": "Matematika Hebat"
+        }
+      ]
+    },
+    {
+      "title": "Transformasi geometri dengan matriks",
+      "slug": "transformasi-geometri-dengan-matriks",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "KBX6B1-ULF0",
+          "url": "https://www.youtube.com/watch?v=KBX6B1-ULF0",
+          "title": "Transformasi Geometri Bagian 5 -Transformasi Matriks Matematika Wajib Kelas 11",
+          "channel": "m4th-lab",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Transformasi Geometri Bagian 5 -Transformasi Matriks Matematika Wajib Kelas 11",
+          "gemini_claim_channel": "m4th-lab"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "hAop2Ws3MYs",
+          "url": "https://www.youtube.com/watch?v=hAop2Ws3MYs",
+          "title": "Transformasi Geometri dengan Matriks • Part 30: Prinsip Komposisi Transformasi Geometri",
+          "channel": "Jendela Sains",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Transformasi Geometri dengan Matriks • Part 30: Prinsip Komposisi Transformasi Geometri",
+          "gemini_claim_channel": "Jendela Sains"
+        }
+      ]
+    },
+    {
+      "title": "Kombinatorika (kaidah pencacahan, permutasi, kombinasi)",
+      "slug": "kombinatorika-kaidah-pencacahan-permutasi-kombinasi",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "0sZsVM5SzQI",
+          "url": "https://www.youtube.com/watch?v=0sZsVM5SzQI",
+          "title": "Kaidah Pencacahan, aturan penjumlahan, aturan perkalian, filling slot mudah dan gampang dipahami.",
+          "channel": "BOM Matematika",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Kaidah Pencacahan, aturan penjumlahan, aturan perkalian, filling slot mudah dan gampang dipahami.",
+          "gemini_claim_channel": "BOM Matematika"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "706fNr8BKDc",
+          "url": "https://www.youtube.com/watch?v=706fNr8BKDc",
+          "title": "Kaidah Pencacahan 3 - Permutasi dan Kombinasi Matematika Wajib Kelas 12",
+          "channel": "m4th-lab",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Kaidah Pencacahan 3 - Permutasi dan Kombinasi Matematika Wajib Kelas 12",
+          "gemini_claim_channel": "m4th-lab"
+        }
+      ]
+    },
+    {
+      "title": "Teori peluang kejadian majemuk",
+      "slug": "teori-peluang-kejadian-majemuk",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "BChA08e53q0",
+          "url": "https://www.youtube.com/watch?v=BChA08e53q0",
+          "title": "Peluang (Part 2) | Kejadian Majemuk | Saling Lepas, Tidak Saling Lepas, Saling Bebas, dan Bersyarat",
+          "channel": "m4th-lab",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Peluang (Part 2) | Kejadian Majemuk | Saling Lepas, Tidak Saling Lepas, Saling Bebas, dan Bersyarat",
+          "gemini_claim_channel": "m4th-lab"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "-anMsu5zEBI",
+          "url": "https://www.youtube.com/watch?v=-anMsu5zEBI",
+          "title": "Peluang Kejadian Majemuk | Saling Lepas, Saling Bebas, Bersyarat + Contoh Soal",
+          "channel": "Alam Matematik",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Peluang Kejadian Majemuk | Saling Lepas, Saling Bebas, Bersyarat + Contoh Soal",
+          "gemini_claim_channel": "Alam Matematik"
+        }
+      ]
+    }
+  ]
+}
