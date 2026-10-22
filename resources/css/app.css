@@ -6,6 +6,9 @@
 /* Import AI Tutor Components Styles */
 @import './tutor-components.css';
 
+/* Import Math Content Styles */
+@import './math-content.css';
+
 /* ─── 1. Design Tokens ─────────────────────────────────────────────── */
 :root {
   /* Brand */

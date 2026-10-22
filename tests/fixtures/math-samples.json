@@ -1,0 +1,143 @@
+{
+  "samples": [
+    {
+      "id": 1,
+      "category": "Pangkat & Akar (SD/SMP)",
+      "input": "Hasil dari 2^3 + sqrt(16) adalah 8 + 4 = 12",
+      "expected": "Hasil dari $2^{3} + \\sqrt{16}$ adalah $8 + 4 = 12$",
+      "grade": "SMP"
+    },
+    {
+      "id": 2,
+      "category": "Pecahan Bertingkat",
+      "input": "Sederhanakan (a+b)/(c+d) = (2+3)/(4+1) = 5/5 = 1",
+      "expected": "Sederhanakan $\\frac{a+b}{c+d} = \\frac{2+3}{4+1} = \\frac{5}{5} = 1$",
+      "grade": "SMP"
+    },
+    {
+      "id": 3,
+      "category": "Persamaan Kuadrat",
+      "input": "Selesaikan x^2 - 5x + 6 = 0\nFaktorkan: (x-2)(x-3) = 0\nJadi x = 2 atau x = 3",
+      "expected": "$$\\begin{aligned}\nx^{2} - 5x + 6 &= 0 \\\\\n(x-2)(x-3) &= 0 \\\\\nx &= 2 \\text{ atau } x = 3\n\\end{aligned}$$",
+      "grade": "SMP"
+    },
+    {
+      "id": 4,
+      "category": "SPLDV",
+      "input": "Sistem persamaan:\n2x + y = 5\nx - y = 1",
+      "expected": "$$\\begin{cases}\n2x + y = 5 \\\\\nx - y = 1\n\\end{cases}$$",
+      "grade": "SMP"
+    },
+    {
+      "id": 5,
+      "category": "Operasi Dasar (SD)",
+      "input": "5 x 3 = 15 dan 12 : 4 = 3",
+      "expected": "5 × 3 = 15 dan 12 ÷ 4 = 3",
+      "note": "SD: gunakan simbol Unicode, tidak perlu LaTeX berat",
+      "grade": "SD"
+    },
+    {
+      "id": 6,
+      "category": "Pecahan Sederhana (SD)",
+      "input": "1/2 + 1/4 = 2/4 + 1/4 = 3/4",
+      "expected": "½ + ¼ = ²⁄₄ + ¼ = ¾",
+      "note": "SD: simbol Unicode atau LaTeX sederhana",
+      "grade": "SD"
+    },
+    {
+      "id": 7,
+      "category": "Matriks",
+      "input": "Matriks A = [[1,2],[3,4]]",
+      "expected": "$$A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$$",
+      "grade": "SMA"
+    },
+    {
+      "id": 8,
+      "category": "Limit",
+      "input": "lim (x->2) (x^2 - 4)/(x - 2) = lim (x->2) (x+2) = 4",
+      "expected": "$$\\lim_{x \\to 2} \\frac{x^{2} - 4}{x - 2} = \\lim_{x \\to 2} (x+2) = 4$$",
+      "grade": "SMA"
+    },
+    {
+      "id": 9,
+      "category": "Turunan",
+      "input": "Turunan f(x) = x^3 adalah f'(x) = 3x^2",
+      "expected": "Turunan $f(x) = x^{3}$ adalah $f'(x) = 3x^{2}$",
+      "grade": "SMA"
+    },
+    {
+      "id": 10,
+      "category": "Integral",
+      "input": "Integral dari 2x dx adalah x^2 + C",
+      "expected": "$$\\int 2x \\, dx = x^{2} + C$$",
+      "grade": "SMA"
+    },
+    {
+      "id": 11,
+      "category": "Trigonometri",
+      "input": "sin(90deg) = 1 dan cos(0deg) = 1",
+      "expected": "$\\sin(90^\\circ) = 1$ dan $\\cos(0^\\circ) = 1$",
+      "grade": "SMA"
+    },
+    {
+      "id": 12,
+      "category": "Logaritma",
+      "input": "log(base 2)(8) = 3 karena 2^3 = 8",
+      "expected": "$\\log_{2}(8) = 3$ karena $2^{3} = 8$",
+      "grade": "SMA"
+    },
+    {
+      "id": 13,
+      "category": "Pertidaksamaan",
+      "input": "x >= 5 atau x <= -3",
+      "expected": "$x \\geq 5$ atau $x \\leq -3$",
+      "grade": "SMP"
+    },
+    {
+      "id": 14,
+      "category": "Sigma/Jumlah",
+      "input": "Sum dari k=1 sampai n dari k = n(n+1)/2",
+      "expected": "$$\\sum_{k=1}^{n} k = \\frac{n(n+1)}{2}$$",
+      "grade": "SMA"
+    },
+    {
+      "id": 15,
+      "category": "Vektor",
+      "input": "Vektor a = (3, 4) dan |a| = sqrt(3^2 + 4^2) = 5",
+      "expected": "$\\vec{a} = (3, 4)$ dan $|\\vec{a}| = \\sqrt{3^{2} + 4^{2}} = 5$",
+      "grade": "SMA"
+    }
+  ],
+  "edge_cases": [
+    {
+      "case": "Rupiah (tidak boleh diubah)",
+      "input": "Harga buku Rp 15.000",
+      "expected": "Harga buku Rp 15.000",
+      "note": "Rp tidak boleh dianggap sebagai delimiter math"
+    },
+    {
+      "case": "Tanggal",
+      "input": "Tanggal 12/05/2026",
+      "expected": "Tanggal 12/05/2026",
+      "note": "Slash dalam tanggal tidak boleh diubah menjadi frac"
+    },
+    {
+      "case": "URL",
+      "input": "https://example.com/path",
+      "expected": "https://example.com/path",
+      "note": "URL tidak boleh dimodifikasi"
+    },
+    {
+      "case": "Kode",
+      "input": "```python\nx = 5**2\n```",
+      "expected": "```python\nx = 5**2\n```",
+      "note": "Code block tidak boleh dimodifikasi"
+    },
+    {
+      "case": "Streaming incomplete",
+      "input": "Rumus: $x^2 + ",
+      "expected": "Rumus: $x^2 + ",
+      "note": "Delimiter belum tertutup saat streaming, tampilkan apa adanya"
+    }
+  ]
+}

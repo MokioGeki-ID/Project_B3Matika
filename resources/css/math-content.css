@@ -1,0 +1,181 @@
+/* ========================================
+   MATH CONTENT STYLES
+   KaTeX + Custom Math Rendering
+   ======================================== */
+
+/* === KATEX BASE === */
+.math-content {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text, #1f2937);
+}
+
+/* Inline math */
+.math-content .katex {
+  font-size: 1.05em;
+}
+
+/* Display math (block) */
+.math-content .katex-display {
+  margin: 12px 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 8px 0;
+}
+
+/* Prevent math from breaking page layout on mobile */
+.math-content .katex-display > .katex {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 4px 0;
+}
+
+@media (max-width: 640px) {
+  .math-content .katex-display {
+    font-size: 0.95em;
+  }
+}
+
+/* === CODE BLOCKS === */
+.math-content .inline-code {
+  padding: 2px 6px;
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  color: var(--navy, #1e3a8a);
+}
+
+.math-content .code-block {
+  padding: 12px;
+  background: #1e293b;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 12px 0;
+}
+
+.math-content .code-block code {
+  color: #e2e8f0;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* === BLOCKQUOTE === */
+.math-content .math-quote {
+  padding-left: 12px;
+  border-left: 3px solid var(--blue, #3b82f6);
+  margin: 12px 0;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* === TABLES === */
+.math-content .math-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+.math-content .math-table th,
+.math-content .math-table td {
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.math-content .math-table th {
+  background: #f3f4f6;
+  font-weight: 600;
+  color: var(--navy, #1e3a8a);
+}
+
+.math-content .math-table tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+/* === VISUALIZATION LOADING === */
+.viz-loading {
+  padding: 20px;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 13px;
+  background: #f9fafb;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+/* === DARK MODE === */
+@media (prefers-color-scheme: dark) {
+  .math-content {
+    color: #e5e7eb;
+  }
+
+  .math-content .inline-code {
+    background: rgba(255, 255, 255, 0.1);
+    color: #93c5fd;
+  }
+
+  .math-content .math-quote {
+    border-left-color: #3b82f6;
+    color: #9ca3af;
+  }
+
+  .math-content .math-table th {
+    background: #374151;
+    color: #e5e7eb;
+  }
+
+  .math-content .math-table td {
+    border-color: #4b5563;
+  }
+
+  .math-content .math-table tr:nth-child(even) {
+    background: #1f2937;
+  }
+
+  .viz-loading {
+    background: #1f2937;
+    color: #9ca3af;
+  }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 320px) {
+  .math-content {
+    font-size: 13px;
+  }
+
+  .math-content .katex {
+    font-size: 1em;
+  }
+
+  .math-content .code-block {
+    font-size: 12px;
+  }
+}
+
+/* === ACCESSIBILITY === */
+.math-content .katex-mathml {
+  /* KaTeX includes MathML for screen readers */
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+/* === PRINT === */
+@media print {
+  .math-content .katex-display {
+    page-break-inside: avoid;
+  }
+
+  .math-content .code-block {
+    page-break-inside: avoid;
+  }
+}

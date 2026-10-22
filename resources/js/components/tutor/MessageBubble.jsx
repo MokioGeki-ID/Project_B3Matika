@@ -1,9 +1,9 @@
 import { User, Bot, Image as ImageIcon, FileText, File } from 'lucide-react';
 import { motion } from 'framer-motion';
-import ReactMarkdown from 'react-markdown';
-import { parseAIResponse, highlightRecommendations } from '@/utils/aiResponseParser';
+import { parseAIResponse } from '@/utils/aiResponseParser';
 import MaterialCard from './MaterialCard';
 import VideoCard from './VideoCard';
+import MathContent from '@/components/MathContent';
 
 /**
  * MessageBubble - Display user or AI message with attachments and recommendations
@@ -18,9 +18,6 @@ export default function MessageBubble({ message, topics = [], videos = [] }) {
 
   // Parse AI response for recommendations
   const { topicIds, videoCodes } = isUser ? { topicIds: [], videoCodes: [] } : parseAIResponse(content);
-
-  // Highlight recommendations in text
-  const highlightedContent = isUser ? content : highlightRecommendations(content);
 
   // Get file icon
   const getFileIcon = (mimeType) => {
@@ -112,21 +109,7 @@ export default function MessageBubble({ message, topics = [], videos = [] }) {
           {isUser ? (
             <p>{content}</p>
           ) : (
-            <ReactMarkdown
-              components={{
-                p: ({ children }) => <p style={{ margin: '0 0 8px 0' }}>{children}</p>,
-                strong: ({ children }) => <strong style={{ color: 'var(--navy)' }}>{children}</strong>,
-                ul: ({ children }) => <ul style={{ paddingLeft: '20px', margin: '8px 0' }}>{children}</ul>,
-                ol: ({ children }) => <ol style={{ paddingLeft: '20px', margin: '8px 0' }}>{children}</ol>,
-                li: ({ children }) => <li style={{ marginBottom: '4px' }}>{children}</li>,
-                code: ({ inline, children }) => inline
-                  ? <code className="inline-code">{children}</code>
-                  : <pre className="code-block"><code>{children}</code></pre>,
-                blockquote: ({ children }) => <blockquote className="message-quote">{children}</blockquote>,
-              }}
-            >
-              {highlightedContent}
-            </ReactMarkdown>
+            <MathContent content={content} />
           )}
         </div>
 
