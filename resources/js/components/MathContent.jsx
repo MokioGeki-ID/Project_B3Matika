@@ -16,34 +16,34 @@ function normalizeDelimiters(text) {
   
   // Protect code blocks
   const codeBlocks = [];
-  let protected = text.replace(/```[\s\S]*?```/g, (match) => {
+  let processed = text.replace(/```[\s\S]*?```/g, (match) => {
     codeBlocks.push(match);
     return `__CODE_BLOCK_${codeBlocks.length - 1}__`;
   });
 
   // Protect inline code
   const inlineCodes = [];
-  protected = protected.replace(/`[^`]+`/g, (match) => {
+  processed = processed.replace(/`[^`]+`/g, (match) => {
     inlineCodes.push(match);
     return `__INLINE_CODE_${inlineCodes.length - 1}__`;
   });
 
   // Protect Rupiah
-  protected = protected.replace(/Rp\s*[\d.,]+/g, (match) => {
+  processed = processed.replace(/Rp\s*[\d.,]+/g, (match) => {
     return match.replace(/\$/g, 'Rp');
   });
 
   // Normalize LaTeX delimiters
-  protected = protected.replace(/\\\((.*?)\\\)/g, '$$$1$$'); // \(...\) -> $...$
-  protected = protected.replace(/\\\[(.*?)\\\]/gs, '$$$$$$1$$$$'); // \[...\] -> $$...$$
+  processed = processed.replace(/\\\((.*?)\\\)/g, '$$$1$$'); // \(...\) -> $...$
+  processed = processed.replace(/\\\[(.*?)\\\]/gs, '$$$$$$1$$$$'); // \[...\] -> $$...$$
 
   // Restore code blocks
-  protected = protected.replace(/__CODE_BLOCK_(\d+)__/g, (_, idx) => codeBlocks[idx]);
+  processed = processed.replace(/__CODE_BLOCK_(\d+)__/g, (_, idx) => codeBlocks[idx]);
   
   // Restore inline codes
-  protected = protected.replace(/__INLINE_CODE_(\d+)__/g, (_, idx) => inlineCodes[idx]);
+  processed = processed.replace(/__INLINE_CODE_(\d+)__/g, (_, idx) => inlineCodes[idx]);
 
-  return protected;
+  return processed;
 }
 
 /**
@@ -55,52 +55,52 @@ function convertRawNotation(text) {
 
   // Protect URLs
   const urls = [];
-  let protected = text.replace(/(https?:\/\/[^\s]+)/g, (match) => {
+  let processed = text.replace(/(https?:\/\/[^\s]+)/g, (match) => {
     urls.push(match);
     return `__URL_${urls.length - 1}__`;
   });
 
   // Protect dates (dd/mm/yyyy, dd/mm)
-  protected = protected.replace(/\b\d{1,2}\/\d{1,2}(\/\d{2,4})?\b/g, (match) => {
+  processed = processed.replace(/\b\d{1,2}\/\d{1,2}(\/\d{2,4})?\b/g, (match) => {
     urls.push(match);
     return `__DATE_${urls.length - 1}__`;
   });
 
   // Protect code blocks and inline code
   const codeBlocks = [];
-  protected = protected.replace(/```[\s\S]*?```/g, (match) => {
+  processed = processed.replace(/```[\s\S]*?```/g, (match) => {
     codeBlocks.push(match);
     return `__CODE_${codeBlocks.length - 1}__`;
   });
 
-  protected = protected.replace(/`[^`]+`/g, (match) => {
+  processed = processed.replace(/`[^`]+`/g, (match) => {
     codeBlocks.push(match);
     return `__CODE_${codeBlocks.length - 1}__`;
   });
 
   // Convert sqrt(x) to \sqrt{x}
-  protected = protected.replace(/sqrt\(([^)]+)\)/g, '\\sqrt{$1}');
+  processed = processed.replace(/sqrt\(([^)]+)\)/g, '\\sqrt{$1}');
 
   // Convert x^2, x^(n+1) to x^{2}, x^{n+1}
   // Only if not already in LaTeX context
-  protected = protected.replace(/(\w+)\^(\d+)/g, '$$$1^{$2}$$');
-  protected = protected.replace(/(\w+)\^\(([^)]+)\)/g, '$$$1^{$2}$$');
+  processed = processed.replace(/(\w+)\^(\d+)/g, '$$$1^{$2}$$');
+  processed = processed.replace(/(\w+)\^\(([^)]+)\)/g, '$$$1^{$2}$$');
 
   // Convert a*b to a \times b (only between alphanumeric)
-  protected = protected.replace(/(\w+)\s*\*\s*(\w+)/g, '$$$1 \\times $2$$');
+  processed = processed.replace(/(\w+)\s*\*\s*(\w+)/g, '$$$1 \\times $2$$');
 
   // Convert inequalities
-  protected = protected.replace(/(\w+)\s*<=\s*(\w+)/g, '$$$1 \\leq $2$$');
-  protected = protected.replace(/(\w+)\s*>=\s*(\w+)/g, '$$$1 \\geq $2$$');
-  protected = protected.replace(/(\w+)\s*!=\s*(\w+)/g, '$$$1 \\neq $2$$');
+  processed = processed.replace(/(\w+)\s*<=\s*(\w+)/g, '$$$1 \\leq $2$$');
+  processed = processed.replace(/(\w+)\s*>=\s*(\w+)/g, '$$$1 \\geq $2$$');
+  processed = processed.replace(/(\w+)\s*!=\s*(\w+)/g, '$$$1 \\neq $2$$');
 
   // Restore code blocks
-  protected = protected.replace(/__CODE_(\d+)__/g, (_, idx) => codeBlocks[idx]);
+  processed = processed.replace(/__CODE_(\d+)__/g, (_, idx) => codeBlocks[idx]);
 
   // Restore URLs and dates
-  protected = protected.replace(/__(?:URL|DATE)_(\d+)__/g, (_, idx) => urls[idx]);
+  processed = processed.replace(/__(?:URL|DATE)_(\d+)__/g, (_, idx) => urls[idx]);
 
-  return protected;
+  return processed;
 }
 
 /**
