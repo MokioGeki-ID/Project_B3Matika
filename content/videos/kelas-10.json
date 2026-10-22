@@ -1,0 +1,245 @@
+{
+  "grade": 10,
+  "topics": [
+    {
+      "title": "Eksponen dan logaritma",
+      "slug": "eksponen-dan-logaritma",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "VJdmwh-ECQo",
+          "url": "https://www.youtube.com/watch?v=VJdmwh-ECQo",
+          "title": "(Part 1/6) EKSPONEN DAN LOGARITMA MATEMATIKA KELAS 10 KURIKULUM MERDEKA 1 #kurikulummerdeka",
+          "channel": "Wien Classroom",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "(Part 1/6) EKSPONEN DAN LOGARITMA MATEMATIKA KELAS 10 KURIKULUM MERDEKA 1 #kurikulummerdeka",
+          "gemini_claim_channel": "Wien Classroom"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "FqYIq9kdshM",
+          "url": "https://www.youtube.com/watch?v=FqYIq9kdshM",
+          "title": "LOGARITMA ITU GAMPANG!! Bahas Logaritma Kelas 10 | Study With Jerome Polin",
+          "channel": "Mantappu Academy by Jerome Polin",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "LOGARITMA ITU GAMPANG!! Bahas Logaritma Kelas 10 | Study With Jerome Polin",
+          "gemini_claim_channel": "Mantappu Academy by Jerome Polin"
+        }
+      ]
+    },
+    {
+      "title": "Barisan dan deret (aritmetika dan geometri)",
+      "slug": "barisan-dan-deret-aritmetika-dan-geometri",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "68fXtyOCT5A",
+          "url": "https://www.youtube.com/watch?v=68fXtyOCT5A",
+          "title": "Barisan Dan Deret - Aritmatika Dan Geometri",
+          "channel": "Ariyan Masrur",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Barisan Dan Deret - Aritmatika Dan Geometri",
+          "gemini_claim_channel": "Ariyan Masrur"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "tl2XtGQJBpE",
+          "url": "https://www.youtube.com/watch?v=tl2XtGQJBpE",
+          "title": "Baris dan Deret Geometri | Matematika Kelas X Fase E Kurikulum Merdeka",
+          "channel": "Matematika Deka",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Baris dan Deret Geometri | Matematika Kelas X Fase E Kurikulum Merdeka",
+          "gemini_claim_channel": "Matematika Deka"
+        }
+      ]
+    },
+    {
+      "title": "Vektor di R2 dan R3",
+      "slug": "vektor-di-r2-dan-r3",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "5jKGcT-JYtw",
+          "url": "https://www.youtube.com/watch?v=5jKGcT-JYtw",
+          "title": "Konsep Dasar Vektor (Vektor Bagian 1) Matematika Peminatan Kelas 10 - m4thlab",
+          "channel": "m4th-lab",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Konsep Dasar Vektor (Vektor Bagian 1) Matematika Peminatan Kelas 10 - m4thlab",
+          "gemini_claim_channel": "m4th-lab"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "Im10fMICp50",
+          "url": "https://www.youtube.com/watch?v=Im10fMICp50",
+          "title": "KONSEP VEKTOR || Definisi Vektor, Vektor R2 dan Vektor R3|| Matematika Lanjut FASE F",
+          "channel": "AQC aQib Channel",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "KONSEP VEKTOR || Definisi Vektor, Vektor R2 dan Vektor R3|| Matematika Lanjut FASE F",
+          "gemini_claim_channel": "AQC aQib Channel"
+        }
+      ]
+    },
+    {
+      "title": "Trigonometri dasar (perbandingan segitiga siku-siku, identitas dasar)",
+      "slug": "trigonometri-dasar-perbandingan-segitiga-siku-siku-identitas-dasar",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "2iTbfPEMCeo",
+          "url": "https://www.youtube.com/watch?v=2iTbfPEMCeo",
+          "title": "Perbandingan Trigonometri Pada Segitiga Siku-siku - Matematika Wajib Kelas X",
+          "channel": "m4th-lab",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Perbandingan Trigonometri Pada Segitiga Siku-siku - Matematika Wajib Kelas X",
+          "gemini_claim_channel": "m4th-lab"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "zNAF5K5XHAc",
+          "url": "https://www.youtube.com/watch?v=zNAF5K5XHAc",
+          "title": "Perbandingan trigonometri pada segitiga siku siku, Menjelaskan rasio trigonometri",
+          "channel": "BOM Matematika",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Perbandingan trigonometri pada segitiga siku siku, Menjelaskan rasio trigonometri",
+          "gemini_claim_channel": "BOM Matematika"
+        }
+      ]
+    },
+    {
+      "title": "Sistem persamaan linear tiga variabel (SPLTV) dan sistem pertidaksamaan linear",
+      "slug": "spltv-dan-sistem-pertidaksamaan-linear",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "JVANLCfV70w",
+          "url": "https://www.youtube.com/watch?v=JVANLCfV70w",
+          "title": "Sistem Persamaan Linear Tiga Variabel Matematika Wajib Kelas 10 Bagian 1",
+          "channel": "m4th-lab",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Sistem Persamaan Linear Tiga Variabel Matematika Wajib Kelas 10 Bagian 1",
+          "gemini_claim_channel": "m4th-lab"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "3Ho6BvRJoVw",
+          "url": "https://www.youtube.com/watch?v=3Ho6BvRJoVw",
+          "title": "SISTEM PERTIDAKSAMAAN LINEAR DUA VARIABEL SPtLDV",
+          "channel": "Cahaya Mathematic",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "SISTEM PERTIDAKSAMAAN LINEAR DUA VARIABEL SPtLDV",
+          "gemini_claim_channel": "Cahaya Mathematic"
+        }
+      ]
+    },
+    {
+      "title": "Fungsi kuadrat lanjutan",
+      "slug": "fungsi-kuadrat-lanjutan",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "qYZqAAAvnO8",
+          "url": "https://www.youtube.com/watch?v=qYZqAAAvnO8",
+          "title": "Fungsi Kuadrat Kelas 10 Kurikulum Merdeka",
+          "channel": "Rokhaniyah",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Fungsi Kuadrat Kelas 10 Kurikulum Merdeka",
+          "gemini_claim_channel": "Rokhaniyah"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "IwFQPIdqqqQ",
+          "url": "https://www.youtube.com/watch?v=IwFQPIdqqqQ",
+          "title": "Fungsi Kuadrat Bagian 1 - Matematika Wajib Kelas X m4thlab",
+          "channel": "m4th-lab",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Fungsi Kuadrat Bagian 1 - Matematika Wajib Kelas X m4thlab",
+          "gemini_claim_channel": "m4th-lab"
+        }
+      ]
+    },
+    {
+      "title": "Statistika analitis",
+      "slug": "statistika-analitis-kelas-10",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "OX7NlFMMIRw",
+          "url": "https://www.youtube.com/watch?v=OX7NlFMMIRw",
+          "title": "Statistika #5 : Varian dan Simpangan Baku  Kelas X Fase E Kurikulum Merdeka.",
+          "channel": "kasiyanta deka",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Statistika #5 : Varian dan Simpangan Baku Kelas X Fase E Kurikulum Merdeka.",
+          "gemini_claim_channel": "kasiyanta deka"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "_qQ1JUdQ0d8",
+          "url": "https://www.youtube.com/watch?v=_qQ1JUdQ0d8",
+          "title": "Statistika Bagian 7 - Simpangan Baku dan Varian Data Tunggal dan Data Berkelompok",
+          "channel": "m4th-lab",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Statistika Bagian 7 - Simpangan Baku dan Varian Data Tunggal dan Data Berkelompok",
+          "gemini_claim_channel": "m4th-lab"
+        }
+      ]
+    },
+    {
+      "title": "Peluang",
+      "slug": "peluang-kelas-10",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "KlPIuWCx2I8",
+          "url": "https://www.youtube.com/watch?v=KlPIuWCx2I8",
+          "title": "Materi Peluang Kelas X Kurikulum Merdeka",
+          "channel": "Mamas Guru",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Materi Peluang Kelas X Kurikulum Merdeka",
+          "gemini_claim_channel": "Mamas Guru"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "BqM9SbVyt0w",
+          "url": "https://www.youtube.com/watch?v=BqM9SbVyt0w",
+          "title": "Pembahasan materi PELUANG dasar! Sampai semua paham, ngerti, understand! #MatematikAsik",
+          "channel": "Billykur",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Pembahasan materi PELUANG dasar! Sampai semua paham, ngerti, understand! #MatematikAsik",
+          "gemini_claim_channel": "Billykur"
+        }
+      ]
+    }
+  ]
+}
