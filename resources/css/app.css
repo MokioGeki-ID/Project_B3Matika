@@ -3,6 +3,9 @@
    Versi: 2.0  (Revisi UI lengkap)
    ===================================================================== */
 
+/* Import AI Tutor Components Styles */
+@import './tutor-components.css';
+
 /* ─── 1. Design Tokens ─────────────────────────────────────────────── */
 :root {
   /* Brand */
