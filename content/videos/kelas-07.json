@@ -1,0 +1,185 @@
+{
+  "grade": 7,
+  "topics": [
+    {
+      "title": "Bilangan bulat dan bilangan rasional",
+      "slug": "bilangan-bulat-dan-bilangan-rasional",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "Rc6vjXtS70Q",
+          "url": "https://www.youtube.com/watch?v=Rc6vjXtS70Q",
+          "title": "Bilangan Bulat dan Bilangan Rasional | Matematika SMP",
+          "channel": "kejarcita",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Bilangan Bulat dan Bilangan Rasional | Matematika SMP",
+          "gemini_claim_channel": "kejarcita"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "j3-vxTMQlXM",
+          "url": "https://www.youtube.com/watch?v=j3-vxTMQlXM",
+          "title": "Kurikulum Merdeka Matematika Kelas 7 Bab 1 Bilangan Bulat",
+          "channel": "Portal Edukasi",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Kurikulum Merdeka Matematika Kelas 7 Bab 1 Bilangan Bulat",
+          "gemini_claim_channel": "Portal Edukasi"
+        }
+      ]
+    },
+    {
+      "title": "Pengenalan bentuk aljabar (variabel, konstanta, suku)",
+      "slug": "pengenalan-bentuk-aljabar-variabel-konstanta-suku",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "4t3UIu51Uq0",
+          "url": "https://www.youtube.com/watch?v=4t3UIu51Uq0",
+          "title": "Cara Mudah Menentukan Bentuk Aljabar (Suku, Variabel, Koefisien, Konstanta) - Matematika SMP",
+          "channel": "Belajar Bareng Fatchur",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Cara Mudah Menentukan Bentuk Aljabar (Suku, Variabel, Koefisien, Konstanta) - Matematika SMP",
+          "gemini_claim_channel": "Belajar Bareng Fatchur"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "kjBd97SKcU0",
+          "url": "https://www.youtube.com/watch?v=kjBd97SKcU0",
+          "title": "Cara Menyederhanakan Bentuk Aljabar - Matematika SMP Kelas 7",
+          "channel": "Didi Yuli Setiaji",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Cara Menyederhanakan Bentuk Aljabar - Matematika SMP Kelas 7",
+          "gemini_claim_channel": "Didi Yuli Setiaji"
+        }
+      ]
+    },
+    {
+      "title": "Persamaan dan pertidaksamaan linear satu variabel",
+      "slug": "persamaan-dan-pertidaksamaan-linear-satu-variabel",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "j91Xy4TVlk4",
+          "url": "https://www.youtube.com/watch?v=j91Xy4TVlk4",
+          "title": "Persamaan dan Pertidaksamaan Linier Satu Variabel - Materi Matematika SMP Kelas VII",
+          "channel": "AF Science",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Persamaan dan Pertidaksamaan Linier Satu Variabel - Materi Matematika SMP Kelas VII",
+          "gemini_claim_channel": "AF Science"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "OJhDRcYojt8",
+          "url": "https://www.youtube.com/watch?v=OJhDRcYojt8",
+          "title": "Persamaan dan pertidaksamaan linear satu variabel",
+          "channel": "Matematika Hebat",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Persamaan dan pertidaksamaan linear satu variabel",
+          "gemini_claim_channel": "Matematika Hebat"
+        }
+      ]
+    },
+    {
+      "title": "Rasio dan perbandingan (senilai dan berbalik nilai)",
+      "slug": "rasio-dan-perbandingan-senilai-dan-berbalik-nilai",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "-I8hztM_LV4",
+          "url": "https://www.youtube.com/watch?v=-I8hztM_LV4",
+          "title": "Matematika Kelas 7: Perbandingan Senilai dan Berbalik Nilai",
+          "channel": "Portal Edukasi",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Matematika Kelas 7: Perbandingan Senilai dan Berbalik Nilai",
+          "gemini_claim_channel": "Portal Edukasi"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "sop63Y5SSV4",
+          "url": "https://www.youtube.com/watch?v=sop63Y5SSV4",
+          "title": "Kelas VII - Perbandingan Senilai dan Berbalik Nilai",
+          "channel": "Mahir Matematika",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Kelas VII - Perbandingan Senilai dan Berbalik Nilai",
+          "gemini_claim_channel": "Mahir Matematika"
+        }
+      ]
+    },
+    {
+      "title": "Aritmetika sosial (untung, rugi, diskon, bunga tunggal, pajak)",
+      "slug": "aritmetika-sosial-untung-rugi-diskon-bunga-tunggal-pajak",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "4Y7byg5nEOU",
+          "url": "https://www.youtube.com/watch?v=4Y7byg5nEOU",
+          "title": "Aritmetika Sosial | Diskon | Bruto, Neto, Tara | Bunga Tabungan | Pajak | MTK SMP",
+          "channel": "kejarcita",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Aritmetika Sosial | Diskon | Bruto, Neto, Tara | Bunga Tabungan | Pajak | MTK SMP",
+          "gemini_claim_channel": "kejarcita"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "Z6Q655sDNjQ",
+          "url": "https://www.youtube.com/watch?v=Z6Q655sDNjQ",
+          "title": "Aritmatika Sosial (4) - Aritmatika Sosial Bunga Tabungan, Diskon dan Pajak - Matematika SMP",
+          "channel": "Le GuruLes",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Aritmatika Sosial (4) - Aritmatika Sosial Bunga Tabungan, Diskon dan Pajak - Matematika SMP",
+          "gemini_claim_channel": "Le GuruLes"
+        }
+      ]
+    },
+    {
+      "title": "Statistika: penyajian data kelompok",
+      "slug": "statistika-penyajian-data-kelompok",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "Gl3RxwlnThw",
+          "url": "https://www.youtube.com/watch?v=Gl3RxwlnThw",
+          "title": "Kurikulum Merdeka Materi Matematika Kelas 7 Bab 6 Data dan Diagram",
+          "channel": "Portal Edukasi",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Kurikulum Merdeka Materi Matematika Kelas 7 Bab 6 Data dan Diagram",
+          "gemini_claim_channel": "Portal Edukasi"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "q8p2QrWzWLs",
+          "url": "https://www.youtube.com/watch?v=q8p2QrWzWLs",
+          "title": "1  PENYAJIAN DATA - STATISTIKA - KELAS 7 SMP",
+          "channel": "Yovita Vera",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "1 PENYAJIAN DATA - STATISTIKA - KELAS 7 SMP",
+          "gemini_claim_channel": "Yovita Vera"
+        }
+      ]
+    }
+  ]
+}
