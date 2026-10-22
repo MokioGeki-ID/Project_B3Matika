@@ -16,3 +16,17 @@ if (supabaseKey) {
 }
 
 export const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
+
+/**
+ * getSupabaseClient — alias untuk mendapatkan singleton supabase client.
+ * Dipakai oleh chat.js dan routes lain yang mengimpor fungsi ini.
+ * Melempar error eksplisit jika env vars tidak dikonfigurasi.
+ */
+export function getSupabaseClient() {
+  if (!supabase) {
+    throw new Error(
+      'Supabase client tidak terinisialisasi. Pastikan SUPABASE_URL dan SUPABASE_SERVICE_ROLE_KEY sudah diset di environment variables.'
+    );
+  }
+  return supabase;
+}

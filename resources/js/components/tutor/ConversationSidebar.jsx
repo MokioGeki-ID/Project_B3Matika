@@ -1,4 +1,4 @@
-import { Bot } from 'lucide-react';
+import { LogoMark } from '@/components/Logo';
 import ConversationList from './ConversationList';
 import ToneSwitch from './ToneSwitch';
 
@@ -24,7 +24,7 @@ export default function ConversationSidebar({
       <div className="conversation-sidebar-header">
         <div className="sidebar-logo">
           <div className="sidebar-logo-icon">
-            <Bot size={32} strokeWidth={1.5} />
+            <LogoMark size={32} />
           </div>
           <div className="sidebar-logo-text">
             <h2>AI Tutor</h2>

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
-import { X, Bot } from 'lucide-react';
+import { X } from 'lucide-react';
+import { LogoMark } from '@/components/Logo';
 import { motion, AnimatePresence } from 'framer-motion';
 import ConversationList from './ConversationList';
 import ToneSwitch from './ToneSwitch';
@@ -82,7 +83,7 @@ export default function ConversationDrawer({
             <div className="drawer-header">
               <div className="drawer-logo">
                 <div className="drawer-logo-icon">
-                  <Bot size={28} strokeWidth={1.5} />
+                  <LogoMark size={28} />
                 </div>
                 <div className="drawer-logo-text">
                   <h2>AI Tutor</h2>

@@ -97,7 +97,8 @@ async function createConversation(req, res) {
   try {
     const { user } = await requireAuth(req);
 
-    // Rate limiting
+    // Rate limiting — inject req.user agar rateLimiter bisa membaca user ID
+    req.user = user;
     await new Promise((resolve, reject) => {
       tutorConversationLimiter(req, res, (err) => {
         if (err) reject(err);

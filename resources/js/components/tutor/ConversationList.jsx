@@ -20,31 +20,34 @@ export default function ConversationList({
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [creating, setCreating] = useState(false);
-  const [page, setPage] = useState(1);
+  const [cursor, setCursor] = useState(null);
   const [hasMore, setHasMore] = useState(false);
 
-  const loadConversations = async (pageNum = 1) => {
+  const loadConversations = async (nextCursor = null) => {
     try {
       setLoading(true);
       setError(null);
 
-      const response = await api.get('/api/tutor/conversations', {
-        params: { page: pageNum, limit: 20 }
-      });
+      // Backend memakai cursor-based pagination (bukan page/limit)
+      const url = nextCursor
+        ? `/tutor/conversations?cursor=${encodeURIComponent(nextCursor)}`
+        : '/tutor/conversations';
 
-      const { conversations: data, pagination } = response;
+      const response = await api.get(url);
 
-      if (pageNum === 1) {
-        setConversations(data);
+      const { conversations: data, nextCursor: newCursor, hasMore: more } = response;
+
+      if (!nextCursor) {
+        setConversations(data || []);
       } else {
-        setConversations(prev => [...prev, ...data]);
+        setConversations(prev => [...prev, ...(data || [])]);
       }
 
-      setHasMore(pagination.page < pagination.totalPages);
-      setPage(pageNum);
+      setHasMore(!!more);
+      setCursor(newCursor || null);
     } catch (err) {
       console.error('Error loading conversations:', err);
-      setError('Gagal memuat percakapan');
+      setError(err.message || 'Gagal memuat percakapan');
     } finally {
       setLoading(false);
     }
@@ -67,7 +70,7 @@ export default function ConversationList({
         minute: '2-digit' 
       })}`;
 
-      const response = await api.post('/api/tutor/conversations', {
+      const response = await api.post('/tutor/conversations', {
         title: defaultTitle,
         tone: 'baku'
       });
@@ -96,7 +99,7 @@ export default function ConversationList({
 
   const handleRename = async (conversationId, newTitle) => {
     try {
-      await api.patch(`/api/tutor/conversations/${conversationId}`, {
+      await api.patch(`/tutor/conversations/${conversationId}`, {
         title: newTitle
       });
 
@@ -116,7 +119,7 @@ export default function ConversationList({
 
   const handleDelete = async (conversationId) => {
     try {
-      await api.delete(`/api/tutor/conversations/${conversationId}`);
+      await api.delete(`/tutor/conversations/${conversationId}`);
 
       // Remove from list
       setConversations(prev => prev.filter(conv => conv.id !== conversationId));
@@ -138,8 +141,8 @@ export default function ConversationList({
   };
 
   const handleLoadMore = () => {
-    if (!loading && hasMore) {
-      loadConversations(page + 1);
+    if (!loading && hasMore && cursor) {
+      loadConversations(cursor);
     }
   };
 
@@ -164,6 +167,12 @@ export default function ConversationList({
         <div className="conversation-list-error">
           <AlertCircle size={16} />
           <span>{error}</span>
+          <button
+            className="conversation-list-retry"
+            onClick={() => loadConversations()}
+          >
+            Coba lagi
+          </button>
         </div>
       )}
 

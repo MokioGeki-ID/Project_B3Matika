@@ -35,8 +35,13 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') return errorResponse(res, 'Method not allowed', 405);
 
   // Require authentication
-  const user = await requireAuth(req, res);
-  if (!user) return; // requireAuth already sent error response
+  let user;
+  try {
+    const authResult = await requireAuth(req);
+    user = authResult.user;
+  } catch (authErr) {
+    return errorResponse(res, authErr.message, authErr.status || 401);
+  }
 
   const apiKeyStr = env.GEMINI_API_KEY || '';
   const apiKeys = apiKeyStr.split(',').map(k => k.replace(/['"]/g, '').trim()).filter(k => k);

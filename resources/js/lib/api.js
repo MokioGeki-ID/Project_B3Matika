@@ -54,3 +54,20 @@ export async function api(path, { method = 'GET', body } = {}) {
   }
   return data;
 }
+
+/**
+ * Shorthand methods agar komponen bisa memanggil:
+ *   api.get('/endpoint')
+ *   api.post('/endpoint', bodyObj)
+ *   api.patch('/endpoint', bodyObj)
+ *   api.delete('/endpoint')
+ *
+ * Catatan: parameter `params` / `_opts` pada get() diabaikan karena
+ * querystring harus sudah disertakan di dalam `path`.
+ * Contoh: api.get('/tutor/conversations?page=1')
+ */
+api.get = (path, _opts) => api(path, { method: 'GET' });
+api.post = (path, body) => api(path, { method: 'POST', body });
+api.patch = (path, body) => api(path, { method: 'PATCH', body });
+api.put = (path, body) => api(path, { method: 'PUT', body });
+api.delete = (path) => api(path, { method: 'DELETE' });

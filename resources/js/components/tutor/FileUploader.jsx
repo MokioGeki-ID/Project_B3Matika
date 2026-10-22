@@ -62,7 +62,7 @@ export default function FileUploader({ conversationId, attachments = [], onAttac
       setUploading(true);
 
       // Step 1: Get signed upload URL
-      const signedUrlResponse = await api.post('/api/tutor/uploads', {
+      const signedUrlResponse = await api.post('/tutor/uploads', {
         conversation_id: conversationId,
         file_name: file.name,
         mime_type: file.type,

@@ -87,7 +87,8 @@ export default async function handler(req, res) {
   try {
     const { user } = await requireAuth(req);
 
-    // Rate limiting
+    // Rate limiting — inject req.user agar rateLimiter bisa membaca user ID
+    req.user = user;
     await new Promise((resolve, reject) => {
       tutorUploadLimiter(req, res, (err) => {
         if (err) reject(err);

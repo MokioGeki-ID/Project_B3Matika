@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { Menu, Send, Paperclip, X, Bot, Loader } from 'lucide-react';
+import { Menu, Send, Paperclip, X, Loader } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
 import { api } from '@/lib/api';
 import {
@@ -10,9 +10,6 @@ import {
   FileUploader,
   AttachmentPreview
 } from '@/components/tutor';
-
-// AI Tutor logo - use B3Matika robot logo
-const AI_TUTOR_LOGO = '/images/ai-tutor-logo.png';
 
 export default function TutorChat() {
   const { user } = useAuth();
@@ -60,14 +57,15 @@ export default function TutorChat() {
     checkHealth();
   }, []);
 
-  // Load topics catalog for material recommendations
+  // Load topics catalog for material recommendations (graceful fallback)
   useEffect(() => {
     const loadTopics = async () => {
       try {
-        const response = await api.get('/api/topics'); // Assuming this endpoint exists
+        const response = await api.get('/topics');
         setTopics(response.topics || []);
       } catch (err) {
-        console.error('Error loading topics:', err);
+        // Endpoint mungkin belum ada, abaikan error ini
+        console.warn('Topics endpoint not available:', err.message);
       }
     };
     loadTopics();
@@ -82,10 +80,10 @@ export default function TutorChat() {
       }
 
       try {
-        const response = await api.get(`/api/topics/${activeConversation.topic_id}/videos`);
+        const response = await api.get(`/topics/${activeConversation.topic_id}/videos`);
         setVideos(response.videos || []);
       } catch (err) {
-        console.error('Error loading videos:', err);
+        console.warn('Videos endpoint not available:', err.message);
         setVideos([]);
       }
     };
@@ -125,7 +123,7 @@ export default function TutorChat() {
     try {
       setLoading(true);
       
-      const response = await api.get(`/api/tutor/${activeConversationId}/messages`);
+      const response = await api.get(`/tutor/${activeConversationId}/messages`);
       setMessages(response.messages || []);
     } catch (err) {
       console.error('Error loading messages:', err);
@@ -138,13 +136,13 @@ export default function TutorChat() {
   const handleSelectConversation = async (conversationId) => {
     setActiveConversationId(conversationId);
     
-    // Load conversation details
+    // Load conversation details dari local state jika ada
     try {
-      const convs = await api.get('/api/tutor/conversations');
-      const conv = convs.conversations.find(c => c.id === conversationId);
-      setActiveConversation(conv);
+      const convResponse = await api.get('/tutor/conversations');
+      const conv = (convResponse.conversations || []).find(c => c.id === conversationId);
+      if (conv) setActiveConversation(conv);
     } catch (err) {
-      console.error('Error loading conversation:', err);
+      console.warn('Error loading conversation details:', err);
     }
   };
 
@@ -158,7 +156,7 @@ export default function TutorChat() {
     if (!activeConversationId) return;
 
     try {
-      await api.patch(`/api/tutor/conversations/${activeConversationId}`, {
+      await api.patch(`/tutor/conversations/${activeConversationId}`, {
         tone: newTone
       });
 
@@ -282,7 +280,9 @@ export default function TutorChat() {
                   break;
                 }
               } catch (e) {
-                console.error('Error parsing SSE:', e);
+                if (e.message && !e.message.includes('JSON')) {
+                  throw e; // Re-throw application errors, not JSON parse errors
+                }
               }
             }
           }
@@ -369,7 +369,7 @@ export default function TutorChat() {
 
             <div className="welcome-content">
               <div className="welcome-logo">
-                <img src={AI_TUTOR_LOGO} alt="AI Tutor B3Matika" />
+                <img src="/images/ai-tutor-mascot.jpg" alt="AI Tutor B3Matika" className="tutor-mascot-img" />
               </div>
               <h1>Selamat Datang di AI Tutor B3Matika!</h1>
               <p className="welcome-subtitle">
@@ -381,10 +381,7 @@ export default function TutorChat() {
               </p>
               <button 
                 className="welcome-cta-btn"
-                onClick={() => {
-                  // This will trigger conversation creation in ConversationList
-                  setDrawerOpen(true);
-                }}
+                onClick={() => setDrawerOpen(true)}
               >
                 Mulai Percakapan Baru
               </button>
@@ -429,7 +426,8 @@ export default function TutorChat() {
 
           <div className="header-info">
             <div className="header-avatar">
-              <Bot size={24} />
+              {/* Logo B3Matika kecil di header chat */}
+              <LogoMark size={28} />
             </div>
             <div className="header-text">
               <h2 className="header-title">
@@ -454,7 +452,7 @@ export default function TutorChat() {
             </div>
           ) : messages.length === 0 ? (
             <div className="messages-empty">
-              <Bot size={64} strokeWidth={1} opacity={0.2} />
+            <img src="/images/ai-tutor-mascot.jpg" alt="AI Tutor B3Matika" className="tutor-mascot-img" style={{width:64,height:64}} />
               <p>Mulai percakapan dengan mengirim pesan pertama!</p>
             </div>
           ) : (
