@@ -1,0 +1,215 @@
+{
+  "grade": 8,
+  "topics": [
+    {
+      "title": "Relasi dan fungsi",
+      "slug": "relasi-dan-fungsi",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "5zD5ppiCjHE",
+          "url": "https://www.youtube.com/watch?v=5zD5ppiCjHE",
+          "title": "Kurikulum Merdeka Matematika Kelas 8 Bab 4 Relasi dan Fungsi",
+          "channel": "Portal Edukasi",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Kurikulum Merdeka Matematika Kelas 8 Bab 4 Relasi dan Fungsi",
+          "gemini_claim_channel": "Portal Edukasi"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "iBe7hvD5YiY",
+          "url": "https://www.youtube.com/watch?v=iBe7hvD5YiY",
+          "title": "Relasi dan Fungsi | Matematika SMP",
+          "channel": "kejarcita",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Relasi dan Fungsi | Matematika SMP",
+          "gemini_claim_channel": "kejarcita"
+        }
+      ]
+    },
+    {
+      "title": "Persamaan garis lurus",
+      "slug": "persamaan-garis-lurus",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "aLdYlnXe-zU",
+          "url": "https://www.youtube.com/watch?v=aLdYlnXe-zU",
+          "title": "Kurikulum Merdeka Matematika Kelas 8 Bab 5 Persamaan Garis Lurus",
+          "channel": "Portal Edukasi",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Kurikulum Merdeka Matematika Kelas 8 Bab 5 Persamaan Garis Lurus",
+          "gemini_claim_channel": "Portal Edukasi"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "RA_IMgVitP0",
+          "url": "https://www.youtube.com/watch?v=RA_IMgVitP0",
+          "title": "Persamaan Garis Lurus [Part 1] - Mengenal Persamaan Garis Lurus",
+          "channel": "Benni al azhri",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Persamaan Garis Lurus [Part 1] - Mengenal Persamaan Garis Lurus",
+          "gemini_claim_channel": "Benni al azhri"
+        }
+      ]
+    },
+    {
+      "title": "Sistem persamaan linear dua variabel (SPLDV)",
+      "slug": "sistem-persamaan-linear-dua-variabel-spldv",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "GbPkZ92QDLI",
+          "url": "https://www.youtube.com/watch?v=GbPkZ92QDLI",
+          "title": "Sistem Persamaan Linear Dua Variabel | SPLDV | Matematika Kelas 8 SMP/MTs",
+          "channel": "Safira Rahmadhani",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Sistem Persamaan Linear Dua Variabel | SPLDV | Matematika Kelas 8 SMP/MTs",
+          "gemini_claim_channel": "Safira Rahmadhani"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "QNigb4Art5Y",
+          "url": "https://www.youtube.com/watch?v=QNigb4Art5Y",
+          "title": "Sistem persamaan linear dua variabel (SPLDV) Metode subtitusi, Eliminasi dan Campuran",
+          "channel": "Matematika Hebat",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Sistem persamaan linear dua variabel (SPLDV) Metode subtitusi, Eliminasi dan Campuran",
+          "gemini_claim_channel": "Matematika Hebat"
+        }
+      ]
+    },
+    {
+      "title": "Teorema Pythagoras",
+      "slug": "teorema-pythagoras",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "JxRergfgyTk",
+          "url": "https://www.youtube.com/watch?v=JxRergfgyTk",
+          "title": "Kurikulum Merdeka Matematika Kelas 8 Bab 2 Teorema Pythagoras",
+          "channel": "Portal Edukasi",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Kurikulum Merdeka Matematika Kelas 8 Bab 2 Teorema Pythagoras",
+          "gemini_claim_channel": "Portal Edukasi"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "9YdFM0y12Po",
+          "url": "https://www.youtube.com/watch?v=9YdFM0y12Po",
+          "title": "MATEMATIKA Kelas 8 - Teorema Phytagoras | GIA Academy",
+          "channel": "GIA Academy",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "MATEMATIKA Kelas 8 - Teorema Phytagoras | GIA Academy",
+          "gemini_claim_channel": "GIA Academy"
+        }
+      ]
+    },
+    {
+      "title": "Geometri: bangun ruang sisi datar (prisma, limas)",
+      "slug": "geometri-bangun-ruang-sisi-datar-prisma-limas",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "e9puyQX8x_k",
+          "url": "https://www.youtube.com/watch?v=e9puyQX8x_k",
+          "title": "Matematika Kelas 8: Bangun Ruang Sisi Datar(Kubus, Balok,Prisma,Limas)",
+          "channel": "Portal Edukasi",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Matematika Kelas 8: Bangun Ruang Sisi Datar(Kubus, Balok,Prisma,Limas)",
+          "gemini_claim_channel": "Portal Edukasi"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "_ulyFVw9jPo",
+          "url": "https://www.youtube.com/watch?v=_ulyFVw9jPo",
+          "title": "Latihan Soal Prisma & Limas || PEMBAHASAN VOLUME & LUAS PERMUKAAN",
+          "channel": "Rika Merdeka",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Latihan Soal Prisma & Limas || PEMBAHASAN VOLUME & LUAS PERMUKAAN",
+          "gemini_claim_channel": "Rika Merdeka"
+        }
+      ]
+    },
+    {
+      "title": "Statistika",
+      "slug": "statistika-kelas-8",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "-8S8SYWShfY",
+          "url": "https://www.youtube.com/watch?v=-8S8SYWShfY",
+          "title": "Kurikulum Merdeka Matematika Kelas 8 Bab 6 Statistika",
+          "channel": "Portal Edukasi",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Kurikulum Merdeka Matematika Kelas 8 Bab 6 Statistika",
+          "gemini_claim_channel": "Portal Edukasi"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "JryYK-YUKxk",
+          "url": "https://www.youtube.com/watch?v=JryYK-YUKxk",
+          "title": "Matematika Kelas 8: Statistika | Mean, Median, Modus, Kuartil, Jangkauan",
+          "channel": "Portal Edukasi",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Matematika Kelas 8: Statistika | Mean, Median, Modus, Kuartil, Jangkauan",
+          "gemini_claim_channel": "Portal Edukasi"
+        }
+      ]
+    },
+    {
+      "title": "Peluang dasar",
+      "slug": "peluang-dasar-kelas-8",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "nTp0F_mLB7Y",
+          "url": "https://www.youtube.com/watch?v=nTp0F_mLB7Y",
+          "title": "Matematika Kelas 8: Peluang",
+          "channel": "Portal Edukasi",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Matematika Kelas 8: Peluang",
+          "gemini_claim_channel": "Portal Edukasi"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "HyEqUL3PtGE",
+          "url": "https://www.youtube.com/watch?v=HyEqUL3PtGE",
+          "title": "Latihan Soal Ulangan Harian Peluang Matematika Kelas 8",
+          "channel": "Bimbel Jakarta Timur",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Latihan Soal Ulangan Harian Peluang Matematika Kelas 8",
+          "gemini_claim_channel": "Bimbel Jakarta Timur"
+        }
+      ]
+    }
+  ]
+}
