@@ -1,0 +1,155 @@
+{
+  "grade": 3,
+  "topics": [
+    {
+      "title": "Bilangan cacah hingga ribuan beserta operasi hitungnya",
+      "slug": "bilangan-cacah-hingga-ribuan",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "_dIN-060dkM",
+          "url": "https://www.youtube.com/watch?v=_dIN-060dkM",
+          "title": "MEMBACA DAN MENULIS BILANGAN CACAH SAMPAI 1.000 | MATEMATIKA | KELAS 3 SD | BAB 1 KURIKULUM MERDEKA",
+          "channel": "Video Materi SD",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "MEMBACA DAN MENULIS BILANGAN CACAH SAMPAI 1.000 | MATEMATIKA | KELAS 3 SD | BAB 1 KURIKULUM MERDEKA",
+          "gemini_claim_channel": "Video Materi SD"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "Q56f0dWsbkI",
+          "url": "https://www.youtube.com/watch?v=Q56f0dWsbkI",
+          "title": "Matematika Kelas 3 Bab 1 - Bilangan Cacah sampai 1000 - Halaman 01-14 Kurikulum Merdeka",
+          "channel": "BIMBEL ONLINE",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "Matematika Kelas 3 Bab 1 - Bilangan Cacah sampai 1000 - Halaman 01-14 Kurikulum Merdeka",
+          "gemini_claim_channel": "BIMBEL ONLINE"
+        }
+      ]
+    },
+    {
+      "title": "Garis bilangan dasar",
+      "slug": "garis-bilangan-dasar",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "tCzW6TpUxPk",
+          "url": "https://www.youtube.com/watch?v=tCzW6TpUxPk",
+          "title": "GARIS BILANGAN KELAS 3 SD",
+          "channel": "Nawangsih Yuni",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "GARIS BILANGAN KELAS 3 SD",
+          "gemini_claim_channel": "Nawangsih Yuni"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "23pioKrT3h4",
+          "url": "https://www.youtube.com/watch?v=23pioKrT3h4",
+          "title": "Menentukan Letak Bilangan pada Garis Bilangan - Matematika Kelas 3 SD",
+          "channel": "Indah Nia",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "Menentukan Letak Bilangan pada Garis Bilangan - Matematika Kelas 3 SD",
+          "gemini_claim_channel": "Indah Nia"
+        }
+      ]
+    },
+    {
+      "title": "Operasi pecahan sederhana",
+      "slug": "operasi-pecahan-sederhana",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "mpDIA2OQjUc",
+          "url": "https://www.youtube.com/watch?v=mpDIA2OQjUc",
+          "title": "Belajar Pecahan Sederhana Kelas 3 SD Mudah dan Menyenangkan",
+          "channel": "Ria Dewi Saptini",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "Belajar Pecahan Sederhana Kelas 3 SD Mudah dan Menyenangkan",
+          "gemini_claim_channel": "Ria Dewi Saptini"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "g5TSfen0WPU",
+          "url": "https://www.youtube.com/watch?v=g5TSfen0WPU",
+          "title": "PENJUMLAHAN PECAHAN - Tema 5 - Kelas 3 SD",
+          "channel": "Anak Mipa Course",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "PENJUMLAHAN PECAHAN - Tema 5 - Kelas 3 SD",
+          "gemini_claim_channel": "Anak Mipa Course"
+        }
+      ]
+    },
+    {
+      "title": "Keliling dan luas bangun datar sederhana (persegi dan persegi panjang)",
+      "slug": "keliling-dan-luas-bangun-datar-sederhana",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "ZkaRhb_kcdg",
+          "url": "https://www.youtube.com/watch?v=ZkaRhb_kcdg",
+          "title": "Matematika Kelas 3 Materi 3, Keliling dan Luas Persegi, dan Persegi Panjang",
+          "channel": "Aksara Ceria",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "Matematika Kelas 3 Materi 3, Keliling dan Luas Persegi, dan Persegi Panjang",
+          "gemini_claim_channel": "Aksara Ceria"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "GdxNqg4VeMY",
+          "url": "https://www.youtube.com/watch?v=GdxNqg4VeMY",
+          "title": "[Part - 2] Latihan Soal tentang Keliling dan Luas Persegi Panjang",
+          "channel": "Media Pembelajaran Kita",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "[Part - 2] Latihan Soal tentang Keliling dan Luas Persegi Panjang",
+          "gemini_claim_channel": "Media Pembelajaran Kita"
+        }
+      ]
+    },
+    {
+      "title": "Sudut (siku-siku, lancip, tumpul)",
+      "slug": "sudut-siku-siku-lancip-tumpul",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "Y_qWRPldV4E",
+          "url": "https://www.youtube.com/watch?v=Y_qWRPldV4E",
+          "title": "MENGENAL SUDUT MATEMATIKA KELAS 3 SD (TEMA 8)",
+          "channel": "Mia Laksmi",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "MENGENAL SUDUT MATEMATIKA KELAS 3 SD (TEMA 8)",
+          "gemini_claim_channel": "Mia Laksmi"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "88Lo9GU4aXo",
+          "url": "https://www.youtube.com/watch?v=88Lo9GU4aXo",
+          "title": "Mengukur Besar Sudut - Matematika Kelas 3",
+          "channel": "Uyum Lusi Ana",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "Mengukur Besar Sudut - Matematika Kelas 3",
+          "gemini_claim_channel": "Uyum Lusi Ana"
+        }
+      ]
+    }
+  ]
+}

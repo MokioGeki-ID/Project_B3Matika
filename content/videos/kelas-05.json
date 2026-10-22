@@ -1,0 +1,125 @@
+{
+  "grade": 5,
+  "topics": [
+    {
+      "title": "Operasi hitung pecahan (penjumlahan, pengurangan, perkalian, pembagian)",
+      "slug": "operasi-hitung-pecahan",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "M2UPJKhzVpA",
+          "url": "https://www.youtube.com/watch?v=M2UPJKhzVpA",
+          "title": "Operasi Hitung Pecahan | Matematika SD",
+          "channel": "kejarcita",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "Operasi Hitung Pecahan | Matematika SD",
+          "gemini_claim_channel": "kejarcita"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "mpSkjJE4f4Q",
+          "url": "https://www.youtube.com/watch?v=mpSkjJE4f4Q",
+          "title": "Pecahan Campuran ( penjumlahan ,pengurangan,perkalian,pembagian pecahan campuran )",
+          "channel": "Ariyan Masrur",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "Pecahan Campuran ( penjumlahan ,pengurangan,perkalian,pembagian pecahan campuran )",
+          "gemini_claim_channel": "Ariyan Masrur"
+        }
+      ]
+    },
+    {
+      "title": "Kecepatan, debit, skala, jarak, dan waktu",
+      "slug": "kecepatan-debit-skala-jarak-dan-waktu",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "LpRU7gJO_DU",
+          "url": "https://www.youtube.com/watch?v=LpRU7gJO_DU",
+          "title": "Jarak - Skala - Debit || Matematika Kelas 5 Semester 1 || Belajar Mtk Jadi Mudah",
+          "channel": "Ihsanesia Belajar",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "Jarak - Skala - Debit || Matematika Kelas 5 Semester 1 || Belajar Mtk Jadi Mudah",
+          "gemini_claim_channel": "Ihsanesia Belajar"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "hwz3Z7xRbSA",
+          "url": "https://www.youtube.com/watch?v=hwz3Z7xRbSA",
+          "title": "SOAL CERITA KECEPATAN, JARAK, WAKTU || MATEMATIKA KELAS 5 SD",
+          "channel": "Video Materi SD",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "SOAL CERITA KECEPATAN, JARAK, WAKTU || MATEMATIKA KELAS 5 SD",
+          "gemini_claim_channel": "Video Materi SD"
+        }
+      ]
+    },
+    {
+      "title": "Geometri ruang: volume kubus dan balok",
+      "slug": "geometri-ruang-volume-kubus-dan-balok",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "1XOvoj0_DDs",
+          "url": "https://www.youtube.com/watch?v=1XOvoj0_DDs",
+          "title": "Volume KUBUS dan BALOK, dengan Kubus SATUAN",
+          "channel": "Matematika Spekta",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "Volume KUBUS dan BALOK, dengan Kubus SATUAN",
+          "gemini_claim_channel": "Matematika Spekta"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "LL4h4r0Bve8",
+          "url": "https://www.youtube.com/watch?v=LL4h4r0Bve8",
+          "title": "Penyelesaian Soal Cerita Materi Kubus dan Balok Kelas 5",
+          "channel": "Bu Guru Wanti",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "Penyelesaian Soal Cerita Materi Kubus dan Balok Kelas 5",
+          "gemini_claim_channel": "Bu Guru Wanti"
+        }
+      ]
+    },
+    {
+      "title": "Penyajian data lanjutan (diagram lingkaran, garis)",
+      "slug": "penyajian-data-lanjutan-diagram-lingkaran-garis",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "O_WCwkFkMDk",
+          "url": "https://www.youtube.com/watch?v=O_WCwkFkMDk",
+          "title": "Matematika SD |  Penyajian Data ( Pengertian diagram, diagram garis, batang dan Lingkaran |",
+          "channel": "EduMotion “Edumotion indonesia” Indonesia",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "Matematika SD | Penyajian Data ( Pengertian diagram, diagram garis, batang dan Lingkaran",
+          "gemini_claim_channel": "EduMotion \"Edumotion indonesia\" Indonesia"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "PTF0cqgbUjc",
+          "url": "https://www.youtube.com/watch?v=PTF0cqgbUjc",
+          "title": "Matematika Kelas 5 Bab 15 : Diagram Lingkaran Halaman 102-103 Kelas 5 Kurikulum Merdeka",
+          "channel": "BIMBEL ONLINE",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "Matematika Kelas 5 Bab 15 : Diagram Lingkaran Halaman 102-103 Kelas 5 Kurikulum Merdeka",
+          "gemini_claim_channel": "BIMBEL ONLINE"
+        }
+      ]
+    }
+  ]
+}

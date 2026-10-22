@@ -1,0 +1,125 @@
+{
+  "grade": 6,
+  "topics": [
+    {
+      "title": "Bilangan bulat negatif dan operasi hitung campuran",
+      "slug": "bilangan-bulat-negatif-dan-operasi-hitung-campuran",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "TDxwIux9e0Q",
+          "url": "https://www.youtube.com/watch?v=TDxwIux9e0Q",
+          "title": "Kelas 6 Matematika \"OPERASI HITUNG CAMPURAN BILANGAN BULAT\"",
+          "channel": "CHITRA SINTARANI",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "Kelas 6 Matematika \"OPERASI HITUNG CAMPURAN BILANGAN BULAT\"",
+          "gemini_claim_channel": "CHITRA SINTARANI"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "4cBNmbDeRjA",
+          "url": "https://www.youtube.com/watch?v=4cBNmbDeRjA",
+          "title": "Cara Mengerjakan Soal Operasi Hitung Campuran Bilangan Bulat",
+          "channel": "Matematika Spekta",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "Cara Mengerjakan Soal Operasi Hitung Campuran Bilangan Bulat",
+          "gemini_claim_channel": "Matematika Spekta"
+        }
+      ]
+    },
+    {
+      "title": "Rasio dan proporsi (perbandingan)",
+      "slug": "rasio-dan-proporsi-perbandingan",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "ju6K5iyvsAs",
+          "url": "https://www.youtube.com/watch?v=ju6K5iyvsAs",
+          "title": "MATEMATIKA | KELAS 6 | KONSEP RASIO ATAU PERBANDINGAN | KURIKULUM MERDEKA | BAB 2 | SEMESTER 1",
+          "channel": "Video Materi SD",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "MATEMATIKA | KELAS 6 | KONSEP RASIO ATAU PERBANDINGAN | KURIKULUM MERDEKA | BAB 2 | SEMESTER 1",
+          "gemini_claim_channel": "Video Materi SD"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "jVU7pZQofAc",
+          "url": "https://www.youtube.com/watch?v=jVU7pZQofAc",
+          "title": "Matematika Kelas 6 Bab 2 : Konsep Rasio dan Pembahasan Lengkap - Halaman 45-53 Kurikulum Merdeka",
+          "channel": "BIMBEL ONLINE",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "Matematika Kelas 6 Bab 2 : Konsep Rasio dan Pembahasan Lengkap - Halaman 45-53 Kurikulum Merdeka",
+          "gemini_claim_channel": "BIMBEL ONLINE"
+        }
+      ]
+    },
+    {
+      "title": "Geometri ruang lanjutan: volume dan luas permukaan tabung, kerucut, bola, prisma, limas",
+      "slug": "geometri-ruang-lanjutan-volume-dan-luas-permukaan",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "q50HvRP1n4E",
+          "url": "https://www.youtube.com/watch?v=q50HvRP1n4E",
+          "title": "Materi lengkap Volume bangun ruang",
+          "channel": "Matematika Hebat",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "Materi lengkap Volume bangun ruang",
+          "gemini_claim_channel": "Matematika Hebat"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "SMi-t9Q526g",
+          "url": "https://www.youtube.com/watch?v=SMi-t9Q526g",
+          "title": "MATEMATIKA | KELAS 6 | REVIEW MENGHITUNG VOLUME DAN LUAS PERMUKAAN BANGUN RUANG | GIIS",
+          "channel": "Grade 6 GIIS Official",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "MATEMATIKA | KELAS 6 | REVIEW MENGHITUNG VOLUME DAN LUAS PERMUKAAN BANGUN RUANG | GIIS",
+          "gemini_claim_channel": "Grade 6 GIIS Official"
+        }
+      ]
+    },
+    {
+      "title": "Statistika: rata-rata (mean), nilai tengah (median), dan modus",
+      "slug": "statistika-mean-median-dan-modus",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "soYN4EzC7uA",
+          "url": "https://www.youtube.com/watch?v=soYN4EzC7uA",
+          "title": "Matematika kelas VI SD - Mean, Modus dan Median",
+          "channel": "Matematika Hebat",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "Matematika kelas VI SD - Mean, Modus dan Median",
+          "gemini_claim_channel": "Matematika Hebat"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "trzZ0rjmBXI",
+          "url": "https://www.youtube.com/watch?v=trzZ0rjmBXI",
+          "title": "Matematika kelas 6 SD - Mean, Median dan modus data dalam bentuk tabel",
+          "channel": "Matematika Hebat",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "Matematika kelas 6 SD - Mean, Median dan modus data dalam bentuk tabel",
+          "gemini_claim_channel": "Matematika Hebat"
+        }
+      ]
+    }
+  ]
+}

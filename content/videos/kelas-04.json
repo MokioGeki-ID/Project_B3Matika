@@ -1,0 +1,155 @@
+{
+  "grade": 4,
+  "topics": [
+    {
+      "title": "Kelipatan dan faktor bilangan (KPK dan FPB)",
+      "slug": "kelipatan-dan-faktor-bilangan-kpk-dan-fpb",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "V298M_22YNA",
+          "url": "https://www.youtube.com/watch?v=V298M_22YNA",
+          "title": "KPK DAN FPB KELAS 4 | FPB DAN KPK",
+          "channel": "Nita Cahyo",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "KPK DAN FPB KELAS 4 | FPB DAN KPK",
+          "gemini_claim_channel": "Nita Cahyo"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "prLXaSR8038",
+          "url": "https://www.youtube.com/watch?v=prLXaSR8038",
+          "title": "Matematika Kelas 4 SD: Latihan Soal KPK dan FPB",
+          "channel": "Gembira Belajar",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "Matematika Kelas 4 SD: Latihan Soal KPK dan FPB",
+          "gemini_claim_channel": "Gembira Belajar"
+        }
+      ]
+    },
+    {
+      "title": "Pecahan senilai, desimal, dan persen",
+      "slug": "pecahan-senilai-desimal-dan-persen",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "A25J2Wp3qMI",
+          "url": "https://www.youtube.com/watch?v=A25J2Wp3qMI",
+          "title": "HUBUNGAN PECAHAN DESIMAL DENGAN PERSEN  | BAB 2 PECAHAN | MATEMATIKA | KELAS 4 | KURIKULUM MERDEKA",
+          "channel": "Video Materi SD",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "HUBUNGAN PECAHAN DESIMAL DENGAN PERSEN | BAB 2 PECAHAN | MATEMATIKA | KELAS 4 | KURIKULUM MERDEKA",
+          "gemini_claim_channel": "Video Materi SD"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "ZXJ_GlA3AR4",
+          "url": "https://www.youtube.com/watch?v=ZXJ_GlA3AR4",
+          "title": "SOAL MATEMATIKA KELAS 4 BAB 2 PECAHAN DESIMAL DAN PERSEN SEMESTER 1 KURIKULUM MERDEKA",
+          "channel": "Muhamad Jaelani Manjur",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "SOAL MATEMATIKA KELAS 4 BAB 2 PECAHAN DESIMAL DAN PERSEN SEMESTER 1 KURIKULUM MERDEKA",
+          "gemini_claim_channel": "Muhamad Jaelani Manjur"
+        }
+      ]
+    },
+    {
+      "title": "Pembulatan dan penaksiran hasil hitung",
+      "slug": "pembulatan-dan-penaksiran-hasil-hitung",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "nRAv3boSDio",
+          "url": "https://www.youtube.com/watch?v=nRAv3boSDio",
+          "title": "Pembulatan dan Penaksiran | Matematika SD",
+          "channel": "kejarcita",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "Pembulatan dan Penaksiran | Matematika SD",
+          "gemini_claim_channel": "kejarcita"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "EkSWX2t_0p0",
+          "url": "https://www.youtube.com/watch?v=EkSWX2t_0p0",
+          "title": "Pembulatan dan Penaksiran Bilangan || Matematika Kelas 4 SD",
+          "channel": "Utak Atik Otak",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "Pembulatan dan Penaksiran Bilangan || Matematika Kelas 4 SD",
+          "gemini_claim_channel": "Utak Atik Otak"
+        }
+      ]
+    },
+    {
+      "title": "Geometri: sifat bangun datar (segitiga, jajar genjang) dan sudut",
+      "slug": "geometri-sifat-bangun-datar-dan-sudut",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "zEs4Es7h15c",
+          "url": "https://www.youtube.com/watch?v=zEs4Es7h15c",
+          "title": "MATEMATIKA | KELAS 4 SD | CIRI-CIRI BANGUN DATAR ( SEGITIGA DAN SEGIEMPAT ) KURIKULUM MERDEKA",
+          "channel": "Video Materi SD",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "MATEMATIKA | KELAS 4 SD | CIRI-CIRI BANGUN DATAR ( SEGITIGA DAN SEGIEMPAT ) KURIKULUM MERDEKA",
+          "gemini_claim_channel": "Video Materi SD"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "FgOhPGmF0aM",
+          "url": "https://www.youtube.com/watch?v=FgOhPGmF0aM",
+          "title": "Pembahasan Uji Kompetensi Bangun Datar Hal 174-176 Bab 5 BANGUN DATAR Kelas 4 Kurikulum Merdeka",
+          "channel": "Ruang Pintar",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "Pembahasan Uji Kompetensi Bangun Datar Hal 174-176 Bab 5 BANGUN DATAR Kelas 4 Kurikulum Merdeka",
+          "gemini_claim_channel": "Ruang Pintar"
+        }
+      ]
+    },
+    {
+      "title": "Statistika: pengumpulan dan penyajian data (diagram batang)",
+      "slug": "statistika-pengumpulan-dan-penyajian-data-diagram-batang",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "Vt9e5ebTl5g",
+          "url": "https://www.youtube.com/watch?v=Vt9e5ebTl5g",
+          "title": "KELAS 4 | MATEMATIKA | PENYAJIAN DATA BENTUK DIAGRAM BATANG | KURIKULUM MERDEKA",
+          "channel": "Video Materi SD",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "KELAS 4 | MATEMATIKA | PENYAJIAN DATA BENTUK DIAGRAM BATANG | KURIKULUM MERDEKA",
+          "gemini_claim_channel": "Video Materi SD"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "ZQimD_sNjco",
+          "url": "https://www.youtube.com/watch?v=ZQimD_sNjco",
+          "title": "Soal Diagram Batang Kelas 4 SD",
+          "channel": "Belajar Dasar CN",
+          "language": "id",
+          "verified_at": "2026-10-18",
+          "gemini_claim_title": "Soal Diagram Batang Kelas 4 SD",
+          "gemini_claim_channel": "Belajar Dasar CN"
+        }
+      ]
+    }
+  ]
+}
