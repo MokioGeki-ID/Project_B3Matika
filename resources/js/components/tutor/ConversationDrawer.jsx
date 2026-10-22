@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react';
 import { X } from 'lucide-react';
-import { LogoMark } from '@/components/Logo';
 import { motion, AnimatePresence } from 'framer-motion';
 import ConversationList from './ConversationList';
 import ToneSwitch from './ToneSwitch';
@@ -83,7 +82,7 @@ export default function ConversationDrawer({
             <div className="drawer-header">
               <div className="drawer-logo">
                 <div className="drawer-logo-icon">
-                  <LogoMark size={28} />
+                  <img src="/images/ai-tutor-mascot.jpg" alt="AI Tutor" className="tutor-mascot-img" style={{width: 28, height: 28, borderRadius: '8px'}} />
                 </div>
                 <div className="drawer-logo-text">
                   <h2>AI Tutor</h2>

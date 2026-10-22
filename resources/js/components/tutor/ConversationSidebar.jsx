@@ -1,4 +1,3 @@
-import { LogoMark } from '@/components/Logo';
 import ConversationList from './ConversationList';
 import ToneSwitch from './ToneSwitch';
 
@@ -24,7 +23,7 @@ export default function ConversationSidebar({
       <div className="conversation-sidebar-header">
         <div className="sidebar-logo">
           <div className="sidebar-logo-icon">
-            <LogoMark size={32} />
+            <img src="/images/ai-tutor-mascot.jpg" alt="AI Tutor" className="tutor-mascot-img" style={{width: 32, height: 32, borderRadius: '8px'}} />
           </div>
           <div className="sidebar-logo-text">
             <h2>AI Tutor</h2>

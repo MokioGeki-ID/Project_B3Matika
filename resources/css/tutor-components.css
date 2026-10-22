@@ -974,3 +974,40 @@
   font-size: 0.9em;
 }
 [data-theme="dark"] .text-ai .math-content code { background: var(--surface, #374151); border-color: var(--line); }
+
+/* ================================================================
+   AI TUTOR MASCOT IMAGE STYLING
+   ================================================================ */
+
+.tutor-mascot-img {
+  object-fit: cover;
+  display: block;
+}
+
+/* Styling khusus untuk logo di sidebar dan drawer */
+.sidebar-logo-icon .tutor-mascot-img,
+.drawer-logo-icon .tutor-mascot-img {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling untuk avatar di message bubble */
+.message-avatar .tutor-mascot-img {
+  object-fit: cover;
+}
+
+/* Styling untuk header chat */
+.header-avatar .tutor-mascot-img {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling untuk welcome screen */
+.welcome-content .tutor-mascot-img {
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling untuk empty state */
+.messages-empty .tutor-mascot-img {
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}

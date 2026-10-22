@@ -1,7 +1,6 @@
 import { User, Image as ImageIcon, FileText, File } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { parseAIResponse } from '@/utils/aiResponseParser';
-import { LogoMark } from '@/components/Logo';
 import MaterialCard from './MaterialCard';
 import VideoCard from './VideoCard';
 import MathContent from '@/components/MathContent';
@@ -53,7 +52,7 @@ export default function MessageBubble({ message, topics = [], videos = [] }) {
     >
       {/* Avatar */}
       <div className={`message-avatar ${isUser ? 'avatar-user' : 'avatar-ai'}`}>
-        {isUser ? <User size={20} /> : <LogoMark size={20} />}
+        {isUser ? <User size={20} /> : <img src="/images/ai-tutor-mascot.jpg" alt="AI" className="tutor-mascot-img" style={{width: 20, height: 20, borderRadius: '4px'}} />}
       </div>
 
       {/* Content */}

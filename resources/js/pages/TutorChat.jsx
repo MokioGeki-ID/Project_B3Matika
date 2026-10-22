@@ -427,7 +427,7 @@ export default function TutorChat() {
           <div className="header-info">
             <div className="header-avatar">
               {/* Logo B3Matika kecil di header chat */}
-              <LogoMark size={28} />
+              <img src="/images/ai-tutor-mascot.jpg" alt="AI Tutor" className="tutor-mascot-img" style={{width: 28, height: 28, borderRadius: '8px'}} />
             </div>
             <div className="header-text">
               <h2 className="header-title">
