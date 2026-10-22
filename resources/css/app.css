@@ -9,6 +9,9 @@
 /* Import Math Content Styles */
 @import './math-content.css';
 
+/* Import Visualization Styles */
+@import './viz.css';
+
 /* ─── 1. Design Tokens ─────────────────────────────────────────────── */
 :root {
   /* Brand */

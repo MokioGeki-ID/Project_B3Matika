@@ -1,5 +1,25 @@
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import { AlertCircle } from 'lucide-react';
+
+// Lazy load visualization components
+const FunctionPlot = lazy(() => import('./FunctionPlot'));
+const Geometry = lazy(() => import('./Geometry'));
+const BarChart = lazy(() => import('./BarChart'));
+const NumberLine = lazy(() => import('./NumberLine'));
+
+// Map of supported visualization types
+const VIZ_COMPONENTS = {
+  function_plot: FunctionPlot,
+  geometry: Geometry,
+  bar_chart: BarChart,
+  number_line: NumberLine,
+  // TODO: Add more types
+  // line_chart: LineChart,
+  // pie_chart: PieChart,
+  // tree: TreeDiagram,
+  // venn: VennDiagram,
+  // flow: FlowDiagram
+};
 
 /**
  * B3Viz - Render mathematical visualizations from JSON schema
@@ -17,7 +37,7 @@ export default function B3Viz({ json }) {
     return (
       <div className="viz-error">
         <AlertCircle size={20} />
-        <span>Format visualisasi tidak valid</span>
+        <span>Format visualisasi tidak valid (JSON error)</span>
       </div>
     );
   }
@@ -37,28 +57,35 @@ export default function B3Viz({ json }) {
     return (
       <div className="viz-error">
         <AlertCircle size={20} />
-        <span>Data visualisasi terlalu besar</span>
+        <span>Data visualisasi terlalu besar (max 8KB)</span>
       </div>
     );
   }
 
-  // TODO: Implement actual visualization components
-  // For now, show placeholder
+  // Get component for this visualization type
+  const VizComponent = VIZ_COMPONENTS[data.type];
+
+  if (!VizComponent) {
+    return (
+      <div className="viz-error">
+        <AlertCircle size={20} />
+        <span>Tipe visualisasi "{data.type}" belum didukung</span>
+        <details style={{ marginTop: '8px', fontSize: '11px' }}>
+          <summary>Tipe yang didukung:</summary>
+          <ul style={{ paddingLeft: '20px', marginTop: '4px' }}>
+            {Object.keys(VIZ_COMPONENTS).map(type => (
+              <li key={type}>{type}</li>
+            ))}
+          </ul>
+        </details>
+      </div>
+    );
+  }
+
+  // Render component with error boundary
   return (
-    <div className="viz-placeholder">
-      <div className="viz-placeholder-header">
-        <strong>{data.title}</strong>
-        <span className="viz-type-badge">{data.type}</span>
-      </div>
-      {data.caption && (
-        <p className="viz-caption">{data.caption}</p>
-      )}
-      <div className="viz-placeholder-content">
-        <p>📊 Visualisasi {data.type} (dalam pengembangan)</p>
-        <pre style={{ fontSize: '11px', color: '#666', marginTop: '8px' }}>
-          {JSON.stringify(data, null, 2).slice(0, 200)}...
-        </pre>
-      </div>
-    </div>
+    <Suspense fallback={<div className="viz-loading">Memuat visualisasi...</div>}>
+      <VizComponent data={data} />
+    </Suspense>
   );
 }

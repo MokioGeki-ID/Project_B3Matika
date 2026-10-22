@@ -1,0 +1,371 @@
+/* ========================================
+   VISUALIZATION COMPONENTS STYLES
+   B3Viz SVG Mathematical Visualizations
+   ======================================== */
+
+/* === VIZ CONTAINER === */
+.viz-container {
+  margin: 16px 0;
+  padding: 16px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.viz-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.viz-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--navy, #1e3a8a);
+  margin: 0;
+}
+
+.viz-fullscreen-btn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #6b7280;
+  transition: all 0.2s;
+}
+
+.viz-fullscreen-btn:hover {
+  background: #f3f4f6;
+  border-color: var(--blue, #3b82f6);
+  color: var(--blue, #3b82f6);
+}
+
+.viz-content {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  overflow: hidden;
+}
+
+.viz-caption {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #6b7280;
+  font-style: italic;
+  text-align: center;
+}
+
+/* === VIZ SVG === */
+.viz-svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure text is readable */
+.viz-svg text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  user-select: none;
+}
+
+/* === FULLSCREEN MODAL === */
+.viz-fullscreen-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.viz-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #1f2937;
+  transition: all 0.2s;
+  z-index: 10000;
+}
+
+.viz-modal-close:hover {
+  background: white;
+  transform: scale(1.1);
+}
+
+.viz-modal-content {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.viz-modal-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy, #1e3a8a);
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.viz-modal-viz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.viz-modal-caption {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #6b7280;
+  text-align: center;
+  font-style: italic;
+}
+
+/* === ERROR STATE === */
+.viz-error {
+  padding: 16px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #dc2626;
+  font-size: 14px;
+  margin: 16px 0;
+}
+
+.viz-error details {
+  color: #991b1b;
+}
+
+.viz-error details summary {
+  cursor: pointer;
+  user-select: none;
+}
+
+.viz-error details summary:hover {
+  text-decoration: underline;
+}
+
+/* === LOADING STATE === */
+.viz-loading {
+  padding: 32px;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 14px;
+  background: #f9fafb;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+/* === PLACEHOLDER === */
+.viz-placeholder {
+  padding: 16px;
+  background: #f9fafb;
+  border: 1px dashed #d1d5db;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+.viz-placeholder-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.viz-type-badge {
+  padding: 4px 10px;
+  background: #eff6ff;
+  color: var(--blue, #3b82f6);
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.viz-placeholder-content {
+  padding: 20px;
+  background: white;
+  border-radius: 6px;
+  text-align: center;
+  color: #6b7280;
+}
+
+/* === DARK MODE === */
+@media (prefers-color-scheme: dark) {
+  .viz-container {
+    background: #1f2937;
+    border-color: #374151;
+  }
+
+  .viz-title {
+    color: #e5e7eb;
+  }
+
+  .viz-fullscreen-btn {
+    background: #374151;
+    border-color: #4b5563;
+    color: #9ca3af;
+  }
+
+  .viz-fullscreen-btn:hover {
+    background: #4b5563;
+    border-color: #3b82f6;
+    color: #3b82f6;
+  }
+
+  .viz-content {
+    background: #111827;
+  }
+
+  .viz-caption {
+    color: #9ca3af;
+  }
+
+  .viz-modal-content {
+    background: #1f2937;
+  }
+
+  .viz-modal-title {
+    color: #e5e7eb;
+  }
+
+  .viz-modal-caption {
+    color: #9ca3af;
+  }
+
+  .viz-error {
+    background: #7f1d1d;
+    border-color: #991b1b;
+    color: #fca5a5;
+  }
+
+  .viz-error details {
+    color: #fecaca;
+  }
+
+  .viz-loading {
+    background: #1f2937;
+    color: #6b7280;
+  }
+
+  .viz-placeholder {
+    background: #1f2937;
+    border-color: #4b5563;
+  }
+
+  .viz-placeholder-content {
+    background: #111827;
+  }
+
+  /* SVG in dark mode */
+  .viz-svg text {
+    fill: #e5e7eb;
+  }
+
+  .viz-svg line,
+  .viz-svg path[stroke*="1f2937"],
+  .viz-svg path[stroke*="text"] {
+    stroke: #e5e7eb;
+  }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 640px) {
+  .viz-container {
+    padding: 12px;
+    margin: 12px 0;
+  }
+
+  .viz-content {
+    padding: 12px;
+  }
+
+  .viz-title {
+    font-size: 14px;
+  }
+
+  .viz-fullscreen-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .viz-modal-content {
+    padding: 20px;
+  }
+
+  .viz-modal-title {
+    font-size: 18px;
+  }
+
+  /* Ensure text in SVG is readable on small screens */
+  .viz-svg text {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 320px) {
+  .viz-svg text {
+    font-size: 10px;
+  }
+}
+
+/* === PRINT === */
+@media print {
+  .viz-fullscreen-btn {
+    display: none;
+  }
+
+  .viz-fullscreen-modal {
+    display: none;
+  }
+
+  .viz-container {
+    page-break-inside: avoid;
+    border-color: #000;
+  }
+}
