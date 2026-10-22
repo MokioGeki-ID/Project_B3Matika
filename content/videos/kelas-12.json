@@ -1,0 +1,245 @@
+{
+  "grade": 12,
+  "topics": [
+    {
+      "title": "Limit fungsi",
+      "slug": "limit-fungsi",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "zE8m4xNizDY",
+          "url": "https://www.youtube.com/watch?v=zE8m4xNizDY",
+          "title": "Konsep Dasar Limit Fungsi Aljabar Matematika Wajib Kelas 11 m4thlab",
+          "channel": "m4th-lab",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Konsep Dasar Limit Fungsi Aljabar Matematika Wajib Kelas 11 m4thlab",
+          "gemini_claim_channel": "m4th-lab"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "XdhZOzMSM0Y",
+          "url": "https://www.youtube.com/watch?v=XdhZOzMSM0Y",
+          "title": "Limit Fungsi Aljabar : Metode Subtitusi Langsung dan Pemfaktoran",
+          "channel": "Matematika Hebat",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Limit Fungsi Aljabar : Metode Subtitusi Langsung dan Pemfaktoran",
+          "gemini_claim_channel": "Matematika Hebat"
+        }
+      ]
+    },
+    {
+      "title": "Turunan fungsi aljabar/trigonometri",
+      "slug": "turunan-fungsi-aljabar-trigonometri",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "_WELZbFTnGM",
+          "url": "https://www.youtube.com/watch?v=_WELZbFTnGM",
+          "title": "Turunan fungsi aljabar dan fungsi trigonometri",
+          "channel": "Matematika Hebat",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Turunan fungsi aljabar dan fungsi trigonometri",
+          "gemini_claim_channel": "Matematika Hebat"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "ok-R-587FYw",
+          "url": "https://www.youtube.com/watch?v=ok-R-587FYw",
+          "title": "Kumpulan soal soal ujian turunan fungsi aljabar",
+          "channel": "Matematika Hebat",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Kumpulan soal soal ujian turunan fungsi aljabar",
+          "gemini_claim_channel": "Matematika Hebat"
+        }
+      ]
+    },
+    {
+      "title": "Integral tentu dan tak tentu",
+      "slug": "integral-tentu-dan-tak-tentu",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "Wel_Eu3JX3U",
+          "url": "https://www.youtube.com/watch?v=Wel_Eu3JX3U",
+          "title": "Matematika Kelas XII: Integral Tentu",
+          "channel": "Pahamify",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Matematika Kelas XII: Integral Tentu",
+          "gemini_claim_channel": "Pahamify"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "SwmmkWNY4XQ",
+          "url": "https://www.youtube.com/watch?v=SwmmkWNY4XQ",
+          "title": "Kumpulan soal-soal integral tak tentu",
+          "channel": "Matematika Hebat",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Kumpulan soal-soal integral tak tentu",
+          "gemini_claim_channel": "Matematika Hebat"
+        }
+      ]
+    },
+    {
+      "title": "Geometri dimensi tiga (jarak titik ke titik, titik ke garis, titik ke bidang)",
+      "slug": "geometri-dimensi-tiga-jarak-titik-garis-bidang",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "IqNb2cEPRY4",
+          "url": "https://www.youtube.com/watch?v=IqNb2cEPRY4",
+          "title": "KEDUDUKAN TITIK, GARIS, DAN BIDANG DALAM DIMENSI TIGA - MAT XII",
+          "channel": "Team Tanpa Les Indonesia",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "KEDUDUKAN TITIK, GARIS, DAN BIDANG DALAM DIMENSI TIGA - MAT XII",
+          "gemini_claim_channel": "Team Tanpa Les Indonesia"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "jy2MJ8Hd1lY",
+          "url": "https://www.youtube.com/watch?v=jy2MJ8Hd1lY",
+          "title": "Analisis Bangun Ruang (Dimensi Tiga) Matematika Wajib Kelas XII Bagian 3 - Jarak Titik ke Bidang",
+          "channel": "m4th-lab",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Analisis Bangun Ruang (Dimensi Tiga) Matematika Wajib Kelas XII Bagian 3 - Jarak Titik ke Bidang",
+          "gemini_claim_channel": "m4th-lab"
+        }
+      ]
+    },
+    {
+      "title": "Polinomial (suku banyak)",
+      "slug": "polinomial-suku-banyak",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "2oPK0eMkwQg",
+          "url": "https://www.youtube.com/watch?v=2oPK0eMkwQg",
+          "title": "Polinomial (Bagian 1) - Pengertian dan Operasi Aljabar Polinomial Matematika Peminatan Kelas XI",
+          "channel": "m4th-lab",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Polinomial (Bagian 1) - Pengertian dan Operasi Aljabar Polinomial Matematika Peminatan Kelas XI",
+          "gemini_claim_channel": "m4th-lab"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "IcMsjdqXQ10",
+          "url": "https://www.youtube.com/watch?v=IcMsjdqXQ10",
+          "title": "Polinomial (Bagian 3) - Pembagian Polinomial Cara Bersusun, Horner dan Horner - Kino",
+          "channel": "m4th-lab",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Polinomial (Bagian 3) - Pembagian Polinomial Cara Bersusun, Horner dan Horner - Kino",
+          "gemini_claim_channel": "m4th-lab"
+        }
+      ]
+    },
+    {
+      "title": "Analisis data",
+      "slug": "analisis-data-kelas-12",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "RypkXx4YG6Y",
+          "url": "https://www.youtube.com/watch?v=RypkXx4YG6Y",
+          "title": "Pengertian Regresi Linear - Matematika Wajib Kelas XI Kurikulum Merdeka",
+          "channel": "BSMath Channel",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Pengertian Regresi Linear - Matematika Wajib Kelas XI Kurikulum Merdeka",
+          "gemini_claim_channel": "BSMath Channel"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "yN2gf1u5E_s",
+          "url": "https://www.youtube.com/watch?v=yN2gf1u5E_s",
+          "title": "📊 [LATIHAN SOAL] Diagram Pencar, Regresi Linier, & Korelasi – STATISTIKA MUDAH!",
+          "channel": "RDS ASTROMATH",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "[LATIHAN SOAL] Diagram Pencar, Regresi Linier, & Korelasi – STATISTIKA MUDAH!",
+          "gemini_claim_channel": "RDS ASTROMATH"
+        }
+      ]
+    },
+    {
+      "title": "Distribusi normal dan statistika inferensial",
+      "slug": "distribusi-normal-dan-statistika-inferensial",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "w91b6ZtSiRc",
+          "url": "https://www.youtube.com/watch?v=w91b6ZtSiRc",
+          "title": "Distribusi Normal | Konsep Dasar dan Sifat Kurva Normal | Matematika Peminatan Kelas 12",
+          "channel": "Bu KhusnuL",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Distribusi Normal | Konsep Dasar dan Sifat Kurva Normal | Matematika Peminatan Kelas 12",
+          "gemini_claim_channel": "Bu KhusnuL"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "xbk0hfAI0fQ",
+          "url": "https://www.youtube.com/watch?v=xbk0hfAI0fQ",
+          "title": "Distribusi Binomial : Statistika Inferensial , Matematika Peminatan Kelas XII",
+          "channel": "Ayo Paham!",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Distribusi Binomial : Statistika Inferensial , Matematika Peminatan Kelas XII",
+          "gemini_claim_channel": "Ayo Paham!"
+        }
+      ]
+    },
+    {
+      "title": "Matematika finansial (investasi, bunga majemuk, anuitas, dan pinjaman)",
+      "slug": "matematika-finansial-investasi-bunga-majemuk-anuitas-pinjaman",
+      "videos": [
+        {
+          "purpose": "konsep",
+          "status": "terverifikasi",
+          "youtube_id": "NgUNtASRfXI",
+          "url": "https://www.youtube.com/watch?v=NgUNtASRfXI",
+          "title": "BUNGA MAJEMUK DAN ANUITAS",
+          "channel": "Rini Octavianingsih",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "BUNGA MAJEMUK DAN ANUITAS",
+          "gemini_claim_channel": "Rini Octavianingsih"
+        },
+        {
+          "purpose": "contoh-soal",
+          "status": "terverifikasi",
+          "youtube_id": "jaqx6qEmq0I",
+          "url": "https://www.youtube.com/watch?v=jaqx6qEmq0I",
+          "title": "Bunga Tunggal dan Bunga Majemuk | Matematika SMA Kelas XI",
+          "channel": "Tutor Online",
+          "language": "id",
+          "verified_at": "2026-10-22",
+          "gemini_claim_title": "Bunga Tunggal dan Bunga Majemuk | Matematika SMA Kelas XI",
+          "gemini_claim_channel": "Tutor Online"
+        }
+      ]
+    }
+  ]
+}
