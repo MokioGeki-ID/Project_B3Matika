@@ -1,10 +1,34 @@
 // api/chat.js  →  POST /api/chat
-// Proxy ke Gemini API — API key aman di server, tidak terekspos ke browser
+// Proxy ke Gemini API dengan integrasi conversation history, attachments, dan context material/video
 
-import { setCors, errorResponse } from './_lib/auth.js';
+import { setCors, errorResponse, requireAuth } from './_lib/auth.js';
 import env from './_lib/env.js';
+import { getSupabaseClient } from './_lib/supabase.js';
+import {
+  buildTopicCatalog,
+  getTopicVideos,
+  formatTopicCatalogForAI,
+  formatVideosForAI,
+  extractTopicIds,
+  extractVideoCodes,
+  replaceVideoCodesWithLinks,
+  buildMessageMeta
+} from './_lib/tutorContext.js';
 
-const SYSTEM_INSTRUCTION = `IDENTITAS & PERAN
+function buildSystemInstruction(tone, topicCatalogText, videoCatalogText) {
+  const toneAdjustment = tone === 'santai' 
+    ? '\n\n🎨 GAYA BAHASA: Gunakan bahasa santai, gaul, dan menyenangkan seperti teman sebaya. Boleh pakai emoji dan ekspresi kasual, tapi tetap jelas dan edukatif.'
+    : '';
+
+  const materialContext = topicCatalogText 
+    ? `\n\n📚 KATALOG MATERI TERSEDIA:\n${topicCatalogText}\n\nJika pengguna bertanya tentang topik tertentu, rekomendasikan materi yang relevan dengan format: "Kamu bisa baca materi TOPIK[id] tentang [nama topik]"`
+    : '';
+
+  const videoContext = videoCatalogText
+    ? `\n\n🎥 VIDEO TUTORIAL TERSEDIA:\n${videoCatalogText}\n\nJika pengguna butuh video tutorial, rekomendasikan dengan format kode video (contoh: V1, V2) tanpa link YouTube langsung.`
+    : '';
+
+  return `IDENTITAS & PERAN
 Anda adalah **MathTutor AI**, seorang pendidik matematika ahli dan "Game Master" teka-teki logika di platform B3Matika.
 Tugas Anda adalah membimbing pengguna memahami kurikulum matematika secara bertahap (SD, SMP, SMA/SMK) dan melatih kemampuan logika mereka melalui permainan dan teka-teki matematika.
 Jelaskan setiap konsep dengan bahasa yang sederhana, rinci, dan berikan analogi yang mudah dipahami.
@@ -30,12 +54,19 @@ Jika pengguna ingin bermain atau melatih otak:
 3. BIARKAN MENCOBA LAGI sampai menemukan sendiri.
 4. Setelah 3x percobaan gagal, baru boleh memberikan penjelasan lengkap.
 
-PENTING: Sambut pengguna dengan hangat di pesan pertama.`;
+🖼️ JIKA PENGGUNA MENGIRIM GAMBAR:
+Gambar mungkin berisi soal matematika, diagram, atau catatan. Analisis dengan cermat dan bantu selesaikan atau jelaskan konsepnya.
+
+PENTING: Sambut pengguna dengan hangat di pesan pertama.${toneAdjustment}${materialContext}${videoContext}
+
+⚠️ ATURAN LINK YOUTUBE: HANYA gunakan kode video (V1, V2, dll) dari katalog di atas. JANGAN tambahkan link YouTube lain dari pengetahuanmu.`;
+}
 
 export default async function handler(req, res) {
   setCors(res);
   if (req.method === 'OPTIONS') return res.status(200).end();
   
+  // Health check endpoint
   if (req.query.health) {
     const key = env.GEMINI_API_KEY || '';
     if (!key) return res.status(503).json({ status: 'down', message: 'API Key Gemini belum dikonfigurasi.' });
@@ -49,65 +80,191 @@ export default async function handler(req, res) {
 
   if (req.method !== 'POST') return errorResponse(res, 'Method not allowed', 405);
 
+  // Require authentication
+  const user = await requireAuth(req, res);
+  if (!user) return; // requireAuth already sent error response
+
   const apiKeyStr = env.GEMINI_API_KEY || '';
   const apiKeys = apiKeyStr.split(',').map(k => k.replace(/['"]/g, '').trim()).filter(k => k);
   if (apiKeys.length === 0) return errorResponse(res, 'Layanan AI belum dikonfigurasi.', 500);
 
-  const { messages } = req.body;
-  if (!Array.isArray(messages) || messages.length === 0)
-    return errorResponse(res, 'Pesan tidak valid.', 422);
-
-  // Sanitasi: hapus leading model messages, pastikan dimulai user
-  let sanitized = [...messages].filter(m => !m.parts?.[0]?.text?.startsWith('⚠️'));
-  while (sanitized.length > 0 && sanitized[0].role !== 'user') sanitized.shift();
-  while (sanitized.length > 0 && sanitized[sanitized.length - 1].role !== 'user') sanitized.pop();
-
-  if (sanitized.length === 0) return errorResponse(res, 'Pesan tidak valid. Silakan coba lagi.', 422);
+  const { conversation_id, user_message, attachments = [] } = req.body;
   
-  // Batas panjang input dan pesan
-  if (sanitized.length > 20) sanitized = sanitized.slice(-20);
-  const totalLength = sanitized.reduce((acc, msg) => acc + (msg.parts[0].text || '').length, 0);
-  if (totalLength > 10000) return errorResponse(res, 'Pesan terlalu panjang.', 413);
+  // Validate conversation_id
+  if (!conversation_id || typeof conversation_id !== 'string') {
+    return errorResponse(res, 'conversation_id wajib diisi.', 422);
+  }
+
+  // Validate user_message
+  if (!user_message || typeof user_message !== 'string' || user_message.trim().length === 0) {
+    return errorResponse(res, 'Pesan tidak boleh kosong.', 422);
+  }
+
+  if (user_message.length > 4000) {
+    return errorResponse(res, 'Pesan terlalu panjang (maksimal 4000 karakter).', 413);
+  }
+
+  // Validate attachments array
+  if (!Array.isArray(attachments) || attachments.length > 3) {
+    return errorResponse(res, 'Maksimal 3 lampiran per pesan.', 422);
+  }
+
+  const supabase = getSupabaseClient();
 
   try {
-    const { GoogleGenAI } = await import('@google/genai');
+    // 1. VERIFY CONVERSATION OWNERSHIP (IDOR protection)
+    const { data: conversation, error: convError } = await supabase
+      .from('tutor_conversations')
+      .select('id, tone, topic_id')
+      .eq('id', conversation_id)
+      .eq('user_id', user.id)
+      .single();
 
-    let promptText = "RIWAYAT PERCAKAPAN:\n";
-    if (sanitized.length > 1) {
-      sanitized.slice(0, -1).forEach(msg => {
-        promptText += `${msg.role === 'user' ? 'User' : 'AI'}: ${msg.parts[0].text}\n`;
-      });
-      promptText += `\nPESAN USER TERBARU:\n${sanitized[sanitized.length - 1].parts[0].text}`;
-    } else {
-      promptText = sanitized[0].parts[0].text;
+    if (convError || !conversation) {
+      return errorResponse(res, 'Percakapan tidak ditemukan.', 404);
     }
 
-    const modelName = env.GEMINI_MODEL || "gemini-3.8-flash";
-    let lastError = null;
-    let stream;
-    let successfulKey = null;
+    // 2. LOAD CONVERSATION HISTORY (last 10 messages for context)
+    const { data: history, error: historyError } = await supabase
+      .from('tutor_messages')
+      .select('role, content')
+      .eq('conversation_id', conversation_id)
+      .order('created_at', { ascending: true })
+      .limit(10);
 
+    if (historyError) {
+      console.error('Error loading history:', historyError);
+      return errorResponse(res, 'Gagal memuat riwayat chat.', 500);
+    }
+
+    // 3. BUILD MATERIAL & VIDEO CONTEXT
+    let topicCatalogText = '';
+    let videoCatalogText = '';
+    
+    try {
+      const topicCatalog = await buildTopicCatalog(supabase);
+      topicCatalogText = formatTopicCatalogForAI(topicCatalog);
+
+      if (conversation.topic_id) {
+        const videos = await getTopicVideos(supabase, conversation.topic_id);
+        videoCatalogText = formatVideosForAI(videos);
+      }
+    } catch (ctxError) {
+      console.error('Error building context:', ctxError);
+      // Continue without context if it fails
+    }
+
+    // 4. SAVE USER MESSAGE TO DATABASE
+    const { data: userMsg, error: userMsgError } = await supabase
+      .from('tutor_messages')
+      .insert({
+        conversation_id: conversation_id,
+        role: 'user',
+        content: user_message,
+        meta: {}
+      })
+      .select('id')
+      .single();
+
+    if (userMsgError || !userMsg) {
+      console.error('Error saving user message:', userMsgError);
+      return errorResponse(res, 'Gagal menyimpan pesan.', 500);
+    }
+
+    // 5. LINK ATTACHMENTS TO MESSAGE (if any)
+    if (attachments.length > 0) {
+      const attachmentIds = attachments.filter(id => typeof id === 'string');
+      
+      if (attachmentIds.length > 0) {
+        const { error: linkError } = await supabase
+          .from('tutor_attachments')
+          .update({ 
+            message_id: userMsg.id,
+            status: 'attached'
+          })
+          .in('id', attachmentIds)
+          .eq('user_id', user.id)
+          .eq('conversation_id', conversation_id)
+          .eq('status', 'pending');
+
+        if (linkError) {
+          console.error('Error linking attachments:', linkError);
+          // Continue anyway - attachments will remain pending
+        }
+      }
+    }
+
+    // 6. LOAD ATTACHMENT FILES FOR MULTIMODAL INPUT
+    let attachmentFiles = [];
+    if (attachments.length > 0) {
+      const { data: files, error: filesError } = await supabase
+        .from('tutor_attachments')
+        .select('storage_path, mime_type')
+        .in('id', attachments)
+        .eq('message_id', userMsg.id);
+
+      if (!filesError && files) {
+        attachmentFiles = files;
+      }
+    }
+
+    // 7. PREPARE MULTIMODAL INPUT (text + images)
+    let promptText = '';
+    
+    // Add conversation history
+    if (history && history.length > 0) {
+      promptText += "RIWAYAT PERCAKAPAN SEBELUMNYA:\n";
+      history.forEach(msg => {
+        promptText += `${msg.role === 'user' ? 'User' : 'AI'}: ${msg.content}\n`;
+      });
+      promptText += '\n';
+    }
+    
+    // Add current user message
+    promptText += `PESAN USER TERBARU:\n${user_message}`;
+
+    // Build system instruction with context
+    const systemInstruction = buildSystemInstruction(
+      conversation.tone,
+      topicCatalogText,
+      videoCatalogText
+    );
+
+    // 8. CALL GEMINI AI WITH MULTIMODAL SUPPORT
+    const { GoogleGenAI } = await import('@google/genai');
+    const modelName = env.GEMINI_MODEL || "gemini-3.8-flash";
+    
+    let lastError = null;
+    let stream = null;
+
+    // Try each API key until one works
     for (const currentKey of apiKeys) {
       try {
         const ai = new GoogleGenAI({ apiKey: currentKey });
+        
+        // For now, use text-only input (multimodal with file URLs will need signed URLs)
+        // TODO: Implement image download and base64 encoding for multimodal input
         stream = await ai.interactions.create({
           model: modelName,
-          system_instruction: SYSTEM_INSTRUCTION,
+          system_instruction: systemInstruction,
           input: promptText,
           stream: true,
         });
-        successfulKey = currentKey;
-        break; // berhasil mendapatkan stream
+        
+        break; // Success - exit loop
       } catch (err) {
         lastError = err;
         const status = err.status || 500;
         const msg = err.message || '';
-        // Rotasi hanya jika error kunci atau kuota
-        if ([401, 403, 429].includes(status) || msg.toLowerCase().includes('quota') || msg.toLowerCase().includes('api key')) {
+        
+        // Rotate API key only for auth/quota errors
+        if ([401, 403, 429].includes(status) || 
+            msg.toLowerCase().includes('quota') || 
+            msg.toLowerCase().includes('api key')) {
           console.warn(`⚠️ Rotasi API Key (status ${status})`);
           continue;
         } else {
-          break; // error lain, jangan rotasi
+          break; // Other errors - don't rotate
         }
       }
     }
@@ -116,48 +273,106 @@ export default async function handler(req, res) {
       const errMsg = lastError?.message || 'AI tidak memberikan respons.';
       const status = lastError?.status || 500;
       console.error(`API Error (${status}):`, errMsg);
+      
       if (status === 429 || errMsg.toLowerCase().includes('quota')) {
         return errorResponse(res, 'Jatah AI sedang habis, coba lagi nanti.', 429);
       }
       return errorResponse(res, 'Gagal terhubung ke AI Tutor.', status);
     }
 
-    // Set headers untuk SSE
+    // 9. STREAM RESPONSE TO CLIENT
     res.setHeader('Content-Type', 'text/event-stream');
     res.setHeader('Cache-Control', 'no-cache');
     res.setHeader('Connection', 'keep-alive');
     res.flushHeaders();
 
+    let fullResponse = '';
     let hasResponded = false;
+
     for await (const chunk of stream) {
-      // Tangani event stream.delta dari Interactions API
+      // Handle event stream.delta from Interactions API
       if (chunk.event_type === 'step.delta' && chunk.delta?.type === 'text' && chunk.delta?.text) {
         hasResponded = true;
-        const data = JSON.stringify({ text: chunk.delta.text });
+        const textChunk = chunk.delta.text;
+        fullResponse += textChunk;
+        
+        const data = JSON.stringify({ text: textChunk });
         res.write(`data: ${data}\n\n`);
       }
-      // Atau jika SDK mereturn format fallback
+      // Or if SDK returns fallback format
       else if (chunk.output_text && typeof chunk.output_text === 'string') {
         hasResponded = true;
+        fullResponse += chunk.output_text;
+        
         const data = JSON.stringify({ text: chunk.output_text });
         res.write(`data: ${data}\n\n`);
       }
     }
     
     if (!hasResponded) {
-       // Interactions API object fallback for non-stream / complete
-       if (stream.output_text) {
-          const data = JSON.stringify({ text: stream.output_text });
-          res.write(`data: ${data}\n\n`);
-       } else {
-          // Empty response
-          res.write(`data: ${JSON.stringify({ error: 'AI tidak memberikan jawaban, coba kirim ulang.' })}\n\n`);
-       }
+      // Interactions API object fallback for non-stream / complete
+      if (stream.output_text) {
+        fullResponse = stream.output_text;
+        const data = JSON.stringify({ text: stream.output_text });
+        res.write(`data: ${data}\n\n`);
+      } else {
+        // Empty response
+        res.write(`data: ${JSON.stringify({ error: 'AI tidak memberikan jawaban, coba kirim ulang.' })}\n\n`);
+        res.end();
+        return;
+      }
     }
+
+    // 10. SANITIZE RESPONSE (remove unauthorized YouTube links)
+    let sanitizedResponse = fullResponse;
     
+    // Remove YouTube links that are not from our video catalog
+    const youtubeRegex = /https?:\/\/(www\.)?(youtube\.com\/watch\?v=|youtu\.be\/)[a-zA-Z0-9_-]+/g;
+    const foundLinks = fullResponse.match(youtubeRegex) || [];
+    
+    if (foundLinks.length > 0) {
+      // Get video codes from response
+      const videoCodes = extractVideoCodes(fullResponse);
+      
+      // Replace video codes with actual links
+      if (videoCodes.length > 0) {
+        const videos = conversation.topic_id 
+          ? await getTopicVideos(supabase, conversation.topic_id)
+          : [];
+        sanitizedResponse = replaceVideoCodesWithLinks(fullResponse, videos);
+      }
+      
+      // Remove any remaining unauthorized YouTube links
+      sanitizedResponse = sanitizedResponse.replace(youtubeRegex, '[link tidak tersedia]');
+    }
+
+    // 11. EXTRACT METADATA (topic IDs and video codes)
+    const topicIds = extractTopicIds(sanitizedResponse);
+    const videoCodes = extractVideoCodes(sanitizedResponse);
+    const meta = buildMessageMeta(topicIds, videoCodes);
+
+    // 12. SAVE AI RESPONSE TO DATABASE
+    const { error: aiMsgError } = await supabase
+      .from('tutor_messages')
+      .insert({
+        conversation_id: conversation_id,
+        role: 'assistant',
+        content: sanitizedResponse,
+        meta: meta
+      });
+
+    if (aiMsgError) {
+      console.error('Error saving AI message:', aiMsgError);
+      // Don't fail the request - message was already sent to client
+    }
+
+    // Send completion signal
+    res.write(`data: ${JSON.stringify({ done: true })}\n\n`);
     res.end();
+
   } catch (err) {
-    console.error('API Error (Stream):', err.status || 500, err.message);
+    console.error('API Error (Main):', err);
+    
     if (!res.headersSent) {
       return errorResponse(res, `Gagal terhubung ke AI Tutor: ${err.message || 'Kesalahan internal'}`, 500);
     } else {
