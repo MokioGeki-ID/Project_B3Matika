@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Plus, Loader, AlertCircle } from 'lucide-react';
+import { Plus, Loader, AlertCircle, MessageSquare } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ConversationItem from './ConversationItem';
 import { api } from '@/lib/api';
