@@ -67,7 +67,11 @@ export default function ConversationList({
   const [hasMore, setHasMore] = useState(false);
   
   // Dialog and toast state
-  const [deleteDialog, setDeleteDialog] = useState({ isOpen: false, conversation: null });
+  const [deleteDialog, setDeleteDialog] = useState({ 
+    isOpen: false, 
+    conversation: null,
+    deleting: false 
+  });
   const [toast, setToast] = useState({ show: false, message: '', type: 'info' });
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -152,8 +156,15 @@ export default function ConversationList({
     const conversationId = deleteDialog.conversation.id;
     const conversationTitle = deleteDialog.conversation.title;
 
+    // Set loading state untuk disable button
+    setDeleteDialog(prev => ({ ...prev, deleting: true }));
+
     try {
+      console.log(`🗑️ Deleting conversation ${conversationId}...`);
+      
       await api.delete(`/tutor/conversations/${conversationId}`);
+
+      console.log(`✅ Conversation ${conversationId} deleted`);
 
       // Remove from list (optimistic update)
       setConversations(prev => prev.filter(conv => conv.id !== conversationId));
@@ -164,13 +175,35 @@ export default function ConversationList({
       }
 
       showToast('Percakapan berhasil dihapus', 'success');
-      setDeleteDialog({ isOpen: false, conversation: null });
+      setDeleteDialog({ isOpen: false, conversation: null, deleting: false });
     } catch (err) {
-      console.error('Error deleting conversation:', err);
-      showToast('Gagal menghapus percakapan', 'error');
+      console.error('❌ Error deleting conversation:', err);
       
-      // Rollback optimistic update jika gagal
-      loadConversations();
+      // Beri pesan yang lebih spesifik
+      let errorMessage = 'Gagal menghapus percakapan';
+      
+      if (err.status === 404) {
+        errorMessage = 'Percakapan sudah dihapus atau tidak ditemukan';
+        // Tetap remove dari list karena memang sudah tidak ada
+        setConversations(prev => prev.filter(conv => conv.id !== conversationId));
+        setDeleteDialog({ isOpen: false, conversation: null, deleting: false });
+      } else if (err.status === 401) {
+        errorMessage = 'Sesi Anda telah berakhir. Silakan masuk kembali';
+      } else if (err.status === 403) {
+        errorMessage = 'Anda tidak memiliki izin untuk menghapus percakapan ini';
+      } else if (!navigator.onLine) {
+        errorMessage = 'Tidak ada koneksi internet. Periksa jaringan Anda';
+      }
+      
+      showToast(errorMessage, 'error');
+      
+      // Reset loading state tapi keep dialog open untuk retry
+      setDeleteDialog(prev => ({ ...prev, deleting: false }));
+      
+      // Reload list untuk sync dengan server (jika bukan offline)
+      if (navigator.onLine && err.status !== 404) {
+        loadConversations();
+      }
     }
   };
 
