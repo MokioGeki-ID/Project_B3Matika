@@ -15,6 +15,7 @@
     "seed:superadmin": "node scripts/seed-superadmin.js",
     "lint:css": "stylelint \"resources/css/**/*.css\"",
     "test:ui": "playwright test",
+    "test:tutor": "node scripts/smoke-test-tutor.js",
     "materi:validate": "node scripts/validate-materi.js",
     "materi:verify-videos": "node scripts/verify-videos.js",
     "materi:backup": "node scripts/backup-materi.js",

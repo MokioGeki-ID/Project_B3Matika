@@ -2,10 +2,11 @@
  * routes/tutor/conversations.js
  * Endpoints untuk CRUD conversations AI Tutor
  * 
- * GET    /api/tutor/conversations?cursor=...  — List conversations (paginated)
- * POST   /api/tutor/conversations             — Create new conversation
- * PATCH  /api/tutor/conversations/:id         — Update conversation (rename, tone)
- * DELETE /api/tutor/conversations/:id         — Delete conversation & attachments
+ * GET    /api/tutor/conversations                — List conversations (paginated)
+ * GET    /api/tutor/conversations/:id            — Get single conversation
+ * POST   /api/tutor/conversations                — Create new conversation
+ * PATCH  /api/tutor/conversations/:id            — Update conversation (rename, tone)
+ * DELETE /api/tutor/conversations/:id            — Delete conversation & attachments
  */
 
 import { requireAuth, errorResponse, setCors } from '../_lib/auth.js';
@@ -100,6 +101,59 @@ async function listConversations(req, res) {
     });
   } catch (err) {
     console.error('List conversations error:', err);
+    return errorResponse(res, err.message, err.status || 500);
+  }
+}
+
+/**
+ * GET /api/tutor/conversations/:id
+ * Get single conversation by ID
+ */
+async function getConversation(req, res) {
+  try {
+    const { user } = await requireAuth(req);
+    const conversationId = req.query.id;
+
+    if (!conversationId || !isValidUUID(conversationId)) {
+      return errorResponse(res, 'ID obrolan tidak valid.', 422);
+    }
+
+    // Query dengan ownership check dan message_count
+    const { data: conversation, error } = await supabase
+      .from('tutor_conversations')
+      .select(`
+        id, 
+        title, 
+        tone, 
+        topic_id, 
+        created_at, 
+        updated_at, 
+        last_message_at,
+        message_count:tutor_messages(count)
+      `)
+      .eq('id', conversationId)
+      .eq('user_id', user.id)  // IDOR protection
+      .single();
+
+    if (error || !conversation) {
+      if (error?.code === '42P01') {
+        return res.status(503).json({
+          error: 'Fitur riwayat obrolan belum aktif.',
+          feature_disabled: true
+        });
+      }
+      return errorResponse(res, 'Obrolan tidak ditemukan atau Anda tidak punya akses.', 404);
+    }
+
+    // Transform message_count dari array ke number
+    const conversationData = {
+      ...conversation,
+      message_count: Array.isArray(conversation.message_count) ? conversation.message_count[0]?.count || 0 : 0
+    };
+
+    return res.status(200).json({ conversation: conversationData });
+  } catch (err) {
+    console.error('Get conversation error:', err);
     return errorResponse(res, err.message, err.status || 500);
   }
 }
@@ -321,7 +375,12 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(200).end();
 
   try {
-    if (req.method === 'GET') {
+    // GET single conversation by ID if :id is present
+    if (req.method === 'GET' && req.query.id) {
+      return await getConversation(req, res);
+    }
+    // GET list conversations if no :id
+    else if (req.method === 'GET') {
       return await listConversations(req, res);
     } else if (req.method === 'POST') {
       return await createConversation(req, res);

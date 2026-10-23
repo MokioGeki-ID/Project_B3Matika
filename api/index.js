@@ -74,7 +74,11 @@ async function loadRoutes() {
             if (!res.headersSent) res.status(500).json({ error: err.message || 'Internal Server Error' });
           }
         });
-        console.log(`Terhubung: ${routePath}`);
+        
+        // Log route registration hanya jika env LOG_ROUTES=1
+        if (env.LOG_ROUTES === '1') {
+          console.log(`Terhubung: ${routePath}`);
+        }
       }
     } catch (e) {
       console.error(`Gagal memuat route ${routePath}:`, e);
@@ -85,8 +89,22 @@ async function loadRoutes() {
 await loadRoutes();
 
 app.use((req, res) => {
-  console.warn(`[404] API Route Not Found: ${req.method} ${req.path}`);
-  res.status(404).json({ error: 'Rute API tidak ditemukan.' });
+  const requestId = req.headers['x-vercel-id'] || `req_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+  
+  console.warn(`[404] API Route Not Found: ${req.method} ${req.path}`, {
+    requestId,
+    method: req.method,
+    path: req.path,
+    timestamp: new Date().toISOString(),
+  });
+  
+  res.status(404).json({ 
+    error: {
+      code: 'ROUTE_NOT_FOUND',
+      message: 'Rute API tidak ditemukan.',
+      requestId,
+    }
+  });
 });
 
 if (env.NODE_ENV !== 'production' && !process.env.VERCEL) {
