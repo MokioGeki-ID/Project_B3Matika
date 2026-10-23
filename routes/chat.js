@@ -129,8 +129,16 @@ export default async function handler(req, res) {
 
     if (userMsgError || !userMsg) {
       console.error('Error saving user message:', userMsgError);
+      console.error('User Message Error Details:', {
+        conversation_id,
+        content_length: user_message.length,
+        error_code: userMsgError?.code,
+        error_message: userMsgError?.message,
+      });
       return errorResponse(res, 'Gagal menyimpan pesan.', 500);
     }
+
+    console.log(`✅ User message saved: ${userMsg.id}`);
 
     // 5. LINK ATTACHMENTS TO MESSAGE (if any)
     if (attachments.length > 0) {
@@ -322,6 +330,21 @@ export default async function handler(req, res) {
 
     if (aiMsgError) {
       console.error('Error saving AI message:', aiMsgError);
+      // Log error detail untuk debugging
+      console.error('AI Message Error Details:', {
+        conversation_id,
+        content_length: sanitizedResponse.length,
+        meta,
+        error_code: aiMsgError.code,
+        error_message: aiMsgError.message,
+      });
+      // Don't fail the request - message was already sent to client
+      // Tapi user perlu tahu bahwa pesan tidak tersimpan
+      res.write(`data: ${JSON.stringify({ 
+        warning: 'Jawaban berhasil dikirim tapi gagal disimpan. Refresh halaman untuk melihat.' 
+      })}\n\n`);
+    } else {
+      console.log(`✅ AI message saved for conversation ${conversation_id}`);
     }
 
     // 12. AUTO-GENERATE TITLE (BACKGROUND)

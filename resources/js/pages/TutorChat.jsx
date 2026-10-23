@@ -102,7 +102,7 @@ export default function TutorChat() {
   }, [user?.id]);
 
   // Load conversation by ID
-  const loadConversation = async (conversationId) => {
+  const loadConversation = async (conversationId, forceReload = false) => {
     try {
       setLoading(true);
       
@@ -124,8 +124,16 @@ export default function TutorChat() {
       saveActiveConversation(user.id, conversationId);
       
       // Load messages
+      console.log(`📥 Loading messages for conversation ${conversationId}...`);
       const msgResponse = await api.get(`/tutor/${conversationId}/messages`);
-      setMessages(msgResponse.messages || []);
+      
+      if (msgResponse.messages) {
+        console.log(`✅ Loaded ${msgResponse.messages.length} messages`);
+        setMessages(msgResponse.messages);
+      } else {
+        console.warn('⚠️ No messages in response');
+        setMessages([]);
+      }
     } catch (err) {
       console.error('Error loading conversation:', err);
       
@@ -447,12 +455,20 @@ export default function TutorChat() {
         }
       }
 
-      // Reload messages to get actual saved messages with real IDs
+      // Reload messages to get actual saved messages with real IDs and attachments
       try {
+        console.log(`📥 Reloading messages for conversation ${conversationId}...`);
         const msgResponse = await api.get(`/tutor/${conversationId}/messages`);
-        setMessages(msgResponse.messages || []);
+        
+        if (msgResponse.messages && msgResponse.messages.length > 0) {
+          console.log(`✅ Loaded ${msgResponse.messages.length} messages`);
+          setMessages(msgResponse.messages);
+        } else {
+          console.warn('⚠️ No messages returned from API, keeping local state');
+        }
       } catch (err) {
-        console.warn('Failed to reload messages:', err);
+        console.error('❌ Failed to reload messages:', err);
+        // Keep optimistic UI if reload fails
       }
 
     } catch (err) {
