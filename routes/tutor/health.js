@@ -151,12 +151,8 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Require authentication
-    const { user } = await requireAuth(req);
-
-    // TODO: Check if user is admin
-    // For now, any authenticated user can check health
-    // You can add admin check here: if (!user.is_admin) return errorResponse(res, 'Forbidden', 403);
+    // Health check tidak perlu auth untuk diagnostik
+    // Tapi tidak expose detail sensitif
 
     // Run all checks in parallel
     const [envCheck, dbCheck, tablesCheck, storageCheck, aiCheck] = await Promise.all([

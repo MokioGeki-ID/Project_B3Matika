@@ -1,5 +1,6 @@
 // api/chat.js  →  POST /api/chat
 // Proxy ke Gemini API dengan integrasi conversation history, attachments, dan context material/video
+// UPDATED: Menggunakan @google/generative-ai SDK resmi
 
 import { setCors, errorResponse, requireAuth } from './_lib/auth.js';
 import env from './_lib/env.js';
@@ -25,10 +26,11 @@ export default async function handler(req, res) {
     const key = env.GEMINI_API_KEY || '';
     if (!key) return res.status(503).json({ status: 'down', message: 'API Key Gemini belum dikonfigurasi.' });
     try {
-      await import('@google/genai');
+      // Check if SDK can be loaded
+      const { GoogleGenerativeAI } = await import('@google/generative-ai');
       return res.status(200).json({ status: 'ok', message: 'Layanan AI siap.' });
     } catch (e) {
-      return res.status(500).json({ status: 'error', message: 'Gagal memuat SDK AI.' });
+      return res.status(500).json({ status: 'error', message: 'Gagal memuat SDK AI: ' + e.message });
     }
   }
 
@@ -148,39 +150,26 @@ export default async function handler(req, res) {
 
         if (linkError) {
           console.error('Error linking attachments:', linkError);
-          // Continue anyway - attachments will remain pending
         }
       }
     }
 
-    // 6. LOAD ATTACHMENT FILES FOR MULTIMODAL INPUT
-    let attachmentFiles = [];
-    if (attachments.length > 0) {
-      const { data: files, error: filesError } = await supabase
-        .from('tutor_attachments')
-        .select('storage_path, mime_type')
-        .in('id', attachments)
-        .eq('message_id', userMsg.id);
-
-      if (!filesError && files) {
-        attachmentFiles = files;
-      }
-    }
-
-    // 7. PREPARE MULTIMODAL INPUT (text + images)
-    let promptText = '';
-    
-    // Add conversation history
+    // 6. BUILD CHAT HISTORY FOR GEMINI
+    const chatHistory = [];
     if (history && history.length > 0) {
-      promptText += "RIWAYAT PERCAKAPAN SEBELUMNYA:\n";
       history.forEach(msg => {
-        promptText += `${msg.role === 'user' ? 'User' : 'AI'}: ${msg.content}\n`;
+        chatHistory.push({
+          role: msg.role === 'user' ? 'user' : 'model',
+          parts: [{ text: msg.content }],
+        });
       });
-      promptText += '\n';
     }
-    
+
     // Add current user message
-    promptText += `PESAN USER TERBARU:\n${user_message}`;
+    chatHistory.push({
+      role: 'user',
+      parts: [{ text: user_message }],
+    });
 
     // Build system instruction with context
     const systemInstruction = buildSystemInstruction(
@@ -189,37 +178,53 @@ export default async function handler(req, res) {
       videoCatalogText
     );
 
-    // 8. CALL GEMINI AI WITH MULTIMODAL SUPPORT
-    const { GoogleGenAI } = await import('@google/genai');
-    const modelName = env.GEMINI_MODEL || "gemini-3.8-flash";
+    // 7. CALL GEMINI AI WITH UPDATED SDK
+    // Model name yang benar: gemini-1.5-flash atau gemini-1.5-pro
+    const modelName = env.GEMINI_MODEL || "gemini-1.5-flash";
     
     let lastError = null;
-    let stream = null;
+    let result = null;
 
     // Try each API key until one works
     for (const currentKey of apiKeys) {
       try {
-        const ai = new GoogleGenAI({ apiKey: currentKey });
+        const { GoogleGenerativeAI } = await import('@google/generative-ai');
+        const genAI = new GoogleGenerativeAI(currentKey);
         
-        // For now, use text-only input (multimodal with file URLs will need signed URLs)
-        // TODO: Implement image download and base64 encoding for multimodal input
-        stream = await ai.interactions.create({
+        const model = genAI.getGenerativeModel({
           model: modelName,
-          system_instruction: systemInstruction,
-          input: promptText,
-          stream: true,
+          systemInstruction: systemInstruction,
         });
+
+        // Start chat with history
+        const chat = model.startChat({
+          history: chatHistory.slice(0, -1), // Exclude last user message
+          generationConfig: {
+            maxOutputTokens: 2048,
+            temperature: conversation.tone === 'santai' ? 0.8 : 0.7,
+          },
+        });
+
+        // Stream response
+        result = await chat.sendMessageStream(user_message);
         
         break; // Success - exit loop
       } catch (err) {
         lastError = err;
-        const status = err.status || 500;
+        const status = err.status || err.statusCode || 500;
         const msg = err.message || '';
+        
+        console.error(`Gemini API Error (key ${apiKeys.indexOf(currentKey) + 1}/${apiKeys.length}):`, {
+          status,
+          message: msg,
+          code: err.code,
+        });
         
         // Rotate API key only for auth/quota errors
         if ([401, 403, 429].includes(status) || 
             msg.toLowerCase().includes('quota') || 
-            msg.toLowerCase().includes('api key')) {
+            msg.toLowerCase().includes('api key') ||
+            msg.toLowerCase().includes('invalid')) {
           console.warn(`⚠️ Rotasi API Key (status ${status})`);
           continue;
         } else {
@@ -228,61 +233,58 @@ export default async function handler(req, res) {
       }
     }
 
-    if (!stream) {
+    if (!result) {
       const errMsg = lastError?.message || 'AI tidak memberikan respons.';
-      const status = lastError?.status || 500;
+      const status = lastError?.status || lastError?.statusCode || 500;
       console.error(`API Error (${status}):`, errMsg);
       
       if (status === 429 || errMsg.toLowerCase().includes('quota')) {
         return errorResponse(res, 'Jatah AI sedang habis, coba lagi nanti.', 429);
       }
-      return errorResponse(res, 'Gagal terhubung ke AI Tutor.', status);
+      
+      if (errMsg.toLowerCase().includes('model') || errMsg.toLowerCase().includes('not found')) {
+        return errorResponse(res, `Model ${modelName} tidak tersedia. Periksa GEMINI_MODEL di environment.`, 500);
+      }
+      
+      return errorResponse(res, 'Gagal terhubung ke AI Tutor: ' + errMsg, status);
     }
 
-    // 9. STREAM RESPONSE TO CLIENT
+    // 8. STREAM RESPONSE TO CLIENT
     res.setHeader('Content-Type', 'text/event-stream');
-    res.setHeader('Cache-Control', 'no-cache');
+    res.setHeader('Cache-Control', 'no-cache, no-transform');
     res.setHeader('Connection', 'keep-alive');
     res.flushHeaders();
 
     let fullResponse = '';
     let hasResponded = false;
 
-    for await (const chunk of stream) {
-      // Handle event stream.delta from Interactions API
-      if (chunk.event_type === 'step.delta' && chunk.delta?.type === 'text' && chunk.delta?.text) {
-        hasResponded = true;
-        const textChunk = chunk.delta.text;
-        fullResponse += textChunk;
-        
-        const data = JSON.stringify({ text: textChunk });
-        res.write(`data: ${data}\n\n`);
+    try {
+      for await (const chunk of result.stream) {
+        const text = chunk.text();
+        if (text) {
+          hasResponded = true;
+          fullResponse += text;
+          
+          const data = JSON.stringify({ text });
+          res.write(`data: ${data}\n\n`);
+        }
       }
-      // Or if SDK returns fallback format
-      else if (chunk.output_text && typeof chunk.output_text === 'string') {
-        hasResponded = true;
-        fullResponse += chunk.output_text;
-        
-        const data = JSON.stringify({ text: chunk.output_text });
-        res.write(`data: ${data}\n\n`);
-      }
-    }
-    
-    if (!hasResponded) {
-      // Interactions API object fallback for non-stream / complete
-      if (stream.output_text) {
-        fullResponse = stream.output_text;
-        const data = JSON.stringify({ text: stream.output_text });
-        res.write(`data: ${data}\n\n`);
-      } else {
-        // Empty response
-        res.write(`data: ${JSON.stringify({ error: 'AI tidak memberikan jawaban, coba kirim ulang.' })}\n\n`);
+    } catch (streamError) {
+      console.error('Stream error:', streamError);
+      if (!hasResponded) {
+        res.write(`data: ${JSON.stringify({ error: 'Stream terputus, coba kirim ulang.' })}\n\n`);
         res.end();
         return;
       }
     }
+    
+    if (!hasResponded || !fullResponse) {
+      res.write(`data: ${JSON.stringify({ error: 'AI tidak memberikan jawaban, coba kirim ulang.' })}\n\n`);
+      res.end();
+      return;
+    }
 
-    // 10. SANITIZE RESPONSE (remove unauthorized YouTube links)
+    // 9. SANITIZE RESPONSE (remove unauthorized YouTube links)
     let sanitizedResponse = fullResponse;
     
     // Remove YouTube links that are not from our video catalog
@@ -290,10 +292,8 @@ export default async function handler(req, res) {
     const foundLinks = fullResponse.match(youtubeRegex) || [];
     
     if (foundLinks.length > 0) {
-      // Get video codes from response
       const videoCodes = extractVideoCodes(fullResponse);
       
-      // Replace video codes with actual links
       if (videoCodes.length > 0) {
         const videos = conversation.topic_id 
           ? await getTopicVideos(supabase, conversation.topic_id)
@@ -305,12 +305,12 @@ export default async function handler(req, res) {
       sanitizedResponse = sanitizedResponse.replace(youtubeRegex, '[link tidak tersedia]');
     }
 
-    // 11. EXTRACT METADATA (topic IDs and video codes)
+    // 10. EXTRACT METADATA
     const topicIds = extractTopicIds(sanitizedResponse);
     const videoCodes = extractVideoCodes(sanitizedResponse);
     const meta = buildMessageMeta(topicIds, videoCodes);
 
-    // 12. SAVE AI RESPONSE TO DATABASE
+    // 11. SAVE AI RESPONSE TO DATABASE
     const { error: aiMsgError } = await supabase
       .from('tutor_messages')
       .insert({
@@ -322,28 +322,22 @@ export default async function handler(req, res) {
 
     if (aiMsgError) {
       console.error('Error saving AI message:', aiMsgError);
-      // Don't fail the request - message was already sent to client
     }
 
-    // 13. AUTO-GENERATE TITLE (BACKGROUND) - Only for first AI response
-    // Check if this is the first AI response (message_count = 2: 1 user + 1 ai)
+    // 12. AUTO-GENERATE TITLE (BACKGROUND)
     const { count: messageCount } = await supabase
       .from('tutor_messages')
       .select('*', { count: 'exact', head: true })
       .eq('conversation_id', conversation_id);
 
     if (messageCount === 2) {
-      // This is first AI response - generate title in background (don't block response)
       import('./_lib/titleGenerator.js')
         .then(({ generateConversationTitle, updateConversationTitle }) => {
           return generateConversationTitle(user_message, conversation.tone)
-            .then(newTitle => {
-              return updateConversationTitle(supabase, conversation_id, newTitle);
-            });
+            .then(newTitle => updateConversationTitle(supabase, conversation_id, newTitle));
         })
         .catch(err => {
           console.error('Background title generation failed:', err);
-          // Silent fail - don't affect user experience
         });
     }
 
