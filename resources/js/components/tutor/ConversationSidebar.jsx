@@ -1,23 +1,18 @@
 import ConversationList from './ConversationList';
-import TonePicker from './TonePicker';
 
 /**
  * ConversationSidebar - Desktop sidebar with conversation list
  * @param {Object} props
  * @param {string} props.activeConversationId - Currently active conversation ID
- * @param {string} props.activeTone - Current conversation tone
  * @param {Function} props.onSelectConversation - Callback when conversation is selected
  * @param {Function} props.onConversationCreated - Callback when new conversation is created
  * @param {Function} props.onConversationDeleted - Callback when conversation is deleted
- * @param {Function} props.onToneChange - Callback when tone is changed
  */
 export default function ConversationSidebar({ 
   activeConversationId,
-  activeTone,
   onSelectConversation,
   onConversationCreated,
-  onConversationDeleted,
-  onToneChange
+  onConversationDeleted
 }) {
   return (
     <aside className="conversation-sidebar">
@@ -32,16 +27,6 @@ export default function ConversationSidebar({
             <p>B3Matika</p>
           </div>
         </div>
-
-        {/* Tone picker */}
-        {activeConversationId && (
-          <div className="sidebar-tone-picker">
-            <TonePicker
-              tone={activeTone}
-              onChange={onToneChange}
-            />
-          </div>
-        )}
       </div>
 
       {/* Conversation list */}

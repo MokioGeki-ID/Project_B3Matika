@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react';
 import { X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ConversationList from './ConversationList';
-import TonePicker from './TonePicker';
 
 /**
  * ConversationDrawer - Mobile drawer that slides from left
@@ -10,21 +9,17 @@ import TonePicker from './TonePicker';
  * @param {boolean} props.isOpen - Whether drawer is open
  * @param {Function} props.onClose - Callback to close drawer
  * @param {string} props.activeConversationId - Currently active conversation ID
- * @param {string} props.activeTone - Current conversation tone
  * @param {Function} props.onSelectConversation - Callback when conversation is selected
  * @param {Function} props.onConversationCreated - Callback when new conversation is created
  * @param {Function} props.onConversationDeleted - Callback when conversation is deleted
- * @param {Function} props.onToneChange - Callback when tone is changed
  */
 export default function ConversationDrawer({ 
   isOpen,
   onClose,
   activeConversationId,
-  activeTone,
   onSelectConversation,
   onConversationCreated,
-  onConversationDeleted,
-  onToneChange
+  onConversationDeleted
 }) {
   const drawerRef = useRef(null);
 
@@ -100,16 +95,6 @@ export default function ConversationDrawer({
                 <X size={24} />
               </button>
             </div>
-
-            {/* Tone picker */}
-            {activeConversationId && (
-              <div className="drawer-tone-picker">
-                <TonePicker
-                  tone={activeTone}
-                  onChange={onToneChange}
-                />
-              </div>
-            )}
 
             {/* Conversation list */}
             <div className="drawer-content">

@@ -13,7 +13,8 @@ import {
   WelcomeState,
   Toast,
   VoiceInput,
-  ScrollToBottom
+  ScrollToBottom,
+  TonePicker
 } from '@/components/tutor';
 import {
   getActiveConversation,
@@ -537,20 +538,16 @@ export default function TutorChat() {
         isOpen={drawerOpen}
         onClose={() => setDrawerOpen(false)}
         activeConversationId={activeConversationId}
-        activeTone={activeConversation?.tone || 'baku'}
         onSelectConversation={handleSelectConversation}
         onConversationCreated={handleConversationCreated}
         onConversationDeleted={handleConversationDeleted}
-        onToneChange={handleToneChange}
       />
 
       <ConversationSidebar
         activeConversationId={activeConversationId}
-        activeTone={activeConversation?.tone || 'baku'}
         onSelectConversation={handleSelectConversation}
         onConversationCreated={handleConversationCreated}
         onConversationDeleted={handleConversationDeleted}
-        onToneChange={handleToneChange}
       />
 
       <main className="tutor-chat-main">
@@ -581,6 +578,17 @@ export default function TutorChat() {
               </h2>
             </div>
           </div>
+
+          {/* Tone picker in header (Phase 3 UI improvement) */}
+          {activeConversationId && !isDraft && (
+            <div className="header-tone-picker">
+              <TonePicker
+                tone={activeConversation?.tone || 'baku'}
+                onChange={handleToneChange}
+                disabled={streaming}
+              />
+            </div>
+          )}
         </header>
 
         {/* Messages area */}
