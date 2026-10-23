@@ -1,12 +1,11 @@
 /**
  * routes/tutor/conversations.js
- * Endpoints untuk CRUD conversations AI Tutor
+ * Endpoints untuk list dan create conversations AI Tutor
  * 
  * GET    /api/tutor/conversations                — List conversations (paginated)
- * GET    /api/tutor/conversations/:id            — Get single conversation
  * POST   /api/tutor/conversations                — Create new conversation
- * PATCH  /api/tutor/conversations/:id            — Update conversation (rename, tone)
- * DELETE /api/tutor/conversations/:id            — Delete conversation & attachments
+ * 
+ * Note: GET/PATCH/DELETE by ID ada di conversations/[id].js
  */
 
 import { requireAuth, errorResponse, setCors } from '../_lib/auth.js';
@@ -106,59 +105,6 @@ async function listConversations(req, res) {
 }
 
 /**
- * GET /api/tutor/conversations/:id
- * Get single conversation by ID
- */
-async function getConversation(req, res) {
-  try {
-    const { user } = await requireAuth(req);
-    const conversationId = req.query.id;
-
-    if (!conversationId || !isValidUUID(conversationId)) {
-      return errorResponse(res, 'ID obrolan tidak valid.', 422);
-    }
-
-    // Query dengan ownership check dan message_count
-    const { data: conversation, error } = await supabase
-      .from('tutor_conversations')
-      .select(`
-        id, 
-        title, 
-        tone, 
-        topic_id, 
-        created_at, 
-        updated_at, 
-        last_message_at,
-        message_count:tutor_messages(count)
-      `)
-      .eq('id', conversationId)
-      .eq('user_id', user.id)  // IDOR protection
-      .single();
-
-    if (error || !conversation) {
-      if (error?.code === '42P01') {
-        return res.status(503).json({
-          error: 'Fitur riwayat obrolan belum aktif.',
-          feature_disabled: true
-        });
-      }
-      return errorResponse(res, 'Obrolan tidak ditemukan atau Anda tidak punya akses.', 404);
-    }
-
-    // Transform message_count dari array ke number
-    const conversationData = {
-      ...conversation,
-      message_count: Array.isArray(conversation.message_count) ? conversation.message_count[0]?.count || 0 : 0
-    };
-
-    return res.status(200).json({ conversation: conversationData });
-  } catch (err) {
-    console.error('Get conversation error:', err);
-    return errorResponse(res, err.message, err.status || 500);
-  }
-}
-
-/**
  * POST /api/tutor/conversations
  * Create new conversation
  * Body: { topic_id?: number, title?: string, tone?: 'baku'|'santai' }
@@ -235,139 +181,6 @@ async function createConversation(req, res) {
 }
 
 /**
- * PATCH /api/tutor/conversations/:id
- * Update conversation (rename, change tone)
- * Body: { title?: string, tone?: 'baku'|'santai' }
- */
-async function updateConversation(req, res) {
-  try {
-    const { user } = await requireAuth(req);
-    const conversationId = req.query.id;
-
-    if (!conversationId || !isValidUUID(conversationId)) {
-      return errorResponse(res, 'ID obrolan tidak valid.', 422);
-    }
-
-    const { title, tone } = req.body || {};
-
-    if (!title && !tone) {
-      return errorResponse(res, 'Tidak ada yang diubah.', 422);
-    }
-
-    // Build update object
-    const updates = { updated_at: new Date().toISOString() };
-
-    if (title !== undefined) {
-      updates.title = sanitizeTitle(title);
-      if (updates.title.length < 1 || updates.title.length > 80) {
-        return errorResponse(res, 'Judul harus 1-80 karakter.', 422);
-      }
-    }
-
-    if (tone !== undefined) {
-      if (!isValidTone(tone)) {
-        return errorResponse(res, 'Gaya bahasa tidak valid. Pilih "baku" atau "santai".', 422);
-      }
-      updates.tone = tone;
-    }
-
-    // Update dengan ownership check
-    const { data: conversation, error } = await supabase
-      .from('tutor_conversations')
-      .update(updates)
-      .eq('id', conversationId)
-      .eq('user_id', user.id)  // IDOR protection
-      .select()
-      .single();
-
-    if (error || !conversation) {
-      if (error?.code === '42P01') {
-        return res.status(503).json({
-          error: 'Fitur riwayat obrolan belum aktif.',
-          feature_disabled: true
-        });
-      }
-      return errorResponse(res, 'Obrolan tidak ditemukan atau Anda tidak punya akses.', 404);
-    }
-
-    return res.status(200).json({ conversation });
-  } catch (err) {
-    console.error('Update conversation error:', err);
-    return errorResponse(res, err.message, err.status || 500);
-  }
-}
-
-/**
- * DELETE /api/tutor/conversations/:id
- * Delete conversation beserta messages & attachments
- */
-async function deleteConversation(req, res) {
-  try {
-    const { user } = await requireAuth(req);
-    const conversationId = req.query.id;
-
-    if (!conversationId || !isValidUUID(conversationId)) {
-      return errorResponse(res, 'ID obrolan tidak valid.', 422);
-    }
-
-    // Verify ownership terlebih dahulu
-    const { data: conversation, error: fetchError } = await supabase
-      .from('tutor_conversations')
-      .select('id, user_id')
-      .eq('id', conversationId)
-      .eq('user_id', user.id)
-      .single();
-
-    if (fetchError || !conversation) {
-      return errorResponse(res, 'Obrolan tidak ditemukan atau Anda tidak punya akses.', 404);
-    }
-
-    // Ambil daftar attachments untuk hapus dari storage
-    const { data: attachments } = await supabase
-      .from('tutor_attachments')
-      .select('storage_path')
-      .eq('conversation_id', conversationId);
-
-    // Hapus conversation (cascade akan hapus messages & attachments rows)
-    const { error: deleteError } = await supabase
-      .from('tutor_conversations')
-      .delete()
-      .eq('id', conversationId)
-      .eq('user_id', user.id);
-
-    if (deleteError) {
-      console.error('Delete conversation error:', deleteError);
-      return errorResponse(res, 'Gagal menghapus obrolan.', 500);
-    }
-
-    // Hapus files dari storage (background, jangan block response)
-    if (attachments && attachments.length > 0) {
-      const filePaths = attachments.map(a => a.storage_path);
-      supabase.storage
-        .from('tutor-uploads')
-        .remove(filePaths)
-        .then(({ error: storageError }) => {
-          if (storageError) {
-            console.error('Storage cleanup warning:', storageError);
-            // Jangan throw error - file mungkin sudah dihapus atau tidak ada
-          }
-        })
-        .catch(err => {
-          console.error('Storage cleanup error:', err);
-        });
-    }
-
-    return res.status(200).json({
-      message: 'Obrolan berhasil dihapus.',
-      deleted_id: conversationId,
-    });
-  } catch (err) {
-    console.error('Delete conversation error:', err);
-    return errorResponse(res, err.message, err.status || 500);
-  }
-}
-
-/**
  * Main handler - route dispatcher
  */
 export default async function handler(req, res) {
@@ -375,19 +188,10 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(200).end();
 
   try {
-    // GET single conversation by ID if :id is present
-    if (req.method === 'GET' && req.query.id) {
-      return await getConversation(req, res);
-    }
-    // GET list conversations if no :id
-    else if (req.method === 'GET') {
+    if (req.method === 'GET') {
       return await listConversations(req, res);
     } else if (req.method === 'POST') {
       return await createConversation(req, res);
-    } else if (req.method === 'PATCH') {
-      return await updateConversation(req, res);
-    } else if (req.method === 'DELETE') {
-      return await deleteConversation(req, res);
     } else {
       return errorResponse(res, 'Method not allowed', 405);
     }
