@@ -560,6 +560,21 @@
 .message-timestamp { font-size: 11px; color: var(--text-muted); padding: 0 4px; }
 .message-user .message-timestamp { text-align: right; }
 
+/* Streaming cursor animation */
+.streaming-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s steps(2, start) infinite;
+  color: var(--blue, #0284c7);
+  font-weight: bold;
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+
 .message-attachments { display: flex; flex-wrap: wrap; gap: 8px; }
 
 .message-attachment-image img {
@@ -599,6 +614,92 @@
 .message-recommendations { margin-top: 8px; }
 .recommendations-label { font-size: 13px; font-weight: 600; color: var(--text-muted); margin-bottom: 8px; }
 .recommendations-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* TYPING INDICATOR */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+}
+
+/* ================================================================
+   SKELETON LOADER (Phase 2 Performance Optimization)
+   ================================================================ */
+.skeleton-loader {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  animation: fadeIn 300ms ease-in;
+}
+
+.skeleton-message {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.skeleton-message.skeleton-user {
+  flex-direction: row-reverse;
+  align-self: flex-end;
+}
+
+.skeleton-message.skeleton-ai {
+  align-self: flex-start;
+}
+
+.skeleton-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, var(--surface, #e5e7eb) 25%, var(--line, #d1d5db) 50%, var(--surface, #e5e7eb) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  flex-shrink: 0;
+}
+
+.skeleton-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  max-width: 500px;
+}
+
+.skeleton-text {
+  height: 16px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, var(--surface, #e5e7eb) 25%, var(--line, #d1d5db) 50%, var(--surface, #e5e7eb) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.skeleton-line {
+  width: 100%;
+}
+
+.skeleton-line.short {
+  width: 60%;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 /* TYPING INDICATOR */
 .typing-indicator {

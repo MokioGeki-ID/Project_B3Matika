@@ -12,6 +12,7 @@ export { default as ConversationDrawer } from './ConversationDrawer';
 export { default as ConversationSearch } from './ConversationSearch';
 export { default as MessageBubble } from './MessageBubble';
 export { default as TypingIndicator } from './TypingIndicator';
+export { default as SkeletonLoader } from './SkeletonLoader';
 export { default as ConfirmDialog } from './ConfirmDialog';
 export { default as Toast } from './Toast';
 export { default as WelcomeState } from './WelcomeState';

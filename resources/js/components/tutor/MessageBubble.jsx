@@ -123,7 +123,13 @@ export default function MessageBubble({ message, topics = [], videos = [] }) {
           {isUser ? (
             <p>{content}</p>
           ) : (
-            <MathContent content={content} />
+            <>
+              <MathContent content={content} />
+              {/* Streaming indicator */}
+              {meta?.isStreaming && (
+                <span className="streaming-cursor">▋</span>
+              )}
+            </>
           )}
         </div>
 

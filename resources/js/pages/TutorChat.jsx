@@ -7,6 +7,7 @@ import {
   ConversationDrawer,
   MessageBubble,
   TypingIndicator,
+  SkeletonLoader,
   FileUploader,
   AttachmentPreview,
   WelcomeState,
@@ -350,13 +351,13 @@ export default function TutorChat() {
     setMessages(prev => [...prev, userMsg]);
     setStreaming(true);
 
-    // Add empty AI message placeholder
+    // Add empty AI message placeholder with streaming indicator
     const aiMsgId = 'temp-ai-' + Date.now();
     const aiMsg = {
       id: aiMsgId,
       role: 'assistant',
       content: '',
-      meta: {},
+      meta: { isStreaming: true }, // Marker for streaming state
       attachments: [],
       created_at: new Date().toISOString()
     };
@@ -585,10 +586,7 @@ export default function TutorChat() {
         {/* Messages area */}
         <div ref={messagesContainerRef} className="tutor-chat-messages">
           {loading ? (
-            <div className="messages-loading">
-              <Loader size={32} className="spin" />
-              <p>Memuat pesan...</p>
-            </div>
+            <SkeletonLoader />
           ) : messages.length === 0 ? (
             <WelcomeState 
               user={user} 
