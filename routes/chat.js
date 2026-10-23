@@ -188,10 +188,12 @@ export default async function handler(req, res) {
 
     // 7. CALL GEMINI AI WITH UPDATED SDK
     // Model name yang benar: gemini-1.5-flash atau gemini-1.5-pro
-    const modelName = env.GEMINI_MODEL || "gemini-1.5-flash";
+    const modelName = env.GEMINI_MODEL || "gemini-3.8-flash";
+    const fallbackModel = env.GEMINI_FALLBACK_MODEL || null;
     
     let lastError = null;
     let result = null;
+    let usedModel = modelName;
 
     // Try each API key until one works
     for (const currentKey of apiKeys) {
@@ -216,6 +218,7 @@ export default async function handler(req, res) {
         // Stream response
         result = await chat.sendMessageStream(user_message);
         
+        console.log(`✅ Gemini success with model: ${usedModel}, key ${apiKeys.indexOf(currentKey) + 1}/${apiKeys.length}`);
         break; // Success - exit loop
       } catch (err) {
         lastError = err;
@@ -226,7 +229,36 @@ export default async function handler(req, res) {
           status,
           message: msg,
           code: err.code,
+          model: usedModel
         });
+        
+        // Try fallback model if main model fails with 404 and fallback is configured
+        if (status === 404 && fallbackModel && usedModel === modelName) {
+          console.warn(`⚠️ Model ${modelName} not available, trying fallback: ${fallbackModel}`);
+          try {
+            const fallbackGenAI = new (await import('@google/generative-ai')).GoogleGenerativeAI(currentKey);
+            const fallbackModelInstance = fallbackGenAI.getGenerativeModel({
+              model: fallbackModel,
+              systemInstruction: systemInstruction,
+            });
+            
+            const fallbackChat = fallbackModelInstance.startChat({
+              history: chatHistory.slice(0, -1),
+              generationConfig: {
+                maxOutputTokens: 2048,
+                temperature: conversation.tone === 'santai' ? 0.8 : 0.7,
+              },
+            });
+            
+            result = await fallbackChat.sendMessageStream(user_message);
+            usedModel = fallbackModel;
+            console.log(`✅ Fallback model ${fallbackModel} succeeded`);
+            break;
+          } catch (fallbackErr) {
+            console.error(`❌ Fallback model ${fallbackModel} also failed:`, fallbackErr.message);
+            lastError = fallbackErr;
+          }
+        }
         
         // Rotate API key only for auth/quota errors
         if ([401, 403, 429].includes(status) || 
@@ -244,17 +276,43 @@ export default async function handler(req, res) {
     if (!result) {
       const errMsg = lastError?.message || 'AI tidak memberikan respons.';
       const status = lastError?.status || lastError?.statusCode || 500;
-      console.error(`API Error (${status}):`, errMsg);
+      const errorCode = lastError?.code || 'UNKNOWN';
       
-      if (status === 429 || errMsg.toLowerCase().includes('quota')) {
-        return errorResponse(res, 'Jatah AI sedang habis, coba lagi nanti.', 429);
+      // Generate unique request ID for tracking
+      const requestId = `req_${Date.now()}_${Math.random().toString(36).substring(7)}`;
+      
+      console.error(`[${requestId}] API Error:`, {
+        status,
+        code: errorCode,
+        message: errMsg,
+        model: modelName
+      });
+      
+      // Specific error responses WITHOUT mentioning env variable names
+      if (status === 429 || errMsg.toLowerCase().includes('quota') || errMsg.toLowerCase().includes('resource has been exhausted')) {
+        return errorResponse(res, 'AI Tutor sedang sibuk. Silakan coba lagi dalam beberapa saat.', 429);
       }
       
-      if (errMsg.toLowerCase().includes('model') || errMsg.toLowerCase().includes('not found')) {
-        return errorResponse(res, `Model ${modelName} tidak tersedia. Periksa GEMINI_MODEL di environment.`, 500);
+      if (status === 401 || status === 403 || errMsg.toLowerCase().includes('api key') || errMsg.toLowerCase().includes('permission denied')) {
+        return errorResponse(res, 'Sistem tidak dapat mengakses layanan AI. Silakan hubungi administrator.', 503);
       }
       
-      return errorResponse(res, 'Gagal terhubung ke AI Tutor: ' + errMsg, status);
+      if (status === 400 && (errMsg.toLowerCase().includes('invalid argument') || errMsg.toLowerCase().includes('parameter'))) {
+        return errorResponse(res, 'Permintaan tidak valid. Silakan coba lagi atau hubungi administrator.', 400);
+      }
+      
+      // Only if explicitly "model not found" or "not supported"
+      if (status === 404 && (errMsg.includes('not found') || errMsg.includes('not supported') || errMsg.includes('does not exist'))) {
+        console.error(`[${requestId}] Model configuration issue - check GEMINI_MODEL value`);
+        return errorResponse(res, 'Layanan AI sementara tidak tersedia. Silakan coba lagi nanti.', 503);
+      }
+      
+      if (status >= 500 || errMsg.toLowerCase().includes('internal') || errMsg.toLowerCase().includes('server error')) {
+        return errorResponse(res, 'Layanan AI mengalami gangguan. Silakan coba lagi dalam beberapa menit.', 503);
+      }
+      
+      // Generic error with request ID for debugging
+      return errorResponse(res, `Gagal terhubung ke AI Tutor. (ID: ${requestId})`, status);
     }
 
     // 8. STREAM RESPONSE TO CLIENT

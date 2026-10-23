@@ -77,8 +77,10 @@ try {
     NODE_ENV: process.env.NODE_ENV || 'development',
     FRONTEND_URL: process.env.FRONTEND_URL || '*',
     PORT: process.env.PORT || 3000,
-    GEMINI_API_KEY: process.env.GEMINI_API_KEY || null, // Optional
-    GEMINI_MODEL: process.env.GEMINI_MODEL || 'gemini-3.8-flash',
+    // Normalize API keys and model name (trim whitespace, quotes, newlines)
+    GEMINI_API_KEY: (process.env.GEMINI_API_KEY || '').trim().replace(/^["']|["']$/g, '') || null,
+    GEMINI_MODEL: (process.env.GEMINI_MODEL || 'gemini-3.8-flash').trim().replace(/^["']|["']$/g, ''),
+    GEMINI_FALLBACK_MODEL: (process.env.GEMINI_FALLBACK_MODEL || '').trim().replace(/^["']|["']$/g, '') || null,
     
     // Limits
     LOGIN_MAX_ATTEMPTS: parseInt(process.env.LOGIN_MAX_ATTEMPTS || '5', 10),

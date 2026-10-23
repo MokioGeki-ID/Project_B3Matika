@@ -111,8 +111,8 @@ export async function generateConversationTitle(userMessage, tone = 'baku') {
     }
 
     // Import Gemini SDK
-    const { GoogleGenAI } = await import('@google/genai');
-    const modelName = 'gemini-2.0-flash-exp'; // Model ringan untuk generate title
+    const { GoogleGenerativeAI } = await import('@google/generative-ai');
+    const modelName = env.GEMINI_MODEL || 'gemini-3.8-flash'; // Use same model as chat
     
     // Build prompt untuk generate title
     const toneInstruction = tone === 'santai' 
@@ -139,12 +139,9 @@ JUDUL:`;
     
     for (const apiKey of apiKeys) {
       try {
-        const ai = new GoogleGenAI({
-          apiKey,
-          timeout: 5000, // 5 detik timeout untuk title generation
-        });
+        const genAI = new GoogleGenerativeAI(apiKey);
         
-        const model = ai.getGenerativeModel({
+        const model = genAI.getGenerativeModel({
           model: modelName,
           generationConfig: {
             temperature: 0.3, // Lower temperature untuk konsistensi
@@ -153,8 +150,7 @@ JUDUL:`;
         });
 
         const result = await model.generateContent(prompt);
-        const response = await result.response;
-        const text = response.text();
+        const text = result.response.text();
         
         if (text && text.trim()) {
           const title = sanitizeTitle(text);

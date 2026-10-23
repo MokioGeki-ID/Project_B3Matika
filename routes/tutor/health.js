@@ -126,13 +126,14 @@ async function checkAIProvider() {
     }
 
     // Try to load SDK
-    await import('@google/genai');
+    await import('@google/generative-ai');
 
     return { 
       ok: true, 
       message: 'SDK AI tersedia', 
       keys_count: apiKeys.length,
-      model: env.GEMINI_MODEL || 'gemini-3.8-flash'
+      model: env.GEMINI_MODEL,
+      fallback_model: env.GEMINI_FALLBACK_MODEL || null
     };
   } catch (err) {
     return { ok: false, message: `Gagal load SDK: ${err.message}` };
